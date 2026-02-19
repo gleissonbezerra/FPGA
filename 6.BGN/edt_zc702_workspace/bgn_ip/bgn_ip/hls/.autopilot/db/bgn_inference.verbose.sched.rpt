@@ -1,0 +1,156 @@
+
+
+================================================================
+== Vitis HLS Report for 'bgn_inference'
+================================================================
+* Date:           Sun Feb 15 20:08:59 2026
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        bgn_ip
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.627 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     8371|     8371|  83.710 us|  83.710 us|  8372|  8372|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%class_idx_23_loc = alloca i64 1"   --->   Operation 6 'alloca' 'class_idx_23_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%hidden_out = alloca i64 1" [top.cpp:34]   --->   Operation 7 'alloca' 'hidden_out' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 86 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln0 = call void @bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1, i32 %input_img, i32 %hidden_out, i32 %layer1_w, i32 %bn_mean, i32 %bn_var"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 9 [1/2] (0.00ns)   --->   "%call_ln0 = call void @bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1, i32 %input_img, i32 %hidden_out, i32 %layer1_w, i32 %bn_mean, i32 %bn_var"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 10 [2/2] (0.00ns)   --->   "%call_ln0 = call void @bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2, i32 %hidden_out, i32 %class_idx_23_loc, i32 %layer2_w, i32 %layer2_b"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 11 [1/2] (0.00ns)   --->   "%call_ln0 = call void @bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2, i32 %hidden_out, i32 %class_idx_23_loc, i32 %layer2_w, i32 %layer2_b"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 1.00>
+ST_5 : Operation 12 [1/1] (0.00ns)   --->   "%spectopmodule_ln20 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_7" [top.cpp:20]   --->   Operation 12 'spectopmodule' 'spectopmodule_ln20' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_img, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_2, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_img, void @empty_3, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 15 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %input_img, i64 666, i64 207, i64 1"   --->   Operation 15 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %input_img"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %prediction"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %prediction, void @empty, i32 4294967295, i32 4294967295, void @empty_4, i32 0, i32 0, void @empty_1, void @empty_5, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %prediction, void @empty_6, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 21 [1/1] (0.00ns)   --->   "%specmemcore_ln28 = specmemcore void @_ssdm_op_SpecMemCore, i32 %layer1_w, i64 666, i64 33, i64 18446744073709551615" [top.cpp:28]   --->   Operation 21 'specmemcore' 'specmemcore_ln28' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 22 [1/1] (0.00ns)   --->   "%specmemcore_ln29 = specmemcore void @_ssdm_op_SpecMemCore, i32 %layer2_w, i64 666, i64 33, i64 18446744073709551615" [top.cpp:29]   --->   Operation 22 'specmemcore' 'specmemcore_ln29' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 23 [1/1] (0.00ns)   --->   "%specmemcore_ln30 = specmemcore void @_ssdm_op_SpecMemCore, i32 %bn_mean, i64 666, i64 33, i64 18446744073709551615" [top.cpp:30]   --->   Operation 23 'specmemcore' 'specmemcore_ln30' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 24 [1/1] (0.00ns)   --->   "%specmemcore_ln31 = specmemcore void @_ssdm_op_SpecMemCore, i32 %bn_var, i64 666, i64 33, i64 18446744073709551615" [top.cpp:31]   --->   Operation 24 'specmemcore' 'specmemcore_ln31' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 25 [1/1] (0.00ns)   --->   "%specmemcore_ln35 = specmemcore void @_ssdm_op_SpecMemCore, i32 %hidden_out, i64 666, i64 19, i64 18446744073709551615" [top.cpp:35]   --->   Operation 25 'specmemcore' 'specmemcore_ln35' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 26 [1/1] (0.00ns)   --->   "%class_idx_23_loc_load = load i32 %class_idx_23_loc"   --->   Operation 26 'load' 'class_idx_23_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 27 [1/1] (1.00ns)   --->   "%write_ln75 = write void @_ssdm_op_Write.s_axilite.i32P0A, i32 %prediction, i32 %class_idx_23_loc_load" [top.cpp:75]   --->   Operation 27 'write' 'write_ln75' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_5 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln76 = ret" [top.cpp:76]   --->   Operation 28 'ret' 'ret_ln76' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+ <State 5>: 1.000ns
+The critical path consists of the following:
+	'load' operation 32 bit ('class_idx_23_loc_load') on local variable 'class_idx_23_loc' [26]  (0.000 ns)
+	s_axi write operation ('write_ln75', top.cpp:75) on port 'prediction' (top.cpp:75) [27]  (1.000 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

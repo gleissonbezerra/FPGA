@@ -1,0 +1,4 @@
+domain_path: E:\FPGA\2024\MicroPhase-Z7-Lite-Board\BGN\edt_zc702_workspace\plat_bgn\zynq_fsbl\zynq_fsbl_bsp
+app_src_dir: D:\Xilinx\Vitis\2024.2\data\embeddedsw\lib\sw_apps\zynq_fsbl
+template: zynq_fsbl
+lang: c

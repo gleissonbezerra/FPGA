@@ -1,0 +1,12 @@
+{
+  "name": "bgn_ip",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "bgn_ip"
+  },
+  "template": "empty_hls_component"
+}

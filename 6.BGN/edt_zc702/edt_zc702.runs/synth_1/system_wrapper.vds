@@ -1,0 +1,830 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Feb 15 20:15:44 2026
+# Process ID         : 24760
+# Current directory  : E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.runs/synth_1
+# Command line       : vivado.exe -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
+# Log file           : E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.runs/synth_1/system_wrapper.vds
+# Journal file       : E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.runs/synth_1\vivado.jou
+# Running On         : G-MF001
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i9-12900K
+# CPU Frequency      : 3187 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 68413 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 72708 MB
+# Available Virtual  : 43160 MB
+#-----------------------------------------------------------
+source system_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/impl'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2024.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.srcs/utils_1/imports/synth_1/system_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.srcs/utils_1/imports/synth_1/system_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top system_wrapper -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 648
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1171.973 ; gain = 469.648
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'system' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:13]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_smc_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/synth/system_axi_smc_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_1LX95IS' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:660]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_one_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_0/synth/bd_44e3_one_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_9_xlconstant' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_9_xlconstant' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_one_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_0/synth/bd_44e3_one_0.v:53]
+INFO: [Synth 8-638] synthesizing module 'bd_44e3_psr_aclk_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/synth/bd_44e3_psr_aclk_0.vhd:74]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1271' bound to instance 'U0' of component 'proc_sys_reset' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/synth/bd_44e3_psr_aclk_0.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1330]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1399]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1415]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1441]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1464]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1488]
+INFO: [Synth 8-638] synthesizing module 'lpf' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149029' bound to instance 'POR_SRL_I' of component 'SRL16' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:873]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149029]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149029]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1330]
+INFO: [Synth 8-256] done synthesizing module 'bd_44e3_psr_aclk_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/synth/bd_44e3_psr_aclk_0.vhd:74]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_44e3_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:692]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_44e3_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:692]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_44e3_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:692]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_44e3_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:692]
+WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_44e3_psr_aclk_0' has 10 connections declared, but only 6 given [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:692]
+INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_1LX95IS' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:660]
+INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_B7U41B' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:701]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00e_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_12/synth/bd_44e3_m00e_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00e_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_12/synth/bd_44e3_m00e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_B7U41B' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:701]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00s2a_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_11/synth/bd_44e3_m00s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00s2a_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_11/synth/bd_44e3_m00s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s00a2s_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_5/synth/bd_44e3_s00a2s_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s00a2s_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_5/synth/bd_44e3_s00a2s_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_1BIQ3N0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:943]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s00mmu_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/synth/bd_44e3_s00mmu_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s00mmu_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/synth/bd_44e3_s00mmu_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s00sic_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_4/synth/bd_44e3_s00sic_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s00sic_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_4/synth/bd_44e3_s00sic_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s00tr_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/synth/bd_44e3_s00tr_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s00tr_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/synth/bd_44e3_s00tr_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_1BIQ3N0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:943]
+INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_1GZQO6U' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1519]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_sarn_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_6/synth/bd_44e3_sarn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_sarn_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_6/synth/bd_44e3_sarn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_sawn_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_8/synth/bd_44e3_sawn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_sawn_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_8/synth/bd_44e3_sawn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_sbn_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_10/synth/bd_44e3_sbn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_sbn_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_10/synth/bd_44e3_sbn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_srn_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_7/synth/bd_44e3_srn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_srn_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_7/synth/bd_44e3_srn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_swn_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_9/synth/bd_44e3_swn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_swn_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_9/synth/bd_44e3_swn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_1GZQO6U' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1519]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_smc_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/synth/system_axi_smc_0.v:53]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'system_axi_smc_0' is unconnected for instance 'axi_smc' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:138]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'system_axi_smc_0' is unconnected for instance 'axi_smc' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:138]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'system_axi_smc_0' has 59 connections declared, but only 57 given [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:138]
+INFO: [Synth 8-6157] synthesizing module 'system_bgn_inference_0_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_0/synth/system_bgn_inference_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_layer1_w_ROM_1P_BRAM_1R' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_layer1_w_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_layer1_w_ROM_1P_BRAM_1R.dat' is read successfully [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_layer1_w_ROM_1P_BRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_layer1_w_ROM_1P_BRAM_1R' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_layer1_w_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_mean_ROM_1P_BRAM_1R' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_mean_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_mean_ROM_1P_BRAM_1R.dat' is read successfully [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_mean_ROM_1P_BRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_mean_ROM_1P_BRAM_1R' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_mean_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_var_ROM_1P_BRAM_1R' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_var_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_var_ROM_1P_BRAM_1R.dat' is read successfully [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_var_ROM_1P_BRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_var_ROM_1P_BRAM_1R' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_var_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1_ip' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84087]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84087]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1_ip' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_sitofp_32ns_32_5_no_dsp_1' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_sitofp_32ns_32_5_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_sitofp_32ns_32_5_no_dsp_1' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_sitofp_32ns_32_5_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1.v:54]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1_DSP48_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1_DSP48_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1.v:54]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_flow_control_loop_pipe_sequential_init' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_flow_control_loop_pipe_sequential_init' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_w_ROM_1P_BRAM_1R' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_w_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_w_ROM_1P_BRAM_1R.dat' is read successfully [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_w_ROM_1P_BRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_w_ROM_1P_BRAM_1R' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_w_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_b_ROM_AUTO_1R' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_b_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_b_ROM_AUTO_1R.dat' is read successfully [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_b_ROM_AUTO_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_b_ROM_AUTO_1R' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_b_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1_ip' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1_ip' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_CTRL_s_axi' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_CTRL_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_CTRL_s_axi_ram' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_CTRL_s_axi.v:492]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_CTRL_s_axi_ram' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_CTRL_s_axi.v:492]
+INFO: [Synth 8-155] case statement is not full and has no default [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_CTRL_s_axi.v:248]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_CTRL_s_axi' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_CTRL_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1_ip' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1_ip' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1_ip' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1_ip' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'system_bgn_inference_0_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_0/synth/system_bgn_inference_0_0.v:53]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'system_bgn_inference_0_0' is unconnected for instance 'bgn_inference_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:196]
+WARNING: [Synth 8-7023] instance 'bgn_inference_0' of module 'system_bgn_inference_0_0' has 20 connections declared, but only 19 given [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:196]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_1' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
+INFO: [Synth 8-6157] synthesizing module 'BIBUF' [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2323]
+INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (0#1) [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2323]
+INFO: [Synth 8-6157] synthesizing module 'PS7' [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:123980]
+INFO: [Synth 8-6155] done synthesizing module 'PS7' (0#1) [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:123980]
+INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:393]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_1' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/synth/system_processing_system7_0_1.v:53]
+WARNING: [Synth 8-7071] port 'ENET0_GMII_TX_EN' of module 'system_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:216]
+WARNING: [Synth 8-7071] port 'ENET0_GMII_TX_ER' of module 'system_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:216]
+WARNING: [Synth 8-7071] port 'ENET0_MDIO_MDC' of module 'system_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:216]
+WARNING: [Synth 8-7071] port 'ENET0_MDIO_O' of module 'system_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:216]
+WARNING: [Synth 8-7071] port 'ENET0_MDIO_T' of module 'system_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:216]
+WARNING: [Synth 8-7071] port 'ENET0_GMII_TXD' of module 'system_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:216]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'system_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:216]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'system_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:216]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'system_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:216]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'system_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:216]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'system_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:216]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'system_processing_system7_0_1' has 85 connections declared, but only 74 given [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:216]
+INFO: [Synth 8-638] synthesizing module 'system_rst_ps7_0_100M_0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/synth/system_rst_ps7_0_100M_0.vhd:74]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1271' bound to instance 'U0' of component 'proc_sys_reset' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/synth/system_rst_ps7_0_100M_0.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset__parameterized1' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1330]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1399]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1415]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1441]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1464]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1488]
+INFO: [Synth 8-638] synthesizing module 'lpf__parameterized0' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149029' bound to instance 'POR_SRL_I' of component 'SRL16' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:873]
+INFO: [Synth 8-256] done synthesizing module 'lpf__parameterized0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset__parameterized1' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1330]
+INFO: [Synth 8-256] done synthesizing module 'system_rst_ps7_0_100M_0' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/synth/system_rst_ps7_0_100M_0.vhd:74]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:291]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:291]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:291]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:291]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'system_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:291]
+INFO: [Synth 8-6155] done synthesizing module 'system' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/synth/system.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (0#1) [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
+WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_1LX95IS does not have driver. [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:676]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_CTRL_s_axi.v:314]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-7129] Port prmry_aclk in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_resetn in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scndry_resetn in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET1_GMII_COL in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET1_GMII_CRS in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET1_GMII_RX_DV in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET1_GMII_RX_ER in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[7] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[6] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[5] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[4] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[3] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[1] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[0] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_GP0_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_GP0_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_GP1_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_GP1_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ACP_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ACP_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_HP0_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_HP0_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_HP1_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_HP1_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_HP2_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_HP2_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_HP3_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_HP3_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FCLK_CLKTRIG3_N in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FCLK_CLKTRIG2_N in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FCLK_CLKTRIG1_N in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FCLK_CLKTRIG0_N in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[31] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[30] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[29] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[28] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[27] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[26] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[25] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[24] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[23] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[22] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[21] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[20] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[19] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[18] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[17] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[16] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[15] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[14] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[13] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[12] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[11] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[10] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[9] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[8] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[7] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[6] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[5] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[4] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[3] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[1] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[0] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_VALID in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[3] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[1] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[0] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized128 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized128 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized128 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized128 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized128 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized86 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized86 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized86 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized86 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized86 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_eq_im__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized11 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1566.449 ; gain = 864.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1566.449 ; gain = 864.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1566.449 ; gain = 864.125
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.664 . Memory (MB): peak = 1566.449 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2607 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/system_processing_system7_0_1.xdc] for cell 'system_i/processing_system7_0/inst'
+Finished Parsing XDC File [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/system_processing_system7_0_1.xdc] for cell 'system_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_1/system_processing_system7_0_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/bd_44e3_psr_aclk_0_board.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/bd_44e3_psr_aclk_0_board.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/bd_44e3_psr_aclk_0.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/bd_44e3_psr_aclk_0.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr_aclk/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/bd_44e3_psr_aclk_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/smartconnect.xdc] for cell 'system_i/axi_smc/inst'
+Finished Parsing XDC File [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/smartconnect.xdc] for cell 'system_i/axi_smc/inst'
+Parsing XDC File [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Parsing XDC File [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 14 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1715.211 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  FDE => FDRE: 6 instances
+  FDR => FDRE: 24 instances
+  SRL16 => SRL16E: 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 1715.211 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1715.211 ; gain = 1012.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1715.211 ; gain = 1012.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/processing_system7_0/inst. (constraint file  E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.runs/synth_1/dont_touch.xdc, line 62).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst. (constraint file  E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.runs/synth_1/dont_touch.xdc, line 89).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/rst_ps7_0_100M/U0. (constraint file  E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.runs/synth_1/dont_touch.xdc, line 92).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/processing_system7_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/bgn_inference_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/s00_nodes/s00_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/s00_nodes/s00_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/s00_nodes/s00_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/s00_nodes/s00_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/s00_nodes/s00_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/s00_nodes/s00_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/s00_entry_pipeline/s00_mmu/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/s00_entry_pipeline/s00_si_converter/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_smc/inst/s00_entry_pipeline/s00_transaction_regulator/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1715.211 ; gain = 1012.887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.gen_write.write_cs_reg' in module 'sc_mmu_v1_0_14_decerr_slave'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_endpoint.w_state_reg' in module 'sc_mmu_v1_0_14_top'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_endpoint.r_state_reg' in module 'sc_mmu_v1_0_14_top'
+INFO: [Synth 8-802] inferred FSM for state register 'w_state_reg' in module 'sc_si_converter_v1_0_14_axilite_conv'
+INFO: [Synth 8-802] inferred FSM for state register 'r_state_reg' in module 'sc_si_converter_v1_0_14_axilite_conv'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'bgn_inference_CTRL_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'bgn_inference_CTRL_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            P_WRITE_IDLE |                              001 |                               00
+            P_WRITE_DATA |                              010 |                               01
+            P_WRITE_RESP |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.gen_write.write_cs_reg' using encoding 'one-hot' in module 'sc_mmu_v1_0_14_decerr_slave'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 | 00000000000000000000000000000000
+*
+                 W_STALL |                               01 | 00000000000000000000000000000001
+               W_PENDING |                               10 | 00000000000000000000000000000010
+                W_DECERR |                               11 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_endpoint.w_state_reg' using encoding 'sequential' in module 'sc_mmu_v1_0_14_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 | 00000000000000000000000000000000
+*
+                 R_STALL |                               01 | 00000000000000000000000000000001
+               R_PENDING |                               10 | 00000000000000000000000000000010
+                R_DECERR |                               11 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_endpoint.r_state_reg' using encoding 'sequential' in module 'sc_mmu_v1_0_14_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  W_IDLE |                              000 | 00000000000000000000000000000000
+                    W_RX |                              001 | 00000000000000000000000000000001
+                    W_TX |                              010 | 00000000000000000000000000000010
+              W_COMPLETE |                              011 | 00000000000000000000000000000100
+               W_RECOVER |                              100 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'w_state_reg' using encoding 'sequential' in module 'sc_si_converter_v1_0_14_axilite_conv'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  R_IDLE |                               00 | 00000000000000000000000000000000
+               R_PENDING |                               01 | 00000000000000000000000000000001
+                    R_RX |                               10 | 00000000000000000000000000000010
+                    R_TX |                               11 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_state_reg' using encoding 'sequential' in module 'sc_si_converter_v1_0_14_axilite_conv'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'bgn_inference_CTRL_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'bgn_inference_CTRL_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1715.211 ; gain = 1012.887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'flt_add_dsp:/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'flt_add_dsp:/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsub_32ns_32ns_32_5_full_dsp_1_U2/bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsub_32ns_32ns_32_5_full_dsp_1_U2/bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsub_32ns_32ns_32_5_full_dsp_1_U2/bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsub_32ns_32ns_32_5_full_dsp_1_U2/bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fdiv_32ns_32ns_32_12_no_dsp_1_U3/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fdiv_32ns_32ns_32_12_no_dsp_1_U3/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fdiv_32ns_32ns_32_12_no_dsp_1_U3/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fdiv_32ns_32ns_32_12_no_dsp_1_U3/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fdiv_32ns_32ns_32_12_no_dsp_1_U3/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized27) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fdiv_32ns_32ns_32_12_no_dsp_1_U3/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fdiv_32ns_32ns_32_12_no_dsp_1_U3/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized27) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fdiv_32ns_32ns_32_12_no_dsp_1_U3/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fdiv_32ns_32ns_32_12_no_dsp_1_U3/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fdiv_32ns_32ns_32_12_no_dsp_1_U3/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized27) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized27) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/sitofp_32ns_32_5_no_dsp_1_U4/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized27) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized27) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/fsqrt_32ns_32ns_32_12_no_dsp_1_U6/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_fu_93/fmul_32ns_32ns_32_4_max_dsp_1_U19/bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_fu_93/fmul_32ns_32ns_32_4_max_dsp_1_U19/bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_fu_93/fmul_32ns_32ns_32_4_max_dsp_1_U19/bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_fu_93/fmul_32ns_32ns_32_4_max_dsp_1_U19/bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U26/bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U26/bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U26/bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U26/bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/fcmp_32ns_32ns_1_2_no_dsp_1_U27/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/fcmp_32ns_32ns_1_2_no_dsp_1_U27/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/fcmp_32ns_32ns_1_2_no_dsp_1_U27/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/fcmp_32ns_32ns_1_2_no_dsp_1_U27/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/fcmp_32ns_32ns_1_2_no_dsp_1_U27/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/fcmp_32ns_32ns_1_2_no_dsp_1_U27/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'system_i/bgn_inference_0/inst/fcmp_32ns_32ns_1_2_no_dsp_1_U27/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'system_i/bgn_inference_0/inst/fcmp_32ns_32ns_1_2_no_dsp_1_U27/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8ns_5ns_5ns_12_4_1_U7/bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '12' bits. [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1.v:44]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8ns_5ns_5ns_12_4_1_U7/bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '12' bits. [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1.v:36]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8ns_5ns_5ns_12_4_1_U7/bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '25' to '12' bits. [e:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1.v:34]
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module bd_44e3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module bd_44e3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module bd_44e3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module bd_44e3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module bd_44e3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module bd_44e3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module bd_44e3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module bd_44e3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/FDRE_inst) is unused and will be removed from module bd_44e3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module bd_44e3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module bd_44e3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module bd_44e3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_19_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_19_viv.
+INFO: [Synth 8-3332] Sequential element (inst/CTRL_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module system_bgn_inference_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/CTRL_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module system_bgn_inference_0_0.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_19_viv__parameterized9.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_19_viv__parameterized9.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (FDRE_inst) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module proc_sys_reset__parameterized1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1715.211 ; gain = 1012.887
+---------------------------------------------------------------------------------
+ Sort Area is  mac_muladd_8ns_5ns_5ns_12_4_1_U7/bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1_DSP48_0_U/p_reg_reg_0 : 0 0 : 1147 1147 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1952.891 ; gain = 1250.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 2009.000 ; gain = 1306.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_fu_79/layer1_w_U/q0_reg_0_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/CTRL_s_axi_U/int_input_img/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/CTRL_s_axi_U/int_input_img/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2016.879 ; gain = 1314.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2195.418 ; gain = 1493.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2195.418 ; gain = 1493.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2195.418 ; gain = 1493.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2195.418 ; gain = 1493.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2210.539 ; gain = 1508.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2210.539 ; gain = 1508.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++----------------------------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                         | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp48e1_wrapper_227                                 | Dynamic         | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized0_181                 | C+A'*B'         | 24     | 16     | 35     | -      | 35     | 1    | 1    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper                                     | Dynamic         | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized0                     | C+A'*B'         | 24     | 16     | 35     | -      | 35     | 1    | 1    | 0    | -    | -     | 0    | 0    | 
+|bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1_DSP48_0 | (C'+(A'*B')')'  | 8      | 5      | 5      | -      | 12     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1                     | (A*B)'          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized2                     | PCIN>>17+(A*B)' | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized3                     | PCIN+A:B+C      | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++----------------------------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BIBUF     |   130|
+|2     |BUFG      |     1|
+|3     |CARRY4    |    21|
+|4     |DSP48E1   |     8|
+|10    |LUT1      |   136|
+|11    |LUT2      |   388|
+|12    |LUT3      |  1478|
+|13    |LUT4      |   357|
+|14    |LUT5      |   329|
+|15    |LUT6      |   456|
+|16    |MUXCY     |  1332|
+|17    |MUXF7     |     3|
+|18    |PS7       |     1|
+|19    |RAM128X1S |    32|
+|20    |RAMB18E1  |     1|
+|21    |RAMB36E1  |    52|
+|73    |SRL16     |     2|
+|74    |SRL16E    |   110|
+|75    |SRLC32E   |    12|
+|76    |XORCY     |  1159|
+|77    |FDCE      |    42|
+|78    |FDE       |     6|
+|79    |FDR       |     8|
+|80    |FDRE      |  2799|
+|81    |FDSE      |    45|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2210.539 ; gain = 1508.215
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 15490 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:47 . Memory (MB): peak = 2210.539 ; gain = 1359.453
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2210.539 ; gain = 1508.215
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.148 . Memory (MB): peak = 2215.672 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2624 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2224.320 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 429 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 381 instances
+  FDE => FDRE: 6 instances
+  FDR => FDRE: 8 instances
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 32 instances
+  SRL16 => SRL16E: 2 instances
+
+Synth Design complete | Checksum: 583e50cb
+INFO: [Common 17-83] Releasing license: Synthesis
+285 Infos, 171 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:01 . Memory (MB): peak = 2224.320 ; gain = 1755.398
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2224.320 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702/edt_zc702.runs/synth_1/system_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 15 20:16:53 2026...

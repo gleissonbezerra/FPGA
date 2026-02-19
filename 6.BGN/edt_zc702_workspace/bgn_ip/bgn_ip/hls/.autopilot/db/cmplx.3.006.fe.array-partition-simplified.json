@@ -1,0 +1,20 @@
+{
+  "0": {
+    "basicblocks": 9,
+    "calls": "",
+    "file": "top.cpp",
+    "fileloc": 20,
+    "instructions": 167,
+    "loads": {
+      "G": 5,
+      "L": 1,
+      "T": 1
+    },
+    "name": "bgn_inference",
+    "stores": {
+      "L": 1,
+      "T": 1
+    },
+    "total_instructions": 167
+  }
+}

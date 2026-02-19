@@ -1,0 +1,94 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: top.cpp, Line: 53, Column: 60 }
+Function:        _Z13bgn_inferenceP7ap_uintILi32EEPi
+Args:            
+  - Callee:          'hls::sqrt(float)'
+    DebugLoc:        { File: 'C:\scratch\2024.2\hls_product\495\2024.2\src\shared\hls\clib\hlsmath\src\c++\sqrtfloat.cpp', 
+                       Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'bgn_inference(ap_uint<32>*, int*)'
+    DebugLoc:        { File: top.cpp, Line: 20, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: top.cpp, Line: 49, Column: 31 }
+Function:        _Z13bgn_inferenceP7ap_uintILi32EEPi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'my_popcount(ap_uint<32>)'
+    DebugLoc:        { File: top.cpp, Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'bgn_inference(ap_uint<32>*, int*)'
+    DebugLoc:        { File: top.cpp, Line: 20, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: top.cpp, Line: 13, Column: 22 }
+Function:        _Z13bgn_inferenceP7ap_uintILi32EEPi
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: top.cpp, Line: 20, Column: 0 }
+Function:        _Z13bgn_inferenceP7ap_uintILi32EEPi
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' ('
+  - LoopLoc:         'top.cpp:13:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          bgn_inference
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: top.cpp, Line: 53, Column: 60 }
+Function:        _Z13bgn_inferenceP7ap_uintILi32EEPi
+Args:            
+  - Callee:          'hls::sqrt(float)'
+    DebugLoc:        { File: 'C:\scratch\2024.2\hls_product\495\2024.2\src\shared\hls\clib\hlsmath\src\c++\sqrtfloat.cpp', 
+                       Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'bgn_inference(ap_uint<32>*, int*)'
+    DebugLoc:        { File: top.cpp, Line: 20, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_bgn_inference_ir
+Args:            
+  - Callee:          'bgn_inference(ap_uint<32>*, int*)'
+    DebugLoc:        { File: top.cpp, Line: 20, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_bgn_inference_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: top.cpp, Line: 20, Column: 0 }
+Function:        _Z13bgn_inferenceP7ap_uintILi32EEPi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::sqrt(float)'
+    DebugLoc:        { File: 'C:\scratch\2024.2\hls_product\495\2024.2\src\shared\hls\clib\hlsmath\src\c++\sqrtfloat.cpp', 
+                       Line: 6, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'bgn_inference(ap_uint<32>*, int*)'
+    DebugLoc:        { File: top.cpp, Line: 20, Column: 0 }
+  - String:          ''''
+...

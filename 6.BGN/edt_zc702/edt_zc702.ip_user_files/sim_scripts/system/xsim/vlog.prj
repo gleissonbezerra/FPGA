@@ -1,0 +1,53 @@
+verilog xil_defaultlib --include "D:/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../edt_zc702.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../edt_zc702.gen/sources_1/bd/system/ipshared/86fe/hdl" --include "../../../../edt_zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_0/drivers/bgn_inference_v1_0/src" --include "../../../../edt_zc702.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" --include "../../../../edt_zc702.gen/sources_1/bd/system/ipshared/0127/hdl/verilog" \
+"../../../bd/system/ip/system_processing_system7_0_1/sim/system_processing_system7_0_1.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1_ip.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1_ip.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1_ip.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1_ip.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1_ip.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1_ip.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/ip/bgn_inference_sitofp_32ns_32_5_no_dsp_1_ip.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_mean_ROM_1P_BRAM_1R.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_bn_var_ROM_1P_BRAM_1R.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1_layer1_w_ROM_1P_BRAM_1R.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_b_ROM_AUTO_1R.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2_layer2_w_ROM_1P_BRAM_1R.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_CTRL_s_axi.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fadd_32ns_32ns_32_5_full_dsp_1.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fcmp_32ns_32ns_1_2_no_dsp_1.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fdiv_32ns_32ns_32_12_no_dsp_1.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_flow_control_loop_pipe_sequential_init.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fmul_32ns_32ns_32_4_max_dsp_1.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fsqrt_32ns_32ns_32_12_no_dsp_1.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_fsub_32ns_32ns_32_5_full_dsp_1.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_mac_muladd_8ns_5ns_5ns_12_4_1.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference_sitofp_32ns_32_5_no_dsp_1.v" \
+"../../../../edt_zc702.gen/sources_1/bd/system/ipshared/51e2/hdl/verilog/bgn_inference.v" \
+"../../../bd/system/ip/system_bgn_inference_0_0/sim/system_bgn_inference_0_0.v" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_0/sim/bd_44e3_one_0.v" \
+
+sv xil_defaultlib --include "D:/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../edt_zc702.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../edt_zc702.gen/sources_1/bd/system/ipshared/86fe/hdl" --include "../../../../edt_zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_0/drivers/bgn_inference_v1_0/src" --include "../../../../edt_zc702.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" --include "../../../../edt_zc702.gen/sources_1/bd/system/ipshared/0127/hdl/verilog" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/sim/bd_44e3_s00mmu_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/sim/bd_44e3_s00tr_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_4/sim/bd_44e3_s00sic_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_5/sim/bd_44e3_s00a2s_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_6/sim/bd_44e3_sarn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_7/sim/bd_44e3_srn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_8/sim/bd_44e3_sawn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_9/sim/bd_44e3_swn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_10/sim/bd_44e3_sbn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_11/sim/bd_44e3_m00s2a_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_12/sim/bd_44e3_m00e_0.sv" \
+
+verilog xil_defaultlib --include "D:/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../edt_zc702.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../edt_zc702.gen/sources_1/bd/system/ipshared/86fe/hdl" --include "../../../../edt_zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_0/drivers/bgn_inference_v1_0/src" --include "../../../../edt_zc702.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" --include "../../../../edt_zc702.gen/sources_1/bd/system/ipshared/0127/hdl/verilog" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/sim/bd_44e3.v" \
+"../../../bd/system/ip/system_axi_smc_0/sim/system_axi_smc_0.v" \
+"../../../bd/system/sim/system.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

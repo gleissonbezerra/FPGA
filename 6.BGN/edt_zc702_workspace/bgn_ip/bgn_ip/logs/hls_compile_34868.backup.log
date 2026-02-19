@@ -1,0 +1,239 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=weights.h' from E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/weights.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=top.cpp' from E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/top.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=bgn_inference' from E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-2' from E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-2'
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.704 seconds; current allocated memory: 264.941 MB.
+INFO: [HLS 200-10] Analyzing design file 'top.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 13.283 seconds; current allocated memory: 271.953 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 250 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,301 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,662 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,506 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,506 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,507 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,507 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,507 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,507 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,508 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,508 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,507 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13,417 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,534 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,539 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,548 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: E:/FPGA/2024/MicroPhase-Z7-Lite-Board/BGN/edt_zc702_workspace/bgn_ip/bgn_ip/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'my_popcount(ap_uint<32>)' into 'bgn_inference(ap_uint<32>*, int*)' (top.cpp:47:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_63_2' is marked as complete unroll implied by the pipeline pragma (top.cpp:63:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_39_1' is marked as complete unroll implied by the pipeline pragma (top.cpp:39:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_16_1' is marked as complete unroll implied by the pipeline pragma (top.cpp:16:22)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_63_2' (top.cpp:63:26) in function 'bgn_inference' completely with a factor of 128 (top.cpp:25:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_39_1' (top.cpp:39:26) in function 'bgn_inference' completely with a factor of 25 (top.cpp:25:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_16_1' (top.cpp:16:22) in function 'bgn_inference' completely with a factor of 32 (top.cpp:25:0)
+INFO: [HLS 214-178] Inlining function 'hls::sqrt(float)' into 'bgn_inference(ap_uint<32>*, int*)' (top.cpp:25:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=25 dim=1' for array 'layer1_w' due to pipeline pragma (top.cpp:34:9)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=64 dim=1' for array 'layer2_w' due to pipeline pragma (top.cpp:61:9)
+INFO: [HLS 214-248] Applying array_partition to '_ZL8layer2_w': Cyclic partitioning with factor 64 on dimension 1. (./weights.h:9:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL8layer1_w': Cyclic partitioning with factor 25 on dimension 1. (./weights.h:5:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 7.247 seconds; current allocated memory: 273.250 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 273.250 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.246 seconds; current allocated memory: 293.609 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.126 seconds; current allocated memory: 295.520 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'bgn_inference' (top.cpp:18:37)...24 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.105 seconds; current allocated memory: 327.059 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.995 seconds; current allocated memory: 343.875 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'bgn_inference' ...
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bgn_inference_Pipeline_LAYER1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LAYER1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 37, loop 'LAYER1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.954 seconds; current allocated memory: 386.910 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.848 seconds; current allocated memory: 386.910 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bgn_inference_Pipeline_LAYER2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LAYER2'.
+WARNING: [HLS 200-880] The II Violation in module 'bgn_inference_Pipeline_LAYER2' (loop 'LAYER2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fcmp' operation 1 bit ('tmp_2', top.cpp:66) and 'icmp' operation 1 bit ('icmp_ln66_2', top.cpp:66).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 648, loop 'LAYER2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.732 seconds; current allocated memory: 391.613 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.238 seconds; current allocated memory: 398.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bgn_inference' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.255 seconds; current allocated memory: 400.375 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 402.270 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bgn_inference_Pipeline_LAYER1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bgn_inference_Pipeline_LAYER1' pipeline 'LAYER1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'bgn_inference_Pipeline_LAYER1' is 7228 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_12_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_12_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_5_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bgn_inference_Pipeline_LAYER1'.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_7_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_8_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_9_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_10_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_11_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_12_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_13_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_14_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_15_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_16_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_17_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_18_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_19_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_20_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_21_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_22_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_23_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_p_ZL8layer1_w_24_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_bn_mean_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER1_bn_var_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.198 seconds; current allocated memory: 436.055 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bgn_inference_Pipeline_LAYER2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bgn_inference_Pipeline_LAYER2' pipeline 'LAYER2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'bgn_inference_Pipeline_LAYER2' is 489079 from HDL expression: ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 63 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bgn_inference_Pipeline_LAYER2'.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_layer2_b_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_7_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_8_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_9_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_10_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_11_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_12_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_13_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_14_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_15_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_16_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_17_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_18_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_19_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_20_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_21_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_22_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_23_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_24_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_25_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_26_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_27_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_28_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_29_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_30_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_31_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_32_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_33_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_34_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_35_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_36_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_37_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_38_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_39_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_40_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_41_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_42_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_43_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_44_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_45_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_46_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_47_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_48_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_49_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_50_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_51_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_52_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_53_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_54_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_55_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_56_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_57_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_58_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_59_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_60_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_61_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_62_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bgn_inference_bgn_inference_Pipeline_LAYER2_p_ZL8layer2_w_63_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 8.067 seconds; current allocated memory: 543.289 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bgn_inference' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bgn_inference/input_img' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bgn_inference/prediction' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'bgn_inference' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'prediction', 'input_img' and 'return' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bgn_inference'.
+INFO: [RTMG 210-278] Implementing memory 'bgn_inference_hidden_out_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.656 seconds; current allocated memory: 563.559 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 3.354 seconds; current allocated memory: 573.410 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.767 seconds; current allocated memory: 602.348 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for bgn_inference.
+INFO: [VLOG 209-307] Generating Verilog RTL for bgn_inference.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.17 MHz
+INFO: [HLS 200-112] Total CPU user time: 13 seconds. Total CPU system time: 2 seconds. Total elapsed time: 45.05 seconds; peak allocated memory: 602.348 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 48s

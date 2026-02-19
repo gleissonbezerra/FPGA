@@ -1,0 +1,244 @@
+
+
+================================================================
+== Synthesis Summary Report of 'bgn_inference'
+================================================================
++ General Information: 
+    * Date:           Sun Feb 15 20:09:01 2026
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        bgn_ip
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+-----------+--------+-----------+-----------+-----+
+    |                      Modules                     |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |           |        |           |           |     |
+    |                      & Loops                     |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |   DSP  |     FF    |    LUT    | URAM|
+    +--------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+-----------+--------+-----------+-----------+-----+
+    |+ bgn_inference                                   |  Timing|  -0.33|     8371|  8.371e+04|         -|     8372|     -|        no|  104 (37%)|  8 (3%)|  3518 (3%)|  3459 (6%)|    -|
+    | + bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1  |       -|   0.01|     3237|  3.237e+04|         -|     3237|     -|        no|   72 (25%)|  3 (1%)|  2382 (2%)|  1843 (3%)|    -|
+    |  o LAYER1_VITIS_LOOP_42_1                        |       -|   7.30|     3235|  3.235e+04|        37|        1|  3200|       yes|          -|       -|          -|          -|    -|
+    | + bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2  |  Timing|  -0.33|     5130|  5.130e+04|         -|     5130|     -|        no|   32 (11%)|  3 (1%)|  674 (~0%)|   823 (1%)|    -|
+    |  o LAYER2_VITIS_LOOP_64_2                        |      II|   7.30|     5128|  5.128e+04|        13|        4|  1280|       yes|          -|       -|          -|          -|    -|
+    +--------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+-----------+--------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++------------+------------+---------------+--------+----------+
+| Interface  | Data Width | Address Width | Offset | Register |
++------------+------------+---------------+--------+----------+
+| s_axi_CTRL | 32         | 8             | 128    | 0        |
++------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++------------+-----------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface  | Register        | Offset | Width | Access | Description                      | Bit Fields                                                           |
++------------+-----------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_CTRL | CTRL            | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CTRL | GIER            | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_CTRL | IP_IER          | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CTRL | IP_ISR          | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_CTRL | prediction      | 0x10   | 32    | R      | Data signal of prediction        |                                                                      |
+| s_axi_CTRL | prediction_ctrl | 0x14   | 32    | R      | Control signal of prediction     | 0=prediction_ap_vld                                                  |
++------------+-----------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+--------------+
+| Argument   | Direction | Datatype     |
++------------+-----------+--------------+
+| input_img  | in        | ap_uint<32>* |
+| prediction | out       | int*         |
++------------+-----------+--------------+
+
+* SW-to-HW Mapping
++------------+--------------+----------+-------------------------------------------+
+| Argument   | HW Interface | HW Type  | HW Info                                   |
++------------+--------------+----------+-------------------------------------------+
+| input_img  | s_axi_CTRL   | memory   | name=input_img offset=128 range=128       |
+| prediction | s_axi_CTRL   | register | name=prediction offset=0x10 range=32      |
+| prediction | s_axi_CTRL   | register | name=prediction_ctrl offset=0x14 range=32 |
++------------+--------------+----------+-------------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------------+-----+--------+------------------+--------+-----------+---------+
+| Name                                             | DSP | Pragma | Variable         | Op     | Impl      | Latency |
++--------------------------------------------------+-----+--------+------------------+--------+-----------+---------+
+| + bgn_inference                                  | 8   |        |                  |        |           |         |
+|  + bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1 | 3   |        |                  |        |           |         |
+|    icmp_ln38_fu_281_p2                           |     |        | icmp_ln38        | seteq  | auto      | 0       |
+|    add_ln38_fu_287_p2                            |     |        | add_ln38         | add    | fabric    | 0       |
+|    icmp_ln42_fu_299_p2                           |     |        | icmp_ln42        | seteq  | auto      | 0       |
+|    select_ln38_fu_305_p3                         |     |        | select_ln38      | select | auto_sel  | 0       |
+|    select_ln38_1_fu_1011_p3                      |     |        | select_ln38_1    | select | auto_sel  | 0       |
+|    add_ln38_1_fu_313_p2                          |     |        | add_ln38_1       | add    | fabric    | 0       |
+|    select_ln38_2_fu_319_p3                       |     |        | select_ln38_2    | select | auto_sel  | 0       |
+|    mac_muladd_8ns_5ns_5ns_12_4_1_U7              | 1   |        | mul_ln42         | mul    | dsp_slice | 3       |
+|    mac_muladd_8ns_5ns_5ns_12_4_1_U7              | 1   |        | add_ln44         | add    | dsp_slice | 3       |
+|    xor_ln48_fu_375_p2                            |     |        | xor_ln48         | xor    | auto      | 0       |
+|    xnor_result_fu_381_p2                         |     |        | xnor_result      | xor    | auto      | 0       |
+|    select_ln15_fu_403_p3                         |     |        | select_ln15      | select | auto_sel  | 0       |
+|    cnt_1_fu_411_p3                               |     |        | cnt_1            | select | auto_sel  | 0       |
+|    cnt_2_fu_427_p2                               |     |        | cnt_2            | add    | fabric    | 0       |
+|    cnt_3_fu_433_p3                               |     |        | cnt_3            | select | auto_sel  | 0       |
+|    add_ln15_fu_453_p2                            |     |        | add_ln15         | add    | fabric    | 0       |
+|    cnt_4_fu_459_p3                               |     |        | cnt_4            | select | auto_sel  | 0       |
+|    cnt_5_fu_683_p2                               |     |        | cnt_5            | add    | fabric    | 0       |
+|    cnt_6_fu_688_p3                               |     |        | cnt_6            | select | auto_sel  | 0       |
+|    add_ln15_2_fu_694_p2                          |     |        | add_ln15_2       | add    | fabric    | 0       |
+|    cnt_7_fu_700_p3                               |     |        | cnt_7            | select | auto_sel  | 0       |
+|    cnt_8_fu_707_p2                               |     |        | cnt_8            | add    | fabric    | 0       |
+|    cnt_9_fu_713_p3                               |     |        | cnt_9            | select | auto_sel  | 0       |
+|    add_ln15_4_fu_724_p2                          |     |        | add_ln15_4       | add    | fabric    | 0       |
+|    cnt_10_fu_730_p3                              |     |        | cnt_10           | select | auto_sel  | 0       |
+|    cnt_11_fu_737_p2                              |     |        | cnt_11           | add    | fabric    | 0       |
+|    cnt_12_fu_743_p3                              |     |        | cnt_12           | select | auto_sel  | 0       |
+|    add_ln15_6_fu_748_p2                          |     |        | add_ln15_6       | add    | fabric    | 0       |
+|    cnt_13_fu_754_p3                              |     |        | cnt_13           | select | auto_sel  | 0       |
+|    cnt_14_fu_761_p2                              |     |        | cnt_14           | add    | fabric    | 0       |
+|    cnt_15_fu_767_p3                              |     |        | cnt_15           | select | auto_sel  | 0       |
+|    add_ln15_8_fu_774_p2                          |     |        | add_ln15_8       | add    | fabric    | 0       |
+|    cnt_16_fu_780_p3                              |     |        | cnt_16           | select | auto_sel  | 0       |
+|    cnt_17_fu_787_p2                              |     |        | cnt_17           | add    | fabric    | 0       |
+|    cnt_18_fu_792_p3                              |     |        | cnt_18           | select | auto_sel  | 0       |
+|    add_ln15_10_fu_798_p2                         |     |        | add_ln15_10      | add    | fabric    | 0       |
+|    cnt_19_fu_804_p3                              |     |        | cnt_19           | select | auto_sel  | 0       |
+|    cnt_20_fu_811_p2                              |     |        | cnt_20           | add    | fabric    | 0       |
+|    cnt_21_fu_817_p3                              |     |        | cnt_21           | select | auto_sel  | 0       |
+|    add_ln15_12_fu_828_p2                         |     |        | add_ln15_12      | add    | fabric    | 0       |
+|    cnt_22_fu_834_p3                              |     |        | cnt_22           | select | auto_sel  | 0       |
+|    cnt_23_fu_839_p2                              |     |        | cnt_23           | add    | fabric    | 0       |
+|    cnt_24_fu_845_p3                              |     |        | cnt_24           | select | auto_sel  | 0       |
+|    add_ln15_14_fu_852_p2                         |     |        | add_ln15_14      | add    | fabric    | 0       |
+|    cnt_25_fu_858_p3                              |     |        | cnt_25           | select | auto_sel  | 0       |
+|    cnt_26_fu_865_p2                              |     |        | cnt_26           | add    | fabric    | 0       |
+|    cnt_27_fu_871_p3                              |     |        | cnt_27           | select | auto_sel  | 0       |
+|    add_ln15_16_fu_878_p2                         |     |        | add_ln15_16      | add    | fabric    | 0       |
+|    cnt_28_fu_883_p3                              |     |        | cnt_28           | select | auto_sel  | 0       |
+|    cnt_29_fu_889_p2                              |     |        | cnt_29           | add    | fabric    | 0       |
+|    cnt_30_fu_895_p3                              |     |        | cnt_30           | select | auto_sel  | 0       |
+|    add_ln15_18_fu_902_p2                         |     |        | add_ln15_18      | add    | fabric    | 0       |
+|    cnt_31_fu_908_p3                              |     |        | cnt_31           | select | auto_sel  | 0       |
+|    cnt_32_fu_915_p2                              |     |        | cnt_32           | add    | fabric    | 0       |
+|    cnt_33_fu_921_p3                              |     |        | cnt_33           | select | auto_sel  | 0       |
+|    add_ln15_20_fu_926_p2                         |     |        | add_ln15_20      | add    | fabric    | 0       |
+|    cnt_34_fu_932_p3                              |     |        | cnt_34           | select | auto_sel  | 0       |
+|    cnt_35_fu_939_p2                              |     |        | cnt_35           | add    | fabric    | 0       |
+|    cnt_36_fu_945_p3                              |     |        | cnt_36           | select | auto_sel  | 0       |
+|    add_ln15_22_fu_952_p2                         |     |        | add_ln15_22      | add    | fabric    | 0       |
+|    cnt_37_fu_958_p3                              |     |        | cnt_37           | select | auto_sel  | 0       |
+|    cnt_38_fu_965_p2                              |     |        | cnt_38           | add    | fabric    | 0       |
+|    cnt_39_fu_970_p3                              |     |        | cnt_39           | select | auto_sel  | 0       |
+|    add_ln15_24_fu_976_p2                         |     |        | add_ln15_24      | add    | fabric    | 0       |
+|    cnt_40_fu_982_p3                              |     |        | cnt_40           | select | auto_sel  | 0       |
+|    cnt_41_fu_989_p2                              |     |        | cnt_41           | add    | fabric    | 0       |
+|    cnt_42_fu_995_p3                              |     |        | cnt_42           | select | auto_sel  | 0       |
+|    add_ln15_26_fu_1002_p2                        |     |        | add_ln15_26      | add    | fabric    | 0       |
+|    cnt_43_fu_1018_p3                             |     |        | cnt_43           | select | auto_sel  | 0       |
+|    cnt_44_fu_1023_p2                             |     |        | cnt_44           | add    | fabric    | 0       |
+|    cnt_45_fu_1029_p3                             |     |        | cnt_45           | select | auto_sel  | 0       |
+|    add_ln15_28_fu_1047_p2                        |     |        | add_ln15_28      | add    | fabric    | 0       |
+|    cnt_46_fu_1053_p3                             |     |        | cnt_46           | select | auto_sel  | 0       |
+|    total_popcount_1_fu_1065_p2                   |     |        | total_popcount_1 | add    | fabric    | 0       |
+|    add_ln42_fu_331_p2                            |     |        | add_ln42         | add    | fabric    | 0       |
+|    icmp_ln42_1_fu_337_p2                         |     |        | icmp_ln42_1      | seteq  | auto      | 0       |
+|    sitofp_32ns_32_5_no_dsp_1_U4                  |     |        | conv             | sitofp | auto      | 4       |
+|    fsub_32ns_32ns_32_5_full_dsp_1_U2             | 2   |        | sub              | fsub   | fulldsp   | 4       |
+|    fsqrt_32ns_32ns_32_12_no_dsp_1_U6             |     |        | tmp              | fsqrt  | fabric    | 11      |
+|    fdiv_32ns_32ns_32_12_no_dsp_1_U3              |     |        | val              | fdiv   | fabric    | 11      |
+|    icmp_ln54_fu_1097_p2                          |     |        | icmp_ln54        | setne  | auto      | 0       |
+|    icmp_ln54_1_fu_1103_p2                        |     |        | icmp_ln54_1      | seteq  | auto      | 0       |
+|    or_ln54_fu_1109_p2                            |     |        | or_ln54          | or     | auto      | 0       |
+|    and_ln54_fu_1115_p2                           |     |        | and_ln54         | and    | auto      | 0       |
+|    select_ln54_fu_1121_p3                        |     |        | select_ln54      | select | auto_sel  | 0       |
+|  + bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2 | 3   |        |                  |        |           |         |
+|    icmp_ln61_fu_189_p2                           |     |        | icmp_ln61        | seteq  | auto      | 0       |
+|    add_ln61_fu_195_p2                            |     |        | add_ln61         | add    | fabric    | 0       |
+|    icmp_ln64_fu_204_p2                           |     |        | icmp_ln64        | seteq  | auto      | 0       |
+|    select_ln59_fu_210_p3                         |     |        | select_ln59      | select | auto_sel  | 0       |
+|    add_ln61_1_fu_248_p2                          |     |        | add_ln61_1       | add    | fabric    | 0       |
+|    select_ln61_fu_254_p3                         |     |        | select_ln61      | select | auto_sel  | 0       |
+|    select_ln61_1_fu_311_p3                       |     |        | select_ln61_1    | select | auto_sel  | 0       |
+|    select_ln61_2_fu_330_p3                       |     |        | select_ln61_2    | select | auto_sel  | 0       |
+|    first_iter_1_fu_218_p2                        |     |        | first_iter_1     | seteq  | auto      | 0       |
+|    add_ln66_fu_272_p2                            |     |        | add_ln66         | add    | fabric    | 0       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U19             | 3   |        | mul              | fmul   | maxdsp    | 3       |
+|    add_ln64_fu_229_p2                            |     |        | add_ln64         | add    | fabric    | 0       |
+|    icmp_ln69_fu_371_p2                           |     |        | icmp_ln69        | setne  | auto      | 0       |
+|    icmp_ln69_1_fu_377_p2                         |     |        | icmp_ln69_1      | seteq  | auto      | 0       |
+|    or_ln69_fu_383_p2                             |     |        | or_ln69          | or     | auto      | 0       |
+|    icmp_ln69_2_fu_389_p2                         |     |        | icmp_ln69_2      | setne  | auto      | 0       |
+|    icmp_ln69_3_fu_395_p2                         |     |        | icmp_ln69_3      | seteq  | auto      | 0       |
+|    or_ln69_1_fu_401_p2                           |     |        | or_ln69_1        | or     | auto      | 0       |
+|    and_ln69_fu_407_p2                            |     |        | and_ln69         | and    | auto      | 0       |
+|    and_ln69_1_fu_413_p2                          |     |        | and_ln69_1       | and    | auto      | 0       |
+|    class_idx_2_fu_422_p3                         |     |        | class_idx_2      | select | auto_sel  | 0       |
+|    max_val_1_fu_430_p3                           |     |        | max_val_1        | select | auto_sel  | 0       |
++--------------------------------------------------+-----+--------+------------------+--------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++--------------------------------------------------+--------------+-----------+------+------+--------+------------+--------+---------+------------------+
+| Name                                             | Usage        | Type      | BRAM | URAM | Pragma | Variable   | Impl   | Latency | Bitwidth, Depth, |
+|                                                  |              |           |      |      |        |            |        |         | Banks            |
++--------------------------------------------------+--------------+-----------+------+------+--------+------------+--------+---------+------------------+
+| + bgn_inference                                  |              |           | 104  | 0    |        |            |        |         |                  |
+|   CTRL_s_axi_U                                   | interface    | s_axilite |      |      |        |            |        |         |                  |
+|   hidden_out_U                                   | ram_1p array |           |      |      | yes    | hidden_out | lutram | 1       | 32, 128, 1       |
+|  + bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1 |              |           | 72   | 0    |        |            |        |         |                  |
+|    layer1_w_U                                    | rom_1p       |           | 64   |      | pragma | layer1_w   | bram   | 1       | 32, 32000, 1     |
+|    bn_mean_U                                     | rom_1p       |           | 4    |      | pragma | bn_mean    | bram   | 1       | 32, 1280, 1      |
+|    bn_var_U                                      | rom_1p       |           | 4    |      | pragma | bn_var     | bram   | 1       | 32, 1280, 1      |
+|  + bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2 |              |           | 32   | 0    |        |            |        |         |                  |
+|    layer2_w_U                                    | rom_1p       |           | 32   |      | pragma | layer2_w   | bram   | 1       | 32, 12800, 1     |
+|    layer2_b_U                                    | rom_1p       |           |      |      |        | layer2_b   | auto   | 1       | 32, 10, 1        |
++--------------------------------------------------+--------------+-----------+------+------+--------+------------+--------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++--------------+---------------------------------------------+-----------------------------------------+
+| Type         | Options                                     | Location                                |
++--------------+---------------------------------------------+-----------------------------------------+
+| inline       |                                             | top.cpp:11 in my_popcount               |
+| unroll       |                                             | top.cpp:14 in my_popcount               |
+| interface    | s_axilite port=input_img bundle=CTRL        | top.cpp:22 in bgn_inference, input_img  |
+| interface    | s_axilite port=prediction bundle=CTRL       | top.cpp:23 in bgn_inference, prediction |
+| interface    | s_axilite port=return bundle=CTRL           | top.cpp:24 in bgn_inference, return     |
+| bind_storage | variable=layer1_w type=rom_1p impl=bram     | top.cpp:28 in bgn_inference, layer1_w   |
+| bind_storage | variable=layer2_w type=rom_1p impl=bram     | top.cpp:29 in bgn_inference, layer2_w   |
+| bind_storage | variable=bn_mean type=rom_1p impl=bram      | top.cpp:30 in bgn_inference, bn_mean    |
+| bind_storage | variable=bn_var type=rom_1p impl=bram       | top.cpp:31 in bgn_inference, bn_var     |
+| bind_storage | variable=hidden_out type=ram_1p impl=lutram | top.cpp:35 in bgn_inference, hidden_out |
+| pipeline     | II=1                                        | top.cpp:43 in bgn_inference             |
+| pipeline     | II=1                                        | top.cpp:65 in bgn_inference             |
++--------------+---------------------------------------------+-----------------------------------------+
+
+

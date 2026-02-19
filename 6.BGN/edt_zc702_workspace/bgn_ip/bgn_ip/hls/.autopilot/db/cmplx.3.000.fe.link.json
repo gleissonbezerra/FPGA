@@ -1,0 +1,38 @@
+{
+  "0": {
+    "basicblocks": 30,
+    "calls": "1 2",
+    "file": "top.cpp",
+    "fileloc": 20,
+    "instructions": 128,
+    "loads": {
+      "G": 5,
+      "L": 2,
+      "T": 1
+    },
+    "name": "bgn_inference",
+    "stores": {
+      "L": 3,
+      "T": 1
+    },
+    "total_instructions": 262
+  },
+  "1": {
+    "basicblocks": 9,
+    "calls": "",
+    "file": "top.cpp",
+    "fileloc": 10,
+    "instructions": 23,
+    "name": "my_popcount",
+    "total_instructions": 44
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "sqrtfloat.cpp",
+    "fileloc": 6,
+    "instructions": 2,
+    "name": "sqrt",
+    "total_instructions": 2
+  }
+}

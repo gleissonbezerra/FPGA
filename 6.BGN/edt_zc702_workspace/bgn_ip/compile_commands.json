@@ -1,0 +1,15 @@
+[
+  {
+    "directory": "E:\\FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip",
+    "arguments": [
+      "D:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=D:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=D:\\Xilinx\\Vitis\\2024.2\\common\\technology\\autopilot",
+      "-fhlstoplevel=bgn_inference",
+      "-c",
+      "E:\\FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\top.cpp"
+    ],
+    "file": "E:\\FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\top.cpp"
+  }
+]

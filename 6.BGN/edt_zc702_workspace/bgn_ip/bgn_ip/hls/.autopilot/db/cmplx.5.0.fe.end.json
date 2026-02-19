@@ -1,0 +1,53 @@
+{
+    "1": {
+        "name": "bgn_inference_Pipeline_LAYER1_VITIS_LOOP_42_1",
+        "file": "top.cpp",
+        "fileloc": "38",
+        "instructions": "175",
+        "total_instructions": "175",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "G": "3",
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "9"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "bgn_inference",
+        "file": "top.cpp",
+        "fileloc": "20",
+        "instructions": "21",
+        "total_instructions": "281",
+        "calls": "1 2",
+        "basicblocks": "1",
+        "loads": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "bgn_inference_Pipeline_LAYER2_VITIS_LOOP_64_2",
+        "file": "top.cpp",
+        "fileloc": "58",
+        "instructions": "85",
+        "total_instructions": "85",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "G": "2",
+            "L": "10"
+        },
+        "stores": {
+            "L": "14"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

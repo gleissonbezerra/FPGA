@@ -1,0 +1,246 @@
+<ENTRY>
+{
+ "thisFile": "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\bgn_ip\\bgn_ip.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "02/15/26 20:08:31",
+ "timestampMillis": "1771196911819",
+ "buildStep": {
+  "cmdId": "29372b00-c505-438e-878a-0e6b7492937d",
+  "name": "v++",
+  "logFile": "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\bgn_ip\\logs\\bgn_ip.steps.log",
+  "commandLine": "D:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config E:\\FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\hls_config.cfg --work_dir bgn_ip ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "E:\\FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\hls_config.cfg",
+   "--work_dir",
+   "bgn_ip"
+  ],
+  "iniFiles": [
+   {
+    "path": "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\hls_config.cfg",
+    "content": "part=xc7z020clg400-2\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.file=weights.h\nsyn.file=top.cpp\nsyn.top=bgn_inference"
+   }
+  ],
+  "cwd": "E:\\FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/15/26 20:08:31",
+ "timestampMillis": "1771196911819",
+ "status": {
+  "cmdId": "29372b00-c505-438e-878a-0e6b7492937d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "02/15/26 20:08:34",
+ "timestampMillis": "1771196914669",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "bgn_inference",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\weights.h",
+     "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\top.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "02/15/26 20:08:34",
+ "timestampMillis": "1771196914670",
+ "buildStep": {
+  "cmdId": "e06077b2-e241-4802-9f02-61f61630ccdf",
+  "name": "",
+  "logFile": "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\bgn_ip\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "E:\\FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/15/26 20:08:34",
+ "timestampMillis": "1771196914670",
+ "status": {
+  "cmdId": "e06077b2-e241-4802-9f02-61f61630ccdf",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/15/26 20:08:34",
+ "timestampMillis": "1771196914670",
+ "report": {
+  "path": "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\bgn_ip\\hls\\hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/15/26 20:08:34",
+ "timestampMillis": "1771196914670",
+ "report": {
+  "path": "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\bgn_ip\\hls\\syn\\report\\csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/15/26 20:08:34",
+ "timestampMillis": "1771196914671",
+ "report": {
+  "path": "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\bgn_ip\\hls\\syn\\report\\csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/15/26 20:09:02",
+ "timestampMillis": "1771196942205",
+ "report": {
+  "path": "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\bgn_ip\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/15/26 20:09:02",
+ "timestampMillis": "1771196942206",
+ "report": {
+  "path": "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\bgn_ip\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/15/26 20:09:02",
+ "timestampMillis": "1771196942206",
+ "report": {
+  "path": "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\bgn_ip\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/15/26 20:09:02",
+ "timestampMillis": "1771196942206",
+ "status": {
+  "cmdId": "e06077b2-e241-4802-9f02-61f61630ccdf",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/15/26 20:09:02",
+ "timestampMillis": "1771196942306",
+ "status": {
+  "cmdId": "29372b00-c505-438e-878a-0e6b7492937d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/15/26 20:09:02",
+ "timestampMillis": "1771196942318",
+ "report": {
+  "path": "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\bgn_ip\\reports\\v++_compile_bgn_ip_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/15/26 20:09:02",
+ "timestampMillis": "1771196942318",
+ "report": {
+  "path": "E:/FPGA\\2024\\MicroPhase-Z7-Lite-Board\\BGN\\edt_zc702_workspace\\bgn_ip\\bgn_ip\\reports\\.db\\v++_compile_bgn_ip_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
