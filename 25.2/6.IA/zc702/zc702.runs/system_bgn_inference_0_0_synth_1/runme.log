@@ -1,0 +1,549 @@
+
+*** Running vivado
+    with args -log system_bgn_inference_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_bgn_inference_0_0.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Feb 22 22:46:57 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_bgn_inference_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
+Command: synth_design -top system_bgn_inference_0_0 -part xc7z020clg400-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26144
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1310.973 ; gain = 539.871
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_bgn_inference_0_0' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_0/synth/system_bgn_inference_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_weights_l1_ROM_1P_BRAM_1R' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_weights_l1_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_weights_l1_ROM_1P_BRAM_1R.dat' is read successfully [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_weights_l1_ROM_1P_BRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_weights_l1_ROM_1P_BRAM_1R' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_weights_l1_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_scale_ROM_1P_BRAM_1R' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_scale_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_scale_ROM_1P_BRAM_1R.dat' is read successfully [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_scale_ROM_1P_BRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_scale_ROM_1P_BRAM_1R' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_scale_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_offset_ROM_1P_BRAM_1R' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_offset_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_offset_ROM_1P_BRAM_1R.dat' is read successfully [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_offset_ROM_1P_BRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_offset_ROM_1P_BRAM_1R' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_offset_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:45]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:45]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_11s_5ns_13s_16_4_1' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:45]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_11s_5ns_13s_16_4_1' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:45]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_flow_control_loop_pipe_sequential_init' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_flow_control_loop_pipe_sequential_init' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R.dat' is read successfully [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R.dat' is read successfully [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_7ns_6s_31s_31_4_1' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:45]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_7ns_6s_31s_31_4_1' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_CTRL_s_axi' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_CTRL_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference_CTRL_s_axi_ram' [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_CTRL_s_axi.v:494]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_CTRL_s_axi_ram' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_CTRL_s_axi.v:494]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_CTRL_s_axi.v:250]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_CTRL_s_axi' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_CTRL_s_axi.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'system_bgn_inference_0_0' (0#1) [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_0/synth/system_bgn_inference_0_0.v:53]
+INFO: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_CTRL_s_axi.v:316]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7129] Port we0[3] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port we0[2] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port we0[1] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port we0[0] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[31] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[30] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[29] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[28] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[27] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[26] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[25] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[24] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[23] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[22] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[21] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[20] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[19] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[18] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[17] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[16] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[15] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[14] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[13] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[12] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[11] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[10] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[9] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[8] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[7] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[6] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[5] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[4] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[3] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[2] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[1] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port d0[0] in module bgn_inference_CTRL_s_axi_ram is either unconnected or has no load
+INFO: [Synth 8-7129] Port rst in module bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R is either unconnected or has no load
+INFO: [Synth 8-7129] Port rst in module bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port rst in module bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_offset_ROM_1P_BRAM_1R is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_bn_scale_ROM_1P_BRAM_1R is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_weights_l1_ROM_1P_BRAM_1R is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1470.664 ; gain = 699.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1470.664 ; gain = 699.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1470.664 ; gain = 699.562
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1470.664 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_0/constraints/bgn_inference_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_0/constraints/bgn_inference_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.runs/system_bgn_inference_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.runs/system_bgn_inference_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1551.719 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1551.723 ; gain = 0.004
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1551.723 ; gain = 780.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1551.723 ; gain = 780.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1551.723 ; gain = 780.621
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'bgn_inference_CTRL_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'bgn_inference_CTRL_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'bgn_inference_CTRL_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'bgn_inference_CTRL_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1551.723 ; gain = 780.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   26 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 1     
+	   3 Input   13 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   3 Input   10 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 3     
+	   3 Input    5 Bit       Adders := 1     
+	   4 Input    5 Bit       Adders := 4     
+	   5 Input    5 Bit       Adders := 1     
+	   3 Input    4 Bit       Adders := 2     
+	   4 Input    4 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   3 Input    3 Bit       Adders := 1     
+	   4 Input    3 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   3 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 18    
+	               31 Bit    Registers := 1     
+	               18 Bit    Registers := 3     
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 4     
+	               10 Bit    Registers := 20    
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 14    
+	                4 Bit    Registers := 10    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 206   
++---RAMs : 
+	              800 Bit	(25 X 32 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 5     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 15    
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   31 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 6     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   3 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 22    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3936] Found unconnected internal register 'grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '16' bits. [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '16' bits. [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '16' bits. [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '25' to '16' bits. [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '14' bits. [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '14' bits. [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '25' to '14' bits. [c:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.gen/sources_1/bd/system/ipshared/64ab/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:30]
+DSP Report: Generating DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*(B:0x19)')')'.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/m is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/bn_offset_load_reg_1428_pp0_iter14_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/m is absorbed into DSP grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (0 or C)+(A''*B2)'.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p is absorbed into DSP grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p is absorbed into DSP grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/m is absorbed into DSP grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg.
+INFO: [Synth 8-3332] Sequential element (CTRL_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module bgn_inference.
+INFO: [Synth 8-3332] Sequential element (CTRL_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module bgn_inference.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1551.723 ; gain = 780.621
+---------------------------------------------------------------------------------
+ Sort Area is  grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg_2 : 0 0 : 2065 2065 : Used 1 time 0
+ Sort Area is  grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg_0 : 0 0 : 1601 1601 : Used 1 time 0
+ Sort Area is  grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg_4 : 0 0 : 1311 1311 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | CTRL_s_axi_U/int_input_img/mem_reg | 25 x 32(READ_FIRST)    | W | R | 25 x 32(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
++------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+----------------------+----------------+----------------------+-------------------------------+
+|Module Name | RTL Object           | Inference      | Size (Depth x Width) | Primitives                    | 
++------------+----------------------+----------------+----------------------+-------------------------------+
+|inst        | hidden_out_U/ram_reg | User Attribute | 1 K x 7              | RAM128X1S x 7 RAM256X1S x 14  | 
++------------+----------------------+----------------+----------------------+-------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-----------------------------------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                          | DSP Mapping           | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------------------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0 | (C'+(A2*(B:0x19)')')' | 14     | 14     | 6      | -      | 14     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0  | (C'+(A2*B2)')'        | 16     | 16     | 13     | -      | 16     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0   | (0 or C)+(A''*B2)'    | 25     | 7      | 31     | -      | 31     | 2    | 1    | 0    | -    | -     | 1    | 1    | 
++-----------------------------------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1729.285 ; gain = 958.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1757.457 ; gain = 986.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | CTRL_s_axi_U/int_input_img/mem_reg | 25 x 32(READ_FIRST)    | W | R | 25 x 32(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
++------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++------------+----------------------+----------------+----------------------+-------------------------------+
+|Module Name | RTL Object           | Inference      | Size (Depth x Width) | Primitives                    | 
++------------+----------------------+----------------+----------------------+-------------------------------+
+|inst        | hidden_out_U/ram_reg | User Attribute | 1 K x 7              | RAM128X1S x 7 RAM256X1S x 14  | 
++------------+----------------------+----------------+----------------------+-------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/bn_scale_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/weights_l2_U/q0_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/weights_l2_U/q0_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/bias_l2_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/CTRL_s_axi_U/int_input_img/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/CTRL_s_axi_U/int_input_img/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1767.348 ; gain = 996.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1999.508 ; gain = 1228.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1999.508 ; gain = 1228.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1999.508 ; gain = 1228.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1999.508 ; gain = 1228.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2000.484 ; gain = 1229.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2000.484 ; gain = 1229.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------+--------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name   | RTL Name                                                                                               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------+--------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/select_ln39_reg_1164_pp0_iter3_reg_reg[4]      | 3      | 5     | NO           | NO                 | YES               | 5      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/select_ln39_2_reg_1170_pp0_iter11_reg_reg[9]   | 12     | 10    | NO           | NO                 | YES               | 10     | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/icmp_ln44_1_reg_1180_pp0_iter15_reg_reg[0]     | 16     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/ap_loop_exit_ready_pp0_iter15_reg_reg          | 15     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/select_ln75_reg_506_pp0_iter3_reg_reg[3]       | 3      | 4     | NO           | NO                 | YES               | 4      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/ap_loop_exit_ready_pp0_iter4_reg_reg           | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/icmp_ln79_reg_493_pp0_iter3_reg_reg[0]         | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/hidden_out_addr_reg_1413_pp0_iter15_reg_reg[9] | 4      | 10    | NO           | NO                 | YES               | 10     | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/xnor_res_reg_1204_pp0_iter12_reg_reg[31]       | 8      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/icmp_ln44_reg_1159_pp0_iter12_reg_reg[0]       | 13     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_29_reg_1344_pp0_iter12_reg_reg[0]          | 8      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_26_reg_1329_pp0_iter11_reg_reg[0]          | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_27_reg_1334_pp0_iter11_reg_reg[0]          | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_28_reg_1339_pp0_iter11_reg_reg[0]          | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_23_reg_1314_pp0_iter10_reg_reg[0]          | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_24_reg_1319_pp0_iter10_reg_reg[0]          | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_25_reg_1324_pp0_iter10_reg_reg[0]          | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_22_reg_1309_pp0_iter10_reg_reg[0]          | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_19_reg_1294_pp0_iter9_reg_reg[0]           | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_20_reg_1299_pp0_iter9_reg_reg[0]           | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_21_reg_1304_pp0_iter9_reg_reg[0]           | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_16_reg_1279_pp0_iter8_reg_reg[0]           | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_17_reg_1284_pp0_iter8_reg_reg[0]           | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_18_reg_1289_pp0_iter8_reg_reg[0]           | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_15_reg_1274_pp0_iter8_reg_reg[0]           | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_14_reg_1269_pp0_iter7_reg_reg[0]           | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_12_reg_1259_pp0_iter7_reg_reg[0]           | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bgn_inference | grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_44_1_fu_79/tmp_13_reg_1264_pp0_iter7_reg_reg[0]           | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++--------------+--------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-----------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                          | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0 | (C'+(A'*B')')' | 10     | 5      | 5      | -      | 14     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0  | (C'+(A'*B')')' | 30     | 5      | 48     | -      | 16     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0   | Dynamic        | -      | -      | -      | -      | 31     | -    | -    | -    | -    | -     | 1    | 1    | 
++-----------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    23|
+|2     |DSP48E1   |     3|
+|4     |LUT1      |     4|
+|5     |LUT2      |    87|
+|6     |LUT3      |   172|
+|7     |LUT4      |    53|
+|8     |LUT5      |    83|
+|9     |LUT6      |   122|
+|10    |RAM128X1S |     7|
+|11    |RAM256X1S |    14|
+|12    |RAMB18E1  |     4|
+|16    |RAMB36E1  |    18|
+|34    |SRL16E    |    53|
+|35    |FDRE      |   396|
+|36    |FDSE      |     9|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2000.484 ; gain = 1229.383
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 2000.484 ; gain = 1148.324
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2000.484 ; gain = 1229.383
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2009.605 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 69 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2013.270 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 21 instances were transformed.
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 7 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 14 instances
+
+Synth Design complete | Checksum: ccae079b
+INFO: [Common 17-83] Releasing license: Synthesis
+132 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2013.270 ; gain = 1467.430
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2013.270 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.runs/system_bgn_inference_0_0_synth_1/system_bgn_inference_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_bgn_inference_0_0, cache-ID = 90c36ed99bab4cd7
+INFO: [Coretcl 2-1174] Renamed 19 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2013.270 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/source/.ITA/FPGA/25.2/6.IA/zc702/zc702.runs/system_bgn_inference_0_0_synth_1/system_bgn_inference_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_bgn_inference_0_0_utilization_synth.rpt -pb system_bgn_inference_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 22 22:47:31 2026...

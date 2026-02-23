@@ -1,0 +1,2 @@
+  CREATE_STREAM @0 {NAME:bgn_inference_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.bgn_inference_virtual_sqr STREAM:1930}
+  CREATE_STREAM @125000 {NAME:bgn_inference_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_lite_CTRL.vsqr STREAM:2043}

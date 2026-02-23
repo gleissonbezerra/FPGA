@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "C:\\source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn",
+    "arguments": [
+      "C:\\AMDDesignTools\\2025.2\\Vitis\\win64\\tools\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\AMDDesignTools\\2025.2\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\AMDDesignTools\\2025.2\\Vitis\\common\\technology\\autopilot",
+      "-fhlstoplevel=bgn_inference",
+      "-c",
+      "C:\\source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn\\top.cpp"
+    ],
+    "file": "C:\\source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn\\top.cpp"
+  },
+  {
+    "directory": "C:\\source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn",
+    "arguments": [
+      "C:\\AMDDesignTools\\2025.2\\Vitis\\win64\\tools\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\AMDDesignTools\\2025.2\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\AMDDesignTools\\2025.2\\Vitis\\include",
+      "-c",
+      "C:\\source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn\\test_bench.cpp"
+    ],
+    "file": "C:\\source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn\\test_bench.cpp"
+  }
+]
