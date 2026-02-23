@@ -1,0 +1,60 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=top.cpp' from hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/top.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=weights.h' from hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/weights.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=test_bench.cpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/test_bench.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=bgn_inference' from hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-2' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-2'
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../top.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../top.cpp:1:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include\ap_int.h:10:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include\hls_half.h:26:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/AMDDesignTools/2025.2/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/AMDDesignTools/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+>> Starting C-Simulation...
+Score Class [0]: -54330
+Score Class [1]: 1143624
+Score Class [2]: 3615502
+Score Class [3]: 1505547
+Score Class [4]: 266908
+Score Class [5]: -3939
+Score Class [6]: 802
+Score Class [7]: 599063
+Score Class [8]: -5768
+Score Class [9]: 2
+>> Predicted Class: 2
+>> Expected Class:  6
+>> TEST FAILED! Check quantization or weights.
+@E Simulation failed: Function 'main' returns nonzero value '1'.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+ERROR: CSIM Failed
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 3.61 seconds; peak allocated memory: 134.066 MB.

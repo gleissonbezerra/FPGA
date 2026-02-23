@@ -1,0 +1,51 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: top.cpp, Line: 52, Column: 29 }
+Function:        _Z13bgn_inferenceP7ap_uintILi32EEPi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls_popcount(ap_uint<32>)'
+    DebugLoc:        { File: top.cpp, Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'bgn_inference(ap_uint<32>*, int*)'
+    DebugLoc:        { File: top.cpp, Line: 21, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: top.cpp, Line: 14, Column: 22 }
+Function:        _Z13bgn_inferenceP7ap_uintILi32EEPi
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_14_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: top.cpp, Line: 21, Column: 0 }
+Function:        _Z13bgn_inferenceP7ap_uintILi32EEPi
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_14_1
+  - String:          ''' ('
+  - LoopLoc:         'top.cpp:14:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          bgn_inference
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_bgn_inference_ir
+Args:            
+  - Callee:          'bgn_inference(ap_uint<32>*, int*)'
+    DebugLoc:        { File: top.cpp, Line: 21, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_bgn_inference_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...

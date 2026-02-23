@@ -1,0 +1,156 @@
+<ENTRY>
+{
+ "thisFile": "C:/source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn\\mnist_mlp_bgn\\mnist_mlp_bgn.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "02/22/26 22:28:03",
+ "timestampMillis": "1771810083240",
+ "buildStep": {
+  "cmdId": "b49afff1-79d9-431a-aa67-6877de18dfc3",
+  "name": "vitis-run",
+  "logFile": "C:/source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn\\mnist_mlp_bgn\\logs\\mnist_mlp_bgn.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn\\hls_config.cfg --work_dir mnist_mlp_bgn ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn\\hls_config.cfg",
+   "--work_dir",
+   "mnist_mlp_bgn"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/22/26 22:28:03",
+ "timestampMillis": "1771810083240",
+ "status": {
+  "cmdId": "b49afff1-79d9-431a-aa67-6877de18dfc3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "02/22/26 22:28:05",
+ "timestampMillis": "1771810085436",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "bgn_inference",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn\\top.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "02/22/26 22:28:05",
+ "timestampMillis": "1771810085437",
+ "buildStep": {
+  "cmdId": "e00b8f35-fb52-4295-b9cc-02b66720e020",
+  "name": "",
+  "logFile": "C:/source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn\\mnist_mlp_bgn\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\source\\.ITA\\FPGA\\25.2\\6.IA\\zc702_workspace\\mnist_mlp_bgn"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/22/26 22:28:05",
+ "timestampMillis": "1771810085437",
+ "status": {
+  "cmdId": "e00b8f35-fb52-4295-b9cc-02b66720e020",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/22/26 22:28:05",
+ "timestampMillis": "1771810085737",
+ "status": {
+  "cmdId": "e00b8f35-fb52-4295-b9cc-02b66720e020",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/22/26 22:28:05",
+ "timestampMillis": "1771810085809",
+ "status": {
+  "cmdId": "b49afff1-79d9-431a-aa67-6877de18dfc3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/22/26 22:28:05",
+ "timestampMillis": "1771810085809",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/22/26 22:28:05",
+ "timestampMillis": "1771810085810",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
