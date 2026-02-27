@@ -1,0 +1,50 @@
+{
+  "0": {
+    "basicblocks": 32,
+    "calls": "2 1 1",
+    "control_depth": 1,
+    "def_use_depth": 3,
+    "file": "top.cpp",
+    "fileloc": 23,
+    "instructions": 284,
+    "loads": {
+      "G": 5,
+      "L": 5,
+      "T": 1
+    },
+    "memory_accesses": 6,
+    "name": "bgn_inference",
+    "stores": {
+      "L": 6,
+      "T": 1
+    },
+    "total_instructions": 1392
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "stdio.h",
+    "fileloc": 345,
+    "instructions": 13,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "printf",
+    "total_instructions": 13
+  },
+  "2": {
+    "basicblocks": 9,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 2,
+    "file": "top.cpp",
+    "fileloc": 10,
+    "instructions": 23,
+    "memory_accesses": 2,
+    "name": "hls_popcount",
+    "total_instructions": 45
+  }
+}

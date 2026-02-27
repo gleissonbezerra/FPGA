@@ -1,0 +1,22 @@
+INFO: [SIM 2] *************** CSIM start ***************
+   Compiling ../../../../test_bench.cpp in debug mode
+   Compiling ../../../../radiation_injector.cpp in debug mode
+   Generating csim.exe
+--- SELENITA MISSION: RADIATION INJECTOR HLS TESTBENCH ---
+Starting Simulation with intensity: 1000
+[EVENT] Bit-flip detected at index 4! Value: 0x04000000
+[EVENT] Bit-flip detected at index 67! Value: 0x00002000
+[EVENT] Bit-flip detected at index 97! Value: 0x00000040
+[EVENT] Bit-flip detected at index 80! Value: 0x00000008
+[EVENT] Bit-flip detected at index 19! Value: 0x00020000
+[EVENT] Bit-flip detected at index 12! Value: 0x00000100
+[EVENT] Bit-flip detected at index 14! Value: 0x00000010
+[EVENT] Bit-flip detected at index 73! Value: 0x00040000
+[EVENT] Bit-flip detected at index 31! Value: 0x00000200
+[EVENT] Bit-flip detected at index 44! Value: 0x00000010
+
+--- Simulation Summary ---
+Total Bit-flips injected: 10
+TEST PASSED: Radiation injector successfully modified memory.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

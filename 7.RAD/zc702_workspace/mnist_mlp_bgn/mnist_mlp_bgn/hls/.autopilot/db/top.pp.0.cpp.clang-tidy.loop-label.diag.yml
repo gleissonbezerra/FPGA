@@ -1,0 +1,88 @@
+---
+MainSourceFile:  'E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/.autopilot/db/top.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_676_1:  '
+      FilePath:        'D:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      676
+      Replacements:
+        - FilePath:        'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\top.pp.0.cpp'
+          Offset:          280087
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_676_1: '
+    Level:           Remark
+    BuildDirectory:  'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_690_1:  '
+      FilePath:        'D:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      690
+      Replacements:
+        - FilePath:        'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\top.pp.0.cpp'
+          Offset:          280558
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_690_1: '
+    Level:           Remark
+    BuildDirectory:  'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_704_1:  '
+      FilePath:        'D:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      704
+      Replacements:
+        - FilePath:        'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\top.pp.0.cpp'
+          Offset:          281030
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_704_1: '
+    Level:           Remark
+    BuildDirectory:  'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1251_1:  '
+      FilePath:        'D:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_fixed_base.h'
+      FileOffset:      1251
+      Replacements:
+        - FilePath:        'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\top.pp.0.cpp'
+          Offset:          626433
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1251_1: '
+    Level:           Remark
+    BuildDirectory:  'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_15_1:  '
+      FilePath:        top.cpp
+      FileOffset:      15
+      Replacements:
+        - FilePath:        'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\top.pp.0.cpp'
+          Offset:          2445134
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_15_1: '
+    Level:           Remark
+    BuildDirectory:  'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_46_1:  '
+      FilePath:        top.cpp
+      FileOffset:      46
+      Replacements:
+        - FilePath:        'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\top.pp.0.cpp'
+          Offset:          2446182
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_46_1: '
+    Level:           Remark
+    BuildDirectory:  'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_79_2:  '
+      FilePath:        top.cpp
+      FileOffset:      79
+      Replacements:
+        - FilePath:        'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\top.pp.0.cpp'
+          Offset:          2446983
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_79_2: '
+    Level:           Remark
+    BuildDirectory:  'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn'
+...

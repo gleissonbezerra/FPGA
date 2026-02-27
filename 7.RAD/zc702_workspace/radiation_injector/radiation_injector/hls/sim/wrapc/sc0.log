@@ -1,0 +1,6 @@
+   Build using "D:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang++"
+   Compiling apatb_radiation_injector.cpp
+   Compiling radiation_injector.cpp_pre.cpp.tb.cpp
+   Compiling test_bench.cpp_pre.cpp.tb.cpp
+   Compiling apatb_radiation_injector_ir.ll
+   Generating cosim.tv.exe

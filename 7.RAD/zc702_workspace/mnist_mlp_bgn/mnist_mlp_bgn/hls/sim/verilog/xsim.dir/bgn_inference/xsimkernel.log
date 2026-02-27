@@ -1,0 +1,7 @@
+Running: xsim.dir/bgn_inference/xsimk.exe -simmode gui -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=bgn_inference_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -wdb bgn_inference.wdb -simrunnum 0 -socket 61076
+Design successfully loaded
+Design Loading Memory Usage: 19824 KB (Peak: 19824 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 39640 KB (Peak: 39640 KB)
+Simulation CPU Usage: 312 ms

@@ -1,0 +1,156 @@
+<ENTRY>
+{
+ "thisFile": "E:/source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\radiation_injector\\radiation_injector\\radiation_injector.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "02/26/26 20:54:30",
+ "timestampMillis": "1772150070094",
+ "buildStep": {
+  "cmdId": "9602d5b4-1e40-4d89-9bc3-e0da3ef0748b",
+  "name": "vitis-run",
+  "logFile": "E:/source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\radiation_injector\\radiation_injector\\logs\\radiation_injector.steps.log",
+  "commandLine": "D:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config E:\\source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\radiation_injector\\hls_config.cfg --work_dir radiation_injector ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "E:\\source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\radiation_injector\\hls_config.cfg",
+   "--work_dir",
+   "radiation_injector"
+  ],
+  "iniFiles": [],
+  "cwd": "E:\\source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\radiation_injector"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/26/26 20:54:30",
+ "timestampMillis": "1772150070094",
+ "status": {
+  "cmdId": "9602d5b4-1e40-4d89-9bc3-e0da3ef0748b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "02/26/26 20:54:32",
+ "timestampMillis": "1772150072140",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "radiation_injector",
+     "file": "E:/source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\radiation_injector\\radiation_injector\\radiation_injector.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "E:/source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\radiation_injector\\radiation_injector.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "02/26/26 20:54:32",
+ "timestampMillis": "1772150072141",
+ "buildStep": {
+  "cmdId": "f3077177-38a6-411a-b7b5-80475b652084",
+  "name": "",
+  "logFile": "E:/source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\radiation_injector\\radiation_injector\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "E:\\source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\radiation_injector"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/26/26 20:54:32",
+ "timestampMillis": "1772150072141",
+ "status": {
+  "cmdId": "f3077177-38a6-411a-b7b5-80475b652084",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/26/26 20:54:39",
+ "timestampMillis": "1772150079737",
+ "status": {
+  "cmdId": "f3077177-38a6-411a-b7b5-80475b652084",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/26/26 20:54:39",
+ "timestampMillis": "1772150079795",
+ "status": {
+  "cmdId": "9602d5b4-1e40-4d89-9bc3-e0da3ef0748b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/26/26 20:54:39",
+ "timestampMillis": "1772150079795",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/26/26 20:54:39",
+ "timestampMillis": "1772150079795",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

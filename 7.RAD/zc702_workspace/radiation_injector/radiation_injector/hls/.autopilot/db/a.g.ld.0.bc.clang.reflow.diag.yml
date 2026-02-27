@@ -1,0 +1,51 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_radiation_injector_ir
+Args:            
+  - Callee:          'radiation_injector(unsigned int volatile*, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: radiation_injector.cpp, Line: 14, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_radiation_injector_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: radiation_injector.cpp, Line: 44, Column: 32 }
+Function:        _Z18radiation_injectorPVjjjj
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      current_val
+    DebugLoc:        { File: radiation_injector.cpp, Line: 44, Column: 32 }
+  - OrigDirection:   read
+  - OrigID:          if.then8.load.8
+  - ArrayName:       weight_mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'radiation_injector(unsigned int volatile*, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: radiation_injector.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: radiation_injector.cpp, Line: 45, Column: 26 }
+Function:        _Z18radiation_injectorPVjjjj
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: radiation_injector.cpp, Line: 45, Column: 26 }
+  - OrigDirection:   write
+  - OrigID:          if.then8.store.12
+  - ArrayName:       weight_mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'radiation_injector(unsigned int volatile*, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: radiation_injector.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...

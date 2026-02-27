@@ -1,0 +1,157 @@
+
+
+================================================================
+== Vitis HLS Report for 'bgn_inference'
+================================================================
+* Date:           Thu Feb 26 20:47:23 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        mnist_mlp_bgn
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.087 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    22427|    22427|  0.224 ms|  0.224 ms|  22428|  22428|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%class_idx_11_loc = alloca i64 1"   --->   Operation 6 'alloca' 'class_idx_11_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%hidden_out = alloca i64 1" [top.cpp:37]   --->   Operation 7 'alloca' 'hidden_out' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 86 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 7> <Depth = 640> <RAM>
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln0 = call void @bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1, i32 %input_img, i7 %hidden_out, i32 %weights_l1, i5 %bn_scale, i13 %bn_offset"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 9 [1/2] (0.00ns)   --->   "%call_ln0 = call void @bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1, i32 %input_img, i7 %hidden_out, i32 %weights_l1, i5 %bn_scale, i13 %bn_offset"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 10 [2/2] (0.00ns)   --->   "%call_ln0 = call void @bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2, i7 %hidden_out, i32 %class_idx_11_loc, i6 %weights_l2, i4 %bias_l2"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 11 [1/2] (0.00ns)   --->   "%call_ln0 = call void @bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2, i7 %hidden_out, i32 %class_idx_11_loc, i6 %weights_l2, i4 %bias_l2"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 1.00>
+ST_5 : Operation 12 [1/1] (0.00ns)   --->   "%spectopmodule_ln23 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_6" [top.cpp:23]   --->   Operation 12 'spectopmodule' 'spectopmodule_ln23' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_img, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_2, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_img, void @empty_3, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 15 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %input_img, i64 666, i64 207, i64 1, i1 0"   --->   Operation 15 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %input_img"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %prediction"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %prediction, void @empty, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_4, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %prediction, void @empty_5, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 21 [1/1] (0.00ns)   --->   "%specmemcore_ln30 = specmemcore void @_ssdm_op_SpecMemCore, i32 %weights_l1, i64 666, i64 33, i64 18446744073709551615, i1 0" [top.cpp:30]   --->   Operation 21 'specmemcore' 'specmemcore_ln30' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 22 [1/1] (0.00ns)   --->   "%specmemcore_ln31 = specmemcore void @_ssdm_op_SpecMemCore, i5 %bn_scale, i64 666, i64 33, i64 18446744073709551615, i1 0" [top.cpp:31]   --->   Operation 22 'specmemcore' 'specmemcore_ln31' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 23 [1/1] (0.00ns)   --->   "%specmemcore_ln32 = specmemcore void @_ssdm_op_SpecMemCore, i13 %bn_offset, i64 666, i64 33, i64 18446744073709551615, i1 0" [top.cpp:32]   --->   Operation 23 'specmemcore' 'specmemcore_ln32' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 24 [1/1] (0.00ns)   --->   "%specmemcore_ln33 = specmemcore void @_ssdm_op_SpecMemCore, i6 %weights_l2, i64 666, i64 33, i64 18446744073709551615, i1 0" [top.cpp:33]   --->   Operation 24 'specmemcore' 'specmemcore_ln33' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 25 [1/1] (0.00ns)   --->   "%specmemcore_ln34 = specmemcore void @_ssdm_op_SpecMemCore, i4 %bias_l2, i64 666, i64 33, i64 18446744073709551615, i1 0" [top.cpp:34]   --->   Operation 25 'specmemcore' 'specmemcore_ln34' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 26 [1/1] (0.00ns)   --->   "%specmemcore_ln38 = specmemcore void @_ssdm_op_SpecMemCore, i7 %hidden_out, i64 666, i64 19, i64 18446744073709551615, i1 0" [top.cpp:38]   --->   Operation 26 'specmemcore' 'specmemcore_ln38' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 27 [1/1] (0.00ns)   --->   "%class_idx_11_loc_load = load i32 %class_idx_11_loc"   --->   Operation 27 'load' 'class_idx_11_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 28 [1/1] (1.00ns)   --->   "%write_ln99 = write void @_ssdm_op_Write.s_axilite.i32P0A, i32 %prediction, i32 %class_idx_11_loc_load" [top.cpp:99]   --->   Operation 28 'write' 'write_ln99' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%ret_ln100 = ret" [top.cpp:100]   --->   Operation 29 'ret' 'ret_ln100' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+ <State 5>: 1.000ns
+The critical path consists of the following:
+	'load' operation 32 bit ('class_idx_11_loc_load') on local variable 'class_idx_11_loc' [27]  (0.000 ns)
+	s_axi write operation ('write_ln99', top.cpp:99) on port 'prediction' (top.cpp:99) [28]  (1.000 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

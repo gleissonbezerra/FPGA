@@ -1,0 +1,3 @@
+relativeroot=E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector
+original_argv=--mode hls --package --config E:\source\.ITA\FPGA\7.RAD\zc702_workspace\radiation_injector\hls_config.cfg --work_dir radiation_injector 
+

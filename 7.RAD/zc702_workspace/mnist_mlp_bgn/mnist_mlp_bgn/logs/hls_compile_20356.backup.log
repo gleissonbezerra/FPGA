@@ -1,0 +1,52 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=top.cpp' from hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/top.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=weights.h' from hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/weights.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=test_bench.cpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/test_bench.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=bgn_inference' from hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-2' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-2'
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 3.029 seconds; current allocated memory: 134.461 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'top.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 8.438 seconds; current allocated memory: 136.957 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,350 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 109 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 92 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 87 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 87 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 88 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 88 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 88 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 88 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 91 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 91 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 88 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 88 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 88 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 92 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 107 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (C:/source/.ITA/FPGA/25.2/6.IA/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 12.536 seconds; current allocated memory: 138.785 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 138.785 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 147.285 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+ERROR: [SYNCHK 200-21] top.cpp:39: The GCC/LLVM intrinsic function 'ctpop' is not supported, only a subset of intrinsics is supported, please check the coding style guide for more information.
+INFO: [SYNCHK 200-10] 1 error(s), 0 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+ERROR: 
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 2 seconds. Total elapsed time: 24.096 seconds; peak allocated memory: 148.871 MB.

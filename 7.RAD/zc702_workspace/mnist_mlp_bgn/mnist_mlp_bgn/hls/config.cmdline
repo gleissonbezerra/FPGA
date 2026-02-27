@@ -1,0 +1,3 @@
+relativeroot=E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn
+original_argv=--mode hls --package --config E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\hls_config.cfg --work_dir mnist_mlp_bgn 
+
