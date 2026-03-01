@@ -22,6 +22,15 @@
 // 0x14 : Control signal of prediction
 //        bit 0  - prediction_ap_vld (Read/COR)
 //        others - reserved
+// 0x20 : Data signal of mode
+//        bit 31~0 - mode[31:0] (Read/Write)
+// 0x24 : reserved
+// 0x28 : Data signal of wr_addr
+//        bit 31~0 - wr_addr[31:0] (Read/Write)
+// 0x2c : reserved
+// 0x30 : Data signal of wr_data
+//        bit 31~0 - wr_data[31:0] (Read/Write)
+// 0x34 : reserved
 // 0x80 ~
 // 0xff : Memory 'input_img' (25 * 32b)
 //        Word n : bit [31:0] - input_img[n]
@@ -34,6 +43,12 @@
 #define CTRL_ADDR_PREDICTION_DATA 0x10
 #define CTRL_BITS_PREDICTION_DATA 32
 #define CTRL_ADDR_PREDICTION_CTRL 0x14
+#define CTRL_ADDR_MODE_DATA       0x20
+#define CTRL_BITS_MODE_DATA       32
+#define CTRL_ADDR_WR_ADDR_DATA    0x28
+#define CTRL_BITS_WR_ADDR_DATA    32
+#define CTRL_ADDR_WR_DATA_DATA    0x30
+#define CTRL_BITS_WR_DATA_DATA    32
 #define CTRL_ADDR_INPUT_IMG_BASE  0x80
 #define CTRL_ADDR_INPUT_IMG_HIGH  0xff
 #define CTRL_WIDTH_INPUT_IMG      32

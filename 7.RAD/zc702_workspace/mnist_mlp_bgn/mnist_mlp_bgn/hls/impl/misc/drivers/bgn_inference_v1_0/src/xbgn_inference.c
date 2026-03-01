@@ -96,6 +96,57 @@ u32 XBgn_inference_Get_prediction_vld(XBgn_inference *InstancePtr) {
     return Data & 0x1;
 }
 
+void XBgn_inference_Set_mode(XBgn_inference *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XBgn_inference_WriteReg(InstancePtr->Ctrl_BaseAddress, XBGN_INFERENCE_CTRL_ADDR_MODE_DATA, Data);
+}
+
+u32 XBgn_inference_Get_mode(XBgn_inference *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XBgn_inference_ReadReg(InstancePtr->Ctrl_BaseAddress, XBGN_INFERENCE_CTRL_ADDR_MODE_DATA);
+    return Data;
+}
+
+void XBgn_inference_Set_wr_addr(XBgn_inference *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XBgn_inference_WriteReg(InstancePtr->Ctrl_BaseAddress, XBGN_INFERENCE_CTRL_ADDR_WR_ADDR_DATA, Data);
+}
+
+u32 XBgn_inference_Get_wr_addr(XBgn_inference *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XBgn_inference_ReadReg(InstancePtr->Ctrl_BaseAddress, XBGN_INFERENCE_CTRL_ADDR_WR_ADDR_DATA);
+    return Data;
+}
+
+void XBgn_inference_Set_wr_data(XBgn_inference *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XBgn_inference_WriteReg(InstancePtr->Ctrl_BaseAddress, XBGN_INFERENCE_CTRL_ADDR_WR_DATA_DATA, Data);
+}
+
+u32 XBgn_inference_Get_wr_data(XBgn_inference *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XBgn_inference_ReadReg(InstancePtr->Ctrl_BaseAddress, XBGN_INFERENCE_CTRL_ADDR_WR_DATA_DATA);
+    return Data;
+}
+
 u32 XBgn_inference_Get_input_img_BaseAddress(XBgn_inference *InstancePtr) {
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);

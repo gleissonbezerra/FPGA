@@ -23,7 +23,7 @@ __USE_VCXX_CLANG__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../test_bench.cpp ../../../../top.cpp
+HLS_SOURCES = ../../../../test_bench.cpp ../../../../bgn_inference.cpp
 
 override TARGET := csim.exe
 
@@ -92,8 +92,8 @@ $(ObjDir)/test_bench.o: ../../../../test_bench.cpp $(ObjDir)/.dir csim.mk
 
 -include $(ObjDir)/test_bench.d
 
-$(ObjDir)/top.o: ../../../../top.cpp $(ObjDir)/.dir csim.mk
-	$(Echo) "   Compiling ../../../../top.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/bgn_inference.o: ../../../../bgn_inference.cpp $(ObjDir)/.dir csim.mk
+	$(Echo) "   Compiling ../../../../bgn_inference.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CXX) -std=gnu++17 ${CCFLAG} -c -MMD  -fhls-csim -fhlstoplevel=bgn_inference $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/top.d
+-include $(ObjDir)/bgn_inference.d

@@ -6,12 +6,19 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="bgn_inference_bgn_inference,hls_ip_2025_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-2,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.087500,HLS_SYN_LAT=22427,HLS_SYN_TPT=none,HLS_SYN_MEM=38,HLS_SYN_DSP=0,HLS_SYN_FF=2445,HLS_SYN_LUT=2189,HLS_VERSION=2025_2}" *)
+(* CORE_GENERATION_INFO="bgn_inference_bgn_inference,hls_ip_2025_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-2,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.087500,HLS_SYN_LAT=11210,HLS_SYN_TPT=none,HLS_SYN_MEM=6,HLS_SYN_DSP=0,HLS_SYN_FF=1187,HLS_SYN_LUT=1652,HLS_VERSION=2025_2}" *)
 
 (* DowngradeIPIdentifiedWarnings="yes" *)
 module bgn_inference (
         ap_clk,
         ap_rst_n,
+        weight_mem_Addr_A,
+        weight_mem_EN_A,
+        weight_mem_WEN_A,
+        weight_mem_Din_A,
+        weight_mem_Dout_A,
+        weight_mem_Clk_A,
+        weight_mem_Rst_A,
         s_axi_CTRL_AWVALID,
         s_axi_CTRL_AWREADY,
         s_axi_CTRL_AWADDR,
@@ -46,6 +53,13 @@ parameter C_S_AXI_WSTRB_WIDTH = (32 / 8);
 
 input   ap_clk;
 input   ap_rst_n;
+output  [31:0] weight_mem_Addr_A;
+output   weight_mem_EN_A;
+output  [3:0] weight_mem_WEN_A;
+output  [31:0] weight_mem_Din_A;
+input  [31:0] weight_mem_Dout_A;
+output   weight_mem_Clk_A;
+output   weight_mem_Rst_A;
 input   s_axi_CTRL_AWVALID;
 output   s_axi_CTRL_AWREADY;
 input  [C_S_AXI_CTRL_ADDR_WIDTH - 1:0] s_axi_CTRL_AWADDR;
@@ -65,6 +79,10 @@ input   s_axi_CTRL_BREADY;
 output  [1:0] s_axi_CTRL_BRESP;
 output   interrupt;
 
+reg[31:0] weight_mem_Addr_A;
+reg weight_mem_EN_A;
+reg weight_mem_Rst_A;
+
  reg    ap_rst_n_inv;
 wire    ap_start;
 reg    ap_done;
@@ -74,34 +92,51 @@ wire    ap_CS_fsm_state1;
 reg    ap_ready;
 wire   [31:0] input_img_q0;
 reg    prediction_ap_vld;
+wire   [31:0] mode;
+wire   [31:0] wr_addr;
+wire   [31:0] wr_data;
+wire   [0:0] icmp_ln40_fu_161_p2;
+reg   [0:0] icmp_ln40_reg_202;
 reg   [9:0] hidden_out_address0;
 reg    hidden_out_ce0;
 reg    hidden_out_we0;
 wire   [6:0] hidden_out_q0;
-wire    grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_start;
-wire    grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_done;
-wire    grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_idle;
-wire    grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_ready;
-wire   [4:0] grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_input_img_address0;
-wire    grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_input_img_ce0;
-wire   [9:0] grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_hidden_out_address0;
-wire    grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_hidden_out_ce0;
-wire    grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_hidden_out_we0;
-wire   [6:0] grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_hidden_out_d0;
-wire    grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_start;
-wire    grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_done;
-wire    grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_idle;
-wire    grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_ready;
-wire   [9:0] grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_hidden_out_address0;
-wire    grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_hidden_out_ce0;
-wire   [31:0] grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_class_idx_11_out;
-wire    grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_class_idx_11_out_ap_vld;
-reg    grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_start_reg;
+wire    grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_start;
+wire    grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_done;
+wire    grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_idle;
+wire    grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_ready;
+wire   [31:0] grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_weight_mem_Addr_A;
+wire    grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_weight_mem_EN_A;
+wire   [3:0] grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_weight_mem_WEN_A;
+wire   [31:0] grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_weight_mem_Din_A;
+wire   [4:0] grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_input_img_address0;
+wire    grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_input_img_ce0;
+wire   [9:0] grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_hidden_out_address0;
+wire    grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_hidden_out_ce0;
+wire    grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_hidden_out_we0;
+wire   [6:0] grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_hidden_out_d0;
+wire    grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_start;
+wire    grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_done;
+wire    grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_idle;
+wire    grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_ready;
+wire   [9:0] grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_hidden_out_address0;
+wire    grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_hidden_out_ce0;
+wire   [31:0] grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_class_idx_11_out;
+wire    grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_class_idx_11_out_ap_vld;
+reg    grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_start_reg;
 wire    ap_CS_fsm_state2;
-reg    grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_start_reg;
+reg    grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_start_reg;
 wire    ap_CS_fsm_state3;
 wire    ap_CS_fsm_state4;
+wire   [63:0] zext_ln43_fu_187_p1;
+wire   [0:0] icmp_ln42_fu_177_p2;
 wire    ap_CS_fsm_state5;
+reg   [3:0] weight_mem_WEN_A_local;
+reg    weight_mem_EN_A_local;
+wire   [31:0] weight_mem_Addr_A_local;
+wire   [31:0] weight_mem_Addr_A_orig;
+wire   [17:0] tmp_fu_167_p4;
+wire   [13:0] trunc_ln43_fu_183_p1;
 reg   [4:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
@@ -113,8 +148,8 @@ wire    ap_ce_reg;
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 5'd1;
-#0 grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_start_reg = 1'b0;
-#0 grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_start_reg = 1'b0;
+#0 grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_start_reg = 1'b0;
+#0 grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_start_reg = 1'b0;
 end
 
 bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W #(
@@ -127,38 +162,43 @@ hidden_out_U(
     .address0(hidden_out_address0),
     .ce0(hidden_out_ce0),
     .we0(hidden_out_we0),
-    .d0(grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_hidden_out_d0),
+    .d0(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_hidden_out_d0),
     .q0(hidden_out_q0)
 );
 
-bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1 grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79(
+bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_start),
-    .ap_done(grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_done),
-    .ap_idle(grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_idle),
-    .ap_ready(grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_ready),
-    .input_img_address0(grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_input_img_address0),
-    .input_img_ce0(grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_input_img_ce0),
+    .ap_start(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_start),
+    .ap_done(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_done),
+    .ap_idle(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_idle),
+    .ap_ready(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_ready),
+    .weight_mem_Addr_A(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_weight_mem_Addr_A),
+    .weight_mem_EN_A(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_weight_mem_EN_A),
+    .weight_mem_WEN_A(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_weight_mem_WEN_A),
+    .weight_mem_Din_A(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_weight_mem_Din_A),
+    .weight_mem_Dout_A(weight_mem_Dout_A),
+    .input_img_address0(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_input_img_address0),
+    .input_img_ce0(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_input_img_ce0),
     .input_img_q0(input_img_q0),
-    .hidden_out_address0(grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_hidden_out_address0),
-    .hidden_out_ce0(grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_hidden_out_ce0),
-    .hidden_out_we0(grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_hidden_out_we0),
-    .hidden_out_d0(grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_hidden_out_d0)
+    .hidden_out_address0(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_hidden_out_address0),
+    .hidden_out_ce0(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_hidden_out_ce0),
+    .hidden_out_we0(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_hidden_out_we0),
+    .hidden_out_d0(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_hidden_out_d0)
 );
 
-bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2 grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93(
+bgn_inference_bgn_inference_Pipeline_LAYER2_MAC grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_start),
-    .ap_done(grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_done),
-    .ap_idle(grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_idle),
-    .ap_ready(grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_ready),
-    .hidden_out_address0(grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_hidden_out_address0),
-    .hidden_out_ce0(grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_hidden_out_ce0),
+    .ap_start(grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_start),
+    .ap_done(grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_done),
+    .ap_idle(grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_idle),
+    .ap_ready(grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_ready),
+    .hidden_out_address0(grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_hidden_out_address0),
+    .hidden_out_ce0(grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_hidden_out_ce0),
     .hidden_out_q0(hidden_out_q0),
-    .class_idx_11_out(grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_class_idx_11_out),
-    .class_idx_11_out_ap_vld(grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_class_idx_11_out_ap_vld)
+    .class_idx_11_out(grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_class_idx_11_out),
+    .class_idx_11_out_ap_vld(grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_class_idx_11_out_ap_vld)
 );
 
 bgn_inference_CTRL_s_axi #(
@@ -185,10 +225,13 @@ CTRL_s_axi_U(
     .ACLK(ap_clk),
     .ARESET(ap_rst_n_inv),
     .ACLK_EN(1'b1),
-    .prediction(grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_class_idx_11_out),
+    .prediction(grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_class_idx_11_out),
     .prediction_ap_vld(prediction_ap_vld),
-    .input_img_address0(grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_input_img_address0),
-    .input_img_ce0(grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_input_img_ce0),
+    .mode(mode),
+    .wr_addr(wr_addr),
+    .wr_data(wr_data),
+    .input_img_address0(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_input_img_address0),
+    .input_img_ce0(grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_input_img_ce0),
     .input_img_q0(input_img_q0),
     .ap_start(ap_start),
     .interrupt(interrupt),
@@ -207,25 +250,31 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_start_reg <= 1'b0;
+        grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_start_reg <= 1'b0;
     end else begin
-        if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-            grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_start_reg <= 1'b1;
-        end else if ((grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_ready == 1'b1)) begin
-            grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_start_reg <= 1'b0;
+        if (((icmp_ln40_fu_161_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+            grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_start_reg <= 1'b1;
+        end else if ((grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_ready == 1'b1)) begin
+            grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_start_reg <= 1'b0;
+        grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state3)) begin
-            grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_start_reg <= 1'b1;
-        end else if ((grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_ready == 1'b1)) begin
-            grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_start_reg <= 1'b0;
+            grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_start_reg <= 1'b1;
+        end else if ((grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_ready == 1'b1)) begin
+            grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_start_reg <= 1'b0;
         end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state1)) begin
+        icmp_ln40_reg_202 <= icmp_ln40_fu_161_p2;
     end
 end
 
@@ -238,7 +287,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_done == 1'b0)) begin
+    if ((grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_done == 1'b0)) begin
         ap_ST_fsm_state2_blk = 1'b1;
     end else begin
         ap_ST_fsm_state2_blk = 1'b0;
@@ -248,7 +297,7 @@ end
 assign ap_ST_fsm_state3_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_done == 1'b0)) begin
+    if ((grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_done == 1'b0)) begin
         ap_ST_fsm_state4_blk = 1'b1;
     end else begin
         ap_ST_fsm_state4_blk = 1'b0;
@@ -283,9 +332,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        hidden_out_address0 = grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_hidden_out_address0;
+        hidden_out_address0 = grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_hidden_out_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        hidden_out_address0 = grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_hidden_out_address0;
+        hidden_out_address0 = grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_hidden_out_address0;
     end else begin
         hidden_out_address0 = 'bx;
     end
@@ -293,9 +342,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        hidden_out_ce0 = grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_hidden_out_ce0;
+        hidden_out_ce0 = grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_hidden_out_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        hidden_out_ce0 = grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_hidden_out_ce0;
+        hidden_out_ce0 = grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_hidden_out_ce0;
     end else begin
         hidden_out_ce0 = 1'b0;
     end
@@ -303,14 +352,14 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        hidden_out_we0 = grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_hidden_out_we0;
+        hidden_out_we0 = grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_hidden_out_we0;
     end else begin
         hidden_out_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state5)) begin
+    if (((icmp_ln40_reg_202 == 1'd0) & (1'b1 == ap_CS_fsm_state5))) begin
         prediction_ap_vld = 1'b1;
     end else begin
         prediction_ap_vld = 1'b0;
@@ -318,16 +367,50 @@ always @ (*) begin
 end
 
 always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        weight_mem_Addr_A = grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_weight_mem_Addr_A;
+    end else begin
+        weight_mem_Addr_A = weight_mem_Addr_A_local;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        weight_mem_EN_A = grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_weight_mem_EN_A;
+    end else begin
+        weight_mem_EN_A = weight_mem_EN_A_local;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln40_fu_161_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1) & (icmp_ln42_fu_177_p2 == 1'd1) & (ap_start == 1'b1))) begin
+        weight_mem_EN_A_local = 1'b1;
+    end else begin
+        weight_mem_EN_A_local = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln40_fu_161_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1) & (icmp_ln42_fu_177_p2 == 1'd1) & (ap_start == 1'b1))) begin
+        weight_mem_WEN_A_local = 4'd15;
+    end else begin
+        weight_mem_WEN_A_local = 4'd0;
+    end
+end
+
+always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+            if (((icmp_ln40_fu_161_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+                ap_NS_fsm = ap_ST_fsm_state5;
+            end else if (((icmp_ln40_fu_161_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if (((grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
@@ -337,7 +420,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state4;
         end
         ap_ST_fsm_state4 : begin
-            if (((grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+            if (((grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
                 ap_NS_fsm = ap_ST_fsm_state5;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
@@ -366,8 +449,32 @@ always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_start = grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79_ap_start_reg;
+assign grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_start = grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137_ap_start_reg;
 
-assign grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_start = grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93_ap_start_reg;
+assign grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_start = grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151_ap_start_reg;
+
+assign icmp_ln40_fu_161_p2 = ((mode == 32'd1) ? 1'b1 : 1'b0);
+
+assign icmp_ln42_fu_177_p2 = ((tmp_fu_167_p4 == 18'd0) ? 1'b1 : 1'b0);
+
+assign tmp_fu_167_p4 = {{wr_addr[31:14]}};
+
+assign trunc_ln43_fu_183_p1 = wr_addr[13:0];
+
+assign weight_mem_Addr_A_local = weight_mem_Addr_A_orig << 32'd2;
+
+assign weight_mem_Addr_A_orig = zext_ln43_fu_187_p1;
+
+assign weight_mem_Clk_A = ap_clk;
+
+assign weight_mem_Din_A = wr_data;
+
+always @ (*) begin
+    weight_mem_Rst_A = ~ap_rst_n;
+end
+
+assign weight_mem_WEN_A = weight_mem_WEN_A_local;
+
+assign zext_ln43_fu_187_p1 = trunc_ln43_fu_183_p1;
 
 endmodule //bgn_inference

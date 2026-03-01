@@ -1,6 +1,0 @@
-   Build using "D:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang++"
-   Compiling apatb_bgn_inference.cpp
-   Compiling test_bench.cpp_pre.cpp.tb.cpp
-   Compiling top.cpp_pre.cpp.tb.cpp
-   Compiling apatb_bgn_inference_ir.ll
-   Generating cosim.tv.exe

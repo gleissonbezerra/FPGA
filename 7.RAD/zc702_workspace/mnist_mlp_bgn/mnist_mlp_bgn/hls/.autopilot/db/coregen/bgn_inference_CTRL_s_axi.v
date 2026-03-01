@@ -34,6 +34,9 @@
     output wire                          interrupt,
     input  wire [31:0]                   prediction,
     input  wire                          prediction_ap_vld,
+    output wire [31:0]                   mode,
+    output wire [31:0]                   wr_addr,
+    output wire [31:0]                   wr_data,
     input  wire [4:0]                    input_img_address0,
     input  wire                          input_img_ce0,
     output wire [31:0]                   input_img_q0,
@@ -69,6 +72,15 @@
 // 0x14 : Control signal of prediction
 //        bit 0  - prediction_ap_vld (Read/COR)
 //        others - reserved
+// 0x20 : Data signal of mode
+//        bit 31~0 - mode[31:0] (Read/Write)
+// 0x24 : reserved
+// 0x28 : Data signal of wr_addr
+//        bit 31~0 - wr_addr[31:0] (Read/Write)
+// 0x2c : reserved
+// 0x30 : Data signal of wr_data
+//        bit 31~0 - wr_data[31:0] (Read/Write)
+// 0x34 : reserved
 // 0x80 ~
 // 0xff : Memory 'input_img' (25 * 32b)
 //        Word n : bit [31:0] - input_img[n]
@@ -82,6 +94,12 @@ localparam
     ADDR_ISR               = 8'h0c,
     ADDR_PREDICTION_DATA_0 = 8'h10,
     ADDR_PREDICTION_CTRL   = 8'h14,
+    ADDR_MODE_DATA_0       = 8'h20,
+    ADDR_MODE_CTRL         = 8'h24,
+    ADDR_WR_ADDR_DATA_0    = 8'h28,
+    ADDR_WR_ADDR_CTRL      = 8'h2c,
+    ADDR_WR_DATA_DATA_0    = 8'h30,
+    ADDR_WR_DATA_CTRL      = 8'h34,
     ADDR_INPUT_IMG_BASE    = 8'h80,
     ADDR_INPUT_IMG_HIGH    = 8'hff,
     WRIDLE                 = 2'd0,
@@ -122,6 +140,9 @@ localparam
     reg  [1:0]                    int_isr = 2'b0;
     reg                           int_prediction_ap_vld;
     reg  [31:0]                   int_prediction = 'b0;
+    reg  [31:0]                   int_mode = 'b0;
+    reg  [31:0]                   int_wr_addr = 'b0;
+    reg  [31:0]                   int_wr_data = 'b0;
     // memory signals
     wire [4:0]                    int_input_img_address0;
     wire                          int_input_img_ce0;
@@ -271,6 +292,15 @@ always @(posedge ACLK) begin
                 ADDR_PREDICTION_CTRL: begin
                     rdata[0] <= int_prediction_ap_vld;
                 end
+                ADDR_MODE_DATA_0: begin
+                    rdata <= int_mode[31:0];
+                end
+                ADDR_WR_ADDR_DATA_0: begin
+                    rdata <= int_wr_addr[31:0];
+                end
+                ADDR_WR_DATA_DATA_0: begin
+                    rdata <= int_wr_data[31:0];
+                end
             endcase
         end
         else if (int_input_img_read) begin
@@ -286,6 +316,9 @@ assign ap_start          = int_ap_start;
 assign task_ap_done      = (ap_done && !auto_restart_status) || auto_restart_done;
 assign task_ap_ready     = ap_ready && !int_auto_restart;
 assign auto_restart_done = auto_restart_status && (ap_idle && !int_ap_idle);
+assign mode              = int_mode;
+assign wr_addr           = int_wr_addr;
+assign wr_data           = int_wr_data;
 // int_interrupt
 always @(posedge ACLK) begin
     if (ARESET)
@@ -437,6 +470,36 @@ always @(posedge ACLK) begin
             int_prediction_ap_vld <= 1'b1;
         else if (ar_hs && raddr == ADDR_PREDICTION_CTRL)
             int_prediction_ap_vld <= 1'b0; // clear on read
+    end
+end
+
+// int_mode[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_mode[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_MODE_DATA_0)
+            int_mode[31:0] <= (WDATA[31:0] & wmask) | (int_mode[31:0] & ~wmask);
+    end
+end
+
+// int_wr_addr[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_wr_addr[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_WR_ADDR_DATA_0)
+            int_wr_addr[31:0] <= (WDATA[31:0] & wmask) | (int_wr_addr[31:0] & ~wmask);
+    end
+end
+
+// int_wr_data[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_wr_data[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_WR_DATA_DATA_0)
+            int_wr_data[31:0] <= (WDATA[31:0] & wmask) | (int_wr_data[31:0] & ~wmask);
     end
 end
 

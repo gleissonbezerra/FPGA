@@ -37,6 +37,9 @@ port (
     interrupt             :out  STD_LOGIC;
     prediction            :in   STD_LOGIC_VECTOR(31 downto 0);
     prediction_ap_vld     :in   STD_LOGIC;
+    mode                  :out  STD_LOGIC_VECTOR(31 downto 0);
+    wr_addr               :out  STD_LOGIC_VECTOR(31 downto 0);
+    wr_data               :out  STD_LOGIC_VECTOR(31 downto 0);
     input_img_address0    :in   STD_LOGIC_VECTOR(4 downto 0);
     input_img_ce0         :in   STD_LOGIC;
     input_img_q0          :out  STD_LOGIC_VECTOR(31 downto 0);
@@ -74,6 +77,15 @@ end entity bgn_inference_CTRL_s_axi;
 -- 0x14 : Control signal of prediction
 --        bit 0  - prediction_ap_vld (Read/COR)
 --        others - reserved
+-- 0x20 : Data signal of mode
+--        bit 31~0 - mode[31:0] (Read/Write)
+-- 0x24 : reserved
+-- 0x28 : Data signal of wr_addr
+--        bit 31~0 - wr_addr[31:0] (Read/Write)
+-- 0x2c : reserved
+-- 0x30 : Data signal of wr_data
+--        bit 31~0 - wr_data[31:0] (Read/Write)
+-- 0x34 : reserved
 -- 0x80 ~
 -- 0xff : Memory 'input_img' (25 * 32b)
 --        Word n : bit [31:0] - input_img[n]
@@ -92,6 +104,12 @@ attribute DowngradeIPIdentifiedWarnings of behave : architecture is "yes";
     constant ADDR_ISR               : INTEGER := 16#0c#;
     constant ADDR_PREDICTION_DATA_0 : INTEGER := 16#10#;
     constant ADDR_PREDICTION_CTRL   : INTEGER := 16#14#;
+    constant ADDR_MODE_DATA_0       : INTEGER := 16#20#;
+    constant ADDR_MODE_CTRL         : INTEGER := 16#24#;
+    constant ADDR_WR_ADDR_DATA_0    : INTEGER := 16#28#;
+    constant ADDR_WR_ADDR_CTRL      : INTEGER := 16#2c#;
+    constant ADDR_WR_DATA_DATA_0    : INTEGER := 16#30#;
+    constant ADDR_WR_DATA_CTRL      : INTEGER := 16#34#;
     constant ADDR_INPUT_IMG_BASE    : INTEGER := 16#80#;
     constant ADDR_INPUT_IMG_HIGH    : INTEGER := 16#ff#;
     constant ADDR_BITS         : INTEGER := 8;
@@ -125,6 +143,9 @@ attribute DowngradeIPIdentifiedWarnings of behave : architecture is "yes";
     signal int_isr             : UNSIGNED(1 downto 0) := (others => '0');
     signal int_prediction_ap_vld : STD_LOGIC;
     signal int_prediction      : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_mode            : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_wr_addr         : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_wr_data         : UNSIGNED(31 downto 0) := (others => '0');
     -- memory signals
     signal int_input_img_address0 : UNSIGNED(4 downto 0);
     signal int_input_img_ce0   : STD_LOGIC;
@@ -328,6 +349,12 @@ port map (
                         rdata_data <= RESIZE(int_prediction(31 downto 0), 32);
                     when ADDR_PREDICTION_CTRL =>
                         rdata_data(0) <= int_prediction_ap_vld;
+                    when ADDR_MODE_DATA_0 =>
+                        rdata_data <= RESIZE(int_mode(31 downto 0), 32);
+                    when ADDR_WR_ADDR_DATA_0 =>
+                        rdata_data <= RESIZE(int_wr_addr(31 downto 0), 32);
+                    when ADDR_WR_DATA_DATA_0 =>
+                        rdata_data <= RESIZE(int_wr_data(31 downto 0), 32);
                     when others =>
                         NULL;
                     end case;
@@ -344,6 +371,9 @@ port map (
     task_ap_done         <= (ap_done and not auto_restart_status) or auto_restart_done;
     task_ap_ready        <= ap_ready and not int_auto_restart;
     auto_restart_done    <= auto_restart_status and (ap_idle and not int_ap_idle);
+    mode                 <= STD_LOGIC_VECTOR(int_mode);
+    wr_addr              <= STD_LOGIC_VECTOR(int_wr_addr);
+    wr_data              <= STD_LOGIC_VECTOR(int_wr_data);
 
     process (ACLK)
     begin
@@ -538,6 +568,45 @@ port map (
                     int_prediction_ap_vld <= '1';
                 elsif (ar_hs = '1' and raddr = ADDR_PREDICTION_CTRL) then
                     int_prediction_ap_vld <= '0'; -- clear on read
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_mode(31 downto 0) <= (others => '0');
+            elsif (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_MODE_DATA_0) then
+                    int_mode(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_mode(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_wr_addr(31 downto 0) <= (others => '0');
+            elsif (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_WR_ADDR_DATA_0) then
+                    int_wr_addr(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_wr_addr(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_wr_data(31 downto 0) <= (others => '0');
+            elsif (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_WR_DATA_DATA_0) then
+                    int_wr_data(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_wr_data(31 downto 0));
                 end if;
             end if;
         end if;

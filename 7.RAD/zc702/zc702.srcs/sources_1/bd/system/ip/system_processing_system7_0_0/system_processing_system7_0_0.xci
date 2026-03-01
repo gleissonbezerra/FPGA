@@ -1340,12 +1340,9 @@
             "is_visible": [ { "value": "FALSE" } ],
             "processor_type": [ { "value": "ARM" } ]
           }
-        },
-        "microblaze": {
-          "address_space_refs": "Data"
         }
       }
     }
   },
-  "checksum": "a20f8cd7"
+  "checksum": "a9effa6d"
 }

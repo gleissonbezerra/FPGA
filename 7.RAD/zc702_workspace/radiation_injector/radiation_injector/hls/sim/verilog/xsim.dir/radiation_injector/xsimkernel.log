@@ -1,7 +1,0 @@
-Running: xsim.dir/radiation_injector/xsimk.exe -simmode gui -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=radiation_injector_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -wdb radiation_injector.wdb -simrunnum 0 -socket 53418
-Design successfully loaded
-Design Loading Memory Usage: 21344 KB (Peak: 21344 KB)
-Design Loading CPU Usage: 61 ms
-Simulation completed
-Simulation Memory Usage: 62268 KB (Peak: 62268 KB)
-Simulation CPU Usage: 155 ms

@@ -2,19 +2,25 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="directive:1:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="radiation_injector" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=radiation_injector" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="radiation_injector.cpp:18:1" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="hls" ARG_PragmaFunction="radiation_injector" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=weight_mem offset=slave bundle=gmem depth=100" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="radiation_injector.cpp:13:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="radiation_injector" ARG_PragmaIsValid="1" ARG_PragmaOptions="bram port=weight_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="radiation_injector.cpp:19:1" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="hls" ARG_PragmaFunction="radiation_injector" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=range_size bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="radiation_injector.cpp:20:1" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="radiation_injector.cpp:14:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="hls" ARG_PragmaFunction="radiation_injector" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=intensity bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="radiation_injector.cpp:21:1" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="radiation_injector.cpp:15:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="hls" ARG_PragmaFunction="radiation_injector" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=seed bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="radiation_injector.cpp:22:1" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="radiation_injector.cpp:16:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="radiation_injector" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=num_words bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="radiation_injector.cpp:17:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="hls" ARG_PragmaFunction="radiation_injector" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="radiation_injector.cpp:19:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="radiation_injector" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=weight_mem type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-340" msg_severity="WARNING" msg_loc="radiation_injector.cpp:19:1" msg_body="The resource pragma (bind_storage) on top-level function argument, in 'call' is unsupported, please use INTERFACE pragma instead">
+        <args Pragma="call" Pragma-DebugLoc="File radiation_injector.cpp Line 19 Column 1"/>
     </msg>
 </xilinx:hls_fe_msgs>

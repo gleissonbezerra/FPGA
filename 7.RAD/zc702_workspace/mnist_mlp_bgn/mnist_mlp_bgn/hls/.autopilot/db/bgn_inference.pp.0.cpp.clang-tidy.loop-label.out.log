@@ -1,0 +1,25 @@
+E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\bgn_inference.pp.0.cpp:2254:5: remark: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_676_1: 
+E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\bgn_inference.pp.0.cpp:2254:5: note: FIX-IT applied suggested code changes
+E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\bgn_inference.pp.0.cpp:2268:5: remark: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_690_1: 
+E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\bgn_inference.pp.0.cpp:2268:5: note: FIX-IT applied suggested code changes
+E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\bgn_inference.pp.0.cpp:2282:5: remark: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_704_1: 
+E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\bgn_inference.pp.0.cpp:2282:5: note: FIX-IT applied suggested code changes
+E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\bgn_inference.pp.0.cpp:5802:7: remark: Added loop label VITIS_LOOP_1251_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^
+      VITIS_LOOP_1251_1: 
+E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\bgn_inference.pp.0.cpp:5802:7: note: FIX-IT applied suggested code changes
+E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\bgn_inference.pp.0.cpp:50127:5: remark: Added loop label VITIS_LOOP_13_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < 32; i++) {
+    ^
+    VITIS_LOOP_13_1: 
+E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\mnist_mlp_bgn\hls\.autopilot\db\bgn_inference.pp.0.cpp:50127:5: note: FIX-IT applied suggested code changes

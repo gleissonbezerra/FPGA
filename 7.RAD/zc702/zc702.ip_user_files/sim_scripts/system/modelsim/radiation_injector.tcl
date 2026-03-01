@@ -10,20 +10,15 @@ proc generate {drv_handle} {
         "NUM_INSTANCES" \
         "DEVICE_ID" \
         "C_S_AXI_CONTROL_BASEADDR" \
-        "C_S_AXI_CONTROL_HIGHADDR" \
-        "C_S_AXI_CONTROL_R_BASEADDR" \
-        "C_S_AXI_CONTROL_R_HIGHADDR"
+        "C_S_AXI_CONTROL_HIGHADDR"
 
     xdefine_config_file $drv_handle "xradiation_injector_g.c" "XRadiation_injector" \
         "DEVICE_ID" \
-        "C_S_AXI_CONTROL_BASEADDR" \
-        "C_S_AXI_CONTROL_R_BASEADDR"
+        "C_S_AXI_CONTROL_BASEADDR"
 
     xdefine_canonical_xpars $drv_handle "xparameters.h" "XRadiation_injector" \
         "DEVICE_ID" \
         "C_S_AXI_CONTROL_BASEADDR" \
-        "C_S_AXI_CONTROL_HIGHADDR" \
-        "C_S_AXI_CONTROL_R_BASEADDR" \
-        "C_S_AXI_CONTROL_R_HIGHADDR"
+        "C_S_AXI_CONTROL_HIGHADDR"
 }
 

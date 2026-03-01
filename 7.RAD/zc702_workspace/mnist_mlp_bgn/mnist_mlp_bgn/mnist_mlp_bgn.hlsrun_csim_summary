@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "02/26/26 20:08:56",
- "timestampMillis": "1772147336707",
+ "dateTimestamp": "03/01/26 01:53:39",
+ "timestampMillis": "1772340819241",
  "buildStep": {
-  "cmdId": "d0df8643-4775-4ada-b498-6ac17a5636be",
+  "cmdId": "a59d981f-922b-423e-8460-5f1315bd432e",
   "name": "vitis-run",
   "logFile": "E:/source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\mnist_mlp_bgn\\mnist_mlp_bgn\\logs\\mnist_mlp_bgn.steps.log",
   "commandLine": "D:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config E:\\source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\mnist_mlp_bgn\\hls_config.cfg --work_dir mnist_mlp_bgn ",
@@ -33,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/26/26 20:08:56",
- "timestampMillis": "1772147336708",
+ "dateTimestamp": "03/01/26 01:53:39",
+ "timestampMillis": "1772340819241",
  "status": {
-  "cmdId": "d0df8643-4775-4ada-b498-6ac17a5636be",
+  "cmdId": "a59d981f-922b-423e-8460-5f1315bd432e",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "02/26/26 20:09:00",
- "timestampMillis": "1772147340508",
+ "dateTimestamp": "03/01/26 01:53:41",
+ "timestampMillis": "1772340821173",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -64,7 +64,7 @@
      "uuid": ""
     },
     "sources": [
-     "E:/source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\mnist_mlp_bgn\\top.cpp"
+     "E:/source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\mnist_mlp_bgn\\bgn_inference.cpp"
     ],
     "psSources": [],
     "cuNames": [],
@@ -80,10 +80,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "02/26/26 20:09:00",
- "timestampMillis": "1772147340508",
+ "dateTimestamp": "03/01/26 01:53:41",
+ "timestampMillis": "1772340821173",
  "buildStep": {
-  "cmdId": "adec8ceb-b7ef-40c3-8c0d-211716f56b1e",
+  "cmdId": "5eea1134-9c18-44fe-a1d6-d89bf8f81fd5",
   "name": "",
   "logFile": "E:/source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\mnist_mlp_bgn\\mnist_mlp_bgn\\hls\\hls.log",
   "commandLine": "",
@@ -96,10 +96,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/26/26 20:09:00",
- "timestampMillis": "1772147340509",
+ "dateTimestamp": "03/01/26 01:53:41",
+ "timestampMillis": "1772340821174",
  "status": {
-  "cmdId": "adec8ceb-b7ef-40c3-8c0d-211716f56b1e",
+  "cmdId": "5eea1134-9c18-44fe-a1d6-d89bf8f81fd5",
   "state": "CS_RUNNING"
  }
 }
@@ -107,10 +107,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/26/26 20:09:04",
- "timestampMillis": "1772147344665",
+ "dateTimestamp": "03/01/26 01:53:42",
+ "timestampMillis": "1772340822671",
  "status": {
-  "cmdId": "adec8ceb-b7ef-40c3-8c0d-211716f56b1e",
+  "cmdId": "5eea1134-9c18-44fe-a1d6-d89bf8f81fd5",
   "state": "CS_PASSED"
  }
 }
@@ -118,10 +118,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/26/26 20:09:04",
- "timestampMillis": "1772147344738",
+ "dateTimestamp": "03/01/26 01:53:42",
+ "timestampMillis": "1772340822721",
  "status": {
-  "cmdId": "d0df8643-4775-4ada-b498-6ac17a5636be",
+  "cmdId": "a59d981f-922b-423e-8460-5f1315bd432e",
   "state": "CS_PASSED"
  }
 }
@@ -129,8 +129,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/26/26 20:09:04",
- "timestampMillis": "1772147344739",
+ "dateTimestamp": "03/01/26 01:53:42",
+ "timestampMillis": "1772340822721",
  "report": {
   "path": "",
   "name": "",
@@ -143,8 +143,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/26/26 20:09:04",
- "timestampMillis": "1772147344739",
+ "dateTimestamp": "03/01/26 01:53:42",
+ "timestampMillis": "1772340822722",
  "report": {
   "path": "",
   "name": "",

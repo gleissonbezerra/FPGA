@@ -1,23 +1,23 @@
 {
   "0": {
-    "basicblocks": 13,
+    "basicblocks": 18,
     "calls": "",
     "control_depth": 1,
-    "def_use_depth": 69,
-    "file": "top.cpp",
-    "fileloc": 23,
-    "instructions": 201,
+    "def_use_depth": 11,
+    "file": "bgn_inference.cpp",
+    "fileloc": 20,
+    "instructions": 226,
     "loads": {
-      "G": 5,
+      "G": 4,
       "L": 1,
-      "T": 1
+      "T": 2
     },
     "memory_accesses": 4,
     "name": "bgn_inference",
     "stores": {
       "L": 1,
-      "T": 1
+      "T": 2
     },
-    "total_instructions": 201
+    "total_instructions": 226
   }
 }

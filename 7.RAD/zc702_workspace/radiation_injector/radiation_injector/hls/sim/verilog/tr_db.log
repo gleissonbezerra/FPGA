@@ -1,4 +1,0 @@
-  CREATE_STREAM @0 {NAME:radiation_injector_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.radiation_injector_virtual_sqr STREAM:4612}
-  CREATE_STREAM @125000 {NAME:radiation_injector_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_gmem.vsqr STREAM:4893}
-  CREATE_STREAM @125000 {NAME:radiation_injector_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_lite_control_r.vsqr STREAM:4902}
-  CREATE_STREAM @125000 {NAME:radiation_injector_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_lite_control.vsqr STREAM:4911}

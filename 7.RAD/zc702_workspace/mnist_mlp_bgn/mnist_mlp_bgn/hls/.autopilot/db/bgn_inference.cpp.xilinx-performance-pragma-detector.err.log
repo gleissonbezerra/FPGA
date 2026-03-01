@@ -1,0 +1,3 @@
+E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\bgn_inference.cpp:41:1: warning: pipeline pragma is ignored, because it can be only applied inside loop body or function body  [-Winvalid-hls-pragmas]
+#pragma HLS PIPELINE II=1
+^

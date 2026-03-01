@@ -1,18 +1,18 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Thu Feb 26 21:25:35 2026
+| Date         : Sun Mar  1 06:16:31 2026
 | Host         : G-MF001 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
 | Device       : xc7z020clg400-2
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'system_bgn_inference_0_1'
+Upgrade Log for IP 'system_radiation_injector_0_1'
 
 1. Summary
 ----------
 
-SUCCESS in the upgrade of system_bgn_inference_0_1 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114492434) to (Rev. 2114498125)
+SUCCESS in the upgrade of system_radiation_injector_0_1 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114501512) to (Rev. 2114501536)
 
 
 
@@ -22,7 +22,827 @@ SUCCESS in the upgrade of system_bgn_inference_0_1 (xilinx.com:hls:bgn_inference
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Thu Feb 26 20:57:23 2026
+| Date         : Sun Mar  1 05:53:15 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_radiation_injector_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_radiation_injector_0_1 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114501416) to (Rev. 2114501512)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'system_radiation_injector_0_1'.
+
+
+-Upgrade has removed interface 's_axi_CTRL'
+
+-Upgrade has added interface 's_axi_control' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_radiation_injector_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 's_axi_CTRL_ARADDR'
+
+-Upgrade has removed port 's_axi_CTRL_ARREADY'
+
+-Upgrade has removed port 's_axi_CTRL_ARVALID'
+
+-Upgrade has removed port 's_axi_CTRL_AWADDR'
+
+-Upgrade has removed port 's_axi_CTRL_AWREADY'
+
+-Upgrade has removed port 's_axi_CTRL_AWVALID'
+
+-Upgrade has removed port 's_axi_CTRL_BREADY'
+
+-Upgrade has removed port 's_axi_CTRL_BRESP'
+
+-Upgrade has removed port 's_axi_CTRL_BVALID'
+
+-Upgrade has removed port 's_axi_CTRL_RDATA'
+
+-Upgrade has removed port 's_axi_CTRL_RREADY'
+
+-Upgrade has removed port 's_axi_CTRL_RRESP'
+
+-Upgrade has removed port 's_axi_CTRL_RVALID'
+
+-Upgrade has removed port 's_axi_CTRL_WDATA'
+
+-Upgrade has removed port 's_axi_CTRL_WREADY'
+
+-Upgrade has removed port 's_axi_CTRL_WSTRB'
+
+-Upgrade has removed port 's_axi_CTRL_WVALID'
+
+-Upgrade has added port 's_axi_control_ARADDR'
+
+-Upgrade has added port 's_axi_control_ARREADY'
+
+-Upgrade has added port 's_axi_control_ARVALID'
+
+-Upgrade has added port 's_axi_control_AWADDR'
+
+-Upgrade has added port 's_axi_control_AWREADY'
+
+-Upgrade has added port 's_axi_control_AWVALID'
+
+-Upgrade has added port 's_axi_control_BREADY'
+
+-Upgrade has added port 's_axi_control_BRESP'
+
+-Upgrade has added port 's_axi_control_BVALID'
+
+-Upgrade has added port 's_axi_control_RDATA'
+
+-Upgrade has added port 's_axi_control_RREADY'
+
+-Upgrade has added port 's_axi_control_RRESP'
+
+-Upgrade has added port 's_axi_control_RVALID'
+
+-Upgrade has added port 's_axi_control_WDATA'
+
+-Upgrade has added port 's_axi_control_WREADY'
+
+-Upgrade has added port 's_axi_control_WSTRB'
+
+-Upgrade has added port 's_axi_control_WVALID'
+
+
+4. Addressing Information
+-------------------------
+
+Detected addressing differences while upgrading 'system_radiation_injector_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed address block 's_axi_CTRL/Reg'
+
+-Upgrade has added address block 's_axi_control/Reg'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 04:17:33 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_radiation_injector_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_radiation_injector_0_1 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114501390) to (Rev. 2114501416)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 03:50:42 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_radiation_injector_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_radiation_injector_0_1 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114501370) to (Rev. 2114501390)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 03:30:27 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_radiation_injector_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_radiation_injector_0_1 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114501363) to (Rev. 2114501370)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'system_radiation_injector_0_1'.
+
+
+-Upgrade has removed interface 's_axi_control'
+
+-Upgrade has added interface 's_axi_CTRL' (xilinx.com:interface:aximm:1.0)
+
+-Upgrade has added interface 'weight_mem_PORTA' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_radiation_injector_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 's_axi_control_ARADDR'
+
+-Upgrade has removed port 's_axi_control_ARREADY'
+
+-Upgrade has removed port 's_axi_control_ARVALID'
+
+-Upgrade has removed port 's_axi_control_AWADDR'
+
+-Upgrade has removed port 's_axi_control_AWREADY'
+
+-Upgrade has removed port 's_axi_control_AWVALID'
+
+-Upgrade has removed port 's_axi_control_BREADY'
+
+-Upgrade has removed port 's_axi_control_BRESP'
+
+-Upgrade has removed port 's_axi_control_BVALID'
+
+-Upgrade has removed port 's_axi_control_RDATA'
+
+-Upgrade has removed port 's_axi_control_RREADY'
+
+-Upgrade has removed port 's_axi_control_RRESP'
+
+-Upgrade has removed port 's_axi_control_RVALID'
+
+-Upgrade has removed port 's_axi_control_WDATA'
+
+-Upgrade has removed port 's_axi_control_WREADY'
+
+-Upgrade has removed port 's_axi_control_WSTRB'
+
+-Upgrade has removed port 's_axi_control_WVALID'
+
+-Upgrade has removed port 'weight_mem_address0'
+
+-Upgrade has removed port 'weight_mem_ce0'
+
+-Upgrade has removed port 'weight_mem_d0'
+
+-Upgrade has removed port 'weight_mem_q0'
+
+-Upgrade has removed port 'weight_mem_we0'
+
+-Upgrade has added port 's_axi_CTRL_ARADDR'
+
+-Upgrade has added port 's_axi_CTRL_ARREADY'
+
+-Upgrade has added port 's_axi_CTRL_ARVALID'
+
+-Upgrade has added port 's_axi_CTRL_AWADDR'
+
+-Upgrade has added port 's_axi_CTRL_AWREADY'
+
+-Upgrade has added port 's_axi_CTRL_AWVALID'
+
+-Upgrade has added port 's_axi_CTRL_BREADY'
+
+-Upgrade has added port 's_axi_CTRL_BRESP'
+
+-Upgrade has added port 's_axi_CTRL_BVALID'
+
+-Upgrade has added port 's_axi_CTRL_RDATA'
+
+-Upgrade has added port 's_axi_CTRL_RREADY'
+
+-Upgrade has added port 's_axi_CTRL_RRESP'
+
+-Upgrade has added port 's_axi_CTRL_RVALID'
+
+-Upgrade has added port 's_axi_CTRL_WDATA'
+
+-Upgrade has added port 's_axi_CTRL_WREADY'
+
+-Upgrade has added port 's_axi_CTRL_WSTRB'
+
+-Upgrade has added port 's_axi_CTRL_WVALID'
+
+-Upgrade has added port 'weight_mem_Addr_A'
+
+-Upgrade has added port 'weight_mem_Clk_A'
+
+-Upgrade has added port 'weight_mem_Din_A'
+
+-Upgrade has added port 'weight_mem_Dout_A'
+
+-Upgrade has added port 'weight_mem_EN_A'
+
+-Upgrade has added port 'weight_mem_Rst_A'
+
+-Upgrade has added port 'weight_mem_WEN_A'
+
+
+4. Addressing Information
+-------------------------
+
+Detected addressing differences while upgrading 'system_radiation_injector_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed address block 's_axi_control/Reg'
+
+-Upgrade has added address block 's_axi_CTRL/Reg'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 01:54:56 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_3'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_bgn_inference_0_3 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114501271) to (Rev. 2114501274)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 01:51:30 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_3'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_bgn_inference_0_3 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114501255) to (Rev. 2114501271)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 01:36:59 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_3'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_bgn_inference_0_3 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114501245) to (Rev. 2114501255)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'system_bgn_inference_0_3'.
+
+
+-Upgrade has added interface 'weight_mem_PORTA' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_bgn_inference_0_3'. These changes may impact your design.
+
+
+-Upgrade has removed port 'weight_mem_address0'
+
+-Upgrade has removed port 'weight_mem_ce0'
+
+-Upgrade has removed port 'weight_mem_d0'
+
+-Upgrade has removed port 'weight_mem_q0'
+
+-Upgrade has removed port 'weight_mem_we0'
+
+-Upgrade has added port 'weight_mem_Addr_A'
+
+-Upgrade has added port 'weight_mem_Clk_A'
+
+-Upgrade has added port 'weight_mem_Din_A'
+
+-Upgrade has added port 'weight_mem_Dout_A'
+
+-Upgrade has added port 'weight_mem_EN_A'
+
+-Upgrade has added port 'weight_mem_Rst_A'
+
+-Upgrade has added port 'weight_mem_WEN_A'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 01:25:53 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_3'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_bgn_inference_0_3 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114501219) to (Rev. 2114501245)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 00:59:48 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_3'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_bgn_inference_0_3 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114501208) to (Rev. 2114501219)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'system_bgn_inference_0_3'.
+
+
+-Upgrade has removed interface 'weight_mem_PORTA'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_bgn_inference_0_3'. These changes may impact your design.
+
+
+-Upgrade has removed port 'weight_mem_Addr_A'
+
+-Upgrade has removed port 'weight_mem_Clk_A'
+
+-Upgrade has removed port 'weight_mem_Din_A'
+
+-Upgrade has removed port 'weight_mem_Dout_A'
+
+-Upgrade has removed port 'weight_mem_EN_A'
+
+-Upgrade has removed port 'weight_mem_Rst_A'
+
+-Upgrade has removed port 'weight_mem_WEN_A'
+
+-Upgrade has added port 'weight_mem_address0'
+
+-Upgrade has added port 'weight_mem_ce0'
+
+-Upgrade has added port 'weight_mem_d0'
+
+-Upgrade has added port 'weight_mem_q0'
+
+-Upgrade has added port 'weight_mem_we0'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 00:49:21 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_3'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_bgn_inference_0_3 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114501186) to (Rev. 2114501208)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'system_bgn_inference_0_3'.
+
+
+-Upgrade has added interface 'weight_mem_PORTA' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_bgn_inference_0_3'. These changes may impact your design.
+
+
+-Upgrade has removed port 'weight_mem_address0'
+
+-Upgrade has removed port 'weight_mem_ce0'
+
+-Upgrade has removed port 'weight_mem_d0'
+
+-Upgrade has removed port 'weight_mem_q0'
+
+-Upgrade has removed port 'weight_mem_we0'
+
+-Upgrade has added port 'weight_mem_Addr_A'
+
+-Upgrade has added port 'weight_mem_Clk_A'
+
+-Upgrade has added port 'weight_mem_Din_A'
+
+-Upgrade has added port 'weight_mem_Dout_A'
+
+-Upgrade has added port 'weight_mem_EN_A'
+
+-Upgrade has added port 'weight_mem_Rst_A'
+
+-Upgrade has added port 'weight_mem_WEN_A'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 00:26:32 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_3'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_bgn_inference_0_3 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114501175) to (Rev. 2114501186)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'system_bgn_inference_0_3'.
+
+
+-Upgrade has removed interface 'weight_mem_PORTA'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_bgn_inference_0_3'. These changes may impact your design.
+
+
+-Upgrade has removed port 'weight_mem_Addr_A'
+
+-Upgrade has removed port 'weight_mem_Clk_A'
+
+-Upgrade has removed port 'weight_mem_Din_A'
+
+-Upgrade has removed port 'weight_mem_Dout_A'
+
+-Upgrade has removed port 'weight_mem_EN_A'
+
+-Upgrade has removed port 'weight_mem_Rst_A'
+
+-Upgrade has removed port 'weight_mem_WEN_A'
+
+-Upgrade has added port 'weight_mem_address0'
+
+-Upgrade has added port 'weight_mem_ce0'
+
+-Upgrade has added port 'weight_mem_d0'
+
+-Upgrade has added port 'weight_mem_q0'
+
+-Upgrade has added port 'weight_mem_we0'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 00:15:37 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_3'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_bgn_inference_0_3 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114501169) to (Rev. 2114501175)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 00:10:10 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_bgn_inference_0_2 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114501146) to (Rev. 2114501169)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 28 23:46:26 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_bgn_inference_0_2 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114501002) to (Rev. 2114501146)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'system_bgn_inference_0_2'.
+
+
+-Upgrade has added interface 'weight_mem_PORTA' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_bgn_inference_0_2'. These changes may impact your design.
+
+
+-Upgrade has removed port 'weight_mem_address0'
+
+-Upgrade has removed port 'weight_mem_ce0'
+
+-Upgrade has removed port 'weight_mem_d0'
+
+-Upgrade has removed port 'weight_mem_q0'
+
+-Upgrade has removed port 'weight_mem_we0'
+
+-Upgrade has added port 'weight_mem_Addr_A'
+
+-Upgrade has added port 'weight_mem_Clk_A'
+
+-Upgrade has added port 'weight_mem_Din_A'
+
+-Upgrade has added port 'weight_mem_Dout_A'
+
+-Upgrade has added port 'weight_mem_EN_A'
+
+-Upgrade has added port 'weight_mem_Rst_A'
+
+-Upgrade has added port 'weight_mem_WEN_A'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 28 21:23:01 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_bgn_inference_0_2 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114500978) to (Rev. 2114501002)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_bgn_inference_0_2'. These changes may impact your design.
+
+
+-Upgrade has removed port 'weights_mem_address0'
+
+-Upgrade has removed port 'weights_mem_ce0'
+
+-Upgrade has removed port 'weights_mem_d0'
+
+-Upgrade has removed port 'weights_mem_q0'
+
+-Upgrade has removed port 'weights_mem_we0'
+
+-Upgrade has added port 'weight_mem_address0'
+
+-Upgrade has added port 'weight_mem_ce0'
+
+-Upgrade has added port 'weight_mem_d0'
+
+-Upgrade has added port 'weight_mem_q0'
+
+-Upgrade has added port 'weight_mem_we0'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 28 20:59:12 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_radiation_injector_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_radiation_injector_0_0 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114500852) to (Rev. 2114500978)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 28 20:59:12 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_bgn_inference_0_2 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114500931) to (Rev. 2114500978)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 28 20:11:35 2026
 | Host         : G-MF001 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
 | Device       : xc7z020clg400-2
@@ -33,5 +853,235 @@ Upgrade Log for IP 'system_bgn_inference_0_0'
 1. Summary
 ----------
 
-SUCCESS in the update of system_bgn_inference_0_0 (xilinx.com:hls:bgn_inference:1.0 (Rev. 2114492434)) to current project options.
+SUCCESS in the upgrade of system_bgn_inference_0_0 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114500896) to (Rev. 2114500931)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 28 19:39:55 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_bgn_inference_0_0 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114500849) to (Rev. 2114500896)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_bgn_inference_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'weights_mem_d0'
+
+-Upgrade has added port 'weights_mem_we0'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 28 18:52:50 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_radiation_injector_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_radiation_injector_0_0 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114500781) to (Rev. 2114500852)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'system_radiation_injector_0_0'.
+
+
+-Upgrade has removed interface 'weight_mem_PORTA'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_radiation_injector_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'weight_mem_Addr_A'
+
+-Upgrade has removed port 'weight_mem_Clk_A'
+
+-Upgrade has removed port 'weight_mem_Din_A'
+
+-Upgrade has removed port 'weight_mem_Dout_A'
+
+-Upgrade has removed port 'weight_mem_EN_A'
+
+-Upgrade has removed port 'weight_mem_Rst_A'
+
+-Upgrade has removed port 'weight_mem_WEN_A'
+
+-Upgrade has added port 'weight_mem_address0'
+
+-Upgrade has added port 'weight_mem_ce0'
+
+-Upgrade has added port 'weight_mem_d0'
+
+-Upgrade has added port 'weight_mem_q0'
+
+-Upgrade has added port 'weight_mem_we0'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 28 18:52:50 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_bgn_inference_0_0 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114500770) to (Rev. 2114500849)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'system_bgn_inference_0_0'.
+
+
+-Upgrade has removed interface 'weights_mem_PORTA'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_bgn_inference_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'weights_mem_Addr_A'
+
+-Upgrade has removed port 'weights_mem_Clk_A'
+
+-Upgrade has removed port 'weights_mem_Din_A'
+
+-Upgrade has removed port 'weights_mem_Dout_A'
+
+-Upgrade has removed port 'weights_mem_EN_A'
+
+-Upgrade has removed port 'weights_mem_Rst_A'
+
+-Upgrade has removed port 'weights_mem_WEN_A'
+
+-Upgrade has added port 'weights_mem_address0'
+
+-Upgrade has added port 'weights_mem_ce0'
+
+-Upgrade has added port 'weights_mem_q0'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 28 17:42:22 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_bgn_inference_0_0 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114498125) to (Rev. 2114500770)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'system_bgn_inference_0_0'.
+
+
+-Upgrade has added interface 'weights_mem_PORTA' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_bgn_inference_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'weights_mem_Addr_A'
+
+-Upgrade has added port 'weights_mem_Clk_A'
+
+-Upgrade has added port 'weights_mem_Din_A'
+
+-Upgrade has added port 'weights_mem_Dout_A'
+
+-Upgrade has added port 'weights_mem_EN_A'
+
+-Upgrade has added port 'weights_mem_Rst_A'
+
+-Upgrade has added port 'weights_mem_WEN_A'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 28 16:58:28 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_bgn_inference_0_0 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114492434) to (Rev. 2114498125)
 

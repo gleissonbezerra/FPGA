@@ -239,6 +239,92 @@
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>weight_mem_PORTA</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="bram" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="bram_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>weight_mem_Addr_A</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>weight_mem_Clk_A</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DIN</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>weight_mem_Din_A</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DOUT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>weight_mem_Dout_A</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>EN</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>weight_mem_EN_A</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>weight_mem_Rst_A</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WE</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>weight_mem_WEN_A</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>MASTER_TYPE</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.WEIGHT_MEM_PORTA.MASTER_TYPE">BRAM_CTRL</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>MEM_SIZE</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.WEIGHT_MEM_PORTA.MEM_SIZE">65536</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>MEM_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.WEIGHT_MEM_PORTA.MEM_WIDTH">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>MEM_ADDRESS_MODE</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.WEIGHT_MEM_PORTA.MEM_ADDRESS_MODE">BYTE_ADDRESS</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>READ_LATENCY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.WEIGHT_MEM_PORTA.READ_LATENCY">1</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
   </spirit:busInterfaces>
   <spirit:memoryMaps>
     <spirit:memoryMap>
@@ -589,6 +675,75 @@
           </spirit:field>
         </spirit:register>
         <spirit:register>
+          <spirit:name>mode</spirit:name>
+          <spirit:displayName>mode</spirit:displayName>
+          <spirit:description>Data signal of mode</spirit:description>
+          <spirit:addressOffset>32</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>write-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>mode</spirit:name>
+            <spirit:description>Bit 31 to 0 of mode</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">32</spirit:bitWidth>
+            <spirit:access>write-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>wr_addr</spirit:name>
+          <spirit:displayName>wr_addr</spirit:displayName>
+          <spirit:description>Data signal of wr_addr</spirit:description>
+          <spirit:addressOffset>40</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>write-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>wr_addr</spirit:name>
+            <spirit:description>Bit 31 to 0 of wr_addr</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">32</spirit:bitWidth>
+            <spirit:access>write-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>wr_data</spirit:name>
+          <spirit:displayName>wr_data</spirit:displayName>
+          <spirit:description>Data signal of wr_data</spirit:description>
+          <spirit:addressOffset>48</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>write-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>wr_data</spirit:name>
+            <spirit:description>Bit 31 to 0 of wr_data</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">32</spirit:bitWidth>
+            <spirit:access>write-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
           <spirit:name>Memory_input_img</spirit:name>
           <spirit:displayName>Memory_input_img</spirit:displayName>
           <spirit:description>Memory input_img</spirit:description>
@@ -616,7 +771,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>ac0088eb</spirit:value>
+            <spirit:value>0d678f98</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -632,7 +787,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f1582b20</spirit:value>
+            <spirit:value>0fb4d5ae</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -648,7 +803,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9f012285</spirit:value>
+            <spirit:value>5e1fe8f5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -664,7 +819,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>648d0e08</spirit:value>
+            <spirit:value>9eed7a75</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -678,7 +833,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>220cdb7f</spirit:value>
+            <spirit:value>89f09395</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1022,6 +1177,113 @@
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
+      <spirit:port>
+        <spirit:name>weight_mem_Addr_A</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>weight_mem_Clk_A</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>weight_mem_Din_A</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>weight_mem_Dout_A</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>weight_mem_EN_A</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>weight_mem_Rst_A</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>weight_mem_WEN_A</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
     </spirit:ports>
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
@@ -1043,51 +1305,43 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1.v</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_offset_ROM_1P_BRAM_1R.dat</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_offset_ROM_1P_BRAM_1R.v</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_scale_ROM_1P_BRAM_1R.dat</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_scale_ROM_1P_BRAM_1R.v</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_weights_l1_ROM_1P_BRAM_1R.dat</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_weights_l1_ROM_1P_BRAM_1R.v</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R.dat</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R.v</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1122,57 +1376,48 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1.v</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_offset_ROM_1P_BRAM_1R.dat</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_offset_ROM_1P_BRAM_1R.v</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_scale_ROM_1P_BRAM_1R.dat</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_scale_ROM_1P_BRAM_1R.v</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_weights_l1_ROM_1P_BRAM_1R.dat</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_weights_l1_ROM_1P_BRAM_1R.v</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R.dat</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R.v</spirit:name>
+        <spirit:name>hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1220,31 +1465,27 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_offset_ROM_1P_BRAM_1R.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_scale_ROM_1P_BRAM_1R.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_weights_l1_ROM_1P_BRAM_1R.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1274,43 +1515,38 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/bgn_inference.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_d0975cf8</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_5c19d900</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_offset_ROM_1P_BRAM_1R.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_scale_ROM_1P_BRAM_1R.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_weights_l1_ROM_1P_BRAM_1R.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1445,11 +1681,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="4">22427</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="4">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="5">22428</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="5">2 ~ 22420</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -1462,8 +1698,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Bgn_inference</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114498125</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-02-27T00:25:14Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114501274</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-03-01T04:54:43Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -1471,12 +1707,12 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2025.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="4054f985"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="8888ee02"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3c583aea"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="d2cd2e24"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7d956630"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="805005ef"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5640bdd8"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="73f43bd1"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="4395c73a"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="7527a7da"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="aa04e101"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

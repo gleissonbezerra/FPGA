@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AdditionalInfo>
   <CTypeInfo>
+      <RtlPort>
+        <name>weight_mem_Addr_A</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weight_mem_Clk_A</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weight_mem_Din_A</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weight_mem_Dout_A</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weight_mem_EN_A</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weight_mem_Rst_A</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weight_mem_WEN_A</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
   </CTypeInfo>
   <DesignConstraint>
     <clk_period>10</clk_period>
@@ -8,7 +43,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>37</latency>
-    <II>38 ~ 88</II>
+    <latency>1</latency>
+    <II>2 ~ 36</II>
   </modelParameters>
 </AdditionalInfo>

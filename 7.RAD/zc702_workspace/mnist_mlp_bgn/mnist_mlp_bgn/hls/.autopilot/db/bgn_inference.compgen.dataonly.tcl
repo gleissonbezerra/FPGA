@@ -10,6 +10,30 @@ prediction {
 	offset 16
 	offset_end 23
 }
+mode { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 32
+	offset_end 39
+}
+wr_addr { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 40
+	offset_end 47
+}
+wr_data { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 48
+	offset_end 55
+}
 input_img { 
 	dir I
 	width 32

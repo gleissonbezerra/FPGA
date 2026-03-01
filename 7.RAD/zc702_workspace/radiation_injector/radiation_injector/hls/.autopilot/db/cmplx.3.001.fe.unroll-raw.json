@@ -1,22 +1,20 @@
 {
   "0": {
-    "basicblocks": 8,
+    "basicblocks": 9,
     "calls": "",
     "control_depth": 0,
-    "def_use_depth": 10,
+    "def_use_depth": 6,
     "file": "radiation_injector.cpp",
-    "fileloc": 11,
-    "instructions": 48,
+    "fileloc": 5,
+    "instructions": 36,
     "loads": {
-      "G": 6,
       "T": 1
     },
     "memory_accesses": 0,
     "name": "radiation_injector",
     "stores": {
-      "G": 3,
       "T": 1
     },
-    "total_instructions": 48
+    "total_instructions": 36
   }
 }

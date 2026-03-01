@@ -6,11 +6,11 @@ INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-2'
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
 INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
-INFO: [HLS 200-1465] Applying config ini 'syn.file=top.cpp' from hls_config.cfg(7)
-INFO: [HLS 200-10] Adding design file 'E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/top.cpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'tb.file=test_bench.cpp' from hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=bgn_inference.cpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/bgn_inference.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=test_bench.cpp' from hls_config.cfg(8)
 INFO: [HLS 200-10] Adding test bench file 'E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/test_bench.cpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.top=bgn_inference' from hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'syn.top=bgn_inference' from hls_config.cfg(7)
 INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
@@ -21,37 +21,18 @@ INFO: [COSIM 212-47] Using XSIM for RTL simulation.
 INFO: [COSIM 212-14] Instrumenting C test bench ...
    Build using "D:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang++"
    Compiling apatb_bgn_inference.cpp
+   Compiling bgn_inference.cpp_pre.cpp.tb.cpp
    Compiling test_bench.cpp_pre.cpp.tb.cpp
-   Compiling top.cpp_pre.cpp.tb.cpp
    Compiling apatb_bgn_inference_ir.ll
    Generating cosim.tv.exe
 INFO: [COSIM 212-302] Starting C TB testing ... 
->> Starting C-Simulation...
-Hidden[0]: 2
-Hidden[1]: 2
-Hidden[2]: 0
-Hidden[3]: 3
-Hidden[4]: 3
-Hidden[5]: 1
-Hidden[6]: 2
-Hidden[7]: 2
-Hidden[8]: 1
-Hidden[9]: 1
-Score Class [0]: -31
-Score Class [1]: -26
-Score Class [2]: -11
-Score Class [3]: -13
-Score Class [4]: -21
-Score Class [5]: -6
-Score Class [6]: 0
-Score Class [7]: -32
-Score Class [8]: -1
-Score Class [9]: -23
->> Predicted Class: 6
->> Expected Class:  6
->> TEST PASSED! Bit-accuracy confirmed.
+>> LOAD by direct copy (fast)...
+>> Running inference...
+>> Predicted: 6
+>> Expected:  6
 INFO: [COSIM 212-333] Generating C post check test bench ...
 INFO: [COSIM 212-12] Generating RTL test bench ...
+pdir_merged readwrite
 find not read role field
 INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
 INFO: [COSIM 212-323] Starting verilog simulation. 
@@ -67,24 +48,24 @@ Running: D:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe xil_def
 Multi-threading is on. Using 22 slave threads.
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/AESL_autobram_weight_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_weight_mem
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_bgn_inference_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module bgn_inference
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_offset_ROM_1P_BRAM_1R.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_offset_ROM_1P_BRAM_1R
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_scale_ROM_1P_BRAM_1R.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_bn_scale_ROM_1P_BRAM_1R
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_weights_l1_ROM_1P_BRAM_1R.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bgn_inference_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_weights_l1_ROM_1P_BRAM_1R
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_bias_l2_ROM_1P_BRAM_1R
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bgn_inference_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_weights_l2_ROM_1P_BRAM_1R
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bgn_inference_bgn_inference_Pipeline_LAYER2_MAC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/bgn_inference_CTRL_s_axi.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module bgn_inference_CTRL_s_axi
 INFO: [VRFC 10-311] analyzing module bgn_inference_CTRL_s_axi_ram
@@ -127,7 +108,6 @@ Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
 Compiling module xil_defaultlib.bgn_inference_hidden_out_RAM_1P_...
 Compiling module xil_defaultlib.bgn_inference_bgn_inference_Pipe...
 Compiling module xil_defaultlib.bgn_inference_bgn_inference_Pipe...
-Compiling module xil_defaultlib.bgn_inference_bgn_inference_Pipe...
 Compiling module xil_defaultlib.bgn_inference_mac_muladd_10ns_5n...
 Compiling module xil_defaultlib.bgn_inference_mac_muladd_10ns_5n...
 Compiling module xil_defaultlib.bgn_inference_mac_muladd_11s_5ns...
@@ -145,6 +125,10 @@ Compiling module xil_defaultlib.bgn_inference
 Compiling module xil_defaultlib.misc_interface_default
 Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=8,STRB_WIDTH=4...
 Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.AESL_autobram_weight_mem
+WARNING: [XSIM 43-3373] "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/AESL_autobram_weight_mem.v" Line 97. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/AESL_autobram_weight_mem.v" Line 102. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/mnist_mlp_bgn/hls/sim/verilog/AESL_autobram_weight_mem.v" Line 105. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
 Compiling module xil_defaultlib.nodf_module_intf_default
 Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
 Compiling module xil_defaultlib.dataflow_monitor_1
@@ -156,7 +140,7 @@ Built simulation snapshot bgn_inference
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Thu Feb 26 20:48:10 2026
+  **** Start of session at: Sun Mar  1 01:50:49 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -340,17 +324,17 @@ UVM_INFO D:/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_pa
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 1 [0.00%] @ "125000"
-// RTL Simulation : 1 / 1 [100.00%] @ "225185000"
+// RTL Simulation : 1 / 1 [100.00%] @ "225195000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 225315 ns : File "D:/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+$finish called at time : 225325 ns : File "D:/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu Feb 26 20:48:13 2026...
+INFO: [Common 17-206] Exiting xsim at Sun Mar  1 01:50:52 2026...
 INFO: [COSIM 212-316] Starting C post checking ...
->> Starting C-Simulation...
->> Predicted Class: 6
->> Expected Class:  6
->> TEST PASSED! Bit-accuracy confirmed.
+>> LOAD by direct copy (fast)...
+>> Running inference...
+>> Predicted: 6
+>> Expected:  6
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 35.141 seconds; peak allocated memory: 207.738 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 38s
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 33.067 seconds; peak allocated memory: 207.246 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 36s

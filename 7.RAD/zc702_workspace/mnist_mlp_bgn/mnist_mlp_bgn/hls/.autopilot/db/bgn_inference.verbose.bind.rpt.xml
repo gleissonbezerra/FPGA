@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'bgn_inference'" level="0">
-<item name = "Date">Thu Feb 26 20:47:23 2026
+<item name = "Date">Sun Mar  1 01:54:16 2026
 </item>
 <item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
 <item name = "Project">mnist_mlp_bgn</item>
@@ -24,15 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">22427, 22427, 0.224 ms, 0.224 ms, 22428, 22428, no</column>
+<column name="">1, 22419, 10.000 ns, 0.224 ms, 2, 22420, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1_fu_79">bgn_inference_Pipeline_LAYER1_VITIS_LOOP_46_1, 16017, 16017, 0.160 ms, 0.160 ms, 0, 0, loop pipeline stp</column>
-<column name="grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93">bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2, 6406, 6406, 64.060 us, 64.060 us, 0, 0, loop pipeline stp</column>
+<column name="grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137">bgn_inference_Pipeline_LAYER1_XNOR_POP, 16009, 16009, 0.160 ms, 0.160 ms, 0, 0, loop pipeline stp</column>
+<column name="grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151">bgn_inference_Pipeline_LAYER2_MAC, 6406, 6406, 64.060 us, 64.060 us, 0, 0, loop pipeline stp</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

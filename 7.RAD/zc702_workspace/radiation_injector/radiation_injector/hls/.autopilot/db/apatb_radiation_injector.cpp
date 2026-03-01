@@ -23,18 +23,16 @@ using namespace std;
 // wrapc file define:
 #define AUTOTB_TVIN_weight_mem "../tv/cdatafile/c.radiation_injector.autotvin_weight_mem.dat"
 #define AUTOTB_TVOUT_weight_mem "../tv/cdatafile/c.radiation_injector.autotvout_weight_mem.dat"
-#define AUTOTB_TVIN_range_size "../tv/cdatafile/c.radiation_injector.autotvin_range_size.dat"
-#define AUTOTB_TVOUT_range_size "../tv/cdatafile/c.radiation_injector.autotvout_range_size.dat"
 #define AUTOTB_TVIN_intensity "../tv/cdatafile/c.radiation_injector.autotvin_intensity.dat"
 #define AUTOTB_TVOUT_intensity "../tv/cdatafile/c.radiation_injector.autotvout_intensity.dat"
 #define AUTOTB_TVIN_seed "../tv/cdatafile/c.radiation_injector.autotvin_seed.dat"
 #define AUTOTB_TVOUT_seed "../tv/cdatafile/c.radiation_injector.autotvout_seed.dat"
-#define AUTOTB_TVIN_gmem "../tv/cdatafile/c.radiation_injector.autotvin_gmem.dat"
-#define AUTOTB_TVOUT_gmem "../tv/cdatafile/c.radiation_injector.autotvout_gmem.dat"
+#define AUTOTB_TVIN_num_words "../tv/cdatafile/c.radiation_injector.autotvin_num_words.dat"
+#define AUTOTB_TVOUT_num_words "../tv/cdatafile/c.radiation_injector.autotvout_num_words.dat"
 
 
 // tvout file define:
-#define AUTOTB_TVOUT_PC_gmem "../tv/rtldatafile/rtl.radiation_injector.autotvout_gmem.dat"
+#define AUTOTB_TVOUT_PC_weight_mem "../tv/rtldatafile/rtl.radiation_injector.autotvout_weight_mem.dat"
 
 
 namespace hls::sim
@@ -1259,35 +1257,12 @@ namespace hls::sim
 
 
 extern "C"
-void radiation_injector_hw_stub_wrapper(void*, hls::sim::Byte<4>, hls::sim::Byte<4>, hls::sim::Byte<4>);
+void radiation_injector_hw_stub_wrapper(void*, hls::sim::Byte<4>*, hls::sim::Byte<4>*, hls::sim::Byte<4>*);
 
 extern "C"
-void apatb_radiation_injector_hw(void* __xlx_apatb_param_weight_mem, hls::sim::Byte<4> __xlx_apatb_param_range_size, hls::sim::Byte<4> __xlx_apatb_param_intensity, hls::sim::Byte<4> __xlx_apatb_param_seed)
+void apatb_radiation_injector_hw(void* __xlx_apatb_param_weight_mem, hls::sim::Byte<4>* __xlx_apatb_param_intensity, hls::sim::Byte<4>* __xlx_apatb_param_seed, hls::sim::Byte<4>* __xlx_apatb_param_num_words)
 {
-  static hls::sim::Byte<4> __xlx_offset_byte_param_weight_mem;
   static hls::sim::Register port0 {
-    .name = "weight_mem",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_weight_mem),
-#endif
-  };
-  port0.param = &__xlx_offset_byte_param_weight_mem;
-
-  static hls::sim::Register port1 {
-    .name = "range_size",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_range_size),
-#endif
-  };
-  port1.param = &__xlx_apatb_param_range_size;
-
-  static hls::sim::Register port2 {
     .name = "intensity",
     .width = 32,
 #ifdef POST_CHECK
@@ -1296,9 +1271,9 @@ void apatb_radiation_injector_hw(void* __xlx_apatb_param_weight_mem, hls::sim::B
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_intensity),
 #endif
   };
-  port2.param = &__xlx_apatb_param_intensity;
+  port0.param = __xlx_apatb_param_intensity;
 
-  static hls::sim::Register port3 {
+  static hls::sim::Register port1 {
     .name = "seed",
     .width = 32,
 #ifdef POST_CHECK
@@ -1307,64 +1282,73 @@ void apatb_radiation_injector_hw(void* __xlx_apatb_param_weight_mem, hls::sim::B
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_seed),
 #endif
   };
-  port3.param = &__xlx_apatb_param_seed;
+  port1.param = __xlx_apatb_param_seed;
+
+  static hls::sim::Register port2 {
+    .name = "num_words",
+    .width = 32,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_num_words),
+#endif
+  };
+  port2.param = __xlx_apatb_param_num_words;
 
 #ifdef USE_BINARY_TV_FILE
-  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port4 {
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port3 {
 #else
-  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port4 {
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port3 {
 #endif
     .width = 32,
     .asize = 4,
     .hbm = false,
-    .name = { "gmem" },
+    .name = { "weight_mem" },
 #ifdef POST_CHECK
 #ifdef USE_BINARY_TV_FILE
-    .reader = new hls::sim::Input(AUTOTB_TVOUT_PC_gmem),
+    .reader = new hls::sim::Input(AUTOTB_TVOUT_PC_weight_mem),
 #else
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_gmem),
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_weight_mem),
 #endif
 #else
 #ifdef USE_BINARY_TV_FILE
-    .owriter = new hls::sim::Output(AUTOTB_TVOUT_gmem),
+    .owriter = new hls::sim::Output(AUTOTB_TVOUT_weight_mem),
 #else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_gmem),
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_weight_mem),
 #endif
 #ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_gmem),
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_weight_mem),
 #else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gmem),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_weight_mem),
 #endif
 #endif
     .hasWrite = { true },
     .max_nbytes = { 0 },
   };
-  port4.param = { __xlx_apatb_param_weight_mem };
-  port4.mname = { "weight_mem" };
-  port4.nbytes = { 400 };
+  port3.param = { __xlx_apatb_param_weight_mem };
+  port3.mname = { "weight_mem" };
+  port3.nbytes = { 65536 };
 
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
-    check(port4);
+    check(port3);
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     tcl.containsVLA = 0;
     CodeState = DUMP_INPUTS;
-    delay_dump(port0, port0.iwriter, tcl.AESL_transaction);
+    dump(port0, port0.iwriter, tcl.AESL_transaction);
     dump(port1, port1.iwriter, tcl.AESL_transaction);
     dump(port2, port2.iwriter, tcl.AESL_transaction);
     dump(port3, port3.iwriter, tcl.AESL_transaction);
-    dump(port4, port4.iwriter, tcl.AESL_transaction);
     port0.doTCL(tcl);
     port1.doTCL(tcl);
     port2.doTCL(tcl);
     port3.doTCL(tcl);
-    port4.doTCL(tcl);
     CodeState = CALL_C_DUT;
-    radiation_injector_hw_stub_wrapper(__xlx_apatb_param_weight_mem, __xlx_apatb_param_range_size, __xlx_apatb_param_intensity, __xlx_apatb_param_seed);
+    radiation_injector_hw_stub_wrapper(__xlx_apatb_param_weight_mem, __xlx_apatb_param_intensity, __xlx_apatb_param_seed, __xlx_apatb_param_num_words);
     CodeState = DUMP_OUTPUTS;
-    dump(port4, port4.owriter, tcl.AESL_transaction);
+    dump(port3, port3.owriter, tcl.AESL_transaction);
     tcl.AESL_transaction++;
 #endif
   } catch (const hls::sim::SimException &e) {

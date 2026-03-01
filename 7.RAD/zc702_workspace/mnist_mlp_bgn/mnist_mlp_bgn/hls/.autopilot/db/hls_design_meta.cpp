@@ -2,6 +2,13 @@
 const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("ap_clk", 1, hls_in, -1, "", "", 1),
 	Port_Property("ap_rst_n", 1, hls_in, -1, "", "", 1),
+	Port_Property("weight_mem_Addr_A", 32, hls_out, 1, "bram", "MemPortADDR2", 1),
+	Port_Property("weight_mem_EN_A", 1, hls_out, 1, "bram", "MemPortCE2", 1),
+	Port_Property("weight_mem_WEN_A", 4, hls_out, 1, "bram", "MemPortWE2", 1),
+	Port_Property("weight_mem_Din_A", 32, hls_out, 1, "bram", "MemPortDIN2", 1),
+	Port_Property("weight_mem_Dout_A", 32, hls_in, 1, "bram", "MemPortDOUT2", 1),
+	Port_Property("weight_mem_Clk_A", 1, hls_out, 1, "bram", "mem_clk", 1),
+	Port_Property("weight_mem_Rst_A", 1, hls_out, 1, "bram", "mem_rst", 1),
 	Port_Property("s_axi_CTRL_AWVALID", 1, hls_in, -1, "", "", 1),
 	Port_Property("s_axi_CTRL_AWREADY", 1, hls_out, -1, "", "", 1),
 	Port_Property("s_axi_CTRL_AWADDR", 8, hls_in, -1, "", "", 1),

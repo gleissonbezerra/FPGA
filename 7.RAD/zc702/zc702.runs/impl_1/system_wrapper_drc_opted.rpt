@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Fri Feb 27 01:59:49 2026
+| Date         : Sun Mar  1 06:18:42 2026
 | Host         : G-MF001 running 64-bit major release  (build 9200)
 | Command      : report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
 | Design       : system_wrapper
@@ -35,7 +35,7 @@ Table of Contents
 -----------------
 DPIP-1#1 Warning
 Input pipelining  
-DSP system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg input system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_VITIS_LOOP_79_2_fu_93/mac_muladd_7ns_6s_31s_31_4_1_U10/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151/mac_muladd_7ns_6s_31s_31_4_1_U9/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg input system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151/mac_muladd_7ns_6s_31s_31_4_1_U9/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 

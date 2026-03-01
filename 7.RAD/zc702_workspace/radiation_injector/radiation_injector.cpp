@@ -1,47 +1,47 @@
-#include <stdint.h>
+#include <ap_int.h>
 
-/**
- * Radiation Fault Injector IP
- * Simulates Single Event Upsets (SEUs) by flipping bits in memory.
- * @param weight_mem: Pointer to the BRAM/DDR memory containing model weights.
- * @param range_size: Number of 32-bit words to target (e.g., 15680 for Exp=5).
- * @param intensity: Probability of failure per execution (0-1000).
- * @param seed: Initial seed for the LFSR random generator.
- */
-void radiation_injector(volatile uint32_t *weight_mem, 
-                        uint32_t range_size, 
-                        uint32_t intensity, 
-                        uint32_t seed) {
+#define MAX_WORDS 16384
 
-    // AXI Interfaces: m_axi for memory access, s_axilite for control
-    // #pragma HLS INTERFACE m_axi port=weight_mem offset=slave bundle=gmem depth=15680
-    #pragma HLS INTERFACE m_axi port=weight_mem offset=slave bundle=gmem depth=100
-    #pragma HLS INTERFACE s_axilite port=range_size bundle=control
-    #pragma HLS INTERFACE s_axilite port=intensity bundle=control
-    #pragma HLS INTERFACE s_axilite port=seed bundle=control
-    #pragma HLS INTERFACE s_axilite port=return bundle=control
+extern "C" void radiation_injector(
+    ap_uint<32> weight_mem[MAX_WORDS],
+    ap_uint<32> intensity,
+    ap_uint<32> seed,
+    ap_uint<32> num_words
+)
+{
 
-    static uint32_t lfsr = 0;
-    static bool initialized = false;
+#pragma HLS INTERFACE bram port=weight_mem
+#pragma HLS INTERFACE s_axilite port=intensity bundle=control
+#pragma HLS INTERFACE s_axilite port=seed bundle=control
+#pragma HLS INTERFACE s_axilite port=num_words bundle=control
+#pragma HLS INTERFACE s_axilite port=return bundle=control
 
-    // Initialize LFSR with a non-zero seed
-    if (!initialized) {
-        lfsr = (seed == 0) ? 0xACE1u : seed; 
-        initialized = true;
-    }
+#pragma HLS BIND_STORAGE variable=weight_mem type=ram_2p impl=bram
 
-    // 32-bit LFSR Algorithm (Galois) for pseudo-random noise generation
-    uint32_t bit = ((lfsr >> 0) ^ (lfsr >> 1) ^ (lfsr >> 21) ^ (lfsr >> 31)) & 1;
-    lfsr = (lfsr >> 1) | (bit << 31);
+    if (num_words == 0)
+        return;
 
-    // Inject fault if random roll is within intensity threshold
-    if ((lfsr % 1000) < intensity) {
-        // Randomly select address and bit position
-        uint32_t addr = (lfsr ^ seed) % range_size; 
-        uint32_t bit_pos = (lfsr >> 16) % 32;
+    if (num_words > MAX_WORDS)
+        num_words = MAX_WORDS;
 
-        // Perform Atomic-like Bit-Flip (Read-Modify-Write)
-        uint32_t current_val = weight_mem[addr];
-        weight_mem[addr] = current_val ^ (1 << bit_pos);
-    }
+    ap_uint<32> lfsr;
+
+    if(seed == 0)
+        lfsr = (ap_uint<32>)0xACE1u;
+    else
+        lfsr = seed;
+
+    // LFSR step
+    ap_uint<1> fb =
+        lfsr[0] ^ lfsr[1] ^ lfsr[21] ^ lfsr[31];
+
+    lfsr = (lfsr >> 1) | (fb << 31);
+
+    ap_uint<14> addr = lfsr % num_words;
+    ap_uint<5> bitpos = lfsr.range(20,16);
+
+    ap_uint<32> mask = ((ap_uint<32>)1 << bitpos);
+
+    ap_uint<32> val = weight_mem[addr];
+    weight_mem[addr] = val ^ mask;
 }

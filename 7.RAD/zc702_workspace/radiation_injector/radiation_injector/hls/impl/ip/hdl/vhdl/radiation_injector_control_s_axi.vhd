@@ -35,9 +35,9 @@ port (
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
     interrupt             :out  STD_LOGIC;
-    range_size            :out  STD_LOGIC_VECTOR(31 downto 0);
     intensity             :out  STD_LOGIC_VECTOR(31 downto 0);
     seed                  :out  STD_LOGIC_VECTOR(31 downto 0);
+    num_words             :out  STD_LOGIC_VECTOR(31 downto 0);
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
@@ -67,14 +67,14 @@ end entity radiation_injector_control_s_axi;
 --        bit 0 - ap_done (Read/TOW)
 --        bit 1 - ap_ready (Read/TOW)
 --        others - reserved
--- 0x10 : Data signal of range_size
---        bit 31~0 - range_size[31:0] (Read/Write)
--- 0x14 : reserved
--- 0x18 : Data signal of intensity
+-- 0x10 : Data signal of intensity
 --        bit 31~0 - intensity[31:0] (Read/Write)
--- 0x1c : reserved
--- 0x20 : Data signal of seed
+-- 0x14 : reserved
+-- 0x18 : Data signal of seed
 --        bit 31~0 - seed[31:0] (Read/Write)
+-- 0x1c : reserved
+-- 0x20 : Data signal of num_words
+--        bit 31~0 - num_words[31:0] (Read/Write)
 -- 0x24 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
@@ -85,16 +85,16 @@ attribute DowngradeIPIdentifiedWarnings of behave : architecture is "yes";
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_AP_CTRL           : INTEGER := 16#00#;
-    constant ADDR_GIE               : INTEGER := 16#04#;
-    constant ADDR_IER               : INTEGER := 16#08#;
-    constant ADDR_ISR               : INTEGER := 16#0c#;
-    constant ADDR_RANGE_SIZE_DATA_0 : INTEGER := 16#10#;
-    constant ADDR_RANGE_SIZE_CTRL   : INTEGER := 16#14#;
-    constant ADDR_INTENSITY_DATA_0  : INTEGER := 16#18#;
-    constant ADDR_INTENSITY_CTRL    : INTEGER := 16#1c#;
-    constant ADDR_SEED_DATA_0       : INTEGER := 16#20#;
-    constant ADDR_SEED_CTRL         : INTEGER := 16#24#;
+    constant ADDR_AP_CTRL          : INTEGER := 16#00#;
+    constant ADDR_GIE              : INTEGER := 16#04#;
+    constant ADDR_IER              : INTEGER := 16#08#;
+    constant ADDR_ISR              : INTEGER := 16#0c#;
+    constant ADDR_INTENSITY_DATA_0 : INTEGER := 16#10#;
+    constant ADDR_INTENSITY_CTRL   : INTEGER := 16#14#;
+    constant ADDR_SEED_DATA_0      : INTEGER := 16#18#;
+    constant ADDR_SEED_CTRL        : INTEGER := 16#1c#;
+    constant ADDR_NUM_WORDS_DATA_0 : INTEGER := 16#20#;
+    constant ADDR_NUM_WORDS_CTRL   : INTEGER := 16#24#;
     constant ADDR_BITS         : INTEGER := 6;
 
     signal AWREADY_t           : STD_LOGIC;
@@ -124,9 +124,9 @@ attribute DowngradeIPIdentifiedWarnings of behave : architecture is "yes";
     signal int_gie             : STD_LOGIC := '0';
     signal int_ier             : UNSIGNED(1 downto 0) := (others => '0');
     signal int_isr             : UNSIGNED(1 downto 0) := (others => '0');
-    signal int_range_size      : UNSIGNED(31 downto 0) := (others => '0');
     signal int_intensity       : UNSIGNED(31 downto 0) := (others => '0');
     signal int_seed            : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_num_words       : UNSIGNED(31 downto 0) := (others => '0');
 
 
 begin
@@ -256,12 +256,12 @@ begin
                         rdata_data(1 downto 0) <= int_ier;
                     when ADDR_ISR =>
                         rdata_data(1 downto 0) <= int_isr;
-                    when ADDR_RANGE_SIZE_DATA_0 =>
-                        rdata_data <= RESIZE(int_range_size(31 downto 0), 32);
                     when ADDR_INTENSITY_DATA_0 =>
                         rdata_data <= RESIZE(int_intensity(31 downto 0), 32);
                     when ADDR_SEED_DATA_0 =>
                         rdata_data <= RESIZE(int_seed(31 downto 0), 32);
+                    when ADDR_NUM_WORDS_DATA_0 =>
+                        rdata_data <= RESIZE(int_num_words(31 downto 0), 32);
                     when others =>
                         NULL;
                     end case;
@@ -276,9 +276,9 @@ begin
     task_ap_done         <= (ap_done and not auto_restart_status) or auto_restart_done;
     task_ap_ready        <= ap_ready and not int_auto_restart;
     auto_restart_done    <= auto_restart_status and (ap_idle and not int_ap_idle);
-    range_size           <= STD_LOGIC_VECTOR(int_range_size);
     intensity            <= STD_LOGIC_VECTOR(int_intensity);
     seed                 <= STD_LOGIC_VECTOR(int_seed);
+    num_words            <= STD_LOGIC_VECTOR(int_num_words);
 
     process (ACLK)
     begin
@@ -454,19 +454,6 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ARESET = '1') then
-                int_range_size(31 downto 0) <= (others => '0');
-            elsif (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_RANGE_SIZE_DATA_0) then
-                    int_range_size(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_range_size(31 downto 0));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ARESET = '1') then
                 int_intensity(31 downto 0) <= (others => '0');
             elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_INTENSITY_DATA_0) then
@@ -484,6 +471,19 @@ begin
             elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_SEED_DATA_0) then
                     int_seed(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_seed(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_num_words(31 downto 0) <= (others => '0');
+            elsif (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_NUM_WORDS_DATA_0) then
+                    int_num_words(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_num_words(31 downto 0));
                 end if;
             end if;
         end if;

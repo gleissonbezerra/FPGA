@@ -1,0 +1,52 @@
+---
+MainSourceFile:  'E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/.autopilot/db/radiation_injector.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_676_1:  '
+      FilePath:        'D:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      676
+      Replacements:
+        - FilePath:        'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\radiation_injector\radiation_injector\hls\.autopilot\db\radiation_injector.pp.0.cpp'
+          Offset:          280117
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_676_1: '
+    Level:           Remark
+    BuildDirectory:  'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\radiation_injector'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_690_1:  '
+      FilePath:        'D:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      690
+      Replacements:
+        - FilePath:        'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\radiation_injector\radiation_injector\hls\.autopilot\db\radiation_injector.pp.0.cpp'
+          Offset:          280588
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_690_1: '
+    Level:           Remark
+    BuildDirectory:  'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\radiation_injector'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_704_1:  '
+      FilePath:        'D:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      704
+      Replacements:
+        - FilePath:        'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\radiation_injector\radiation_injector\hls\.autopilot\db\radiation_injector.pp.0.cpp'
+          Offset:          281060
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_704_1: '
+    Level:           Remark
+    BuildDirectory:  'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\radiation_injector'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1251_1:  '
+      FilePath:        'D:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_fixed_base.h'
+      FileOffset:      1251
+      Replacements:
+        - FilePath:        'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\radiation_injector\radiation_injector\hls\.autopilot\db\radiation_injector.pp.0.cpp'
+          Offset:          626463
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1251_1: '
+    Level:           Remark
+    BuildDirectory:  'E:\source\.ITA\FPGA\7.RAD\zc702_workspace\radiation_injector'
+...

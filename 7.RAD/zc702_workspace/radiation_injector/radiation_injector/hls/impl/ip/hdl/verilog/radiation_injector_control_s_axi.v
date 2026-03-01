@@ -32,9 +32,9 @@
     output wire                          RVALID,
     input  wire                          RREADY,
     output wire                          interrupt,
-    output wire [31:0]                   range_size,
     output wire [31:0]                   intensity,
     output wire [31:0]                   seed,
+    output wire [31:0]                   num_words,
     output wire                          ap_start,
     input  wire                          ap_done,
     input  wire                          ap_ready,
@@ -62,36 +62,36 @@
 //        bit 0 - ap_done (Read/TOW)
 //        bit 1 - ap_ready (Read/TOW)
 //        others - reserved
-// 0x10 : Data signal of range_size
-//        bit 31~0 - range_size[31:0] (Read/Write)
-// 0x14 : reserved
-// 0x18 : Data signal of intensity
+// 0x10 : Data signal of intensity
 //        bit 31~0 - intensity[31:0] (Read/Write)
-// 0x1c : reserved
-// 0x20 : Data signal of seed
+// 0x14 : reserved
+// 0x18 : Data signal of seed
 //        bit 31~0 - seed[31:0] (Read/Write)
+// 0x1c : reserved
+// 0x20 : Data signal of num_words
+//        bit 31~0 - num_words[31:0] (Read/Write)
 // 0x24 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL           = 6'h00,
-    ADDR_GIE               = 6'h04,
-    ADDR_IER               = 6'h08,
-    ADDR_ISR               = 6'h0c,
-    ADDR_RANGE_SIZE_DATA_0 = 6'h10,
-    ADDR_RANGE_SIZE_CTRL   = 6'h14,
-    ADDR_INTENSITY_DATA_0  = 6'h18,
-    ADDR_INTENSITY_CTRL    = 6'h1c,
-    ADDR_SEED_DATA_0       = 6'h20,
-    ADDR_SEED_CTRL         = 6'h24,
-    WRIDLE                 = 2'd0,
-    WRDATA                 = 2'd1,
-    WRRESP                 = 2'd2,
-    WRRESET                = 2'd3,
-    RDIDLE                 = 2'd0,
-    RDDATA                 = 2'd1,
-    RDRESET                = 2'd2,
+    ADDR_AP_CTRL          = 6'h00,
+    ADDR_GIE              = 6'h04,
+    ADDR_IER              = 6'h08,
+    ADDR_ISR              = 6'h0c,
+    ADDR_INTENSITY_DATA_0 = 6'h10,
+    ADDR_INTENSITY_CTRL   = 6'h14,
+    ADDR_SEED_DATA_0      = 6'h18,
+    ADDR_SEED_CTRL        = 6'h1c,
+    ADDR_NUM_WORDS_DATA_0 = 6'h20,
+    ADDR_NUM_WORDS_CTRL   = 6'h24,
+    WRIDLE                = 2'd0,
+    WRDATA                = 2'd1,
+    WRRESP                = 2'd2,
+    WRRESET               = 2'd3,
+    RDIDLE                = 2'd0,
+    RDDATA                = 2'd1,
+    RDRESET               = 2'd2,
     ADDR_BITS                = 6;
 
 //------------------------Local signal-------------------
@@ -121,9 +121,9 @@ localparam
     reg                           int_gie = 1'b0;
     reg  [1:0]                    int_ier = 2'b0;
     reg  [1:0]                    int_isr = 2'b0;
-    reg  [31:0]                   int_range_size = 'b0;
     reg  [31:0]                   int_intensity = 'b0;
     reg  [31:0]                   int_seed = 'b0;
+    reg  [31:0]                   int_num_words = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -233,14 +233,14 @@ always @(posedge ACLK) begin
                 ADDR_ISR: begin
                     rdata <= int_isr;
                 end
-                ADDR_RANGE_SIZE_DATA_0: begin
-                    rdata <= int_range_size[31:0];
-                end
                 ADDR_INTENSITY_DATA_0: begin
                     rdata <= int_intensity[31:0];
                 end
                 ADDR_SEED_DATA_0: begin
                     rdata <= int_seed[31:0];
+                end
+                ADDR_NUM_WORDS_DATA_0: begin
+                    rdata <= int_num_words[31:0];
                 end
             endcase
         end
@@ -254,9 +254,9 @@ assign ap_start          = int_ap_start;
 assign task_ap_done      = (ap_done && !auto_restart_status) || auto_restart_done;
 assign task_ap_ready     = ap_ready && !int_auto_restart;
 assign auto_restart_done = auto_restart_status && (ap_idle && !int_ap_idle);
-assign range_size        = int_range_size;
 assign intensity         = int_intensity;
 assign seed              = int_seed;
+assign num_words         = int_num_words;
 // int_interrupt
 always @(posedge ACLK) begin
     if (ARESET)
@@ -389,16 +389,6 @@ always @(posedge ACLK) begin
     end
 end
 
-// int_range_size[31:0]
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_range_size[31:0] <= 0;
-    else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_RANGE_SIZE_DATA_0)
-            int_range_size[31:0] <= (WDATA[31:0] & wmask) | (int_range_size[31:0] & ~wmask);
-    end
-end
-
 // int_intensity[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
@@ -416,6 +406,16 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_SEED_DATA_0)
             int_seed[31:0] <= (WDATA[31:0] & wmask) | (int_seed[31:0] & ~wmask);
+    end
+end
+
+// int_num_words[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_num_words[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_NUM_WORDS_DATA_0)
+            int_num_words[31:0] <= (WDATA[31:0] & wmask) | (int_num_words[31:0] & ~wmask);
     end
 end
 

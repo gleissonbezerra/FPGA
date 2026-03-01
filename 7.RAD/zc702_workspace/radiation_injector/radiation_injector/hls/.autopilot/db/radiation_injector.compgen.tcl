@@ -1,19 +1,8 @@
 # This script segment is generated automatically by AutoPilot
 
-set name radiation_injector_urem_32ns_11ns_32_36_seq_1
+set name radiation_injector_urem_31ns_15ns_31_35_seq_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {urem} IMPL {auto_seq} LATENCY 35 ALLOW_PRAGMA 1
-}
-
-
-set name radiation_injector_urem_32ns_32ns_32_36_seq_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {urem} IMPL {auto_seq} LATENCY 35 ALLOW_PRAGMA 1
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler radiation_injector_gmem_m_axi BINDTYPE {interface} TYPE {adapter} IMPL {m_axi}
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {urem} IMPL {auto_seq} LATENCY 34 ALLOW_PRAGMA 1
 }
 
 
@@ -26,7 +15,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 set axilite_register_dict [dict create]
 set port_control {
-range_size { 
+intensity { 
 	dir I
 	width 32
 	depth 1
@@ -34,7 +23,7 @@ range_size {
 	offset 16
 	offset_end 23
 }
-intensity { 
+seed { 
 	dir I
 	width 32
 	depth 1
@@ -42,7 +31,7 @@ intensity {
 	offset 24
 	offset_end 31
 }
-seed { 
+num_words { 
 	dir I
 	width 32
 	depth 1
@@ -64,7 +53,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 5 \
+			id 3 \
 			corename radiation_injector_control_axilite \
 			name radiation_injector_control_s_axi \
 			ports {$port_control} \
@@ -83,44 +72,6 @@ if {${::AESL::PGuard_simmodel_gen}} {
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler radiation_injector_control_s_axi BINDTYPE interface TYPE interface_s_axilite
-}
-
-set port_control_r {
-weight_mem { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 16
-	offset_end 27
-}
-}
-dict set axilite_register_dict control_r $port_control_r
-
-
-# Native S_AXILite:
-if {${::AESL::PGuard_simmodel_gen}} {
-	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
-		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 6 \
-			corename radiation_injector_control_r_axilite \
-			name radiation_injector_control_r_s_axi \
-			ports {$port_control_r} \
-			op interface \
-			interrupt_clear_mode TOW \
-			interrupt_trigger_type default \
-			is_flushable 0 \
-			is_datawidth64 0 \
-			is_addrwidth64 1 \
-			enable_mem_auto_widen 1 \
-		} "
-	} else {
-		puts "@W \[IMPL-110\] Cannot find AXI Lite interface model in the library. Ignored generation of AXI Lite  interface for 'control_r'"
-	}
-}
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler radiation_injector_control_r_s_axi BINDTYPE interface TYPE interface_s_axilite
 }
 
 

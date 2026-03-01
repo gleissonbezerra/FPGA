@@ -40,7 +40,7 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-2
-set SourceFiles {sc {} c ../../top.cpp}
+set SourceFiles {sc {} c ../../bgn_inference.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {}
 set TBFiles {verilog E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/test_bench.cpp bc E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/test_bench.cpp vhdl E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/test_bench.cpp sc E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/test_bench.cpp cas E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn/test_bench.cpp c {}}

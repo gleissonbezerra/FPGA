@@ -129,10 +129,6 @@ int XRadiation_injector_Initialize(XRadiation_injector *InstancePtr, const char*
     InstancePtr->Control_BaseAddress = (u64)mmap(NULL, InfoPtr->maps[0].size, PROT_READ|PROT_WRITE, MAP_SHARED, InfoPtr->uio_fd, 0 * getpagesize());
     assert(InstancePtr->Control_BaseAddress);
 
-    // NOTE: slave interface 'Control_r' should be mapped to uioX/map1
-    InstancePtr->Control_r_BaseAddress = (u64)mmap(NULL, InfoPtr->maps[1].size, PROT_READ|PROT_WRITE, MAP_SHARED, InfoPtr->uio_fd, 1 * getpagesize());
-    assert(InstancePtr->Control_r_BaseAddress);
-
     InstancePtr->IsReady = XIL_COMPONENT_IS_READY;
 
     return XST_SUCCESS;
@@ -145,7 +141,6 @@ int XRadiation_injector_Release(XRadiation_injector *InstancePtr) {
     assert(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
     munmap((void*)InstancePtr->Control_BaseAddress, InfoPtr->maps[0].size);
-    munmap((void*)InstancePtr->Control_r_BaseAddress, InfoPtr->maps[1].size);
 
     close(InfoPtr->uio_fd);
 

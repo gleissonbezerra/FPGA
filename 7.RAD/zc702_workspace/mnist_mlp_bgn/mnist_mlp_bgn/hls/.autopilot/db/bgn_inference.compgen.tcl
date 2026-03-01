@@ -22,6 +22,30 @@ prediction {
 	offset 16
 	offset_end 23
 }
+mode { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 32
+	offset_end 39
+}
+wr_addr { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 40
+	offset_end 47
+}
+wr_data { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 48
+	offset_end 55
+}
 input_img { 
 	dir I
 	width 32
@@ -48,7 +72,7 @@ dict set axilite_register_dict CTRL $port_CTRL
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 17 \
+			id 16 \
 			corename bgn_inference_CTRL_axilite \
 			name bgn_inference_CTRL_s_axi \
 			ports {$port_CTRL} \

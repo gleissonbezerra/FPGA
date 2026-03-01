@@ -1,0 +1,112 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector 
+INFO: [HLS 200-2176] Writing Vitis IDE component file E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=radiation_injector.cpp' from hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=test_bench.cpp' from hls_config.cfg(8)
+INFO: [HLS 200-10] Adding test bench file 'E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/test_bench.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=radiation_injector' from hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-2' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-2'
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.251 seconds; current allocated memory: 136.137 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'radiation_injector.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.627 seconds; current allocated memory: 138.039 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 59 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 49 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 214-450] Ignore address on register port 'weight_mem' (radiation_injector.cpp:31:24)
+WARNING: [HLS 214-450] Ignore address on register port 'weight_mem' (radiation_injector.cpp:33:26)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.125 seconds; current allocated memory: 140.191 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 140.191 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 144.211 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.021 seconds; current allocated memory: 146.125 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (radiation_injector.cpp:19:19) to (radiation_injector.cpp:27:9) in function 'radiation_injector'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.039 seconds; current allocated memory: 167.055 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 167.070 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'radiation_injector' ...
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radiation_injector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'radiation_injector'.
+INFO: [HLS 200-2199] The II Violation in module 'radiation_injector' (function 'radiation_injector'): Potential resource conflict between 'load' operation 32 bit ('cur', radiation_injector.cpp:31) on array 'weight_mem' and 'store' operation ('weight_mem_addr_write_ln33', radiation_injector.cpp:33) of variable 'newv', radiation_injector.cpp:32 32 bit on array 'weight_mem' on common resource 'weight_mem'.
+INFO: [HLS 200-2198] Existing conflicting constraints include from 'load' operation 32 bit ('cur', radiation_injector.cpp:31) on array 'weight_mem' to 'store' operation ('weight_mem_addr_write_ln33', radiation_injector.cpp:33) of variable 'newv', radiation_injector.cpp:32 32 bit on array 'weight_mem' with distance of 1 (conflict 1 of 1)
+INFO: [HLS 200-2248] Failed to schedule the whole 2 cycles of the node 'load' operation 32 bit ('cur', radiation_injector.cpp:31) on array 'weight_mem' within the first 3 cycles (II = 2). Simulation mismatch may occur if the input data is modified before this operation completes..
+INFO: [HLS 200-2248] Failed to schedule the whole 2 cycles of the node 'load' operation 32 bit ('cur', radiation_injector.cpp:31) on array 'weight_mem' within the first 4 cycles (II = 3). Simulation mismatch may occur if the input data is modified before this operation completes..
+INFO: [HLS 200-2248] Failed to schedule the whole 2 cycles of the node 'load' operation 32 bit ('cur', radiation_injector.cpp:31) on array 'weight_mem' within the first 5 cycles (II = 4). Simulation mismatch may occur if the input data is modified before this operation completes..
+INFO: [HLS 200-2248] Failed to schedule the whole 2 cycles of the node 'load' operation 32 bit ('cur', radiation_injector.cpp:31) on array 'weight_mem' within the first 68 cycles (II = 67). Simulation mismatch may occur if the input data is modified before this operation completes..
+INFO: [HLS 200-2248] Failed to schedule 'store' operation ('weight_mem_addr_write_ln33', radiation_injector.cpp:33) of variable 'newv', radiation_injector.cpp:32 32 bit on array 'weight_mem' within the first 70 cycles (II = 70). Simulation mismatch may occur if the input data is modified before this operation completes..
+WARNING: [HLS 200-887] Cannot meet target clock period from s_axi read operation ('seed_read', radiation_injector.cpp:16) on port 'seed' (radiation_injector.cpp:16) to 'urem' operation 32 bit ('urem_ln27', radiation_injector.cpp:27) (combination delay: 7.975 ns) to honor II or Latency constraint in region 'radiation_injector'.
+Resolution: For help on HLS 200-887 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-887.html
+INFO: [HLS 200-2248] Failed to schedule 'store' operation ('weight_mem_addr_write_ln33', radiation_injector.cpp:33) of variable 'newv', radiation_injector.cpp:32 32 bit on array 'weight_mem' within the first 71 cycles (II = 71). Simulation mismatch may occur if the input data is modified before this operation completes..
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 72, Depth = 72, function 'radiation_injector'
+WARNING: [HLS 200-871] Estimated clock period (7.975 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
+Resolution: For help on HLS 200-871 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'radiation_injector' consists of the following:
+	s_axi read operation ('seed_read', radiation_injector.cpp:16) on port 'seed' (radiation_injector.cpp:16) [7]  (1.000 ns)
+	'icmp' operation 1 bit ('icmp_ln22_1', radiation_injector.cpp:22) [32]  (1.896 ns)
+	'select' operation 32 bit ('select_ln22', radiation_injector.cpp:22) [33]  (0.000 ns)
+	'select' operation 32 bit ('empty', radiation_injector.cpp:22) [34]  (0.705 ns)
+	'xor' operation 32 bit ('xor_ln25', radiation_injector.cpp:25) [44]  (0.808 ns)
+	'urem' operation 32 bit ('urem_ln27', radiation_injector.cpp:27) [48]  (3.566 ns)
+
+Resolution: For help on HLS 200-1016 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.893 seconds; current allocated memory: 167.070 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 167.070 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radiation_injector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'radiation_injector/weight_mem' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'radiation_injector/intensity' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'radiation_injector/seed' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'radiation_injector/num_words' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'radiation_injector' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'lfsr' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'intensity', 'seed', 'num_words' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_11ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_15ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radiation_injector'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 169.391 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.263 seconds; current allocated memory: 174.754 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/hls/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.513 seconds; current allocated memory: 178.328 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for radiation_injector.
+INFO: [VLOG 209-307] Generating Verilog RTL for radiation_injector.
+INFO: [HLS 200-789] **** Estimated Fmax: 125.39 MHz
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 14.775 seconds; peak allocated memory: 178.398 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 18s

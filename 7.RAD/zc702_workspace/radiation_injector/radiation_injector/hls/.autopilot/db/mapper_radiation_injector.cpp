@@ -243,19 +243,20 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void radiation_injector(Byte<4>*, int, int, int, int);
-extern "C" void apatb_radiation_injector_hw(volatile void * __xlx_apatb_param_weight_mem, int __xlx_apatb_param_range_size, int __xlx_apatb_param_intensity, int __xlx_apatb_param_seed) {
+struct __cosim_s4__ { char data[4]; };
+extern "C" void radiation_injector(Byte<4>*, __cosim_s4__, __cosim_s4__, __cosim_s4__);
+extern "C" void apatb_radiation_injector_hw(volatile void * __xlx_apatb_param_weight_mem, __cosim_s4__* __xlx_apatb_param_intensity, __cosim_s4__* __xlx_apatb_param_seed, __cosim_s4__* __xlx_apatb_param_num_words) {
 using hls::sim::createStream;
   // Collect __xlx_weight_mem__tmp_vec
 std::vector<Byte<4>> __xlx_weight_mem__tmp_vec;
-for (size_t i = 0; i < 100; ++i){
+for (size_t i = 0; i < 16384; ++i){
 __xlx_weight_mem__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weight_mem)[i]);
 }
-  int __xlx_size_param_weight_mem = 100;
+  int __xlx_size_param_weight_mem = 16384;
   int __xlx_offset_param_weight_mem = 0;
   int __xlx_offset_byte_param_weight_mem = 0*4;
   // DUT call
-  radiation_injector(__xlx_weight_mem__tmp_vec.data(), __xlx_offset_byte_param_weight_mem, __xlx_apatb_param_range_size, __xlx_apatb_param_intensity, __xlx_apatb_param_seed);
+  radiation_injector(__xlx_weight_mem__tmp_vec.data(), *__xlx_apatb_param_intensity, *__xlx_apatb_param_seed, *__xlx_apatb_param_num_words);
 // print __xlx_apatb_param_weight_mem
 for (size_t i = 0; i < __xlx_size_param_weight_mem; ++i) {
 ((Byte<4>*)__xlx_apatb_param_weight_mem)[i] = __xlx_weight_mem__tmp_vec[__xlx_offset_param_weight_mem+i];
