@@ -9,16 +9,16 @@ proc generate {drv_handle} {
     xdefine_include_file $drv_handle "xparameters.h" "XBgn_inference" \
         "NUM_INSTANCES" \
         "DEVICE_ID" \
-        "C_S_AXI_CTRL_BASEADDR" \
-        "C_S_AXI_CTRL_HIGHADDR"
+        "C_S_AXI_CONTROL_BASEADDR" \
+        "C_S_AXI_CONTROL_HIGHADDR"
 
     xdefine_config_file $drv_handle "xbgn_inference_g.c" "XBgn_inference" \
         "DEVICE_ID" \
-        "C_S_AXI_CTRL_BASEADDR"
+        "C_S_AXI_CONTROL_BASEADDR"
 
     xdefine_canonical_xpars $drv_handle "xparameters.h" "XBgn_inference" \
         "DEVICE_ID" \
-        "C_S_AXI_CTRL_BASEADDR" \
-        "C_S_AXI_CTRL_HIGHADDR"
+        "C_S_AXI_CONTROL_BASEADDR" \
+        "C_S_AXI_CONTROL_HIGHADDR"
 }
 

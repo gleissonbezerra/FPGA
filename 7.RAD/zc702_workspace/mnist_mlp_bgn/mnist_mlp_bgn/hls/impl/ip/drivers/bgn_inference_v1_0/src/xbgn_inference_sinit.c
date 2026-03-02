@@ -22,7 +22,7 @@ XBgn_inference_Config *XBgn_inference_LookupConfig(UINTPTR BaseAddress) {
 	int Index;
 
 	for (Index = (u32)0x0; XBgn_inference_ConfigTable[Index].Name != NULL; Index++) {
-		if (!BaseAddress || XBgn_inference_ConfigTable[Index].Ctrl_BaseAddress == BaseAddress) {
+		if (!BaseAddress || XBgn_inference_ConfigTable[Index].Control_BaseAddress == BaseAddress) {
 			ConfigPtr = &XBgn_inference_ConfigTable[Index];
 			break;
 		}

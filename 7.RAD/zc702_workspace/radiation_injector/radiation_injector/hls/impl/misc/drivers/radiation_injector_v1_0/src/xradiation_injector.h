@@ -99,12 +99,12 @@ u32 XRadiation_injector_IsReady(XRadiation_injector *InstancePtr);
 void XRadiation_injector_EnableAutoRestart(XRadiation_injector *InstancePtr);
 void XRadiation_injector_DisableAutoRestart(XRadiation_injector *InstancePtr);
 
-void XRadiation_injector_Set_intensity(XRadiation_injector *InstancePtr, u32 Data);
-u32 XRadiation_injector_Get_intensity(XRadiation_injector *InstancePtr);
-void XRadiation_injector_Set_seed(XRadiation_injector *InstancePtr, u32 Data);
-u32 XRadiation_injector_Get_seed(XRadiation_injector *InstancePtr);
-void XRadiation_injector_Set_num_words(XRadiation_injector *InstancePtr, u32 Data);
-u32 XRadiation_injector_Get_num_words(XRadiation_injector *InstancePtr);
+void XRadiation_injector_Set_weight_mem(XRadiation_injector *InstancePtr, u64 Data);
+u64 XRadiation_injector_Get_weight_mem(XRadiation_injector *InstancePtr);
+void XRadiation_injector_Set_wr_addr(XRadiation_injector *InstancePtr, u32 Data);
+u32 XRadiation_injector_Get_wr_addr(XRadiation_injector *InstancePtr);
+void XRadiation_injector_Set_wr_data(XRadiation_injector *InstancePtr, u32 Data);
+u32 XRadiation_injector_Get_wr_data(XRadiation_injector *InstancePtr);
 
 void XRadiation_injector_InterruptGlobalEnable(XRadiation_injector *InstancePtr);
 void XRadiation_injector_InterruptGlobalDisable(XRadiation_injector *InstancePtr);

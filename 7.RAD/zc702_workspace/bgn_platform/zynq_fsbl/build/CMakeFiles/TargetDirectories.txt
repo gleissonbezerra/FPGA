@@ -1,0 +1,4 @@
+E:/source/.ITA/FPGA/7.RAD/zc702_workspace/bgn_platform/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
+E:/source/.ITA/FPGA/7.RAD/zc702_workspace/bgn_platform/zynq_fsbl/build/CMakeFiles/print_build_info.dir
+E:/source/.ITA/FPGA/7.RAD/zc702_workspace/bgn_platform/zynq_fsbl/build/CMakeFiles/edit_cache.dir
+E:/source/.ITA/FPGA/7.RAD/zc702_workspace/bgn_platform/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir

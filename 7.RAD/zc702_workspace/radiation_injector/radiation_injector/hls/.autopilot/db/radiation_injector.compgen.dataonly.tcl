@@ -2,29 +2,29 @@
 
 set axilite_register_dict [dict create]
 set port_control {
-intensity { 
+weight_mem { 
 	dir I
-	width 32
+	width 64
 	depth 1
 	mode ap_none
 	offset 16
-	offset_end 23
+	offset_end 27
 }
-seed { 
+wr_addr { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 24
-	offset_end 31
+	offset 28
+	offset_end 35
 }
-num_words { 
+wr_data { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 32
-	offset_end 39
+	offset 36
+	offset_end 43
 }
 ap_start { }
 ap_done { }

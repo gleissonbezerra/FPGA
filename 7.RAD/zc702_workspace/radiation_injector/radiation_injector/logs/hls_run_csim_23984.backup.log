@@ -1,0 +1,836 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector 
+INFO: [HLS 200-2176] Writing Vitis IDE component file E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=radiation_injector.cpp' from hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=test_bench.cpp' from hls_config.cfg(8)
+INFO: [HLS 200-10] Adding test bench file 'E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/test_bench.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=radiation_injector' from hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-2' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-2'
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file E:/source/.ITA/FPGA/7.RAD/zc702_workspace/radiation_injector/radiation_injector/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../radiation_injector.cpp in debug mode
+In file included from ../../../../radiation_injector.cpp:1:
+In file included from D:/AMDDesignTools/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/AMDDesignTools/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/AMDDesignTools/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/AMDDesignTools/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/AMDDesignTools/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/AMDDesignTools/2025.2/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/AMDDesignTools/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+../../../../radiation_injector.cpp:23:16: error: no viable overloaded '+='
+        warmup += i;
+        ~~~~~~ ^  ~
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1735:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+ALL_OP_ASSIGN_WITH_FLOAT(half)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1730:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_FLOAT'
+  OP_ASSIGN_WITH_FLOAT(+=, C_TYPE)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1722:32: note: expanded from macro 'OP_ASSIGN_WITH_FLOAT'
+  AP_INLINE AP_NODEBUG C_TYPE& operator ASSIGN_OP(                               \
+                               ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1736:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+ALL_OP_ASSIGN_WITH_FLOAT(float)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1730:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_FLOAT'
+  OP_ASSIGN_WITH_FLOAT(+=, C_TYPE)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1722:32: note: expanded from macro 'OP_ASSIGN_WITH_FLOAT'
+  AP_INLINE AP_NODEBUG C_TYPE& operator ASSIGN_OP(                               \
+                               ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1737:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+ALL_OP_ASSIGN_WITH_FLOAT(double)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1730:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_FLOAT'
+  OP_ASSIGN_WITH_FLOAT(+=, C_TYPE)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1722:32: note: expanded from macro 'OP_ASSIGN_WITH_FLOAT'
+  AP_INLINE AP_NODEBUG C_TYPE& operator ASSIGN_OP(                               \
+                               ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1861:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W2, _AP_S2>' against 'int'
+OP_ASSIGN_WITH_RANGE(+=)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1846:53: note: expanded from macro 'OP_ASSIGN_WITH_RANGE'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W1, _AP_S1>& operator ASSIGN_OP(     \
+                                                    ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1861:1: note: candidate template ignored: could not match 'ap_range_ref' against 'ap_uint'
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1852:54: note: expanded from macro 'OP_ASSIGN_WITH_RANGE'
+  AP_INLINE AP_NODEBUG ap_range_ref<_AP_W1, _AP_S1>& operator ASSIGN_OP(    \
+                                                     ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1970:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W2, _AP_S2>' against 'int'
+OP_ASSIGN_WITH_BIT(+=)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1955:53: note: expanded from macro 'OP_ASSIGN_WITH_BIT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W1, _AP_S1>& operator ASSIGN_OP(     \
+                                                    ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1970:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint'
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1961:52: note: expanded from macro 'OP_ASSIGN_WITH_BIT'
+  AP_INLINE AP_NODEBUG ap_bit_ref<_AP_W1, _AP_S1>& operator ASSIGN_OP(      \
+                                                   ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2376:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(bool, 1, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2359:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(+=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2377:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(char, 8, CHAR_IS_SIGNED)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2359:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(+=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2378:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(signed char, 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2359:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(+=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2379:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(unsigned char, 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2359:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(+=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2380:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(short, _AP_SIZE_short, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2359:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(+=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2381:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(unsigned short, _AP_SIZE_short, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2359:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(+=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2382:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(int, _AP_SIZE_int, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2359:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(+=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2383:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(unsigned int, _AP_SIZE_int, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2359:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(+=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2384:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(long, _AP_SIZE_long, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2359:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(+=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2385:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(unsigned long, _AP_SIZE_long, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2359:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(+=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2386:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(ap_slong, _AP_SIZE_ap_slong, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2359:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(+=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2387:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(ap_ulong, _AP_SIZE_ap_slong, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2359:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(+=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2474:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+AF_ASSIGN_OP_WITH_AP_INT(+=)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2450:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_AP_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2474:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2458:73: note: expanded from macro 'AF_ASSIGN_OP_WITH_AP_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE AP_NODEBUG ap_int_base<_AP_W2, _AP_S2>& operator ASSIGN_OP(                      \
+                                                                        ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1702:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(bool, 1, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1691:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(+=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1703:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(char, 8, CHAR_IS_SIGNED)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1691:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(+=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1704:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(signed char, 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1691:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(+=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1705:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(unsigned char, 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1691:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(+=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1706:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(short, _AP_SIZE_short, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1691:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(+=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1707:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(unsigned short, _AP_SIZE_short, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1691:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(+=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1708:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(int, _AP_SIZE_int, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1691:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(+=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1709:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(unsigned int, _AP_SIZE_int, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1691:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(+=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1710:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(long, _AP_SIZE_long, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1691:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(+=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1711:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(unsigned long, _AP_SIZE_long, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1691:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(+=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1712:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(ap_slong, _AP_SIZE_ap_slong, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1691:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(+=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1713:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(ap_ulong, _AP_SIZE_ap_slong, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1691:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(+=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7181:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(bool, 1, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7163:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(+=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7182:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(char, 8, CHAR_IS_SIGNED)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7163:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(+=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7183:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(signed char, 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7163:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(+=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7184:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(unsigned char, 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7163:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(+=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7185:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(short, sizeof(short) * 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7163:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(+=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7186:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(unsigned short, sizeof(unsigned short) * 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7163:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(+=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7187:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(int, sizeof(int) * 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7163:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(+=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7188:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(unsigned int, sizeof(unsigned int) * 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7163:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(+=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7189:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(long, sizeof(long) * 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7163:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(+=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7190:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(unsigned long, sizeof(unsigned long) * 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7163:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(+=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7191:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(ap_slong, sizeof(ap_slong) * 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7163:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(+=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7192:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(ap_ulong, sizeof(ap_ulong) * 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7163:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(+=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7259:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OP_ASSIGN_MIX_RANGE(+=)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7220:61: note: expanded from macro 'OP_ASSIGN_MIX_RANGE'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W1, _AP_S1>& operator ASSIGN_OP(           \
+                                                            ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7259:1: note: candidate template ignored: could not match '_private_range_ref' against 'ap_uint'
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7226:69: note: expanded from macro 'OP_ASSIGN_MIX_RANGE'
+  HLS_CONSTEXPR_EXTRA AP_INLINE _private_range_ref<_AP_W1, _AP_S1>& operator ASSIGN_OP(   \
+                                                                    ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7322:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OP_ASSIGN_MIX_BIT(+=)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7295:61: note: expanded from macro 'OP_ASSIGN_MIX_BIT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W1, _AP_S1>& operator ASSIGN_OP(       \
+                                                            ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7322:1: note: candidate template ignored: could not match '_private_bit_ref' against 'ap_uint'
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7301:67: note: expanded from macro 'OP_ASSIGN_MIX_BIT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE _private_bit_ref<_AP_W1, _AP_S1>& operator ASSIGN_OP( \
+                                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:854:3: note: candidate template ignored: could not match 'ap_int_base<_AP_W2, _AP_S2>' against 'int'
+  OP_ASSIGN_AP(+=, +, plus)
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:844:37: note: expanded from macro 'OP_ASSIGN_AP'
+  AP_INLINE AP_NODEBUG ap_int_base& operator Sym(const ap_int_base<_AP_W2, _AP_S2>& op2) {   \
+                                    ^
+../../../../radiation_injector.cpp:44:16: error: no viable overloaded '^='
+        warmup ^= buffer[i];
+        ~~~~~~ ^  ~~~~~~~~~
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1895:1: note: candidate template ignored: could not match 'ap_range_ref' against 'ap_uint'
+OP_ASSIGN_WITH_RANGE(^=)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1876:53: note: expanded from macro 'OP_ASSIGN_WITH_RANGE'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W1, _AP_S1>& operator ASSIGN_OP(     \
+                                                    ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1895:1: note: candidate template ignored: could not match 'ap_range_ref' against 'ap_uint'
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1884:54: note: expanded from macro 'OP_ASSIGN_WITH_RANGE'
+  AP_INLINE AP_NODEBUG ap_range_ref<_AP_W1, _AP_S1>& operator ASSIGN_OP(    \
+                                                     ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:2004:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint'
+OP_ASSIGN_WITH_BIT(^=)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1985:53: note: expanded from macro 'OP_ASSIGN_WITH_BIT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W1, _AP_S1>& operator ASSIGN_OP(     \
+                                                    ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:2004:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint'
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1993:52: note: expanded from macro 'OP_ASSIGN_WITH_BIT'
+  AP_INLINE AP_NODEBUG ap_bit_ref<_AP_W1, _AP_S1>& operator ASSIGN_OP(      \
+                                                   ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2376:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(bool, 1, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2365:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(^=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2377:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(char, 8, CHAR_IS_SIGNED)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2365:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(^=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2378:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(signed char, 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2365:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(^=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2379:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(unsigned char, 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2365:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(^=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2380:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(short, _AP_SIZE_short, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2365:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(^=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2381:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(unsigned short, _AP_SIZE_short, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2365:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(^=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2382:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(int, _AP_SIZE_int, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2365:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(^=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2383:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(unsigned int, _AP_SIZE_int, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2365:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(^=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2384:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(long, _AP_SIZE_long, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2365:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(^=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2385:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(unsigned long, _AP_SIZE_long, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2365:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(^=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2386:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(ap_slong, _AP_SIZE_ap_slong, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2365:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(^=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2387:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+ALL_AF_OP_WITH_INT(ap_ulong, _AP_SIZE_ap_slong, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2365:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_ASSIGN_OP_WITH_INT(^=, C_TYPE, (BITS), (SIGN))     \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2332:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2480:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+AF_ASSIGN_OP_WITH_AP_INT(^=)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2450:3: note: expanded from macro 'AF_ASSIGN_OP_WITH_AP_INT'
+  operator ASSIGN_OP(                                                          \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2480:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint'
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_fixed_base.h:2458:73: note: expanded from macro 'AF_ASSIGN_OP_WITH_AP_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE AP_NODEBUG ap_int_base<_AP_W2, _AP_S2>& operator ASSIGN_OP(                      \
+                                                                        ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1702:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(bool, 1, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1698:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(^=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1703:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(char, 8, CHAR_IS_SIGNED)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1698:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(^=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1704:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(signed char, 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1698:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(^=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1705:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(unsigned char, 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1698:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(^=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1706:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(short, _AP_SIZE_short, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1698:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(^=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1707:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(unsigned short, _AP_SIZE_short, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1698:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(^=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1708:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(int, _AP_SIZE_int, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1698:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(^=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1709:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(unsigned int, _AP_SIZE_int, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1698:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(^=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1710:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(long, _AP_SIZE_long, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1698:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(^=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1711:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(unsigned long, _AP_SIZE_long, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1698:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(^=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1712:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(ap_slong, _AP_SIZE_ap_slong, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1698:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(^=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1713:1: note: candidate template ignored: deduced type 'ap_int_base<32, false>' of 1st parameter does not match adjusted type 'volatile ap_uint<32>' of argument [with _AP_W = 32, _AP_S = false]
+ALL_OP_ASSIGN_WITH_INT(ap_ulong, _AP_SIZE_ap_slong, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1698:3: note: expanded from macro 'ALL_OP_ASSIGN_WITH_INT'
+  OP_ASSIGN_WITH_INT(^=, C_TYPE, _AP_W2, _AP_S2)       \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:1683:51: note: expanded from macro 'OP_ASSIGN_WITH_INT'
+  AP_INLINE AP_NODEBUG ap_int_base<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7181:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(bool, 1, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7170:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(^=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7182:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(char, 8, CHAR_IS_SIGNED)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7170:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(^=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7183:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(signed char, 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7170:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(^=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7184:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(unsigned char, 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7170:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(^=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7185:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(short, sizeof(short) * 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7170:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(^=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7186:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(unsigned short, sizeof(unsigned short) * 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7170:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(^=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7187:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(int, sizeof(int) * 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7170:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(^=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7188:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(unsigned int, sizeof(unsigned int) * 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7170:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(^=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7189:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(long, sizeof(long) * 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7170:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(^=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7190:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(unsigned long, sizeof(unsigned long) * 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7170:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(^=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7191:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(ap_slong, sizeof(ap_slong) * 8, true)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7170:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(^=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7192:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OPS_MIX_INT(ap_ulong, sizeof(ap_ulong) * 8, false)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7170:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_ASSIGN_MIX_INT(^=, C_TYPE, (_AP_W2), (_AP_S2))      \
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7117:59: note: expanded from macro 'OP_ASSIGN_MIX_INT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W, _AP_S>& operator ASSIGN_OP(             \
+                                                          ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7266:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OP_ASSIGN_MIX_RANGE(^=)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7220:61: note: expanded from macro 'OP_ASSIGN_MIX_RANGE'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W1, _AP_S1>& operator ASSIGN_OP(           \
+                                                            ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7266:1: note: candidate template ignored: could not match '_private_range_ref' against 'ap_uint'
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7226:69: note: expanded from macro 'OP_ASSIGN_MIX_RANGE'
+  HLS_CONSTEXPR_EXTRA AP_INLINE _private_range_ref<_AP_W1, _AP_S1>& operator ASSIGN_OP(   \
+                                                                    ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7329:1: note: candidate template ignored: could not match 'ap_private' against 'ap_uint'
+OP_ASSIGN_MIX_BIT(^=)
+^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7295:61: note: expanded from macro 'OP_ASSIGN_MIX_BIT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE ap_private<_AP_W1, _AP_S1>& operator ASSIGN_OP(       \
+                                                            ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7329:1: note: candidate template ignored: could not match '_private_bit_ref' against 'ap_uint'
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:7301:67: note: expanded from macro 'OP_ASSIGN_MIX_BIT'
+  HLS_CONSTEXPR_EXTRA AP_INLINE _private_bit_ref<_AP_W1, _AP_S1>& operator ASSIGN_OP( \
+                                                                  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:873:3: note: candidate function template not viable: no known conversion from 'volatile ap_uint<32>' to 'ap_int_base<32, false>' for object argument
+  OP_ASSIGN_AP_CHK(^=)
+  ^
+D:/AMDDesignTools/2025.2/Vitis/include\etc/ap_int_base.h:865:37: note: expanded from macro 'OP_ASSIGN_AP_CHK'
+  AP_INLINE AP_NODEBUG ap_int_base& operator Sym(const ap_int_base<_AP_W2, _AP_S2>& op2) { \
+                                    ^
+1 warning and 2 errors generated.
+mingw32-make: *** [csim.mk:97: obj/radiation_injector.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+ERROR: CSIM Failed
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 2.12 seconds; peak allocated memory: 134.789 MB.

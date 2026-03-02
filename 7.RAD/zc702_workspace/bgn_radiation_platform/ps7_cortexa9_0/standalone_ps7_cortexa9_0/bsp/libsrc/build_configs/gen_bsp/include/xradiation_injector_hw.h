@@ -5,9 +5,9 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // 
 // ==============================================================
-// control
+// CTRL
 // 0x00 : Control signals
-//        bit 0  - ap_start (Read/Write/COH)
+//        bit 0  - ap_start (Read/Write/SC)
 //        bit 1  - ap_done (Read/COR)
 //        bit 2  - ap_idle (Read)
 //        bit 3  - ap_ready (Read/COR)
@@ -19,31 +19,24 @@
 //        others - reserved
 // 0x08 : IP Interrupt Enable Register (Read/Write)
 //        bit 0 - enable ap_done interrupt (Read/Write)
-//        bit 1 - enable ap_ready interrupt (Read/Write)
 //        others - reserved
 // 0x0c : IP Interrupt Status Register (Read/TOW)
 //        bit 0 - ap_done (Read/TOW)
-//        bit 1 - ap_ready (Read/TOW)
 //        others - reserved
-// 0x10 : Data signal of intensity
-//        bit 31~0 - intensity[31:0] (Read/Write)
+// 0x10 : Data signal of wr_addr
+//        bit 31~0 - wr_addr[31:0] (Read/Write)
 // 0x14 : reserved
-// 0x18 : Data signal of seed
-//        bit 31~0 - seed[31:0] (Read/Write)
+// 0x18 : Data signal of wr_data
+//        bit 31~0 - wr_data[31:0] (Read/Write)
 // 0x1c : reserved
-// 0x20 : Data signal of num_words
-//        bit 31~0 - num_words[31:0] (Read/Write)
-// 0x24 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
-#define XRADIATION_INJECTOR_CONTROL_ADDR_AP_CTRL        0x00
-#define XRADIATION_INJECTOR_CONTROL_ADDR_GIE            0x04
-#define XRADIATION_INJECTOR_CONTROL_ADDR_IER            0x08
-#define XRADIATION_INJECTOR_CONTROL_ADDR_ISR            0x0c
-#define XRADIATION_INJECTOR_CONTROL_ADDR_INTENSITY_DATA 0x10
-#define XRADIATION_INJECTOR_CONTROL_BITS_INTENSITY_DATA 32
-#define XRADIATION_INJECTOR_CONTROL_ADDR_SEED_DATA      0x18
-#define XRADIATION_INJECTOR_CONTROL_BITS_SEED_DATA      32
-#define XRADIATION_INJECTOR_CONTROL_ADDR_NUM_WORDS_DATA 0x20
-#define XRADIATION_INJECTOR_CONTROL_BITS_NUM_WORDS_DATA 32
+#define XRADIATION_INJECTOR_CTRL_ADDR_AP_CTRL      0x00
+#define XRADIATION_INJECTOR_CTRL_ADDR_GIE          0x04
+#define XRADIATION_INJECTOR_CTRL_ADDR_IER          0x08
+#define XRADIATION_INJECTOR_CTRL_ADDR_ISR          0x0c
+#define XRADIATION_INJECTOR_CTRL_ADDR_WR_ADDR_DATA 0x10
+#define XRADIATION_INJECTOR_CTRL_BITS_WR_ADDR_DATA 32
+#define XRADIATION_INJECTOR_CTRL_ADDR_WR_DATA_DATA 0x18
+#define XRADIATION_INJECTOR_CTRL_BITS_WR_DATA_DATA 32
 

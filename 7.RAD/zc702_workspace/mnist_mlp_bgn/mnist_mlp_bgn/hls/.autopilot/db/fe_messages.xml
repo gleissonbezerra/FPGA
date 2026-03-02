@@ -1,7 +1,4 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_INVALID" msg_id="207-7042" msg_severity="WARNING" msg_loc="bgn_inference.cpp:41:1" msg_body="pipeline pragma is ignored, because it can be only applied inside loop body or function body">
-        <args ClangWarningOption="invalid-hls-pragmas"/>
-    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:11:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="hls" ARG_PragmaFunction="hls_popcount" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
@@ -11,64 +8,49 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="directive:1:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=bgn_inference" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:27:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=input_img bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:28:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=prediction bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:29:1" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=input_img bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=weight_mem bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:30:1" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=prediction bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:31:1" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=mode bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:32:1" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=wr_addr bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:33:1" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=wr_data bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:34:1" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:36:1" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="bram port=weight_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:35:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=weight_mem offset=slave bundle=gmem0 depth=16384" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:38:1" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=weight_mem type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:41:1" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:48:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=bn_scale type=rom_1p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:49:1" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:39:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=bn_offset type=rom_1p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:50:1" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:40:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=weights_l2 type=rom_1p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:51:1" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:41:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=bias_l2 type=rom_1p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:54:1" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:44:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=hidden_out type=ram_1p impl=lutram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:63:1" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:53:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:94:1" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="bgn_inference.cpp:83:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="hls" ARG_PragmaFunction="bgn_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="bgn_inference.cpp:70:41" msg_body="Inlining function 'hls_popcount(ap_uint&lt;32&gt;)' into 'bgn_inference'">
-        <args Callee="hls_popcount(ap_uint&lt;32&gt;)" Callee-DebugLoc="File bgn_inference.cpp Line 10 Column 0" Caller="bgn_inference" Caller-DebugLoc="File bgn_inference.cpp Line 27 Column 0"/>
-    </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-340" msg_severity="WARNING" msg_loc="bgn_inference.cpp:38:1" msg_body="The resource pragma (bind_storage) on top-level function argument, in 'call' is unsupported, please use INTERFACE pragma instead">
-        <args Pragma="call" Pragma-DebugLoc="File bgn_inference.cpp Line 38 Column 1"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="bgn_inference.cpp:60:41" msg_body="Inlining function 'hls_popcount(ap_uint&lt;32&gt;)' into 'bgn_inference'">
+        <args Callee="hls_popcount(ap_uint&lt;32&gt;)" Callee-DebugLoc="File bgn_inference.cpp Line 10 Column 0" Caller="bgn_inference" Caller-DebugLoc="File bgn_inference.cpp Line 24 Column 0"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="bgn_inference.cpp:13:22" msg_body="Loop 'VITIS_LOOP_13_1' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="VITIS_LOOP_13_1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="bgn_inference.cpp:27:0" msg_body="Unrolling loop 'VITIS_LOOP_13_1' (bgn_inference.cpp:13:22) in function 'bgn_inference' completely with a factor of 32">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="bgn_inference.cpp:24:0" msg_body="Unrolling loop 'VITIS_LOOP_13_1' (bgn_inference.cpp:13:22) in function 'bgn_inference' completely with a factor of 32">
         <args Factor="32" LoopLoc="bgn_inference.cpp:13:22" LoopName="VITIS_LOOP_13_1"/>
     </msg>
 </xilinx:hls_fe_msgs>

@@ -1,13 +1,13 @@
 
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "8", "13"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "7", "12", "13"],
 		"CDFG" : "bgn_inference",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "22419",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "22426", "EstimateLatencyMax" : "22426",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -16,36 +16,36 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
+			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
+				"BlockSignal" : [
+					{"Name" : "gmem0_blk_n_AR", "Type" : "RtlSignal"}],
+				"SubConnect" : [
+					{"ID" : "2", "SubInstance" : "grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_122", "Port" : "gmem0", "Inst_start_state" : "10", "Inst_end_state" : "11"}]},
 			{"Name" : "input_img", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137", "Port" : "input_img", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
-			{"Name" : "weight_mem", "Type" : "Bram", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137", "Port" : "weight_mem", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
+					{"ID" : "2", "SubInstance" : "grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_122", "Port" : "input_img", "Inst_start_state" : "10", "Inst_end_state" : "11"}]},
+			{"Name" : "weight_mem", "Type" : "None", "Direction" : "I"},
 			{"Name" : "prediction", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "mode", "Type" : "None", "Direction" : "I"},
-			{"Name" : "wr_addr", "Type" : "None", "Direction" : "I"},
-			{"Name" : "wr_data", "Type" : "None", "Direction" : "I"},
 			{"Name" : "bn_scale", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137", "Port" : "bn_scale", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
+					{"ID" : "2", "SubInstance" : "grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_122", "Port" : "bn_scale", "Inst_start_state" : "10", "Inst_end_state" : "11"}]},
 			{"Name" : "bn_offset", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137", "Port" : "bn_offset", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
+					{"ID" : "2", "SubInstance" : "grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_122", "Port" : "bn_offset", "Inst_start_state" : "10", "Inst_end_state" : "11"}]},
 			{"Name" : "weights_l2", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "8", "SubInstance" : "grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151", "Port" : "weights_l2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "7", "SubInstance" : "grp_bgn_inference_Pipeline_LAYER2_MAC_fu_136", "Port" : "weights_l2", "Inst_start_state" : "12", "Inst_end_state" : "13"}]},
 			{"Name" : "bias_l2", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "8", "SubInstance" : "grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151", "Port" : "bias_l2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}]},
+					{"ID" : "7", "SubInstance" : "grp_bgn_inference_Pipeline_LAYER2_MAC_fu_136", "Port" : "bias_l2", "Inst_start_state" : "12", "Inst_end_state" : "13"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.hidden_out_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137", "Parent" : "0", "Child" : ["3", "4", "5", "6", "7"],
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_122", "Parent" : "0", "Child" : ["3", "4", "5", "6"],
 		"CDFG" : "bgn_inference_Pipeline_LAYER1_XNOR_POP",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "16009", "EstimateLatencyMax" : "16009",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "16007", "EstimateLatencyMax" : "16007",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -54,20 +54,22 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "weight_mem", "Type" : "Bram", "Direction" : "I"},
+			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
+				"BlockSignal" : [
+					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
+			{"Name" : "sext_ln48", "Type" : "None", "Direction" : "I"},
 			{"Name" : "input_img", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "hidden_out", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "bn_scale", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "bn_offset", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "LAYER1_XNOR_POP", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter8", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter8", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137.bn_scale_U", "Parent" : "2"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137.bn_offset_U", "Parent" : "2"},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137.mac_muladd_10ns_5ns_5ns_14_4_1_U1", "Parent" : "2"},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137.mac_muladd_11s_5ns_13s_16_4_1_U2", "Parent" : "2"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137.flow_control_loop_pipe_sequential_init_U", "Parent" : "2"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151", "Parent" : "0", "Child" : ["9", "10", "11", "12"],
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter6", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter6", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_122.bn_scale_U", "Parent" : "2"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_122.bn_offset_U", "Parent" : "2"},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_122.mac_muladd_11s_5ns_13s_16_4_1_U1", "Parent" : "2"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_122.flow_control_loop_pipe_sequential_init_U", "Parent" : "2"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER2_MAC_fu_136", "Parent" : "0", "Child" : ["8", "9", "10", "11"],
 		"CDFG" : "bgn_inference_Pipeline_LAYER2_MAC",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -89,8 +91,9 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "LAYER2_MAC", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter5", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter5", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151.weights_l2_U", "Parent" : "8"},
-	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151.bias_l2_U", "Parent" : "8"},
-	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151.mac_muladd_7ns_6s_31s_31_4_1_U9", "Parent" : "8"},
-	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151.flow_control_loop_pipe_sequential_init_U", "Parent" : "8"},
-	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.CTRL_s_axi_U", "Parent" : "0"}]}
+	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER2_MAC_fu_136.weights_l2_U", "Parent" : "7"},
+	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER2_MAC_fu_136.bias_l2_U", "Parent" : "7"},
+	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER2_MAC_fu_136.mac_muladd_7ns_6s_31s_31_4_1_U9", "Parent" : "7"},
+	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_bgn_inference_Pipeline_LAYER2_MAC_fu_136.flow_control_loop_pipe_sequential_init_U", "Parent" : "7"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem0_m_axi_U", "Parent" : "0"}]}

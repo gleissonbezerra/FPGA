@@ -1,38 +1,22 @@
 # This script segment is generated automatically by AutoPilot
 
 set axilite_register_dict [dict create]
-set port_CTRL {
+set port_control {
+weight_mem { 
+	dir I
+	width 64
+	depth 1
+	mode ap_none
+	offset 16
+	offset_end 27
+}
 prediction { 
 	dir O
 	width 32
 	depth 1
 	mode ap_vld
-	offset 16
-	offset_end 23
-}
-mode { 
-	dir I
-	width 32
-	depth 1
-	mode ap_none
-	offset 32
-	offset_end 39
-}
-wr_addr { 
-	dir I
-	width 32
-	depth 1
-	mode ap_none
-	offset 40
-	offset_end 47
-}
-wr_data { 
-	dir I
-	width 32
-	depth 1
-	mode ap_none
-	offset 48
-	offset_end 55
+	offset 28
+	offset_end 35
 }
 input_img { 
 	dir I
@@ -53,6 +37,6 @@ ap_idle { }
 interrupt {
 }
 }
-dict set axilite_register_dict CTRL $port_CTRL
+dict set axilite_register_dict control $port_control
 
 

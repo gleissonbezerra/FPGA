@@ -1,49 +1,23 @@
 {
-    "1": {
-        "name": "bgn_inference_Pipeline_LAYER1_XNOR_POP",
-        "file": "bgn_inference.cpp",
-        "fileloc": "57",
-        "instructions": "197",
-        "total_instructions": "197",
-        "calls": "",
-        "basicblocks": "6",
-        "memory_accesses": "13",
-        "control_depth": "2",
-        "def_use_depth": "1",
-        "loads": {
-            "G": "2",
-            "L": "4",
-            "T": "2"
-        },
-        "stores": {
-            "L": "9"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
     "0": {
         "name": "bgn_inference",
         "file": "bgn_inference.cpp",
         "fileloc": "20",
-        "instructions": "47",
-        "total_instructions": "325",
-        "calls": "1 2",
-        "basicblocks": "6",
+        "instructions": "30",
+        "total_instructions": "306",
+        "calls": "2 1",
+        "basicblocks": "1",
         "memory_accesses": "0",
         "control_depth": "0",
         "def_use_depth": "2",
         "loads": {
             "L": "1"
-        },
-        "stores": {
-            "T": "1"
         }
     },
-    "2": {
+    "1": {
         "name": "bgn_inference_Pipeline_LAYER2_MAC",
         "file": "bgn_inference.cpp",
-        "fileloc": "84",
+        "fileloc": "73",
         "instructions": "81",
         "total_instructions": "81",
         "calls": "",
@@ -57,6 +31,29 @@
         },
         "stores": {
             "L": "14"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "bgn_inference_Pipeline_LAYER1_XNOR_POP",
+        "file": "bgn_inference.cpp",
+        "fileloc": "48",
+        "instructions": "195",
+        "total_instructions": "195",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "13",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "2",
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "9"
         },
         "loops": {
             "L": "1"

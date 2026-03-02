@@ -3407,7 +3407,7 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xcd v.2025.2 (win64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Sun Mar  1 01:54:19 2026</td></tr>
+<tr><td><b>Date</b></td><td>Mon Mar  2 00:04:15 2026</td></tr>
 <tr><td><b>Host</b></td><td>G-MF001 running 64-bit major release  (build 9200)</td></tr>
 <tr><td><b>Command</b></td><td>D:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn\hls_config.cfg --work_dir mnist_mlp_bgn </td></tr>
 </table></center><br>
@@ -3416,9 +3416,9 @@ window.onload = function () { addSorting(); }
 <tr><td><a href="#VIOLATION DETAILS">2 VIOLATION DETAILS</a></tr></td>
 </table>
 <a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
-<pre>Violations found: 4
+<pre>Violations found: 6
 </pre>
-<pre>Rule Specs Violated: 2
+<pre>Rule Specs Violated: 3
 </pre>
 <a name="VIOLATION DETAILS"></a><h1>2 VIOLATION DETAILS</h1>
 <table border="1">
@@ -3445,16 +3445,17 @@ window.onload = function () { addSorting(); }
 </tr>
 <tr>
 <td align="left">1</td>
-<td align="left">Throughput</td>
+<td align="left">Interface</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.bgn_inference.Throughput</td>
-<td align="left">%s</td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.bgn_inference.Interface</td>
+<td align="left">Multiple burst reads of length 16000 and bit width 32 in loop 'LAYER1'(<a href="file:///E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn\bgn_inference.cpp#line=48">bgn_inference.cpp</a>) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///E:/source/.ITA/FPGA/7.RAD/zc702_workspace/mnist_mlp_bgn\bgn_inference.cpp#line=48">bgn_inference.cpp</a>)
+</td>
 <td align="left"><a href="http:///docs.amd.com/access/sources/dita/map?Doc_Version=2025.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">4</td>
+<td align="left">6</td>
 <td align="left">Kernel</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
@@ -3465,6 +3466,26 @@ window.onload = function () { addSorting(); }
 </tr>
 <tr>
 <td align="left">3</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.bgn_inference.Throughput</td>
+<td align="left">%s</td>
+<td align="left"><a href="http:///docs.amd.com/access/sources/dita/map?Doc_Version=2025.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Interface</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.bgn_inference.Interface</td>
+<td align="left">%s</td>
+<td align="left"><a href="http:///docs.amd.com/access/sources/dita/map?Doc_Version=2025.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">5</td>
 <td align="left">Kernel</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>

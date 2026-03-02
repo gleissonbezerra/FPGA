@@ -49462,52 +49462,29 @@ operator/(const complex<ap_ufixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>> &__x, cons
 # 440 "D:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\\ap_int.h" 2
 # 2 "radiation_injector.cpp" 2
 
-
-
 extern "C" __attribute__((sdx_kernel("radiation_injector", 0))) void radiation_injector(
-    ap_uint<32> weight_mem[16384],
-    ap_uint<32> intensity,
-    ap_uint<32> seed,
-    ap_uint<32> num_words
-)
-{
+    ap_uint<32> *weight_mem,
+    ap_uint<32> wr_addr,
+    ap_uint<32> wr_data
+) {
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=radiation_injector
-# 11 "radiation_injector.cpp"
+# 7 "radiation_injector.cpp"
 
 
-#pragma HLS INTERFACE bram port=weight_mem
-#pragma HLS INTERFACE s_axilite port=intensity bundle=control
-#pragma HLS INTERFACE s_axilite port=seed bundle=control
-#pragma HLS INTERFACE s_axilite port=num_words bundle=control
+
+#pragma HLS INTERFACE s_axilite port=wr_addr bundle=control
+#pragma HLS INTERFACE s_axilite port=wr_data bundle=control
+#pragma HLS INTERFACE s_axilite port=weight_mem bundle=control
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 
-#pragma HLS BIND_STORAGE variable=weight_mem type=ram_2p impl=bram
 
-    if (num_words == 0)
-        return;
+#pragma HLS INTERFACE m_axi port=weight_mem offset=slave bundle=gmem0 depth=16384
 
-    if (num_words > 16384)
-        num_words = 16384;
+    ap_uint<32> tmp;
 
-    ap_uint<32> lfsr;
-
-    if(seed == 0)
-        lfsr = (ap_uint<32>)0xACE1u;
-    else
-        lfsr = seed;
-
-
-    ap_uint<1> fb =
-        lfsr[0] ^ lfsr[1] ^ lfsr[21] ^ lfsr[31];
-
-    lfsr = (lfsr >> 1) | (fb << 31);
-
-    ap_uint<14> addr = lfsr % num_words;
-    ap_uint<5> bitpos = lfsr.range(20,16);
-
-    ap_uint<32> mask = ((ap_uint<32>)1 << bitpos);
-
-    ap_uint<32> val = weight_mem[addr];
-    weight_mem[addr] = val ^ mask;
+    if (wr_addr < 16384) {
+        tmp = weight_mem[wr_addr];
+        weight_mem[wr_addr] = wr_data ^ tmp;
+    }
 }

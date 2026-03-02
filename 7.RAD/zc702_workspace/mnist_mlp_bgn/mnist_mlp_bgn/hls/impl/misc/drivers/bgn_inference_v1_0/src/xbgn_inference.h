@@ -45,12 +45,12 @@ typedef struct {
 #else
     u16 DeviceId;
 #endif
-    u64 Ctrl_BaseAddress;
+    u64 Control_BaseAddress;
 } XBgn_inference_Config;
 #endif
 
 typedef struct {
-    u64 Ctrl_BaseAddress;
+    u64 Control_BaseAddress;
     u32 IsReady;
 } XBgn_inference;
 
@@ -99,14 +99,10 @@ u32 XBgn_inference_IsReady(XBgn_inference *InstancePtr);
 void XBgn_inference_EnableAutoRestart(XBgn_inference *InstancePtr);
 void XBgn_inference_DisableAutoRestart(XBgn_inference *InstancePtr);
 
+void XBgn_inference_Set_weight_mem(XBgn_inference *InstancePtr, u64 Data);
+u64 XBgn_inference_Get_weight_mem(XBgn_inference *InstancePtr);
 u32 XBgn_inference_Get_prediction(XBgn_inference *InstancePtr);
 u32 XBgn_inference_Get_prediction_vld(XBgn_inference *InstancePtr);
-void XBgn_inference_Set_mode(XBgn_inference *InstancePtr, u32 Data);
-u32 XBgn_inference_Get_mode(XBgn_inference *InstancePtr);
-void XBgn_inference_Set_wr_addr(XBgn_inference *InstancePtr, u32 Data);
-u32 XBgn_inference_Get_wr_addr(XBgn_inference *InstancePtr);
-void XBgn_inference_Set_wr_data(XBgn_inference *InstancePtr, u32 Data);
-u32 XBgn_inference_Get_wr_data(XBgn_inference *InstancePtr);
 u32 XBgn_inference_Get_input_img_BaseAddress(XBgn_inference *InstancePtr);
 u32 XBgn_inference_Get_input_img_HighAddress(XBgn_inference *InstancePtr);
 u32 XBgn_inference_Get_input_img_TotalBytes(XBgn_inference *InstancePtr);

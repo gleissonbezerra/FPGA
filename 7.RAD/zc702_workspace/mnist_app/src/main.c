@@ -1,22 +1,17 @@
-#include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
 #include "xparameters.h"
-#include "weights.h"
-
 #include "xbgn_inference.h"
 #include "xradiation_injector.h"
+#include "weights.h"
 
-#define INPUT_WORDS 25
-#define W1_WORDS    16000
-#define CHECK_WORDS 10
+#define INPUT_WORDS  25
+#define W1_WORDS     16000
 
-XBgn_inference bgn_inst;
-XRadiation_injector rad_inst;
+XBgn_inference        bgn_inst;
+XRadiation_injector   rad_inst;
 
-// ==============================
-// IMAGEM DE TESTE
-// ==============================
+// Imagem de teste
 u32 img_teste[INPUT_WORDS] = {
 0x00000000, 0x00000000, 0x00000000, 0x07000000, 0xF000000E,
 0x000001C0, 0x00003800, 0x00070000, 0x00700000, 0x0E000001,
@@ -24,54 +19,62 @@ u32 img_teste[INPUT_WORDS] = {
 0x06630000, 0x60700002, 0x0E000027, 0xC00003F0, 0x00001C00,
 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000};
 
-// ==============================
-// LER UMA PALAVRA DA BRAM
-// ==============================
-static u32 read_bram_word(u32 addr)
-{
-    XBgn_inference_Set_wr_addr(&bgn_inst, addr);
-    XBgn_inference_Set_mode(&bgn_inst, 1);
-    XBgn_inference_Start(&bgn_inst);
-    while (!XBgn_inference_IsDone(&bgn_inst));
-    return XBgn_inference_Get_wr_data(&bgn_inst);
-}
-
-// ==============================
-// MAIN
-// ==============================
 int main()
 {
     init_platform();
 
+    int status;
+
     xil_printf("\r\n=====================================\r\n");
-    xil_printf("   BGN + RADIATION TEST (FINAL)\r\n");
+    xil_printf("   BGN + SIMPLE INJECTOR TEST\r\n");
     xil_printf("=====================================\r\n");
 
-    xil_printf("BGN BASE = 0x%08X\r\n", XPAR_BGN_INFERENCE_0_BASEADDR);
-    xil_printf("RAD BASE = 0x%08X\r\n", XPAR_RADIATION_INJECTOR_0_BASEADDR);
+    // -----------------------------
+    // Inicializa BGN (FORMA CORRETA)
+    // -----------------------------
+    status = XBgn_inference_Initialize(
+                &bgn_inst,
+                XPAR_BGN_INFERENCE_0_BASEADDR);
 
-    // ==============================
-    // INIT BGN
-    // ==============================
-    bgn_inst.Ctrl_BaseAddress = XPAR_BGN_INFERENCE_0_BASEADDR;
-    bgn_inst.IsReady = XIL_COMPONENT_IS_READY;
+    if (status != XST_SUCCESS) {
+        xil_printf("BGN init failed!\r\n");
+        return -1;
+    }
 
-    // ==============================
-    // INIT RADIATION INJECTOR
-    // ==============================
-    rad_inst.Control_BaseAddress = XPAR_RADIATION_INJECTOR_0_BASEADDR;
-    rad_inst.IsReady = XIL_COMPONENT_IS_READY;
+    // -----------------------------
+    // Inicializa Injector (FORMA CORRETA)
+    // -----------------------------
+    status = XRadiation_injector_Initialize(
+                &rad_inst,
+                XPAR_RADIATION_INJECTOR_0_BASEADDR);
 
-    // ==============================
-    // WRITE INPUT IMAGE
-    // ==============================
+    if (status != XST_SUCCESS) {
+        xil_printf("Injector init failed!\r\n");
+        return -1;
+    }
+
+    xil_printf("BGN BASE (driver) = 0x%08X\r\n",
+               (u32)bgn_inst.Ctrl_BaseAddress);
+
+    xil_printf("RAD BASE (driver) = 0x%08X\r\n",
+               (u32)rad_inst.Ctrl_BaseAddress);
+
+    xil_printf("BGN BASE (xparam) = 0x%08X\r\n",
+               XPAR_BGN_INFERENCE_0_BASEADDR);
+
+    xil_printf("RAD BASE (xparam) = 0x%08X\r\n",
+               XPAR_RADIATION_INJECTOR_0_BASEADDR);
+
+    // -----------------------------
+    // Escreve imagem no BGN
+    // -----------------------------
     XBgn_inference_Write_input_img_Words(
         &bgn_inst, 0, img_teste, INPUT_WORDS
     );
 
-    // ==============================
-    // LOAD WEIGHTS
-    // ==============================
+    // -----------------------------
+    // Carrega pesos via BGN
+    // -----------------------------
     xil_printf("[LOAD] Loading weights...\r\n");
 
     for (int i = 0; i < W1_WORDS; i++)
@@ -88,60 +91,47 @@ int main()
 
     xil_printf("Load Done.\r\n");
 
-    // ==============================
-    // INFERENCE BEFORE
-    // ==============================
+    // =============================
+    // INFERÊNCIA BEFORE
+    // =============================
     XBgn_inference_Start(&bgn_inst);
     while (!XBgn_inference_IsDone(&bgn_inst));
-    int pred_before = XBgn_inference_Get_prediction(&bgn_inst);
 
-    xil_printf("\r\nPrediction BEFORE: %d\r\n", pred_before);
+    int before = XBgn_inference_Get_prediction(&bgn_inst);
+    xil_printf("\r\nPrediction BEFORE: %d\r\n", before);
 
-    // ==============================
-    // BRAM BEFORE
-    // ==============================
-    xil_printf("\r\n[BRAM CHECK BEFORE]\r\n");
-    for(int i=0;i<CHECK_WORDS;i++)
-    {
-        u32 val = read_bram_word(i);
-        xil_printf("BRAM[%d] = 0x%08X\r\n", i, val);
-    }
+    u32 test = XRadiation_injector_ReadReg(
+                rad_inst.Ctrl_BaseAddress,
+                0x00);
 
-    // ==============================
-    // CONFIGURE INJECTOR
-    // ==============================
-    XRadiation_injector_Set_num_words(&rad_inst, W1_WORDS);
-    XRadiation_injector_Set_intensity(&rad_inst, 1000);
-    XRadiation_injector_Set_seed(&rad_inst, 1234);
+    xil_printf("Control reg = 0x%08X\r\n", test);
 
-    xil_printf("\r\n[INJECT] Applying radiation...\r\n");
+    // =============================
+    // EXECUTA INJECTOR (escrita única)
+    // =============================
+    xil_printf("\r\n[INJECT] Overwriting address 0...\r\n");
+
+    XRadiation_injector_Set_wr_addr(&rad_inst, 0);
+    XRadiation_injector_Set_wr_data(&rad_inst, 0xAAAAAAAA);
+
+    xil_printf("About to start injector...\r\n");
 
     XRadiation_injector_Start(&rad_inst);
-    while(!XRadiation_injector_IsDone(&rad_inst));
+    while (!XRadiation_injector_IsDone(&rad_inst));
 
     xil_printf("Injection Done.\r\n");
 
-    // ==============================
-    // BRAM AFTER
-    // ==============================
-    xil_printf("\r\n[BRAM CHECK AFTER]\r\n");
-    for(int i=0;i<CHECK_WORDS;i++)
-    {
-        u32 val = read_bram_word(i);
-        xil_printf("BRAM[%d] = 0x%08X\r\n", i, val);
-    }
-
-    // ==============================
-    // INFERENCE AFTER
-    // ==============================
+    // =============================
+    // INFERÊNCIA AFTER
+    // =============================
     XBgn_inference_Start(&bgn_inst);
     while (!XBgn_inference_IsDone(&bgn_inst));
-    int pred_after = XBgn_inference_Get_prediction(&bgn_inst);
 
-    xil_printf("\r\nPrediction AFTER:  %d\r\n", pred_after);
+    int after = XBgn_inference_Get_prediction(&bgn_inst);
+    xil_printf("\r\nPrediction AFTER:  %d\r\n", after);
 
     xil_printf("\r\n=====================================\r\n");
-    xil_printf("RESULT: %d -> %d\r\n", pred_before, pred_after);
+    xil_printf("RESULT: %d -> %d\r\n", before, after);
     xil_printf("=====================================\r\n");
 
     cleanup_platform();

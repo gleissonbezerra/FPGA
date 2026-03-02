@@ -4,7 +4,7 @@ XRadiation_injector_Config XRadiation_injector_ConfigTable[] __attribute__ ((sec
 
 	{
 		"xlnx,radiation-injector-1.0", /* compatible */
-		0x40010000 /* reg */
+		0x40000000 /* reg */
 	},
 	 {
 		 NULL

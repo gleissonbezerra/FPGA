@@ -7,55 +7,40 @@ bgn_inference.cpp:14:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_S
 directive:1:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=name=bgn_inference_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=bgn_inference
 ^
-bgn_inference.cpp:29:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=s_axilite port=input_img bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=input_img bundle=CTRL
+bgn_inference.cpp:27:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=s_axilite port=input_img bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=input_img bundle=control
 ^
-bgn_inference.cpp:30:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=s_axilite port=prediction bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=prediction bundle=CTRL
+bgn_inference.cpp:28:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=s_axilite port=prediction bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=prediction bundle=control
 ^
-bgn_inference.cpp:31:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=s_axilite port=mode bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=mode bundle=CTRL
+bgn_inference.cpp:29:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=s_axilite port=weight_mem bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=weight_mem bundle=control
 ^
-bgn_inference.cpp:32:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=s_axilite port=wr_addr bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=wr_addr bundle=CTRL
+bgn_inference.cpp:30:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=control
 ^
-bgn_inference.cpp:33:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=s_axilite port=wr_data bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=wr_data bundle=CTRL
+bgn_inference.cpp:35:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=m_axi port=weight_mem offset=slave bundle=gmem0 depth=16384_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=weight_mem offset=slave bundle=gmem0 depth=16384
 ^
-bgn_inference.cpp:34:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=return bundle=CTRL
-^
-bgn_inference.cpp:36:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=bram port=weight_mem_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE bram port=weight_mem
-^
-bgn_inference.cpp:38:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=variable=weight_mem type=ram_2p impl=bram_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS BIND_STORAGE variable=weight_mem type=ram_2p impl=bram
-^
-bgn_inference.cpp:41:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS PIPELINE II=1
-^
-bgn_inference.cpp:48:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=variable=bn_scale type=rom_1p impl=bram_XLX_SEP_ [-Wdump-hls-pragmas]
+bgn_inference.cpp:38:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=variable=bn_scale type=rom_1p impl=bram_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS BIND_STORAGE variable=bn_scale type=rom_1p impl=bram
 ^
-bgn_inference.cpp:49:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=variable=bn_offset type=rom_1p impl=bram_XLX_SEP_ [-Wdump-hls-pragmas]
+bgn_inference.cpp:39:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=variable=bn_offset type=rom_1p impl=bram_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS BIND_STORAGE variable=bn_offset type=rom_1p impl=bram
 ^
-bgn_inference.cpp:50:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=variable=weights_l2 type=rom_1p impl=bram_XLX_SEP_ [-Wdump-hls-pragmas]
+bgn_inference.cpp:40:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=variable=weights_l2 type=rom_1p impl=bram_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS BIND_STORAGE variable=weights_l2 type=rom_1p impl=bram
 ^
-bgn_inference.cpp:51:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=variable=bias_l2 type=rom_1p impl=bram_XLX_SEP_ [-Wdump-hls-pragmas]
+bgn_inference.cpp:41:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=variable=bias_l2 type=rom_1p impl=bram_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS BIND_STORAGE variable=bias_l2 type=rom_1p impl=bram
 ^
-bgn_inference.cpp:54:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=variable=hidden_out type=ram_1p impl=lutram_XLX_SEP_ [-Wdump-hls-pragmas]
+bgn_inference.cpp:44:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=variable=hidden_out type=ram_1p impl=lutram_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS BIND_STORAGE variable=hidden_out type=ram_1p impl=lutram
 ^
-bgn_inference.cpp:63:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+bgn_inference.cpp:53:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS PIPELINE II=1
 ^
-bgn_inference.cpp:94:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+bgn_inference.cpp:83:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=bgn_inference_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS PIPELINE II=1
 ^
-bgn_inference.cpp:41:1: warning: pipeline pragma is ignored, because it can be only applied inside loop body or function body  [-Winvalid-hls-pragmas]
-#pragma HLS PIPELINE II=1
-^
-20 warnings generated.
+15 warnings generated.

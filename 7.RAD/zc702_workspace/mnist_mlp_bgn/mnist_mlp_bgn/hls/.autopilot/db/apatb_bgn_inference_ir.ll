@@ -8,7 +8,7 @@ target triple = "fpga64-xilinx-none"
 %"struct.ssdm_int<32, false>" = type { i32 }
 
 ; Function Attrs: noinline
-define void @apatb_bgn_inference_ir(%"struct.ap_uint<32>"* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="25" %input_img, %"struct.ap_uint<32>"* noalias nocapture nonnull "fpga.decayed.dim.hint"="16384" %weight_mem, i32* noalias nocapture nonnull %prediction, %"struct.ap_uint<32>"* nocapture readonly %mode, %"struct.ap_uint<32>"* nocapture readonly %wr_addr, %"struct.ap_uint<32>"* nocapture readonly %wr_data) local_unnamed_addr #0 {
+define void @apatb_bgn_inference_ir(%"struct.ap_uint<32>"* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="25" %input_img, %"struct.ap_uint<32>"* noalias nocapture nonnull readonly "maxi" %weight_mem, i32* noalias nocapture nonnull %prediction) local_unnamed_addr #0 {
 entry:
   %0 = bitcast %"struct.ap_uint<32>"* %input_img to [25 x %"struct.ap_uint<32>"]*
   %input_img_copy = alloca [25 x i32], align 512
@@ -17,7 +17,7 @@ entry:
   %weight_mem_copy = bitcast i8* %2 to [16384 x i32]*
   %prediction_copy = alloca i32, align 512
   call fastcc void @copy_in([25 x %"struct.ap_uint<32>"]* nonnull %0, [25 x i32]* nonnull align 512 %input_img_copy, [16384 x %"struct.ap_uint<32>"]* nonnull %1, [16384 x i32]* %weight_mem_copy, i32* nonnull %prediction, i32* nonnull align 512 %prediction_copy)
-  call void @apatb_bgn_inference_hw([25 x i32]* %input_img_copy, [16384 x i32]* %weight_mem_copy, i32* %prediction_copy, %"struct.ap_uint<32>"* %mode, %"struct.ap_uint<32>"* %wr_addr, %"struct.ap_uint<32>"* %wr_data)
+  call void @apatb_bgn_inference_hw([25 x i32]* %input_img_copy, [16384 x i32]* %weight_mem_copy, i32* %prediction_copy)
   call void @copy_back([25 x %"struct.ap_uint<32>"]* %0, [25 x i32]* %input_img_copy, [16384 x %"struct.ap_uint<32>"]* %1, [16384 x i32]* %weight_mem_copy, i32* %prediction, i32* %prediction_copy)
   call void @free(i8* %2)
   ret void
@@ -238,31 +238,30 @@ ret:                                              ; preds = %copy.split, %entry
   ret void
 }
 
-declare void @apatb_bgn_inference_hw([25 x i32]*, [16384 x i32]*, i32*, %"struct.ap_uint<32>"*, %"struct.ap_uint<32>"*, %"struct.ap_uint<32>"*)
+declare void @apatb_bgn_inference_hw([25 x i32]*, [16384 x i32]*, i32*)
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
 define internal fastcc void @copy_back([25 x %"struct.ap_uint<32>"]* "unpacked"="0", [25 x i32]* noalias nocapture readonly align 512 "unpacked"="1.0", [16384 x %"struct.ap_uint<32>"]* "unpacked"="2", [16384 x i32]* nocapture readonly "unpacked"="3.0", i32* "unpacked"="4", i32* readonly align 512 "unpacked"="5") unnamed_addr #4 {
 entry:
-  call fastcc void @"onebyonecpy_hls.p0a16384struct.ap_uint<32>.5"([16384 x %"struct.ap_uint<32>"]* %2, [16384 x i32]* %3)
   call fastcc void @onebyonecpy_hls.p0i32(i32* %4, i32* align 512 %5)
   ret void
 }
 
-declare void @bgn_inference_hw_stub(%"struct.ap_uint<32>"* noalias nocapture nonnull readonly, %"struct.ap_uint<32>"* noalias nocapture nonnull, i32* noalias nocapture nonnull, %"struct.ap_uint<32>"* nocapture readonly, %"struct.ap_uint<32>"* nocapture readonly, %"struct.ap_uint<32>"* nocapture readonly)
+declare void @bgn_inference_hw_stub(%"struct.ap_uint<32>"* noalias nocapture nonnull readonly, %"struct.ap_uint<32>"* noalias nocapture nonnull readonly, i32* noalias nocapture nonnull)
 
-define void @bgn_inference_hw_stub_wrapper([25 x i32]*, [16384 x i32]*, i32*, %"struct.ap_uint<32>"*, %"struct.ap_uint<32>"*, %"struct.ap_uint<32>"*) #5 {
+define void @bgn_inference_hw_stub_wrapper([25 x i32]*, [16384 x i32]*, i32*) #5 {
 entry:
-  %6 = call i8* @malloc(i64 100)
-  %7 = bitcast i8* %6 to [25 x %"struct.ap_uint<32>"]*
-  %8 = call i8* @malloc(i64 65536)
-  %9 = bitcast i8* %8 to [16384 x %"struct.ap_uint<32>"]*
-  call void @copy_out([25 x %"struct.ap_uint<32>"]* %7, [25 x i32]* %0, [16384 x %"struct.ap_uint<32>"]* %9, [16384 x i32]* %1, i32* null, i32* %2)
-  %10 = bitcast [25 x %"struct.ap_uint<32>"]* %7 to %"struct.ap_uint<32>"*
-  %11 = bitcast [16384 x %"struct.ap_uint<32>"]* %9 to %"struct.ap_uint<32>"*
-  call void @bgn_inference_hw_stub(%"struct.ap_uint<32>"* %10, %"struct.ap_uint<32>"* %11, i32* %2, %"struct.ap_uint<32>"* %3, %"struct.ap_uint<32>"* %4, %"struct.ap_uint<32>"* %5)
-  call void @copy_in([25 x %"struct.ap_uint<32>"]* %7, [25 x i32]* %0, [16384 x %"struct.ap_uint<32>"]* %9, [16384 x i32]* %1, i32* null, i32* %2)
-  call void @free(i8* %6)
-  call void @free(i8* %8)
+  %3 = call i8* @malloc(i64 100)
+  %4 = bitcast i8* %3 to [25 x %"struct.ap_uint<32>"]*
+  %5 = call i8* @malloc(i64 65536)
+  %6 = bitcast i8* %5 to [16384 x %"struct.ap_uint<32>"]*
+  call void @copy_out([25 x %"struct.ap_uint<32>"]* %4, [25 x i32]* %0, [16384 x %"struct.ap_uint<32>"]* %6, [16384 x i32]* %1, i32* null, i32* %2)
+  %7 = bitcast [25 x %"struct.ap_uint<32>"]* %4 to %"struct.ap_uint<32>"*
+  %8 = bitcast [16384 x %"struct.ap_uint<32>"]* %6 to %"struct.ap_uint<32>"*
+  call void @bgn_inference_hw_stub(%"struct.ap_uint<32>"* %7, %"struct.ap_uint<32>"* %8, i32* %2)
+  call void @copy_in([25 x %"struct.ap_uint<32>"]* %4, [25 x i32]* %0, [16384 x %"struct.ap_uint<32>"]* %6, [16384 x i32]* %1, i32* null, i32* %2)
+  call void @free(i8* %3)
+  call void @free(i8* %5)
   ret void
 }
 

@@ -41,5 +41,5 @@ D:/AMDDesignTools/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9
 OK
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 2.359 seconds; peak allocated memory: 135.105 MB.
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 2.376 seconds; peak allocated memory: 135.105 MB.
 INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 5s

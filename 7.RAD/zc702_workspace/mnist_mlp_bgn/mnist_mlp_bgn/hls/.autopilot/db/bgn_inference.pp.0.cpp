@@ -50133,35 +50133,25 @@ static unsigned int hls_popcount(ap_uint<32> n) {
 
 extern "C" __attribute__((sdx_kernel("bgn_inference", 0))) void bgn_inference(
     ap_uint<32> input_img[25],
-    ap_uint<32> weight_mem[16384],
-    int *prediction,
-    ap_uint<32> mode,
-    ap_uint<32> wr_addr,
-    ap_uint<32> wr_data
+    ap_uint<32> *weight_mem,
+    int *prediction
 ) {
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=bgn_inference
-# 27 "bgn_inference.cpp"
+# 24 "bgn_inference.cpp"
 
 
-#pragma HLS INTERFACE s_axilite port=input_img bundle=CTRL
-#pragma HLS INTERFACE s_axilite port=prediction bundle=CTRL
-#pragma HLS INTERFACE s_axilite port=mode bundle=CTRL
-#pragma HLS INTERFACE s_axilite port=wr_addr bundle=CTRL
-#pragma HLS INTERFACE s_axilite port=wr_data bundle=CTRL
-#pragma HLS INTERFACE s_axilite port=return bundle=CTRL
 
-#pragma HLS INTERFACE bram port=weight_mem
+#pragma HLS INTERFACE s_axilite port=input_img bundle=control
+#pragma HLS INTERFACE s_axilite port=prediction bundle=control
+#pragma HLS INTERFACE s_axilite port=weight_mem bundle=control
+#pragma HLS INTERFACE s_axilite port=return bundle=control
 
-#pragma HLS BIND_STORAGE variable=weight_mem type=ram_2p impl=bram
 
-    if (mode == 1) {
-#pragma HLS PIPELINE II=1
-        if (wr_addr < 16384) {
-            weight_mem[(ap_uint<14>)wr_addr] = wr_data;
-        }
-        return;
-    }
+
+
+#pragma HLS INTERFACE m_axi port=weight_mem offset=slave bundle=gmem0 depth=16384
+
 
 #pragma HLS BIND_STORAGE variable=bn_scale type=rom_1p impl=bram
 #pragma HLS BIND_STORAGE variable=bn_offset type=rom_1p impl=bram
@@ -50171,9 +50161,9 @@ extern "C" __attribute__((sdx_kernel("bgn_inference", 0))) void bgn_inference(
     ap_int<16> hidden_out[640];
 #pragma HLS BIND_STORAGE variable=hidden_out type=ram_1p impl=lutram
 
+
 LAYER1:
     for (int i = 0; i < 640; i++) {
-
         ap_int<16> popcount_acc = 0;
 
     XNOR_POP:
@@ -50195,16 +50185,15 @@ LAYER1:
             (ap_int<16>)bn_offset[i];
 
         ap_int<16> bn_res = (ap_int<16>)(bn_calc >> 8);
-
         hidden_out[i] = (bn_res > 0) ? bn_res : (ap_int<16>)0;
     }
 
     ap_int<32> max_score = -2147483648;
     int class_idx = 0;
 
+
 LAYER2:
     for (int i = 0; i < 10; i++) {
-
         ap_int<32> accumulator = 0;
 
     MAC:

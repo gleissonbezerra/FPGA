@@ -4,7 +4,7 @@ XBgn_inference_Config XBgn_inference_ConfigTable[] __attribute__ ((section (".dr
 
 	{
 		"xlnx,bgn-inference-1.0", /* compatible */
-		0x40000000 /* reg */
+		0x40010000 /* reg */
 	},
 	 {
 		 NULL

@@ -8,13 +8,13 @@ target triple = "fpga64-xilinx-none"
 %"struct.ssdm_int<32, false>" = type { i32 }
 
 ; Function Attrs: noinline
-define void @apatb_radiation_injector_ir(%"struct.ap_uint<32>"* noalias nocapture nonnull "fpga.decayed.dim.hint"="16384" %weight_mem, %"struct.ap_uint<32>"* nocapture readonly %intensity, %"struct.ap_uint<32>"* nocapture readonly %seed, %"struct.ap_uint<32>"* nocapture readonly %num_words) local_unnamed_addr #0 {
+define void @apatb_radiation_injector_ir(%"struct.ap_uint<32>"* noalias nocapture nonnull "maxi" %weight_mem, %"struct.ap_uint<32>"* nocapture readonly %wr_addr, %"struct.ap_uint<32>"* nocapture readonly %wr_data) local_unnamed_addr #0 {
 entry:
   %0 = bitcast %"struct.ap_uint<32>"* %weight_mem to [16384 x %"struct.ap_uint<32>"]*
   %1 = call i8* @malloc(i64 65536)
   %weight_mem_copy = bitcast i8* %1 to [16384 x i32]*
   call fastcc void @copy_in([16384 x %"struct.ap_uint<32>"]* nonnull %0, [16384 x i32]* %weight_mem_copy)
-  call void @apatb_radiation_injector_hw([16384 x i32]* %weight_mem_copy, %"struct.ap_uint<32>"* %intensity, %"struct.ap_uint<32>"* %seed, %"struct.ap_uint<32>"* %num_words)
+  call void @apatb_radiation_injector_hw([16384 x i32]* %weight_mem_copy, %"struct.ap_uint<32>"* %wr_addr, %"struct.ap_uint<32>"* %wr_data)
   call void @copy_back([16384 x %"struct.ap_uint<32>"]* %0, [16384 x i32]* %weight_mem_copy)
   call void @free(i8* %1)
   ret void
@@ -126,7 +126,7 @@ ret:                                              ; preds = %copy.split, %entry
   ret void
 }
 
-declare void @apatb_radiation_injector_hw([16384 x i32]*, %"struct.ap_uint<32>"*, %"struct.ap_uint<32>"*, %"struct.ap_uint<32>"*)
+declare void @apatb_radiation_injector_hw([16384 x i32]*, %"struct.ap_uint<32>"*, %"struct.ap_uint<32>"*)
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
 define internal fastcc void @copy_back([16384 x %"struct.ap_uint<32>"]* "unpacked"="0", [16384 x i32]* nocapture readonly "unpacked"="1.0") unnamed_addr #4 {
@@ -135,17 +135,17 @@ entry:
   ret void
 }
 
-declare void @radiation_injector_hw_stub(%"struct.ap_uint<32>"* noalias nocapture nonnull, %"struct.ap_uint<32>"* nocapture readonly, %"struct.ap_uint<32>"* nocapture readonly, %"struct.ap_uint<32>"* nocapture readonly)
+declare void @radiation_injector_hw_stub(%"struct.ap_uint<32>"* noalias nocapture nonnull, %"struct.ap_uint<32>"* nocapture readonly, %"struct.ap_uint<32>"* nocapture readonly)
 
-define void @radiation_injector_hw_stub_wrapper([16384 x i32]*, %"struct.ap_uint<32>"*, %"struct.ap_uint<32>"*, %"struct.ap_uint<32>"*) #5 {
+define void @radiation_injector_hw_stub_wrapper([16384 x i32]*, %"struct.ap_uint<32>"*, %"struct.ap_uint<32>"*) #5 {
 entry:
-  %4 = call i8* @malloc(i64 65536)
-  %5 = bitcast i8* %4 to [16384 x %"struct.ap_uint<32>"]*
-  call void @copy_out([16384 x %"struct.ap_uint<32>"]* %5, [16384 x i32]* %0)
-  %6 = bitcast [16384 x %"struct.ap_uint<32>"]* %5 to %"struct.ap_uint<32>"*
-  call void @radiation_injector_hw_stub(%"struct.ap_uint<32>"* %6, %"struct.ap_uint<32>"* %1, %"struct.ap_uint<32>"* %2, %"struct.ap_uint<32>"* %3)
-  call void @copy_in([16384 x %"struct.ap_uint<32>"]* %5, [16384 x i32]* %0)
-  call void @free(i8* %4)
+  %3 = call i8* @malloc(i64 65536)
+  %4 = bitcast i8* %3 to [16384 x %"struct.ap_uint<32>"]*
+  call void @copy_out([16384 x %"struct.ap_uint<32>"]* %4, [16384 x i32]* %0)
+  %5 = bitcast [16384 x %"struct.ap_uint<32>"]* %4 to %"struct.ap_uint<32>"*
+  call void @radiation_injector_hw_stub(%"struct.ap_uint<32>"* %5, %"struct.ap_uint<32>"* %1, %"struct.ap_uint<32>"* %2)
+  call void @copy_in([16384 x %"struct.ap_uint<32>"]* %4, [16384 x i32]* %0)
+  call void @free(i8* %3)
   ret void
 }
 

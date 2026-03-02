@@ -243,18 +243,9 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-struct __cosim_s4__ { char data[4]; };
-extern "C" void bgn_inference(Byte<4>*, Byte<4>*, volatile void *, __cosim_s4__, __cosim_s4__, __cosim_s4__);
-extern "C" void apatb_bgn_inference_hw(volatile void * __xlx_apatb_param_input_img, volatile void * __xlx_apatb_param_weight_mem, volatile void * __xlx_apatb_param_prediction, __cosim_s4__* __xlx_apatb_param_mode, __cosim_s4__* __xlx_apatb_param_wr_addr, __cosim_s4__* __xlx_apatb_param_wr_data) {
+extern "C" void bgn_inference(Byte<4>*, Byte<4>*, int, volatile void *);
+extern "C" void apatb_bgn_inference_hw(volatile void * __xlx_apatb_param_input_img, volatile void * __xlx_apatb_param_weight_mem, volatile void * __xlx_apatb_param_prediction) {
 using hls::sim::createStream;
-  // Collect __xlx_input_img__tmp_vec
-std::vector<Byte<4>> __xlx_input_img__tmp_vec;
-for (size_t i = 0; i < 25; ++i){
-__xlx_input_img__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_img)[i]);
-}
-  int __xlx_size_param_input_img = 25;
-  int __xlx_offset_param_input_img = 0;
-  int __xlx_offset_byte_param_input_img = 0*4;
   // Collect __xlx_weight_mem__tmp_vec
 std::vector<Byte<4>> __xlx_weight_mem__tmp_vec;
 for (size_t i = 0; i < 16384; ++i){
@@ -263,14 +254,22 @@ __xlx_weight_mem__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weight_mem)[i])
   int __xlx_size_param_weight_mem = 16384;
   int __xlx_offset_param_weight_mem = 0;
   int __xlx_offset_byte_param_weight_mem = 0*4;
-  // DUT call
-  bgn_inference(__xlx_input_img__tmp_vec.data(), __xlx_weight_mem__tmp_vec.data(), __xlx_apatb_param_prediction, *__xlx_apatb_param_mode, *__xlx_apatb_param_wr_addr, *__xlx_apatb_param_wr_data);
-// print __xlx_apatb_param_input_img
-for (size_t i = 0; i < __xlx_size_param_input_img; ++i) {
-((Byte<4>*)__xlx_apatb_param_input_img)[i] = __xlx_input_img__tmp_vec[__xlx_offset_param_input_img+i];
+  // Collect __xlx_input_img__tmp_vec
+std::vector<Byte<4>> __xlx_input_img__tmp_vec;
+for (size_t i = 0; i < 25; ++i){
+__xlx_input_img__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_img)[i]);
 }
+  int __xlx_size_param_input_img = 25;
+  int __xlx_offset_param_input_img = 0;
+  int __xlx_offset_byte_param_input_img = 0*4;
+  // DUT call
+  bgn_inference(__xlx_weight_mem__tmp_vec.data(), __xlx_input_img__tmp_vec.data(), __xlx_offset_byte_param_weight_mem, __xlx_apatb_param_prediction);
 // print __xlx_apatb_param_weight_mem
 for (size_t i = 0; i < __xlx_size_param_weight_mem; ++i) {
 ((Byte<4>*)__xlx_apatb_param_weight_mem)[i] = __xlx_weight_mem__tmp_vec[__xlx_offset_param_weight_mem+i];
+}
+// print __xlx_apatb_param_input_img
+for (size_t i = 0; i < __xlx_size_param_input_img; ++i) {
+((Byte<4>*)__xlx_apatb_param_input_img)[i] = __xlx_input_img__tmp_vec[__xlx_offset_param_input_img+i];
 }
 }

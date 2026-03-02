@@ -3,10 +3,10 @@
     "basicblocks": 3,
     "calls": "",
     "control_depth": 0,
-    "def_use_depth": 5,
+    "def_use_depth": 6,
     "file": "radiation_injector.cpp",
-    "fileloc": 5,
-    "instructions": 32,
+    "fileloc": 3,
+    "instructions": 24,
     "loads": {
       "T": 1
     },
@@ -15,6 +15,6 @@
     "stores": {
       "T": 1
     },
-    "total_instructions": 32
+    "total_instructions": 24
   }
 }

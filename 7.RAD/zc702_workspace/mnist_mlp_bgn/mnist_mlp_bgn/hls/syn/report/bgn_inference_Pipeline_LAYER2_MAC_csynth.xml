@@ -49,13 +49,13 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>bgn_inference.cpp:90</SourceLocation>
+<SourceLocation>bgn_inference.cpp:79</SourceLocation>
 <SummaryOfLoopViolations>
 <LAYER2_MAC>
 <Name>LAYER2_MAC</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>bgn_inference.cpp:88</SourceLocation>
+<SourceLocation>bgn_inference.cpp:78</SourceLocation>
 </LAYER2_MAC>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>

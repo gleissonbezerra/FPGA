@@ -95,7 +95,7 @@
 						<name>accumulator</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>79</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -111,7 +111,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>90</second>
+										<second>79</second>
 									</item>
 								</second>
 							</item>
@@ -151,7 +151,7 @@
 						<name>j</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>82</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -167,7 +167,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>93</second>
+										<second>82</second>
 									</item>
 								</second>
 							</item>
@@ -291,7 +291,7 @@
 						<name>max_score</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>84</lineNumber>
+						<lineNumber>73</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -307,7 +307,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>84</second>
+										<second>73</second>
 									</item>
 								</second>
 							</item>
@@ -347,7 +347,7 @@
 						<name>class_idx</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>85</lineNumber>
+						<lineNumber>74</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -363,7 +363,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>85</second>
+										<second>74</second>
 									</item>
 								</second>
 							</item>
@@ -403,7 +403,7 @@
 						<name>i</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -419,7 +419,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -541,10 +541,10 @@
 					<Obj>
 						<type>0</type>
 						<id>17</id>
-						<name>i_write_ln88</name>
+						<name>i_write_ln78</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -560,7 +560,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -598,10 +598,10 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>class_idx_write_ln85</name>
+						<name>class_idx_write_ln74</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>85</lineNumber>
+						<lineNumber>74</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -617,7 +617,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>85</second>
+										<second>74</second>
 									</item>
 								</second>
 							</item>
@@ -655,10 +655,10 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>max_score_write_ln84</name>
+						<name>max_score_write_ln73</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>84</lineNumber>
+						<lineNumber>73</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -674,7 +674,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>84</second>
+										<second>73</second>
 									</item>
 								</second>
 							</item>
@@ -712,10 +712,10 @@
 					<Obj>
 						<type>0</type>
 						<id>20</id>
-						<name>j_write_ln93</name>
+						<name>j_write_ln82</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>82</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -731,7 +731,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>93</second>
+										<second>82</second>
 									</item>
 								</second>
 							</item>
@@ -769,10 +769,10 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>accumulator_write_ln90</name>
+						<name>accumulator_write_ln79</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>79</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -788,7 +788,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>90</second>
+										<second>79</second>
 									</item>
 								</second>
 							</item>
@@ -871,7 +871,7 @@
 						<name>indvar_flatten8_load</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -887,7 +887,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -925,10 +925,10 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>icmp_ln88</name>
+						<name>icmp_ln78</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -944,7 +944,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -982,10 +982,10 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>add_ln88</name>
+						<name>add_ln78</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1001,7 +1001,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -1039,10 +1039,10 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>br_ln88</name>
+						<name>br_ln78</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1058,7 +1058,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -1100,7 +1100,7 @@
 						<name>accumulator_load</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>84</lineNumber>
+						<lineNumber>73</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1116,7 +1116,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>84</second>
+										<second>73</second>
 									</item>
 								</second>
 							</item>
@@ -1157,7 +1157,7 @@
 						<name>j_load</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>82</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1173,7 +1173,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>93</second>
+										<second>82</second>
 									</item>
 								</second>
 							</item>
@@ -1214,7 +1214,7 @@
 						<name>class_idx_11_load_1</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1230,7 +1230,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -1270,7 +1270,7 @@
 						<name>max_score_12_load</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1286,7 +1286,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -1326,7 +1326,7 @@
 						<name>max_score_load</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1342,7 +1342,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -1383,7 +1383,7 @@
 						<name>class_idx_load</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1399,7 +1399,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -1440,7 +1440,7 @@
 						<name>i_load</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1456,7 +1456,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -1494,10 +1494,10 @@
 					<Obj>
 						<type>0</type>
 						<id>38</id>
-						<name>icmp_ln93</name>
+						<name>icmp_ln82</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>82</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1513,7 +1513,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>93</second>
+										<second>82</second>
 									</item>
 								</second>
 							</item>
@@ -1551,10 +1551,10 @@
 					<Obj>
 						<type>0</type>
 						<id>39</id>
-						<name>select_ln84</name>
+						<name>select_ln73</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>84</lineNumber>
+						<lineNumber>73</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1570,7 +1570,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>84</second>
+										<second>73</second>
 									</item>
 								</second>
 							</item>
@@ -1609,10 +1609,10 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>select_ln84_1</name>
+						<name>select_ln73_1</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>84</lineNumber>
+						<lineNumber>73</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1628,7 +1628,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>84</second>
+										<second>73</second>
 									</item>
 								</second>
 							</item>
@@ -1667,10 +1667,10 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name>add_ln88_1</name>
+						<name>add_ln78_1</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1686,7 +1686,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -1724,10 +1724,10 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>select_ln88</name>
+						<name>select_ln78</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1743,7 +1743,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -1782,10 +1782,10 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>select_ln88_1</name>
+						<name>select_ln78_1</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1801,7 +1801,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -1840,10 +1840,10 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>select_ln88_2</name>
+						<name>select_ln78_2</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1859,7 +1859,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -1898,10 +1898,10 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>zext_ln88</name>
+						<name>zext_ln78</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1917,7 +1917,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -1957,7 +1957,7 @@
 						<name>p_shl</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>82</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -1973,7 +1973,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>93</second>
+										<second>82</second>
 									</item>
 								</second>
 							</item>
@@ -2015,7 +2015,7 @@
 						<name>tmp</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>82</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2031,7 +2031,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>93</second>
+										<second>82</second>
 									</item>
 								</second>
 							</item>
@@ -2070,10 +2070,10 @@
 					<Obj>
 						<type>0</type>
 						<id>48</id>
-						<name>zext_ln93</name>
+						<name>zext_ln82</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>82</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2089,7 +2089,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>93</second>
+										<second>82</second>
 									</item>
 								</second>
 							</item>
@@ -2126,10 +2126,10 @@
 					<Obj>
 						<type>0</type>
 						<id>49</id>
-						<name>add_ln93_1</name>
+						<name>add_ln82_1</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>82</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2145,7 +2145,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>93</second>
+										<second>82</second>
 									</item>
 								</second>
 							</item>
@@ -2183,10 +2183,10 @@
 					<Obj>
 						<type>0</type>
 						<id>50</id>
-						<name>zext_ln93_1</name>
+						<name>zext_ln82_1</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>82</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2202,7 +2202,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>93</second>
+										<second>82</second>
 									</item>
 								</second>
 							</item>
@@ -2239,10 +2239,10 @@
 					<Obj>
 						<type>0</type>
 						<id>51</id>
-						<name>zext_ln93_2</name>
+						<name>zext_ln82_2</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>82</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2258,7 +2258,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>93</second>
+										<second>82</second>
 									</item>
 								</second>
 							</item>
@@ -2298,7 +2298,7 @@
 						<name>hidden_out_addr</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>96</lineNumber>
+						<lineNumber>85</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2314,7 +2314,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>96</second>
+										<second>85</second>
 									</item>
 								</second>
 							</item>
@@ -2356,7 +2356,7 @@
 						<name>hidden_out_load</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>96</lineNumber>
+						<lineNumber>85</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2372,7 +2372,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>96</second>
+										<second>85</second>
 									</item>
 								</second>
 							</item>
@@ -2409,10 +2409,10 @@
 					<Obj>
 						<type>0</type>
 						<id>55</id>
-						<name>add_ln97</name>
+						<name>add_ln86</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>97</lineNumber>
+						<lineNumber>86</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2428,7 +2428,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>97</second>
+										<second>86</second>
 									</item>
 								</second>
 							</item>
@@ -2466,10 +2466,10 @@
 					<Obj>
 						<type>0</type>
 						<id>56</id>
-						<name>zext_ln97</name>
+						<name>zext_ln86</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>97</lineNumber>
+						<lineNumber>86</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2485,7 +2485,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>97</second>
+										<second>86</second>
 									</item>
 								</second>
 							</item>
@@ -2525,7 +2525,7 @@
 						<name>weights_l2_addr</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>97</lineNumber>
+						<lineNumber>86</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2541,7 +2541,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>97</second>
+										<second>86</second>
 									</item>
 								</second>
 							</item>
@@ -2583,7 +2583,7 @@
 						<name>weights_l2_load</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>97</lineNumber>
+						<lineNumber>86</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2599,7 +2599,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>97</second>
+										<second>86</second>
 									</item>
 								</second>
 							</item>
@@ -2636,10 +2636,10 @@
 					<Obj>
 						<type>0</type>
 						<id>59</id>
-						<name>zext_ln96</name>
+						<name>zext_ln85</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>96</lineNumber>
+						<lineNumber>85</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2655,7 +2655,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>96</second>
+										<second>85</second>
 									</item>
 								</second>
 							</item>
@@ -2692,10 +2692,10 @@
 					<Obj>
 						<type>0</type>
 						<id>60</id>
-						<name>sext_ln96</name>
+						<name>sext_ln85</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>96</lineNumber>
+						<lineNumber>85</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2711,7 +2711,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>96</second>
+										<second>85</second>
 									</item>
 								</second>
 							</item>
@@ -2748,10 +2748,10 @@
 					<Obj>
 						<type>0</type>
 						<id>61</id>
-						<name>mul_ln96</name>
+						<name>mul_ln85</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>96</lineNumber>
+						<lineNumber>85</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2767,7 +2767,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>96</second>
+										<second>85</second>
 									</item>
 								</second>
 							</item>
@@ -2805,10 +2805,10 @@
 					<Obj>
 						<type>0</type>
 						<id>62</id>
-						<name>sext_ln95</name>
+						<name>sext_ln84</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>95</lineNumber>
+						<lineNumber>84</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2824,7 +2824,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>95</second>
+										<second>84</second>
 									</item>
 								</second>
 							</item>
@@ -2864,7 +2864,7 @@
 						<name>accumulator_1</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>95</lineNumber>
+						<lineNumber>84</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2880,7 +2880,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>95</second>
+										<second>84</second>
 									</item>
 								</second>
 							</item>
@@ -2918,10 +2918,10 @@
 					<Obj>
 						<type>0</type>
 						<id>64</id>
-						<name>add_ln93</name>
+						<name>add_ln82</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>82</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2937,7 +2937,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>93</second>
+										<second>82</second>
 									</item>
 								</second>
 							</item>
@@ -2978,7 +2978,7 @@
 						<name>trunc_ln2</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>90</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -2994,7 +2994,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>101</second>
+										<second>90</second>
 									</item>
 								</second>
 							</item>
@@ -3034,10 +3034,10 @@
 					<Obj>
 						<type>0</type>
 						<id>66</id>
-						<name>sext_ln102</name>
+						<name>sext_ln91</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>91</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3053,7 +3053,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>102</second>
+										<second>91</second>
 									</item>
 								</second>
 							</item>
@@ -3093,7 +3093,7 @@
 						<name>bias_l2_addr</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>91</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3109,7 +3109,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>102</second>
+										<second>91</second>
 									</item>
 								</second>
 							</item>
@@ -3151,7 +3151,7 @@
 						<name>bias_l2_load</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>91</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3167,7 +3167,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>102</second>
+										<second>91</second>
 									</item>
 								</second>
 							</item>
@@ -3204,10 +3204,10 @@
 					<Obj>
 						<type>0</type>
 						<id>69</id>
-						<name>sext_ln101</name>
+						<name>sext_ln90</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>90</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3223,7 +3223,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>101</second>
+										<second>90</second>
 									</item>
 								</second>
 							</item>
@@ -3263,7 +3263,7 @@
 						<name>final_score</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>90</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3279,7 +3279,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>101</second>
+										<second>90</second>
 									</item>
 								</second>
 							</item>
@@ -3317,10 +3317,10 @@
 					<Obj>
 						<type>0</type>
 						<id>71</id>
-						<name>sext_ln100</name>
+						<name>sext_ln89</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>100</lineNumber>
+						<lineNumber>89</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3336,7 +3336,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>100</second>
+										<second>89</second>
 									</item>
 								</second>
 							</item>
@@ -3373,10 +3373,10 @@
 					<Obj>
 						<type>0</type>
 						<id>72</id>
-						<name>icmp_ln104</name>
+						<name>icmp_ln93</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>93</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3392,7 +3392,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>104</second>
+										<second>93</second>
 									</item>
 								</second>
 							</item>
@@ -3433,7 +3433,7 @@
 						<name>max_score_1</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>93</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3449,7 +3449,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>104</second>
+										<second>93</second>
 									</item>
 								</second>
 							</item>
@@ -3488,10 +3488,10 @@
 					<Obj>
 						<type>0</type>
 						<id>74</id>
-						<name>zext_ln104</name>
+						<name>zext_ln93</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>93</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3507,7 +3507,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>104</second>
+										<second>93</second>
 									</item>
 								</second>
 							</item>
@@ -3547,7 +3547,7 @@
 						<name>class_idx_1</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>93</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3563,7 +3563,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>104</second>
+										<second>93</second>
 									</item>
 								</second>
 							</item>
@@ -3602,10 +3602,10 @@
 					<Obj>
 						<type>0</type>
 						<id>76</id>
-						<name>indvar_flatten8_write_ln88</name>
+						<name>indvar_flatten8_write_ln78</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3621,7 +3621,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -3661,10 +3661,10 @@
 					<Obj>
 						<type>0</type>
 						<id>77</id>
-						<name>i_write_ln88</name>
+						<name>i_write_ln78</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3680,7 +3680,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>88</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -3720,10 +3720,10 @@
 					<Obj>
 						<type>0</type>
 						<id>78</id>
-						<name>class_idx_write_ln85</name>
+						<name>class_idx_write_ln74</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>85</lineNumber>
+						<lineNumber>74</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3739,7 +3739,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>85</second>
+										<second>74</second>
 									</item>
 								</second>
 							</item>
@@ -3779,10 +3779,10 @@
 					<Obj>
 						<type>0</type>
 						<id>79</id>
-						<name>max_score_write_ln84</name>
+						<name>max_score_write_ln73</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>84</lineNumber>
+						<lineNumber>73</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3798,7 +3798,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>84</second>
+										<second>73</second>
 									</item>
 								</second>
 							</item>
@@ -3838,10 +3838,10 @@
 					<Obj>
 						<type>0</type>
 						<id>80</id>
-						<name>max_score_12_write_ln104</name>
+						<name>max_score_12_write_ln93</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>93</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3857,7 +3857,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>104</second>
+										<second>93</second>
 									</item>
 								</second>
 							</item>
@@ -3896,10 +3896,10 @@
 					<Obj>
 						<type>0</type>
 						<id>81</id>
-						<name>class_idx_11_write_ln104</name>
+						<name>class_idx_11_write_ln93</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>93</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3915,7 +3915,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>104</second>
+										<second>93</second>
 									</item>
 								</second>
 							</item>
@@ -3954,10 +3954,10 @@
 					<Obj>
 						<type>0</type>
 						<id>82</id>
-						<name>j_write_ln93</name>
+						<name>j_write_ln82</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>82</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -3973,7 +3973,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>93</second>
+										<second>82</second>
 									</item>
 								</second>
 							</item>
@@ -4013,10 +4013,10 @@
 					<Obj>
 						<type>0</type>
 						<id>83</id>
-						<name>accumulator_write_ln90</name>
+						<name>accumulator_write_ln79</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>79</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -4032,7 +4032,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>90</second>
+										<second>79</second>
 									</item>
 								</second>
 							</item>
@@ -4072,10 +4072,10 @@
 					<Obj>
 						<type>0</type>
 						<id>84</id>
-						<name>br_ln93</name>
+						<name>br_ln82</name>
 						<fileName>bgn_inference.cpp</fileName>
 						<fileDirectory>E:\source\.ITA\FPGA\7.RAD\zc702_workspace\mnist_mlp_bgn</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>82</lineNumber>
 						<contextFuncName>bgn_inference</contextFuncName>
 						<contextNormFuncName>bgn_inference</contextNormFuncName>
 						<inlineStackInfo>
@@ -4091,7 +4091,7 @@
 											<first>bgn_inference.cpp</first>
 											<second>bgn_inference</second>
 										</first>
-										<second>93</second>
+										<second>82</second>
 									</item>
 								</second>
 							</item>
@@ -4834,7 +4834,7 @@
 				<Obj>
 					<type>3</type>
 					<id>28</id>
-					<name>for.inc57</name>
+					<name>for.inc47</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -4868,7 +4868,7 @@
 				<Obj>
 					<type>3</type>
 					<id>85</id>
-					<name>for.end59</name>
+					<name>for.end49</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -4951,7 +4951,7 @@
 				<Obj>
 					<type>3</type>
 					<id>89</id>
-					<name>for.end70.exitStub</name>
+					<name>for.end58.exitStub</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -7860,7 +7860,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln88_1_fu_219</first>
+			<first>add_ln78_1_fu_219</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7868,7 +7868,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln88_fu_193</first>
+			<first>add_ln78_fu_193</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7876,7 +7876,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln93_1_fu_272</first>
+			<first>add_ln82_1_fu_272</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7884,7 +7884,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln93_fu_233</first>
+			<first>add_ln82_fu_233</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7892,7 +7892,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln97_fu_285</first>
+			<first>add_ln86_fu_285</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7956,15 +7956,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln104_fu_371</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>72</item>
-			</second>
-		</item>
-		<item>
-			<first>icmp_ln88_fu_187</first>
+			<first>icmp_ln78_fu_187</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7972,11 +7964,19 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln93_fu_205</first>
+			<first>icmp_ln82_fu_205</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>38</item>
+			</second>
+		</item>
+		<item>
+			<first>icmp_ln93_fu_371</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>72</item>
 			</second>
 		</item>
 		<item>
@@ -8028,7 +8028,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln84_1_fu_307</first>
+			<first>select_ln73_1_fu_307</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8036,7 +8036,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln84_fu_211</first>
+			<first>select_ln73_fu_211</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8044,7 +8044,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln88_1_fu_330</first>
+			<first>select_ln78_1_fu_330</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8052,7 +8052,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln88_2_fu_337</first>
+			<first>select_ln78_2_fu_337</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8060,7 +8060,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln88_fu_225</first>
+			<first>select_ln78_fu_225</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8068,7 +8068,15 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln100_fu_367</first>
+			<first>sext_ln85_fu_300</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>60</item>
+			</second>
+		</item>
+		<item>
+			<first>sext_ln89_fu_367</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8076,7 +8084,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln101_fu_357</first>
+			<first>sext_ln90_fu_357</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8084,19 +8092,11 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln102_fu_353</first>
+			<first>sext_ln91_fu_353</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>66</item>
-			</second>
-		</item>
-		<item>
-			<first>sext_ln96_fu_300</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>60</item>
 			</second>
 		</item>
 		<item>
@@ -8124,15 +8124,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln104_fu_385</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>74</item>
-			</second>
-		</item>
-		<item>
-			<first>zext_ln88_fu_314</first>
+			<first>zext_ln78_fu_314</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8140,7 +8132,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln93_1_fu_278</first>
+			<first>zext_ln82_1_fu_278</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8148,7 +8140,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln93_2_fu_282</first>
+			<first>zext_ln82_2_fu_282</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8156,7 +8148,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln93_fu_268</first>
+			<first>zext_ln82_fu_268</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8164,7 +8156,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln96_fu_296</first>
+			<first>zext_ln85_fu_296</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8172,11 +8164,19 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln97_fu_291</first>
+			<first>zext_ln86_fu_291</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>56</item>
+			</second>
+		</item>
+		<item>
+			<first>zext_ln93_fu_385</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>74</item>
 			</second>
 		</item>
 	</dp_fu_nodes_expression>
@@ -8281,23 +8281,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln104_store_fu_406</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>80</item>
-			</second>
-		</item>
-		<item>
-			<first>store_ln104_store_fu_411</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>81</item>
-			</second>
-		</item>
-		<item>
-			<first>store_ln84_store_fu_169</first>
+			<first>store_ln73_store_fu_169</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8305,7 +8289,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln84_store_fu_401</first>
+			<first>store_ln73_store_fu_401</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8313,7 +8297,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln85_store_fu_164</first>
+			<first>store_ln74_store_fu_164</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8321,7 +8305,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln85_store_fu_396</first>
+			<first>store_ln74_store_fu_396</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8329,7 +8313,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln88_store_fu_159</first>
+			<first>store_ln78_store_fu_159</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8337,7 +8321,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln88_store_fu_239</first>
+			<first>store_ln78_store_fu_239</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8345,7 +8329,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln88_store_fu_244</first>
+			<first>store_ln78_store_fu_244</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8353,7 +8337,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln90_store_fu_179</first>
+			<first>store_ln79_store_fu_179</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8361,7 +8345,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln90_store_fu_416</first>
+			<first>store_ln79_store_fu_416</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8369,7 +8353,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln93_store_fu_174</first>
+			<first>store_ln82_store_fu_174</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8377,11 +8361,27 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln93_store_fu_249</first>
+			<first>store_ln82_store_fu_249</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>82</item>
+			</second>
+		</item>
+		<item>
+			<first>store_ln93_store_fu_406</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>80</item>
+			</second>
+		</item>
+		<item>
+			<first>store_ln93_store_fu_411</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>81</item>
 			</second>
 		</item>
 		<item>
@@ -8637,7 +8637,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln88_reg_489</first>
+			<first>icmp_ln78_reg_489</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8645,7 +8645,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln93_reg_493</first>
+			<first>icmp_ln82_reg_493</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8685,7 +8685,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln84_1_reg_534</first>
+			<first>select_ln73_1_reg_534</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8693,7 +8693,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln84_reg_500</first>
+			<first>select_ln73_reg_500</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8701,7 +8701,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln88_reg_506</first>
+			<first>select_ln78_reg_506</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8709,7 +8709,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln96_reg_529</first>
+			<first>sext_ln85_reg_529</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8725,7 +8725,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln96_reg_524</first>
+			<first>zext_ln85_reg_524</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

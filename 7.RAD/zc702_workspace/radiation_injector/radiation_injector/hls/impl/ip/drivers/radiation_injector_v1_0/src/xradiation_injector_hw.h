@@ -25,25 +25,27 @@
 //        bit 0 - ap_done (Read/TOW)
 //        bit 1 - ap_ready (Read/TOW)
 //        others - reserved
-// 0x10 : Data signal of intensity
-//        bit 31~0 - intensity[31:0] (Read/Write)
-// 0x14 : reserved
-// 0x18 : Data signal of seed
-//        bit 31~0 - seed[31:0] (Read/Write)
-// 0x1c : reserved
-// 0x20 : Data signal of num_words
-//        bit 31~0 - num_words[31:0] (Read/Write)
-// 0x24 : reserved
+// 0x10 : Data signal of weight_mem
+//        bit 31~0 - weight_mem[31:0] (Read/Write)
+// 0x14 : Data signal of weight_mem
+//        bit 31~0 - weight_mem[63:32] (Read/Write)
+// 0x18 : reserved
+// 0x1c : Data signal of wr_addr
+//        bit 31~0 - wr_addr[31:0] (Read/Write)
+// 0x20 : reserved
+// 0x24 : Data signal of wr_data
+//        bit 31~0 - wr_data[31:0] (Read/Write)
+// 0x28 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
-#define XRADIATION_INJECTOR_CONTROL_ADDR_AP_CTRL        0x00
-#define XRADIATION_INJECTOR_CONTROL_ADDR_GIE            0x04
-#define XRADIATION_INJECTOR_CONTROL_ADDR_IER            0x08
-#define XRADIATION_INJECTOR_CONTROL_ADDR_ISR            0x0c
-#define XRADIATION_INJECTOR_CONTROL_ADDR_INTENSITY_DATA 0x10
-#define XRADIATION_INJECTOR_CONTROL_BITS_INTENSITY_DATA 32
-#define XRADIATION_INJECTOR_CONTROL_ADDR_SEED_DATA      0x18
-#define XRADIATION_INJECTOR_CONTROL_BITS_SEED_DATA      32
-#define XRADIATION_INJECTOR_CONTROL_ADDR_NUM_WORDS_DATA 0x20
-#define XRADIATION_INJECTOR_CONTROL_BITS_NUM_WORDS_DATA 32
+#define XRADIATION_INJECTOR_CONTROL_ADDR_AP_CTRL         0x00
+#define XRADIATION_INJECTOR_CONTROL_ADDR_GIE             0x04
+#define XRADIATION_INJECTOR_CONTROL_ADDR_IER             0x08
+#define XRADIATION_INJECTOR_CONTROL_ADDR_ISR             0x0c
+#define XRADIATION_INJECTOR_CONTROL_ADDR_WEIGHT_MEM_DATA 0x10
+#define XRADIATION_INJECTOR_CONTROL_BITS_WEIGHT_MEM_DATA 64
+#define XRADIATION_INJECTOR_CONTROL_ADDR_WR_ADDR_DATA    0x1c
+#define XRADIATION_INJECTOR_CONTROL_BITS_WR_ADDR_DATA    32
+#define XRADIATION_INJECTOR_CONTROL_ADDR_WR_DATA_DATA    0x24
+#define XRADIATION_INJECTOR_CONTROL_BITS_WR_DATA_DATA    32
 

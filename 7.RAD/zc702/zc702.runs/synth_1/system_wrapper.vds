@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Sun Mar  1 06:16:58 2026
-# Process ID         : 6736
+# Start of session at: Mon Mar  2 00:17:25 2026
+# Process ID         : 37292
 # Current directory  : E:/source/.ITA/FPGA/7.RAD/zc702/zc702.runs/synth_1
 # Command line       : vivado.exe -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
 # Log file           : E:/source/.ITA/FPGA/7.RAD/zc702/zc702.runs/synth_1/system_wrapper.vds
@@ -19,7 +19,7 @@
 # Host memory        : 68413 MB
 # Swap memory        : 4294 MB
 # Total Virtual      : 72708 MB
-# Available Virtual  : 48324 MB
+# Available Virtual  : 42756 MB
 #-----------------------------------------------------------
 source system_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -38,15 +38,81 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 22148
+INFO: [Synth 8-7075] Helper process launched with PID 30756
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1348.500 ; gain = 542.793
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1358.547 ; gain = 542.102
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [E:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'system' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:13]
+INFO: [Synth 8-638] synthesizing module 'system_axi_bram_ctrl_0_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_bram_ctrl_0_0/synth/system_axi_bram_ctrl_0_0.vhd:104]
+	Parameter C_BRAM_INST_MODE bound to: EXTERNAL - type: string 
+	Parameter C_MEMORY_DEPTH bound to: 16384 - type: integer 
+	Parameter C_BRAM_ADDR_WIDTH bound to: 14 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
+	Parameter C_S_AXI_SUPPORTS_NARROW_BURST bound to: 0 - type: integer 
+	Parameter C_SINGLE_PORT_BRAM bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_READ_LATENCY bound to: 1 - type: integer 
+	Parameter C_RD_CMD_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_ECC_TYPE bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_bram_ctrl' declared at 'e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31263' bound to instance 'U0' of component 'axi_bram_ctrl' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_bram_ctrl_0_0/synth/system_axi_bram_ctrl_0_0.vhd:260]
+INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31434]
+INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_top' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30438]
+INFO: [Synth 8-638] synthesizing module 'full_axi' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29196]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29266]
+INFO: [Synth 8-3919] null assignment ignored [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29266]
+INFO: [Synth 8-3919] null assignment ignored [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29472]
+INFO: [Synth 8-638] synthesizing module 'sng_port_arb' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11397]
+INFO: [Synth 8-256] done synthesizing module 'sng_port_arb' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11397]
+INFO: [Synth 8-638] synthesizing module 'wr_chnl' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24080]
+INFO: [Synth 8-506] null port 'FaultInjectECC' ignored [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24047]
+INFO: [Synth 8-638] synthesizing module 'wrap_brst' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12386]
+INFO: [Synth 8-256] done synthesizing module 'wrap_brst' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12386]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:91]
+INFO: [Synth 8-3491] module 'FDR' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49383' bound to instance 'Data_Exists_DFF' of component 'FDR' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:188]
+INFO: [Synth 8-6157] synthesizing module 'FDR' [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49383]
+INFO: [Synth 8-6155] done synthesizing module 'FDR' (0#1) [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49383]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:205]
+INFO: [Synth 8-6157] synthesizing module 'MUXCY_L' [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872]
+INFO: [Synth 8-6155] done synthesizing module 'MUXCY_L' (0#1) [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315' bound to instance 'XORCY_I' of component 'XORCY' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:212]
+INFO: [Synth 8-6157] synthesizing module 'XORCY' [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315]
+INFO: [Synth 8-6155] done synthesizing module 'XORCY' (0#1) [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396' bound to instance 'FDRE_I' of component 'FDRE' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:218]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396]
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (0#1) [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:205]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315' bound to instance 'XORCY_I' of component 'XORCY' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:212]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396' bound to instance 'FDRE_I' of component 'FDRE' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:218]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:205]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315' bound to instance 'XORCY_I' of component 'XORCY' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:212]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396' bound to instance 'FDRE_I' of component 'FDRE' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:218]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:205]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315' bound to instance 'XORCY_I' of component 'XORCY' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:212]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396' bound to instance 'FDRE_I' of component 'FDRE' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:218]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334' bound to instance 'SRL16E_I' of component 'SRL16E' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:229]
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (0#1) [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'wr_chnl' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24080]
+WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29936]
+INFO: [Synth 8-638] synthesizing module 'rd_chnl' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:14672]
+INFO: [Synth 8-256] done synthesizing module 'rd_chnl' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:14672]
+INFO: [Synth 8-256] done synthesizing module 'full_axi' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29196]
+INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl_top' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30438]
+INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31434]
+INFO: [Synth 8-256] done synthesizing module 'system_axi_bram_ctrl_0_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_bram_ctrl_0_0/synth/system_axi_bram_ctrl_0_0.vhd:104]
 INFO: [Synth 8-6157] synthesizing module 'system_axi_smc_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/synth/system_axi_smc_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_44e3' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:10]
-INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_1LX95IS' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1174]
+INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_1LX95IS' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2210]
 INFO: [Synth 8-638] synthesizing module 'bd_44e3_psr_aclk_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/synth/bd_44e3_psr_aclk_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -92,157 +158,239 @@ INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [e:/source/.ITA/FPG
 INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
 INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1302]
 INFO: [Synth 8-256] done synthesizing module 'bd_44e3_psr_aclk_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/synth/bd_44e3_psr_aclk_0.vhd:74]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_44e3_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1211]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_44e3_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1211]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_44e3_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1211]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_44e3_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1211]
-WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_44e3_psr_aclk_0' has 10 connections declared, but only 6 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1211]
-INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_1LX95IS' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1174]
-INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_B7U41B' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1462]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00e_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_32/synth/bd_44e3_m00e_0.sv:53]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_44e3_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2265]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_44e3_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2265]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_44e3_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2265]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_44e3_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2265]
+WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_44e3_psr_aclk_0' has 10 connections declared, but only 6 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2265]
+INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_1LX95IS' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2210]
+INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_B7U41B' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2274]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00e_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_37/synth/bd_44e3_m00e_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00e_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_32/synth/bd_44e3_m00e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_B7U41B' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1462]
-INFO: [Synth 8-6157] synthesizing module 'm00_nodes_imp_XE3MPV' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1704]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00arn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_27/synth/bd_44e3_m00arn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00arn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_27/synth/bd_44e3_m00arn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00awn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_29/synth/bd_44e3_m00awn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00awn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_29/synth/bd_44e3_m00awn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00bn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_31/synth/bd_44e3_m00bn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00bn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_31/synth/bd_44e3_m00bn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00rn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_28/synth/bd_44e3_m00rn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00rn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_28/synth/bd_44e3_m00rn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00wn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_30/synth/bd_44e3_m00wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00wn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_30/synth/bd_44e3_m00wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm00_nodes_imp_XE3MPV' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1704]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00s2a_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_26/synth/bd_44e3_m00s2a_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00s2a_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_26/synth/bd_44e3_m00s2a_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'm01_exit_pipeline_imp_HK02SV' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1946]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01e_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_39/synth/bd_44e3_m01e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01e_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_39/synth/bd_44e3_m01e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm01_exit_pipeline_imp_HK02SV' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1946]
-INFO: [Synth 8-6157] synthesizing module 'm01_nodes_imp_1RMTSC5' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2188]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01arn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_34/synth/bd_44e3_m01arn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01arn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_34/synth/bd_44e3_m01arn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01awn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_36/synth/bd_44e3_m01awn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01awn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_36/synth/bd_44e3_m01awn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01bn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_38/synth/bd_44e3_m01bn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01bn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_38/synth/bd_44e3_m01bn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01rn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_35/synth/bd_44e3_m01rn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01rn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_35/synth/bd_44e3_m01rn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01wn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_37/synth/bd_44e3_m01wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01wn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_37/synth/bd_44e3_m01wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm01_nodes_imp_1RMTSC5' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2188]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01s2a_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_33/synth/bd_44e3_m01s2a_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01s2a_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_33/synth/bd_44e3_m01s2a_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s00a2s_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_20/synth/bd_44e3_s00a2s_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s00a2s_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_20/synth/bd_44e3_s00a2s_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_1BIQ3N0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2430]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s00mmu_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_17/synth/bd_44e3_s00mmu_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s00mmu_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_17/synth/bd_44e3_s00mmu_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s00sic_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_19/synth/bd_44e3_s00sic_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s00sic_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_19/synth/bd_44e3_s00sic_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s00tr_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_18/synth/bd_44e3_s00tr_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s00tr_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_18/synth/bd_44e3_s00tr_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_1BIQ3N0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2430]
-INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_1GZQO6U' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:3006]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_sarn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_21/synth/bd_44e3_sarn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_sarn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_21/synth/bd_44e3_sarn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_sawn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_23/synth/bd_44e3_sawn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_sawn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_23/synth/bd_44e3_sawn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_sbn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_25/synth/bd_44e3_sbn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_sbn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_25/synth/bd_44e3_sbn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_srn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_22/synth/bd_44e3_srn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_srn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_22/synth/bd_44e3_srn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_swn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_24/synth/bd_44e3_swn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_swn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_24/synth/bd_44e3_swn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_1GZQO6U' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:3006]
-INFO: [Synth 8-6157] synthesizing module 'switchboards_imp_1N40MOY' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:3248]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_arinsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/synth/bd_44e3_arinsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_arinsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/synth/bd_44e3_arinsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_aroutsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_7/synth/bd_44e3_aroutsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_aroutsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_7/synth/bd_44e3_aroutsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_awinsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_4/synth/bd_44e3_awinsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_awinsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_4/synth/bd_44e3_awinsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_awoutsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_9/synth/bd_44e3_awoutsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_awoutsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_9/synth/bd_44e3_awoutsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_binsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_6/synth/bd_44e3_binsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_binsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_6/synth/bd_44e3_binsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_boutsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_11/synth/bd_44e3_boutsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_boutsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_11/synth/bd_44e3_boutsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'i_nodes_imp_4RJFMI' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1220]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_arni_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_12/synth/bd_44e3_arni_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_arni_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_12/synth/bd_44e3_arni_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_awni_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_14/synth/bd_44e3_awni_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_awni_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_14/synth/bd_44e3_awni_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_bni_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_16/synth/bd_44e3_bni_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_bni_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_16/synth/bd_44e3_bni_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_rni_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_13/synth/bd_44e3_rni_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_rni_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_13/synth/bd_44e3_rni_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_wni_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_15/synth/bd_44e3_wni_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_wni_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_15/synth/bd_44e3_wni_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'i_nodes_imp_4RJFMI' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1220]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_rinsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/synth/bd_44e3_rinsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_rinsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/synth/bd_44e3_rinsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_routsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_8/synth/bd_44e3_routsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_routsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_8/synth/bd_44e3_routsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_winsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_5/synth/bd_44e3_winsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_winsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_5/synth/bd_44e3_winsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_44e3_woutsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_10/synth/bd_44e3_woutsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_woutsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_10/synth/bd_44e3_woutsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'switchboards_imp_1N40MOY' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:3248]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00e_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_37/synth/bd_44e3_m00e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_B7U41B' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2274]
+INFO: [Synth 8-6157] synthesizing module 'm00_nodes_imp_XE3MPV' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2572]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00arn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_32/synth/bd_44e3_m00arn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized0' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized0' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00arn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_32/synth/bd_44e3_m00arn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00awn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_34/synth/bd_44e3_m00awn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00awn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_34/synth/bd_44e3_m00awn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00bn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_36/synth/bd_44e3_m00bn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized1' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized1' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized2' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized2' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized2' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized2' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00bn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_36/synth/bd_44e3_m00bn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00rn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_33/synth/bd_44e3_m00rn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized3' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized3' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized3' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized3' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00rn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_33/synth/bd_44e3_m00rn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00wn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_35/synth/bd_44e3_m00wn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized4' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized4' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized4' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized4' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized5' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized5' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized5' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized5' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00wn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_35/synth/bd_44e3_m00wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm00_nodes_imp_XE3MPV' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2572]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m00s2a_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_31/synth/bd_44e3_m00s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m00s2a_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_31/synth/bd_44e3_m00s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'm01_exit_pipeline_imp_HK02SV' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2823]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01e_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_44/synth/bd_44e3_m01e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01e_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_44/synth/bd_44e3_m01e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm01_exit_pipeline_imp_HK02SV' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2823]
+INFO: [Synth 8-6157] synthesizing module 'm01_nodes_imp_1RMTSC5' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:3065]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01arn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_39/synth/bd_44e3_m01arn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01arn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_39/synth/bd_44e3_m01arn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01awn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_41/synth/bd_44e3_m01awn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01awn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_41/synth/bd_44e3_m01awn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01bn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_43/synth/bd_44e3_m01bn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01bn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_43/synth/bd_44e3_m01bn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01rn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_40/synth/bd_44e3_m01rn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01rn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_40/synth/bd_44e3_m01rn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01wn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_42/synth/bd_44e3_m01wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01wn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_42/synth/bd_44e3_m01wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm01_nodes_imp_1RMTSC5' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:3065]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m01s2a_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_38/synth/bd_44e3_m01s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m01s2a_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_38/synth/bd_44e3_m01s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'm02_exit_pipeline_imp_1QBHIN' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:3316]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m02e_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_51/synth/bd_44e3_m02e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m02e_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_51/synth/bd_44e3_m02e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm02_exit_pipeline_imp_1QBHIN' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:3316]
+INFO: [Synth 8-6157] synthesizing module 'm02_nodes_imp_16IE3JI' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:3558]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m02arn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_46/synth/bd_44e3_m02arn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m02arn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_46/synth/bd_44e3_m02arn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m02awn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_48/synth/bd_44e3_m02awn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m02awn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_48/synth/bd_44e3_m02awn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m02bn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_50/synth/bd_44e3_m02bn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m02bn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_50/synth/bd_44e3_m02bn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m02rn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_47/synth/bd_44e3_m02rn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m02rn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_47/synth/bd_44e3_m02rn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m02wn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_49/synth/bd_44e3_m02wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m02wn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_49/synth/bd_44e3_m02wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm02_nodes_imp_16IE3JI' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:3558]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_m02s2a_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_45/synth/bd_44e3_m02s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_m02s2a_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_45/synth/bd_44e3_m02s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s00a2s_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_10/synth/bd_44e3_s00a2s_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s00a2s_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_10/synth/bd_44e3_s00a2s_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_1BIQ3N0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:3809]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s00mmu_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_7/synth/bd_44e3_s00mmu_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s00mmu_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_7/synth/bd_44e3_s00mmu_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s00sic_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_9/synth/bd_44e3_s00sic_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s00sic_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_9/synth/bd_44e3_s00sic_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s00tr_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_8/synth/bd_44e3_s00tr_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s00tr_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_8/synth/bd_44e3_s00tr_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_1BIQ3N0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:3809]
+INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_1GZQO6U' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:4385]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_sarn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_11/synth/bd_44e3_sarn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized6' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized6' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized6' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized6' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_sarn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_11/synth/bd_44e3_sarn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_sawn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_13/synth/bd_44e3_sawn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_sawn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_13/synth/bd_44e3_sawn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_sbn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_15/synth/bd_44e3_sbn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized7' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized7' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized7' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized7' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_sbn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_15/synth/bd_44e3_sbn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_srn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_12/synth/bd_44e3_srn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized8' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized8' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized8' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized8' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_srn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_12/synth/bd_44e3_srn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_swn_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_14/synth/bd_44e3_swn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized9' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized9' [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized9' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized9' (0#1) [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_swn_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_14/synth/bd_44e3_swn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_1GZQO6U' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:4385]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s01a2s_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_19/synth/bd_44e3_s01a2s_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s01a2s_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_19/synth/bd_44e3_s01a2s_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 's01_entry_pipeline_imp_DDN1H4' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:4627]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s01mmu_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_16/synth/bd_44e3_s01mmu_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s01mmu_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_16/synth/bd_44e3_s01mmu_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s01sic_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_18/synth/bd_44e3_s01sic_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s01sic_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_18/synth/bd_44e3_s01sic_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s01tr_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_17/synth/bd_44e3_s01tr_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s01tr_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_17/synth/bd_44e3_s01tr_0.sv:53]
+WARNING: [Synth 8-7071] port 'm_axi_arburst' of module 'bd_44e3_s01tr_0' is unconnected for instance 's01_transaction_regulator' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:4852]
+WARNING: [Synth 8-7023] instance 's01_transaction_regulator' of module 'bd_44e3_s01tr_0' has 40 connections declared, but only 39 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:4852]
+INFO: [Synth 8-6155] done synthesizing module 's01_entry_pipeline_imp_DDN1H4' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:4627]
+INFO: [Synth 8-6157] synthesizing module 's01_nodes_imp_9Z2OAO' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:4894]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_sarn_1' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_20/synth/bd_44e3_sarn_1.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_sarn_1' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_20/synth/bd_44e3_sarn_1.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_srn_1' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_21/synth/bd_44e3_srn_1.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_srn_1' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_21/synth/bd_44e3_srn_1.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 's01_nodes_imp_9Z2OAO' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:4894]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s02a2s_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_25/synth/bd_44e3_s02a2s_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s02a2s_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_25/synth/bd_44e3_s02a2s_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 's02_entry_pipeline_imp_JNFPC5' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:5001]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s02mmu_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_22/synth/bd_44e3_s02mmu_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s02mmu_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_22/synth/bd_44e3_s02mmu_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s02sic_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_24/synth/bd_44e3_s02sic_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s02sic_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_24/synth/bd_44e3_s02sic_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_s02tr_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_23/synth/bd_44e3_s02tr_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_s02tr_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_23/synth/bd_44e3_s02tr_0.sv:53]
+WARNING: [Synth 8-7071] port 'm_axi_awburst' of module 'bd_44e3_s02tr_0' is unconnected for instance 's02_transaction_regulator' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:5480]
+WARNING: [Synth 8-7071] port 'm_axi_arburst' of module 'bd_44e3_s02tr_0' is unconnected for instance 's02_transaction_regulator' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:5480]
+WARNING: [Synth 8-7023] instance 's02_transaction_regulator' of module 'bd_44e3_s02tr_0' has 86 connections declared, but only 84 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:5480]
+INFO: [Synth 8-6155] done synthesizing module 's02_entry_pipeline_imp_JNFPC5' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:5001]
+INFO: [Synth 8-6157] synthesizing module 's02_nodes_imp_QIOOD7' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:5567]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_sarn_2' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_26/synth/bd_44e3_sarn_2.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_sarn_2' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_26/synth/bd_44e3_sarn_2.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_sawn_1' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_28/synth/bd_44e3_sawn_1.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_sawn_1' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_28/synth/bd_44e3_sawn_1.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_sbn_1' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_30/synth/bd_44e3_sbn_1.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_sbn_1' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_30/synth/bd_44e3_sbn_1.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_srn_2' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_27/synth/bd_44e3_srn_2.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_srn_2' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_27/synth/bd_44e3_srn_2.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_swn_1' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_29/synth/bd_44e3_swn_1.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_swn_1' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_29/synth/bd_44e3_swn_1.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 's02_nodes_imp_QIOOD7' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:5567]
+INFO: [Synth 8-6157] synthesizing module 'switchboards_imp_1N40MOY' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:5809]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_arsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/synth/bd_44e3_arsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_arsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/synth/bd_44e3_arsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_awsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_4/synth/bd_44e3_awsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_awsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_4/synth/bd_44e3_awsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_bsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_6/synth/bd_44e3_bsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_bsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_6/synth/bd_44e3_bsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_rsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/synth/bd_44e3_rsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_rsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/synth/bd_44e3_rsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_44e3_wsw_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_5/synth/bd_44e3_wsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_44e3_wsw_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_5/synth/bd_44e3_wsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'switchboards_imp_1N40MOY' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:5809]
+WARNING: [Synth 8-7071] port 'M01_SC_B_info' of module 'switchboards_imp_1N40MOY' is unconnected for instance 'switchboards' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2061]
+WARNING: [Synth 8-7071] port 'M01_SC_B_payld' of module 'switchboards_imp_1N40MOY' is unconnected for instance 'switchboards' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2061]
+WARNING: [Synth 8-7071] port 'M01_SC_B_req' of module 'switchboards_imp_1N40MOY' is unconnected for instance 'switchboards' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2061]
+WARNING: [Synth 8-7071] port 'M01_SC_B_send' of module 'switchboards_imp_1N40MOY' is unconnected for instance 'switchboards' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2061]
+WARNING: [Synth 8-7071] port 'S01_SC_AW_recv' of module 'switchboards_imp_1N40MOY' is unconnected for instance 'switchboards' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2061]
+WARNING: [Synth 8-7071] port 'S01_SC_W_recv' of module 'switchboards_imp_1N40MOY' is unconnected for instance 'switchboards' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2061]
+WARNING: [Synth 8-7023] instance 'switchboards' of module 'switchboards_imp_1N40MOY' has 152 connections declared, but only 146 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2061]
 INFO: [Synth 8-6155] done synthesizing module 'bd_44e3' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:10]
 INFO: [Synth 8-6155] done synthesizing module 'system_axi_smc_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/synth/system_axi_smc_0.v:53]
-WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'system_axi_smc_0' is unconnected for instance 'axi_smc' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:170]
-WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'system_axi_smc_0' is unconnected for instance 'axi_smc' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:170]
-WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'system_axi_smc_0' is unconnected for instance 'axi_smc' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:170]
-WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'system_axi_smc_0' is unconnected for instance 'axi_smc' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:170]
-WARNING: [Synth 8-7023] instance 'axi_smc' of module 'system_axi_smc_0' has 78 connections declared, but only 74 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:170]
-INFO: [Synth 8-6157] synthesizing module 'system_bgn_inference_0_4' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_4/synth/system_bgn_inference_0_4.v:53]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W.v:7]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.v:7]
-INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.dat' is read successfully [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.v:7]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.v:7]
-INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.dat' is read successfully [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.v:7]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:45]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:45]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_11s_5ns_13s_16_4_1' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:45]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_11s_5ns_13s_16_4_1' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:45]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_flow_control_loop_pipe_sequential_init' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_flow_control_loop_pipe_sequential_init.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_flow_control_loop_pipe_sequential_init' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_flow_control_loop_pipe_sequential_init.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_MAC' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R.v:7]
-INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R.dat' is read successfully [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R.v:7]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R.v:7]
-INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R.dat' is read successfully [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R.v:7]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_7ns_6s_31s_31_4_1' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:45]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_7ns_6s_31s_31_4_1' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:45]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER2_MAC' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_CTRL_s_axi' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_CTRL_s_axi.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bgn_inference_CTRL_s_axi_ram' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_CTRL_s_axi.v:557]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_CTRL_s_axi_ram' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_CTRL_s_axi.v:557]
-INFO: [Synth 8-155] case statement is not full and has no default [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_CTRL_s_axi.v:271]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_CTRL_s_axi' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_CTRL_s_axi.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'bgn_inference' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'system_bgn_inference_0_4' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_4/synth/system_bgn_inference_0_4.v:53]
-WARNING: [Synth 8-7071] port 'interrupt' of module 'system_bgn_inference_0_4' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:245]
-WARNING: [Synth 8-7023] instance 'bgn_inference_0' of module 'system_bgn_inference_0_4' has 27 connections declared, but only 26 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:245]
-INFO: [Synth 8-638] synthesizing module 'system_bgn_inference_0_bram_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_bram_0/synth/system_bgn_inference_0_bram_0.vhd:78]
+WARNING: [Synth 8-7071] port 'M00_AXI_awqos' of module 'system_axi_smc_0' is unconnected for instance 'axi_smc' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:290]
+WARNING: [Synth 8-7071] port 'M00_AXI_arqos' of module 'system_axi_smc_0' is unconnected for instance 'axi_smc' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:290]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'system_axi_smc_0' is unconnected for instance 'axi_smc' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:290]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'system_axi_smc_0' is unconnected for instance 'axi_smc' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:290]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'system_axi_smc_0' is unconnected for instance 'axi_smc' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:290]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'system_axi_smc_0' is unconnected for instance 'axi_smc' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:290]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'system_axi_smc_0' has 165 connections declared, but only 159 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:290]
+INFO: [Synth 8-6157] synthesizing module 'system_bgn_inference_0_2' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_2/synth/system_bgn_inference_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'bgn_inference' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference.v:9]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_hidden_out_RAM_1P_LUTRAM_1R1W.v:7]
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.dat' is read successfully [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_scale_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.dat' is read successfully [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER1_XNOR_POP_bn_offset_ROM_1P_BRAM_1R.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:7]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R.dat' is read successfully [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_weights_l2_ROM_1P_BRAM_1R.v:28]
+INFO: [Synth 8-3876] $readmem data file './bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R.dat' is read successfully [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_bgn_inference_Pipeline_LAYER2_MAC_bias_l2_ROM_1P_BRAM_1R.v:28]
+INFO: [Synth 8-155] case statement is not full and has no default [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_control_s_axi.v:260]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_ARREGION' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_AWADDR' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_AWBURST' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_AWCACHE' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_AWID' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_AWLEN' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_AWLOCK' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_AWPROT' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_AWQOS' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_AWREGION' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_AWSIZE' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_AWVALID' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_BREADY' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_WDATA' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_WID' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_WLAST' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_WSTRB' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_WVALID' of module 'system_bgn_inference_0_2' is unconnected for instance 'bgn_inference_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+WARNING: [Synth 8-7023] instance 'bgn_inference_0' of module 'system_bgn_inference_0_2' has 60 connections declared, but only 41 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:450]
+INFO: [Synth 8-638] synthesizing module 'system_bgn_inference_0_bram_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_bram_0/synth/system_bgn_inference_0_bram_0.vhd:71]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -254,7 +402,7 @@ INFO: [Synth 8-638] synthesizing module 'system_bgn_inference_0_bram_0' [e:/sour
 	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
 	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
-	Parameter C_MEM_TYPE bound to: 2 - type: integer 
+	Parameter C_MEM_TYPE bound to: 0 - type: integer 
 	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
 	Parameter C_ALGORITHM bound to: 1 - type: integer 
 	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
@@ -277,11 +425,11 @@ INFO: [Synth 8-638] synthesizing module 'system_bgn_inference_0_bram_0' [e:/sour
 	Parameter C_WRITE_DEPTH_A bound to: 16384 - type: integer 
 	Parameter C_READ_DEPTH_A bound to: 16384 - type: integer 
 	Parameter C_ADDRA_WIDTH bound to: 32 - type: integer 
-	Parameter C_HAS_RSTB bound to: 1 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
 	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
 	Parameter C_RSTRAM_B bound to: 0 - type: integer 
 	Parameter C_INITB_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENB bound to: 1 - type: integer 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
 	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
 	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
 	Parameter C_WEB_WIDTH bound to: 4 - type: integer 
@@ -305,7 +453,7 @@ INFO: [Synth 8-638] synthesizing module 'system_bgn_inference_0_bram_0' [e:/sour
 	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
 	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
 	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
-	Parameter C_COMMON_CLK bound to: 1 - type: integer 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
 	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
 	Parameter C_USE_URAM bound to: 0 - type: integer 
@@ -317,18 +465,9 @@ INFO: [Synth 8-638] synthesizing module 'system_bgn_inference_0_bram_0' [e:/sour
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
 	Parameter C_COUNT_36K_BRAM bound to: 16 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     20.388 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_12' declared at 'e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/42f3/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195209' bound to instance 'U0' of component 'blk_mem_gen_v8_4_12' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_bram_0/synth/system_bgn_inference_0_bram_0.vhd:256]
-INFO: [Synth 8-256] done synthesizing module 'system_bgn_inference_0_bram_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_bram_0/synth/system_bgn_inference_0_bram_0.vhd:78]
-INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
-INFO: [Synth 8-6157] synthesizing module 'BIBUF' [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2325]
-INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (0#1) [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2325]
-INFO: [Synth 8-6157] synthesizing module 'PS7' [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:140294]
-INFO: [Synth 8-6155] done synthesizing module 'PS7' (0#1) [D:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:140294]
-INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     10.194 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_12' declared at 'e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/42f3/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195209' bound to instance 'U0' of component 'blk_mem_gen_v8_4_12' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_bram_0/synth/system_bgn_inference_0_bram_0.vhd:240]
+INFO: [Synth 8-256] done synthesizing module 'system_bgn_inference_0_bram_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_bgn_inference_0_bram_0/synth/system_bgn_inference_0_bram_0.vhd:71]
 INFO: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:393]
 INFO: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:393]
 INFO: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:393]
@@ -343,32 +482,24 @@ INFO: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_process
 INFO: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:393]
 INFO: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:393]
 INFO: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:393]
-INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:53]
-WARNING: [Synth 8-7071] port 'ENET0_GMII_TX_EN' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:287]
-WARNING: [Synth 8-7071] port 'ENET0_GMII_TX_ER' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:287]
-WARNING: [Synth 8-7071] port 'ENET0_MDIO_MDC' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:287]
-WARNING: [Synth 8-7071] port 'ENET0_MDIO_O' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:287]
-WARNING: [Synth 8-7071] port 'ENET0_MDIO_T' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:287]
-WARNING: [Synth 8-7071] port 'ENET0_GMII_TXD' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:287]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:287]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:287]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:287]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:287]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:287]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'system_processing_system7_0_0' has 85 connections declared, but only 74 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:287]
-INFO: [Synth 8-6157] synthesizing module 'system_radiation_injector_0_1' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_radiation_injector_0_1/synth/system_radiation_injector_0_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'radiation_injector' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/bae3/hdl/verilog/radiation_injector.v:9]
-INFO: [Synth 8-6157] synthesizing module 'radiation_injector_control_s_axi' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/bae3/hdl/verilog/radiation_injector_control_s_axi.v:9]
-INFO: [Synth 8-155] case statement is not full and has no default [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/bae3/hdl/verilog/radiation_injector_control_s_axi.v:218]
-INFO: [Synth 8-6155] done synthesizing module 'radiation_injector_control_s_axi' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/bae3/hdl/verilog/radiation_injector_control_s_axi.v:9]
-INFO: [Synth 8-6157] synthesizing module 'radiation_injector_urem_31ns_15ns_31_35_seq_1' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/bae3/hdl/verilog/radiation_injector_urem_31ns_15ns_31_35_seq_1.v:83]
-INFO: [Synth 8-6157] synthesizing module 'radiation_injector_urem_31ns_15ns_31_35_seq_1_divseq' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/bae3/hdl/verilog/radiation_injector_urem_31ns_15ns_31_35_seq_1.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'radiation_injector_urem_31ns_15ns_31_35_seq_1_divseq' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/bae3/hdl/verilog/radiation_injector_urem_31ns_15ns_31_35_seq_1.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'radiation_injector_urem_31ns_15ns_31_35_seq_1' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/bae3/hdl/verilog/radiation_injector_urem_31ns_15ns_31_35_seq_1.v:83]
-INFO: [Synth 8-6155] done synthesizing module 'radiation_injector' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/bae3/hdl/verilog/radiation_injector.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'system_radiation_injector_0_1' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_radiation_injector_0_1/synth/system_radiation_injector_0_1.v:53]
-WARNING: [Synth 8-7071] port 'interrupt' of module 'system_radiation_injector_0_1' is unconnected for instance 'radiation_injector_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:362]
-WARNING: [Synth 8-7023] instance 'radiation_injector_0' of module 'system_radiation_injector_0_1' has 27 connections declared, but only 26 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:362]
+WARNING: [Synth 8-7071] port 'ENET0_GMII_TX_EN' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:502]
+WARNING: [Synth 8-7071] port 'ENET0_GMII_TX_ER' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:502]
+WARNING: [Synth 8-7071] port 'ENET0_MDIO_MDC' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:502]
+WARNING: [Synth 8-7071] port 'ENET0_MDIO_O' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:502]
+WARNING: [Synth 8-7071] port 'ENET0_MDIO_T' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:502]
+WARNING: [Synth 8-7071] port 'ENET0_GMII_TXD' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:502]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:502]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:502]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:502]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:502]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:502]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'system_processing_system7_0_0' has 85 connections declared, but only 74 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:502]
+INFO: [Synth 8-155] case statement is not full and has no default [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/a31f/hdl/verilog/radiation_injector_control_s_axi.v:221]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'system_radiation_injector_0_8' is unconnected for instance 'radiation_injector_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:577]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_ARREGION' of module 'system_radiation_injector_0_8' is unconnected for instance 'radiation_injector_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:577]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_AWREGION' of module 'system_radiation_injector_0_8' is unconnected for instance 'radiation_injector_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:577]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_WID' of module 'system_radiation_injector_0_8' is unconnected for instance 'radiation_injector_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:577]
+WARNING: [Synth 8-7023] instance 'radiation_injector_0' of module 'system_radiation_injector_0_8' has 60 connections declared, but only 56 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:577]
 INFO: [Synth 8-638] synthesizing module 'system_rst_ps7_0_100M_0' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/synth/system_rst_ps7_0_100M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -406,19 +537,48 @@ INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at 'D:/AMDDesignTools/2025
 INFO: [Synth 8-256] done synthesizing module 'lpf__parameterized0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
 INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset__parameterized1' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1302]
 INFO: [Synth 8-256] done synthesizing module 'system_rst_ps7_0_100M_0' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/synth/system_rst_ps7_0_100M_0.vhd:74]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:389]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:389]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:389]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'system_rst_ps7_0_100M_0' has 10 connections declared, but only 7 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:389]
-INFO: [Synth 8-6155] done synthesizing module 'system' (0#1) [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (0#1) [E:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
-WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_1LX95IS does not have driver. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:1194]
-INFO: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_CTRL_s_axi.v:349]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:634]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:634]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:634]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:634]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'system_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/synth/system.v:634]
+INFO: [Synth 8-6014] Unused sequential element curr_awsize_reg_reg was removed.  [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:25239]
+INFO: [Synth 8-6014] Unused sequential element curr_awlen_reg_1_or_2_reg was removed.  [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:25517]
+INFO: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_arsize_pipe_max_reg was removed.  [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:15432]
+INFO: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.curr_arsize_reg_reg was removed.  [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:15924]
+INFO: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.no_ar_ack_reg was removed.  [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:19829]
+INFO: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.do_cmplt_burst_reg was removed.  [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:21170]
+WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_1LX95IS does not have driver. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/bd_44e3.v:2242]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_AB_reg_slice.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_control_s_axi.v:333]
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/bae3/hdl/verilog/radiation_injector_control_s_axi.v:287]
-INFO: [Synth 8-6014] Unused sequential element quot_reg was removed.  [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/bae3/hdl/verilog/radiation_injector_urem_31ns_15ns_31_35_seq_1.v:149]
+INFO: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/a31f/hdl/verilog/radiation_injector_control_s_axi.v:293]
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RID[0] in module radiation_injector_gmem0_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[1] in module radiation_injector_gmem0_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[0] in module radiation_injector_gmem0_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RUSER[0] in module radiation_injector_gmem0_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BURST_AWLEN[7] in module radiation_injector_gmem0_m_axi_throttle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BURST_AWLEN[6] in module radiation_injector_gmem0_m_axi_throttle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BURST_AWLEN[5] in module radiation_injector_gmem0_m_axi_throttle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BURST_AWLEN[4] in module radiation_injector_gmem0_m_axi_throttle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BURST_AWLEN[3] in module radiation_injector_gmem0_m_axi_throttle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BURST_AWLEN[2] in module radiation_injector_gmem0_m_axi_throttle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BURST_AWLEN[1] in module radiation_injector_gmem0_m_axi_throttle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BURST_AWLEN[0] in module radiation_injector_gmem0_m_axi_throttle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BID[0] in module radiation_injector_gmem0_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[1] in module radiation_injector_gmem0_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[0] in module radiation_injector_gmem0_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BUSER[0] in module radiation_injector_gmem0_m_axi_write is either unconnected or has no load
 WARNING: [Synth 8-7129] Port AWADDR[1] in module radiation_injector_control_s_axi is either unconnected or has no load
 WARNING: [Synth 8-7129] Port AWADDR[0] in module radiation_injector_control_s_axi is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ENET1_GMII_COL in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
@@ -489,50 +649,34 @@ WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[2] in module processing_system7_v
 WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[1] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[0] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port CLKB in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SBITERR_I in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DBITERR_I in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[13] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[12] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[11] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[10] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[9] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[8] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[7] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[6] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[5] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[4] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[3] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[2] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[1] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RDADDRECC_I[0] in module blk_mem_output_block is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SBITERR in module blk_mem_gen_prim_wrapper__parameterized14 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DBITERR in module blk_mem_gen_prim_wrapper__parameterized14 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SSRA in module blk_mem_gen_prim_wrapper__parameterized14 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SSRB in module blk_mem_gen_prim_wrapper__parameterized14 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SLEEP in module blk_mem_gen_prim_wrapper__parameterized14 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_gen_prim_wrapper__parameterized14 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_prim_wrapper__parameterized14 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ECCPIPECE in module blk_mem_gen_prim_wrapper__parameterized14 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SBITERR in module blk_mem_gen_prim_wrapper__parameterized13 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DBITERR in module blk_mem_gen_prim_wrapper__parameterized13 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SSRA in module blk_mem_gen_prim_wrapper__parameterized13 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SSRB in module blk_mem_gen_prim_wrapper__parameterized13 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SLEEP in module blk_mem_gen_prim_wrapper__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[31] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[30] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[29] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[28] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[27] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[26] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[25] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[24] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[23] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[22] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[21] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[20] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[19] in module blk_mem_output_block is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1815.867 ; gain = 1010.160
+Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2034.125 ; gain = 1217.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1815.867 ; gain = 1010.160
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2034.125 ; gain = 1217.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1815.867 ; gain = 1010.160
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2034.125 ; gain = 1217.680
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.944 . Memory (MB): peak = 1815.867 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2428.973 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -554,46 +698,147 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Project 1-1714] 49 XPM XDC files have been applied to the design.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 133 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1916.039 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.161 . Memory (MB): peak = 2844.410 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
+  A total of 7 instances were transformed.
+  FDR => FDRE: 1 instance 
+  MUXCY_L => MUXCY: 4 instances
   SRL16 => SRL16E: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.172 . Memory (MB): peak = 1916.039 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2844.410 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1916.039 ; gain = 1110.332
+Finished Constraint Validation : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 2846.254 ; gain = 2029.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1916.039 ; gain = 1110.332
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 2846.254 ; gain = 2029.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1916.039 ; gain = 1110.332
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 2846.254 ; gain = 2029.809
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'arb_sm_cs_reg' in module 'sng_port_arb'
+INFO: [Synth 8-802] inferred FSM for state register 'GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg' in module 'wr_chnl'
+INFO: [Synth 8-802] inferred FSM for state register 'GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg' in module 'rd_chnl'
+INFO: [Synth 8-802] inferred FSM for state register 'GEN_NO_RD_CMD_OPT.rlast_sm_cs_reg' in module 'rd_chnl'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_AB_reg_slice.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_AB_reg_slice.state_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'w_state_reg' in module 'sc_exit_v1_0_18_axilite_conv'
+INFO: [Synth 8-802] inferred FSM for state register 'r_state_reg' in module 'sc_exit_v1_0_18_axilite_conv'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
 INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.gen_write.write_cs_reg' in module 'sc_mmu_v1_0_16_decerr_slave'
 INFO: [Synth 8-802] inferred FSM for state register 'gen_endpoint.w_state_reg' in module 'sc_mmu_v1_0_16_top'
 INFO: [Synth 8-802] inferred FSM for state register 'gen_endpoint.r_state_reg' in module 'sc_mmu_v1_0_16_top'
-INFO: [Synth 8-802] inferred FSM for state register 'w_state_reg' in module 'sc_si_converter_v1_0_16_axilite_conv'
-INFO: [Synth 8-802] inferred FSM for state register 'r_state_reg' in module 'sc_si_converter_v1_0_16_axilite_conv'
-INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'bgn_inference_CTRL_s_axi'
-INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'bgn_inference_CTRL_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'aw_state_reg' in module 'sc_si_converter_v1_0_16_reduced_area'
+INFO: [Synth 8-802] inferred FSM for state register 'w_state_reg' in module 'sc_si_converter_v1_0_16_reduced_area'
+INFO: [Synth 8-802] inferred FSM for state register 'b_state_reg' in module 'sc_si_converter_v1_0_16_reduced_area'
+INFO: [Synth 8-802] inferred FSM for state register 'ar_state_reg' in module 'sc_si_converter_v1_0_16_reduced_area'
+INFO: [Synth 8-802] inferred FSM for state register 'r_state_reg' in module 'sc_si_converter_v1_0_16_reduced_area'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'sc_si_converter_v1_0_16_reduced_area'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'sc_transaction_regulator_v1_0_12_multithread'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.gen_write.write_cs_reg' in module 'sc_mmu_v1_0_16_decerr_slave__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_endpoint.w_state_reg' in module 'sc_mmu_v1_0_16_top__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_endpoint.r_state_reg' in module 'sc_mmu_v1_0_16_top__parameterized0'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'bgn_inference_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'bgn_inference_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'bgn_inference_gmem0_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'bgn_inference_gmem0_m_axi_reg_slice__parameterized0'
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'radiation_injector_control_s_axi'
 INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'radiation_injector_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'radiation_injector_gmem0_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'radiation_injector_gmem0_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'radiation_injector_gmem0_m_axi_reg_slice__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'radiation_injector_gmem0_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'radiation_injector_gmem0_m_axi_reg_slice__parameterized3'
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                 wr_data |                               01 |                               10
+                 rd_data |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'arb_sm_cs_reg' using encoding 'sequential' in module 'sng_port_arb'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               00
+            brst_wr_data |                              010 |                               10
+             sng_wr_data |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg' using encoding 'one-hot' in module 'wr_chnl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0000 |                             0000
+                sng_addr |                             0001 |                             0011
+                sec_addr |                             0010 |                             0100
+               full_pipe |                             0011 |                             0101
+           full_throttle |                             0100 |                             0110
+               last_addr |                             0101 |                             0111
+           last_throttle |                             0110 |                             1000
+               last_data |                             0111 |                             1001
+       last_data_ar_pend |                             1000 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg' using encoding 'sequential' in module 'rd_chnl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+          w8_throttle_b2 |                              001 |                              101
+             w8_throttle |                              010 |                              010
+        w8_2nd_last_data |                              011 |                              011
+            w8_last_data |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'GEN_NO_RD_CMD_OPT.rlast_sm_cs_reg' using encoding 'sequential' in module 'rd_chnl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  W_IDLE |                              000 | 00000000000000000000000000000000
+                    W_RX |                              001 | 00000000000000000000000000000001
+                    W_TX |                              010 | 00000000000000000000000000000010
+              W_COMPLETE |                              011 | 00000000000000000000000000000100
+               W_RECOVER |                              100 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'w_state_reg' using encoding 'sequential' in module 'sc_exit_v1_0_18_axilite_conv'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  R_IDLE |                               00 | 00000000000000000000000000000000
+                    R_RX |                               01 | 00000000000000000000000000000001
+                    R_TX |                               10 | 00000000000000000000000000000010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_state_reg' using encoding 'sequential' in module 'sc_exit_v1_0_18_axilite_conv'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -625,22 +870,97 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_endpoint.r_state_reg' 
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                  W_IDLE |                              000 | 00000000000000000000000000000000
-                    W_RX |                              001 | 00000000000000000000000000000001
-                    W_TX |                              010 | 00000000000000000000000000000010
-              W_COMPLETE |                              011 | 00000000000000000000000000000100
-               W_RECOVER |                              100 | 00000000000000000000000000000011
+                  B_IDLE |                               00 | 00000000000000000000000000000000
+                 B_ACCUM |                               01 | 00000000000000000000000000000001
+                  B_INCR |                               10 | 00000000000000000000000000000010
+                   B_OUT |                               11 | 00000000000000000000000000000011
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'w_state_reg' using encoding 'sequential' in module 'sc_si_converter_v1_0_16_axilite_conv'
+INFO: [Synth 8-3354] encoded FSM with state register 'b_state_reg' using encoding 'sequential' in module 'sc_si_converter_v1_0_16_reduced_area'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                  R_IDLE |                             0001 | 00000000000000000000000000000000
-               R_PENDING |                             0010 | 00000000000000000000000000000001
-                    R_RX |                             0100 | 00000000000000000000000000000010
-                    R_TX |                             1000 | 00000000000000000000000000000011
+                  W_IDLE |                           000001 | 00000000000000000000000000000000
+             W_SINGLES_1 |                           000010 | 00000000000000000000000000000001
+               W_SINGLES |                           000100 | 00000000000000000000000000000010
+                  W_NULL |                           001000 | 00000000000000000000000000000100
+                  W_INCR |                           010000 | 00000000000000000000000000000011
+              W_COMPLETE |                           100000 | 00000000000000000000000000000101
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'r_state_reg' using encoding 'one-hot' in module 'sc_si_converter_v1_0_16_axilite_conv'
+INFO: [Synth 8-3354] encoded FSM with state register 'w_state_reg' using encoding 'one-hot' in module 'sc_si_converter_v1_0_16_reduced_area'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 AW_IDLE |                               00 | 00000000000000000000000000000000
+             AW_SINGLE_1 |                               01 | 00000000000000000000000000000010
+               AW_SINGLE |                               10 | 00000000000000000000000000000001
+                AW_BURST |                               11 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'aw_state_reg' using encoding 'sequential' in module 'sc_si_converter_v1_0_16_reduced_area'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  R_IDLE |                              000 | 00000000000000000000000000000000
+               R_SPLIT_1 |                              001 | 00000000000000000000000000000010
+                 R_SPLIT |                              010 | 00000000000000000000000000000001
+                  R_WAIT |                              011 | 00000000000000000000000000000101
+               R_SPLIT_2 |                              100 | 00000000000000000000000000000011
+                  R_INCR |                              101 | 00000000000000000000000000000100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_state_reg' using encoding 'sequential' in module 'sc_si_converter_v1_0_16_reduced_area'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 RD_IDLE |                                0 | 00000000000000000000000000000000
+                 RD_DATA |                                1 | 00000000000000000000000000000001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'sequential' in module 'sc_si_converter_v1_0_16_reduced_area'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 AR_IDLE |                               00 | 00000000000000000000000000000000
+               AR_SINGLE |                               01 | 00000000000000000000000000000001
+                AR_BURST |                               10 | 00000000000000000000000000000010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ar_state_reg' using encoding 'sequential' in module 'sc_si_converter_v1_0_16_reduced_area'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                              000 | 00000000000000000000000000000000
+                    IDLE |                              001 | 00000000000000000000000000000001
+                DEADLOCK |                              010 | 00000000000000000000000000000010
+                OVERFLOW |                              011 | 00000000000000000000000000000100
+                ALLOCATE |                              100 | 00000000000000000000000000000011
+                 REFRESH |                              101 | 00000000000000000000000000000101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'sc_transaction_regulator_v1_0_12_multithread'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            P_WRITE_IDLE |                              001 |                               00
+            P_WRITE_DATA |                              010 |                               01
+            P_WRITE_RESP |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.gen_write.write_cs_reg' using encoding 'one-hot' in module 'sc_mmu_v1_0_16_decerr_slave__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 | 00000000000000000000000000000000
+*
+                 W_STALL |                               01 | 00000000000000000000000000000001
+               W_PENDING |                               10 | 00000000000000000000000000000010
+                W_DECERR |                               11 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_endpoint.w_state_reg' using encoding 'sequential' in module 'sc_mmu_v1_0_16_top__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 | 00000000000000000000000000000000
+*
+                 R_STALL |                               01 | 00000000000000000000000000000001
+               R_PENDING |                               10 | 00000000000000000000000000000010
+                R_DECERR |                               11 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_endpoint.r_state_reg' using encoding 'sequential' in module 'sc_mmu_v1_0_16_top__parameterized0'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -649,7 +969,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'r_state_reg' using encodin
                   RDIDLE |                              010 |                               00
                   RDDATA |                              100 |                               01
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'bgn_inference_CTRL_s_axi'
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'bgn_inference_control_s_axi'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -659,7 +979,23 @@ INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding
                   WRDATA |                             0100 |                               01
                   WRRESP |                             1000 |                               10
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'bgn_inference_CTRL_s_axi'
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'bgn_inference_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'bgn_inference_gmem0_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'bgn_inference_gmem0_m_axi_reg_slice__parameterized0'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -679,8 +1015,48 @@ INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding
                   RDDATA |                              100 |                               01
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'radiation_injector_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'radiation_injector_gmem0_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'radiation_injector_gmem0_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'radiation_injector_gmem0_m_axi_reg_slice__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'radiation_injector_gmem0_m_axi_reg_slice__parameterized2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'radiation_injector_gmem0_m_axi_reg_slice__parameterized3'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1916.039 ; gain = 1110.332
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:32 ; elapsed = 00:01:36 . Memory (MB): peak = 2846.254 ; gain = 2029.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -700,60 +1076,90 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151/mac_muladd_7ns_6s_31s_31_4_1_U9/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151/mac_muladd_7ns_6s_31s_31_4_1_U9/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '16' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '16' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '16' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '25' to '16' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '14' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '14' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '25' to '14' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/727f/hdl/verilog/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/urem_31ns_15ns_31_35_seq_1_U1/remd_reg' and it is trimmed from '31' to '30' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/bae3/hdl/verilog/radiation_injector_urem_31ns_15ns_31_35_seq_1.v:150]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/urem_31ns_15ns_31_35_seq_1_U1/radiation_injector_urem_31ns_15ns_31_35_seq_1_divseq_u/remd_tmp_reg' and it is trimmed from '31' to '30' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/bae3/hdl/verilog/radiation_injector_urem_31ns_15ns_31_35_seq_1.v:41]
-WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/FDRE_inst) is unused and will be removed from module bd_44e3.
-WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module bd_44e3.
-WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module bd_44e3.
-WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module bd_44e3.
-INFO: [Synth 8-3332] Sequential element (exit_inst/gen_w_cmd_reg.m_write_cmd_mesg_i_reg) is unused and will be removed from module sc_exit_v1_0_18_top.
-INFO: [Synth 8-3332] Sequential element (exit_inst/gen_w_cmd_reg.m_write_cmd_mesg_i_reg) is unused and will be removed from module sc_exit_v1_0_18_top__parameterized0.
-INFO: [Synth 8-3332] Sequential element (inst/CTRL_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module system_bgn_inference_0_4.
-INFO: [Synth 8-3332] Sequential element (inst/CTRL_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module system_bgn_inference_0_4.
-INFO: [Synth 8-3332] Sequential element (inst/control_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module system_radiation_injector_0_1.
-INFO: [Synth 8-3332] Sequential element (inst/control_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module system_radiation_injector_0_1.
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_11s_5ns_13s_16_4_1_U1/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '16' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_11s_5ns_13s_16_4_1_U1/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '16' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_11s_5ns_13s_16_4_1_U1/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '16' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_11s_5ns_13s_16_4_1_U1/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '25' to '16' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_7ns_6s_31s_31_4_1_U9/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_7ns_6s_31s_31_4_1_U9/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/ec15/hdl/verilog/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'wreq_throttle/rs_req/data_p1_reg' and it is trimmed from '73' to '72' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/a31f/hdl/verilog/radiation_injector_gmem0_m_axi.v:3559]
+INFO: [Synth 8-3936] Found unconnected internal register 'wreq_throttle/rs_req/data_p2_reg' and it is trimmed from '73' to '72' bits. [e:/source/.ITA/FPGA/7.RAD/zc702/zc702.gen/sources_1/bd/system/ipshared/a31f/hdl/verilog/radiation_injector_gmem0_m_axi.v:3580]
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\m00_nodes/m00_ar_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\m00_nodes/m00_aw_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\m00_nodes/m00_w_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\m01_nodes/m01_ar_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\m01_nodes/m01_aw_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\m01_nodes/m01_w_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\m02_nodes/m02_ar_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\m02_nodes/m02_aw_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\m02_nodes/m02_w_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\s00_nodes/s00_b_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\s00_nodes/s00_r_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\s01_nodes/s01_r_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\s02_nodes/s02_b_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+WARNING: [Synth 8-13161] RAM (system_i/axi_smc/inst/i_0/\s02_nodes/s02_r_node/inst /\inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst/i_0) is optimized away because it doesn't have any load.
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_narrow.mem_reg was removed. 
+INFO: [Synth 8-3332] Sequential element (U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Data_Exists_DFF) is unused and will be removed from module system_axi_bram_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[0].FDRE_I) is unused and will be removed from module system_axi_bram_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[1].FDRE_I) is unused and will be removed from module system_axi_bram_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[2].FDRE_I) is unused and will be removed from module system_axi_bram_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[3].FDRE_I) is unused and will be removed from module system_axi_bram_ctrl_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/control_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module system_bgn_inference_0_2.
+INFO: [Synth 8-3332] Sequential element (inst/control_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module system_bgn_inference_0_2.
+INFO: [Synth 8-3332] Sequential element (inst/control_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module system_radiation_injector_0_8.
+INFO: [Synth 8-3332] Sequential element (inst/control_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module system_radiation_injector_0_8.
 WARNING: [Synth 8-3332] Sequential element (FDRE_inst) is unused and will be removed from module proc_sys_reset__parameterized1.
 WARNING: [Synth 8-3332] Sequential element (BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N) is unused and will be removed from module proc_sys_reset__parameterized1.
 WARNING: [Synth 8-3332] Sequential element (PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module proc_sys_reset__parameterized1.
-INFO: [Synth 8-3332] Sequential element (exit_inst/gen_r_cmd_reg.m_read_cmd_mesg_i_reg) is unused and will be removed from module sc_exit_v1_0_18_top__parameterized0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1916.039 ; gain = 1110.332
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:00 ; elapsed = 00:03:08 . Memory (MB): peak = 2846.254 ; gain = 2029.809
 ---------------------------------------------------------------------------------
- Sort Area is  inst/grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137/mac_muladd_11s_5ns_13s_16_4_1_U2/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg_0 : 0 0 : 2065 2065 : Used 1 time 0
- Sort Area is  inst/grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137/mac_muladd_10ns_5ns_5ns_14_4_1_U1/bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0_U/p_reg_reg_4 : 0 0 : 1601 1601 : Used 1 time 0
- Sort Area is  inst/grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151/mac_muladd_7ns_6s_31s_31_4_1_U9/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg_2 : 0 0 : 1311 1311 : Used 1 time 0
+ Sort Area is system__GC0 mac_muladd_11s_5ns_13s_16_4_1_U1/bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0_U/p_reg_reg_0 : 0 0 : 2065 2065 : Used 1 time 0
+ Sort Area is system__GC0 mac_muladd_7ns_6s_31s_31_4_1_U9/bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0_U/p_reg_reg_2 : 0 0 : 1286 1286 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 2057.156 ; gain = 1251.449
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:06 ; elapsed = 00:03:15 . Memory (MB): peak = 2846.254 ; gain = 2029.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2100.199 ; gain = 1294.492
+Finished Timing Optimization : Time (s): cpu = 00:03:14 ; elapsed = 00:03:23 . Memory (MB): peak = 2876.469 ; gain = 2060.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_137/bn_scale_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151/weights_l2_U/q0_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151/weights_l2_U/q0_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_MAC_fu_151/bias_l2_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/CTRL_s_axi_U/int_input_img/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/CTRL_s_axi_U/int_input_img/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-3332] Sequential element (gen_endpoint.decerr_slave_inst/FSM_onehot_gen_axi.gen_write.write_cs_reg[2]) is unused and will be removed from module sc_mmu_v1_0_16_top__parameterized0__1.
+INFO: [Synth 8-3332] Sequential element (gen_endpoint.decerr_slave_inst/FSM_onehot_gen_axi.gen_write.write_cs_reg[1]) is unused and will be removed from module sc_mmu_v1_0_16_top__parameterized0__1.
+INFO: [Synth 8-3332] Sequential element (gen_endpoint.decerr_slave_inst/FSM_onehot_gen_axi.gen_write.write_cs_reg[0]) is unused and will be removed from module sc_mmu_v1_0_16_top__parameterized0__1.
+INFO: [Synth 8-3332] Sequential element (FSM_sequential_gen_endpoint.w_state_reg[1]) is unused and will be removed from module sc_mmu_v1_0_16_top__parameterized0__1.
+INFO: [Synth 8-3332] Sequential element (FSM_sequential_gen_endpoint.w_state_reg[0]) is unused and will be removed from module sc_mmu_v1_0_16_top__parameterized0__1.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER1_XNOR_POP_fu_122/bn_scale_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_MAC_fu_136/weights_l2_U/q0_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_MAC_fu_136/weights_l2_U/q0_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/grp_bgn_inference_Pipeline_LAYER2_MAC_fu_136/bias_l2_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/control_s_axi_U/int_input_img/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/control_s_axi_U/int_input_img/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/bgn_inference_0/inst/gmem0_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance system_i/radiation_injector_0/inst/gmem0_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 2113.969 ; gain = 1308.262
+Finished Technology Mapping : Time (s): cpu = 00:03:21 ; elapsed = 00:03:30 . Memory (MB): peak = 2903.094 ; gain = 2086.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -771,50 +1177,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2328.629 ; gain = 1522.922
+Finished IO Insertion : Time (s): cpu = 00:03:24 ; elapsed = 00:03:33 . Memory (MB): peak = 2907.859 ; gain = 2091.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2328.629 ; gain = 1522.922
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:24 ; elapsed = 00:03:33 . Memory (MB): peak = 2907.859 ; gain = 2091.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2328.629 ; gain = 1522.922
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:25 ; elapsed = 00:03:35 . Memory (MB): peak = 2907.859 ; gain = 2091.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2328.629 ; gain = 1522.922
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:25 ; elapsed = 00:03:35 . Memory (MB): peak = 2907.859 ; gain = 2091.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2328.629 ; gain = 1522.922
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:26 ; elapsed = 00:03:35 . Memory (MB): peak = 2907.859 ; gain = 2091.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2328.629 ; gain = 1522.922
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:26 ; elapsed = 00:03:35 . Memory (MB): peak = 2907.859 ; gain = 2091.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 DSP Final Report (the ' indicates corresponding REG is set)
-+-----------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name                                          | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-----------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|bgn_inference_mac_muladd_10ns_5ns_5ns_14_4_1_DSP48_0 | (C'+(A'*B')')' | 10     | 5      | 5      | -      | 14     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
-|bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0  | (C'+(A'*B')')' | 30     | 5      | 48     | -      | 16     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
-|bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0   | Dynamic        | -      | -      | -      | -      | 31     | -    | -    | -    | -    | -     | 1    | 1    | 
-+-----------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++----------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                         | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|bgn_inference_mac_muladd_11s_5ns_13s_16_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 5      | 48     | -      | 16     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|bgn_inference_mac_muladd_7ns_6s_31s_31_4_1_DSP48_0  | Dynamic        | -      | -      | -      | -      | 31     | -    | -    | -    | -    | -     | 1    | 1    | 
++----------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
 Report BlackBoxes: 
@@ -829,50 +1234,58 @@ Report Cell Usage:
 +------+----------+------+
 |1     |BIBUF     |   130|
 |2     |BUFG      |     1|
-|3     |CARRY4    |    45|
-|4     |DSP48E1   |     3|
-|6     |LUT1      |   159|
-|7     |LUT2      |   237|
-|8     |LUT3      |   634|
-|9     |LUT4      |   221|
-|10    |LUT5      |   209|
-|11    |LUT6      |   411|
-|12    |PS7       |     1|
-|13    |RAM128X1S |     7|
-|14    |RAM256X1S |    14|
-|15    |RAMB18E1  |     4|
-|19    |RAMB36E1  |    18|
-|22    |SRL16     |     2|
-|23    |SRL16E    |    29|
-|24    |FDCE      |   135|
-|25    |FDRE      |  1458|
-|26    |FDSE      |    45|
+|3     |CARRY4    |   182|
+|4     |DSP48E1   |     2|
+|6     |LUT1      |   543|
+|7     |LUT2      |   883|
+|8     |LUT3      |  2725|
+|9     |LUT4      |  1462|
+|10    |LUT5      |  1739|
+|11    |LUT6      |  2396|
+|12    |MUXF7     |     2|
+|13    |PS7       |     1|
+|14    |RAM128X1S |     7|
+|15    |RAM16X1D  |     6|
+|16    |RAM256X1S |    14|
+|17    |RAM32M    |   136|
+|18    |RAM32X1D  |    14|
+|19    |RAMB18E1  |     6|
+|24    |RAMB36E1  |    18|
+|27    |SRL16     |     2|
+|28    |SRL16E    |   337|
+|29    |SRLC32E   |    45|
+|30    |FDCE      |   198|
+|31    |FDRE      |  9685|
+|32    |FDSE      |   383|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2328.629 ; gain = 1522.922
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:26 ; elapsed = 00:03:35 . Memory (MB): peak = 2907.859 ; gain = 2091.414
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 19100 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:47 . Memory (MB): peak = 2328.629 ; gain = 1422.750
-Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2328.629 ; gain = 1522.922
+Synthesis finished with 0 errors, 0 critical warnings and 4157 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:14 ; elapsed = 00:02:45 . Memory (MB): peak = 2907.859 ; gain = 1279.285
+Synthesis Optimization Complete : Time (s): cpu = 00:03:26 ; elapsed = 00:03:35 . Memory (MB): peak = 2907.859 ; gain = 2091.414
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.181 . Memory (MB): peak = 2333.781 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 93 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.530 . Memory (MB): peak = 2935.332 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 389 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2341.430 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2943.004 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 23 instances were transformed.
+  A total of 179 instances were transformed.
   RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 7 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 6 instances
   RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 14 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 136 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 14 instances
   SRL16 => SRL16E: 2 instances
 
-Synth Design complete | Checksum: 4afe758c
+Synth Design complete | Checksum: 516dc484
 INFO: [Common 17-83] Releasing license: Synthesis
-303 Infos, 138 Warnings, 0 Critical Warnings and 0 Errors encountered.
+458 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:05 . Memory (MB): peak = 2341.430 ; gain = 1768.305
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2341.430 ; gain = 0.000
+synth_design: Time (s): cpu = 00:03:34 ; elapsed = 00:03:47 . Memory (MB): peak = 2943.004 ; gain = 2359.008
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2943.004 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'E:/source/.ITA/FPGA/7.RAD/zc702/zc702.runs/synth_1/system_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Mar  1 06:18:11 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  2 00:21:22 2026...

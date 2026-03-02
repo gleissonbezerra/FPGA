@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'radiation_injector'
 ================================================================
 + General Information: 
-    * Date:           Sun Mar  1 06:16:03 2026
+    * Date:           Mon Mar  2 00:11:21 2026
     * Version:        2025.2 (Build 6295257 on Nov 14 2025)
     * Project:        radiation_injector
     * Solution:       hls (Vivado IP Flow Target)
@@ -13,18 +13,26 @@
     
 
 * Performance & Resource Estimates: 
-+----------------------+------+---------------+----------+---------+------+----------+---------+---------+------+------+----+-----------+----------+-----+
-|        Modules       | Issue|               | Iteration|         | Trip |          |      Latency      |      |      |    |           |          |     |
-|        & Loops       | Type | Violation Type|  Latency | Interval| Count| Pipelined| (cycles)|   (ns)  | Slack| BRAM | DSP|     FF    |    LUT   | URAM|
-+----------------------+------+---------------+----------+---------+------+----------+---------+---------+------+------+----+-----------+----------+-----+
-|+ radiation_injector  |     -|              -|         -|       36|     -|        no|       35|  350.000|  0.27|     -|   -|  588 (~0%)|  908 (1%)|    -|
-+----------------------+------+---------------+----------+---------+------+----------+---------+---------+------+------+----+-----------+----------+-----+
++----------------------+------+---------------+----------+---------+------+----------+---------+---------+------+---------+----+-----------+-----------+-----+
+|        Modules       | Issue|               | Iteration|         | Trip |          |      Latency      |      |         |    |           |           |     |
+|        & Loops       | Type | Violation Type|  Latency | Interval| Count| Pipelined| (cycles)|   (ns)  | Slack|  BRAM   | DSP|     FF    |    LUT    | URAM|
++----------------------+------+---------------+----------+---------+------+----------+---------+---------+------+---------+----+-----------+-----------+-----+
+|+ radiation_injector  |     -|              -|         -|       17|     -|        no|       16|  160.000|  0.00|  2 (~0%)|   -|  1130 (1%)|  1284 (2%)|    -|
++----------------------+------+---------------+----------+---------+------+----------+---------+---------+------+---------+----+-----------+-----------+-----+
     Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
 
 
 ================================================================
 == HW Interfaces
 ================================================================
+* M_AXI
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | READ_WRITE | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
 * S_AXILITE Interfaces
 +---------------+------------+---------------+--------+----------+
 | Interface     | Data Width | Address Width | Offset | Register |
@@ -33,24 +41,18 @@
 +---------------+------------+---------------+--------+----------+
 
 * S_AXILITE Registers
-+---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
-| Interface     | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
-+---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
-| s_axi_control | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
-| s_axi_control | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
-| s_axi_control | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
-| s_axi_control | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
-| s_axi_control | intensity | 0x10   | 32    | W      | Data signal of intensity         |                                                                      |
-| s_axi_control | seed      | 0x18   | 32    | W      | Data signal of seed              |                                                                      |
-| s_axi_control | num_words | 0x20   | 32    | W      | Data signal of num_words         |                                                                      |
-+---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
-
-* BRAM
-+------------------+------------+---------------+
-| Interface        | Data Width | Address Width |
-+------------------+------------+---------------+
-| weight_mem_PORTA | 32         | 32            |
-+------------------+------------+---------------+
++---------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register     | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL         | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER         | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER       | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR       | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | weight_mem_1 | 0x10   | 32    | W      | Data signal of weight_mem        |                                                                      |
+| s_axi_control | weight_mem_2 | 0x14   | 32    | W      | Data signal of weight_mem        |                                                                      |
+| s_axi_control | wr_addr      | 0x1c   | 32    | W      | Data signal of wr_addr           |                                                                      |
+| s_axi_control | wr_data      | 0x24   | 32    | W      | Data signal of wr_data           |                                                                      |
++---------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
 
 * TOP LEVEL CONTROL
 +-----------+------------+-----------+
@@ -71,38 +73,33 @@
 | Argument   | Direction | Datatype     |
 +------------+-----------+--------------+
 | weight_mem | inout     | ap_uint<32>* |
-| intensity  | in        | ap_uint<32>  |
-| seed       | in        | ap_uint<32>  |
-| num_words  | in        | ap_uint<32>  |
+| wr_addr    | in        | ap_uint<32>  |
+| wr_data    | in        | ap_uint<32>  |
 +------------+-----------+--------------+
 
 * SW-to-HW Mapping
-+------------+------------------+-----------+-------------------------------------+
-| Argument   | HW Interface     | HW Type   | HW Info                             |
-+------------+------------------+-----------+-------------------------------------+
-| weight_mem | weight_mem_PORTA | interface |                                     |
-| intensity  | s_axi_control    | register  | name=intensity offset=0x10 range=32 |
-| seed       | s_axi_control    | register  | name=seed offset=0x18 range=32      |
-| num_words  | s_axi_control    | register  | name=num_words offset=0x20 range=32 |
-+------------+------------------+-----------+-------------------------------------+
++------------+---------------+-----------+----------+----------------------------------------+
+| Argument   | HW Interface  | HW Type   | HW Usage | HW Info                                |
++------------+---------------+-----------+----------+----------------------------------------+
+| weight_mem | m_axi_gmem0   | interface |          | channel=0                              |
+| weight_mem | s_axi_control | register  | offset   | name=weight_mem_1 offset=0x10 range=32 |
+| weight_mem | s_axi_control | register  | offset   | name=weight_mem_2 offset=0x14 range=32 |
+| wr_addr    | s_axi_control | register  |          | name=wr_addr offset=0x1c range=32      |
+| wr_data    | s_axi_control | register  |          | name=wr_data offset=0x24 range=32      |
++------------+---------------+-----------+----------+----------------------------------------+
 
 
 ================================================================
 == Bind Op Report
 ================================================================
-+---------------------------------+-----+--------+-------------+--------+-----------+---------+
-| Name                            | DSP | Pragma | Variable    | Op     | Impl      | Latency |
-+---------------------------------+-----+--------+-------------+--------+-----------+---------+
-| + radiation_injector            | 0   |        |             |        |           |         |
-|   icmp_ln21_fu_87_p2            |     |        | icmp_ln21   | seteq  | auto      | 0       |
-|   icmp_ln24_fu_93_p2            |     |        | icmp_ln24   | setgt  | auto      | 0       |
-|   num_words_1_fu_99_p3          |     |        | num_words_1 | select | auto_sel  | 0       |
-|   icmp_ln29_fu_111_p2           |     |        | icmp_ln29   | seteq  | auto      | 0       |
-|   lfsr_fu_127_p3                |     |        | lfsr        | select | auto_sel  | 0       |
-|   urem_31ns_15ns_31_35_seq_1_U1 |     |        | addr        | urem   | auto_seq  | 34      |
-|   mask_fu_159_p2                |     |        | mask        | shl    | auto_pipe | 0       |
-|   xor_ln46_fu_165_p2            |     |        | xor_ln46    | xor    | auto      | 0       |
-+---------------------------------+-----+--------+-------------+--------+-----------+---------+
++-----------------------+-----+--------+-----------+-------+--------+---------+
+| Name                  | DSP | Pragma | Variable  | Op    | Impl   | Latency |
++-----------------------+-----+--------+-----------+-------+--------+---------+
+| + radiation_injector  | 0   |        |           |       |        |         |
+|   icmp_ln20_fu_144_p2 |     |        | icmp_ln20 | seteq | auto   | 0       |
+|   add_ln21_fu_166_p2  |     |        | add_ln21  | add   | fabric | 0       |
+|   xor_ln22_fu_192_p2  |     |        | xor_ln22  | xor   | auto   | 0       |
++-----------------------+-----+--------+-----------+-------+--------+---------+
 
 
 ================================================================
@@ -112,30 +109,24 @@
 | Name                 | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
 |                      |           |           |      |      |        |          |      |         | Banks            |
 +----------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
-| + radiation_injector |           |           | 0    | 0    |        |          |      |         |                  |
+| + radiation_injector |           |           | 2    | 0    |        |          |      |         |                  |
 |   control_s_axi_U    | interface | s_axilite |      |      |        |          |      |         |                  |
+|   gmem0_m_axi_U      | interface | m_axi     | 2    |      |        |          |      |         |                  |
 +----------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
 
 
 ================================================================
 == Pragma Report
 ================================================================
-* Pragmas with Warnings
-+--------------+-------------------------------------------+---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
-| Type         | Options                                   | Location                                          | Messages                                                                                                                         |
-+--------------+-------------------------------------------+---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
-| BIND_STORAGE | variable=weight_mem type=ram_2p impl=bram | in radiation_injector (radiation_injector.cpp:19) | The resource pragma (bind_storage) on top-level function argument, in 'call' is unsupported, please use INTERFACE pragma instead |
-+--------------+-------------------------------------------+---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
-
 * Valid Pragma Syntax
-+-----------+-----------------------------------------+---------------------------------------------------+
-| Type      | Options                                 | Location                                          |
-+-----------+-----------------------------------------+---------------------------------------------------+
-| INTERFACE | bram port=weight_mem                    | in radiation_injector (radiation_injector.cpp:13) |
-| INTERFACE | s_axilite port=intensity bundle=control | in radiation_injector (radiation_injector.cpp:14) |
-| INTERFACE | s_axilite port=seed bundle=control      | in radiation_injector (radiation_injector.cpp:15) |
-| INTERFACE | s_axilite port=num_words bundle=control | in radiation_injector (radiation_injector.cpp:16) |
-| INTERFACE | s_axilite port=return bundle=control    | in radiation_injector (radiation_injector.cpp:17) |
-+-----------+-----------------------------------------+---------------------------------------------------+
++-----------+-------------------------------------------------------------+---------------------------------------------------+
+| Type      | Options                                                     | Location                                          |
++-----------+-------------------------------------------------------------+---------------------------------------------------+
+| INTERFACE | s_axilite port=wr_addr bundle=control                       | in radiation_injector (radiation_injector.cpp:10) |
+| INTERFACE | s_axilite port=wr_data bundle=control                       | in radiation_injector (radiation_injector.cpp:11) |
+| INTERFACE | s_axilite port=weight_mem bundle=control                    | in radiation_injector (radiation_injector.cpp:12) |
+| INTERFACE | s_axilite port=return bundle=control                        | in radiation_injector (radiation_injector.cpp:13) |
+| INTERFACE | m_axi port=weight_mem offset=slave bundle=gmem0 depth=16384 | in radiation_injector (radiation_injector.cpp:16) |
++-----------+-------------------------------------------------------------+---------------------------------------------------+
 
 

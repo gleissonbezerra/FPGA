@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'bgn_inference_Pipeline_LAYER1_XNOR_POP'" level="0">
-<item name = "Date">Sun Mar  1 01:54:14 2026
+<item name = "Date">Mon Mar  2 00:04:10 2026
 </item>
 <item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
 <item name = "Project">mnist_mlp_bgn</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 5.629 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">16009, 16009, 0.160 ms, 0.160 ms, 0, 0, loop pipeline stp</column>
+<column name="">16007, 16007, 0.160 ms, 0.160 ms, 0, 0, loop pipeline stp</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- LAYER1_XNOR_POP">16007, 16007, 9, 1, 1, 16000, yes</column>
+<column name="- LAYER1_XNOR_POP">16005, 16005, 7, 1, 1, 16000, yes</column>
 </table>
 </item>
 </section>

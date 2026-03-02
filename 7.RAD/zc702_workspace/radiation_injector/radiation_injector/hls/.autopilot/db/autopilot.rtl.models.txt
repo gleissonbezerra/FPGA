@@ -1,3 +1,3 @@
-radiation_injector_urem_31ns_15ns_31_35_seq_1
+radiation_injector_gmem0_m_axi
 radiation_injector_control_s_axi
 radiation_injector

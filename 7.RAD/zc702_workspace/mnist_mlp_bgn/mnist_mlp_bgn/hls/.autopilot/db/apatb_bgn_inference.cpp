@@ -27,17 +27,13 @@ using namespace std;
 #define AUTOTB_TVOUT_weight_mem "../tv/cdatafile/c.bgn_inference.autotvout_weight_mem.dat"
 #define AUTOTB_TVIN_prediction "../tv/cdatafile/c.bgn_inference.autotvin_prediction.dat"
 #define AUTOTB_TVOUT_prediction "../tv/cdatafile/c.bgn_inference.autotvout_prediction.dat"
-#define AUTOTB_TVIN_mode "../tv/cdatafile/c.bgn_inference.autotvin_mode.dat"
-#define AUTOTB_TVOUT_mode "../tv/cdatafile/c.bgn_inference.autotvout_mode.dat"
-#define AUTOTB_TVIN_wr_addr "../tv/cdatafile/c.bgn_inference.autotvin_wr_addr.dat"
-#define AUTOTB_TVOUT_wr_addr "../tv/cdatafile/c.bgn_inference.autotvout_wr_addr.dat"
-#define AUTOTB_TVIN_wr_data "../tv/cdatafile/c.bgn_inference.autotvin_wr_data.dat"
-#define AUTOTB_TVOUT_wr_data "../tv/cdatafile/c.bgn_inference.autotvout_wr_data.dat"
+#define AUTOTB_TVIN_gmem0 "../tv/cdatafile/c.bgn_inference.autotvin_gmem0.dat"
+#define AUTOTB_TVOUT_gmem0 "../tv/cdatafile/c.bgn_inference.autotvout_gmem0.dat"
 
 
 // tvout file define:
-#define AUTOTB_TVOUT_PC_weight_mem "../tv/rtldatafile/rtl.bgn_inference.autotvout_weight_mem.dat"
 #define AUTOTB_TVOUT_PC_prediction "../tv/rtldatafile/rtl.bgn_inference.autotvout_prediction.dat"
+#define AUTOTB_TVOUT_PC_gmem0 "../tv/rtldatafile/rtl.bgn_inference.autotvout_gmem0.dat"
 
 
 namespace hls::sim
@@ -1262,12 +1258,24 @@ namespace hls::sim
 
 
 extern "C"
-void bgn_inference_hw_stub_wrapper(void*, void*, void*, hls::sim::Byte<4>*, hls::sim::Byte<4>*, hls::sim::Byte<4>*);
+void bgn_inference_hw_stub_wrapper(void*, void*, void*);
 
 extern "C"
-void apatb_bgn_inference_hw(void* __xlx_apatb_param_input_img, void* __xlx_apatb_param_weight_mem, void* __xlx_apatb_param_prediction, hls::sim::Byte<4>* __xlx_apatb_param_mode, hls::sim::Byte<4>* __xlx_apatb_param_wr_addr, hls::sim::Byte<4>* __xlx_apatb_param_wr_data)
+void apatb_bgn_inference_hw(void* __xlx_apatb_param_input_img, void* __xlx_apatb_param_weight_mem, void* __xlx_apatb_param_prediction)
 {
+  static hls::sim::Byte<4> __xlx_offset_byte_param_weight_mem;
   static hls::sim::Register port0 {
+    .name = "weight_mem",
+    .width = 32,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_weight_mem),
+#endif
+  };
+  port0.param = &__xlx_offset_byte_param_weight_mem;
+
+  static hls::sim::Register port1 {
     .name = "prediction",
     .width = 32,
 #ifdef POST_CHECK
@@ -1277,45 +1285,37 @@ void apatb_bgn_inference_hw(void* __xlx_apatb_param_input_img, void* __xlx_apatb
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_prediction),
 #endif
   };
-  port0.param = __xlx_apatb_param_prediction;
-
-  static hls::sim::Register port1 {
-    .name = "mode",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_mode),
-#endif
-  };
-  port1.param = __xlx_apatb_param_mode;
-
-  static hls::sim::Register port2 {
-    .name = "wr_addr",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_wr_addr),
-#endif
-  };
-  port2.param = __xlx_apatb_param_wr_addr;
-
-  static hls::sim::Register port3 {
-    .name = "wr_data",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_wr_data),
-#endif
-  };
-  port3.param = __xlx_apatb_param_wr_data;
+  port1.param = __xlx_apatb_param_prediction;
 
 #ifdef USE_BINARY_TV_FILE
-  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port4 {
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port2 {
 #else
-  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port4 {
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port2 {
+#endif
+    .width = 32,
+    .asize = 4,
+    .hbm = false,
+    .name = { "gmem0" },
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+#ifdef USE_BINARY_TV_FILE
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_gmem0),
+#else
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gmem0),
+#endif
+#endif
+    .hasWrite = { false },
+    .max_nbytes = { 0 },
+  };
+  port2.param = { __xlx_apatb_param_weight_mem };
+  port2.mname = { "weight_mem" };
+  port2.nbytes = { 65536 };
+
+#ifdef USE_BINARY_TV_FILE
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port3 {
+#else
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port3 {
 #endif
     .width = 32,
     .asize = 4,
@@ -1333,70 +1333,30 @@ void apatb_bgn_inference_hw(void* __xlx_apatb_param_input_img, void* __xlx_apatb
     .hasWrite = { false },
     .max_nbytes = { 0 },
   };
-  port4.param = { __xlx_apatb_param_input_img };
-  port4.mname = { "input_img" };
-  port4.nbytes = { 100 };
-
-#ifdef USE_BINARY_TV_FILE
-  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port5 {
-#else
-  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port5 {
-#endif
-    .width = 32,
-    .asize = 4,
-    .hbm = false,
-    .name = { "weight_mem" },
-#ifdef POST_CHECK
-#ifdef USE_BINARY_TV_FILE
-    .reader = new hls::sim::Input(AUTOTB_TVOUT_PC_weight_mem),
-#else
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_weight_mem),
-#endif
-#else
-#ifdef USE_BINARY_TV_FILE
-    .owriter = new hls::sim::Output(AUTOTB_TVOUT_weight_mem),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_weight_mem),
-#endif
-#ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_weight_mem),
-#else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_weight_mem),
-#endif
-#endif
-    .hasWrite = { true },
-    .max_nbytes = { 0 },
-  };
-  port5.param = { __xlx_apatb_param_weight_mem };
-  port5.mname = { "weight_mem" };
-  port5.nbytes = { 65536 };
+  port3.param = { __xlx_apatb_param_input_img };
+  port3.mname = { "input_img" };
+  port3.nbytes = { 100 };
 
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
-    check(port0);
-    check(port5);
+    check(port1);
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     tcl.containsVLA = 0;
     CodeState = DUMP_INPUTS;
-    dump(port0, port0.iwriter, tcl.AESL_transaction);
+    delay_dump(port0, port0.iwriter, tcl.AESL_transaction);
     dump(port1, port1.iwriter, tcl.AESL_transaction);
     dump(port2, port2.iwriter, tcl.AESL_transaction);
     dump(port3, port3.iwriter, tcl.AESL_transaction);
-    dump(port4, port4.iwriter, tcl.AESL_transaction);
-    dump(port5, port5.iwriter, tcl.AESL_transaction);
     port0.doTCL(tcl);
     port1.doTCL(tcl);
     port2.doTCL(tcl);
     port3.doTCL(tcl);
-    port4.doTCL(tcl);
-    port5.doTCL(tcl);
     CodeState = CALL_C_DUT;
-    bgn_inference_hw_stub_wrapper(__xlx_apatb_param_input_img, __xlx_apatb_param_weight_mem, __xlx_apatb_param_prediction, __xlx_apatb_param_mode, __xlx_apatb_param_wr_addr, __xlx_apatb_param_wr_data);
+    bgn_inference_hw_stub_wrapper(__xlx_apatb_param_input_img, __xlx_apatb_param_weight_mem, __xlx_apatb_param_prediction);
     CodeState = DUMP_OUTPUTS;
-    dump(port0, port0.owriter, tcl.AESL_transaction);
-    dump(port5, port5.owriter, tcl.AESL_transaction);
+    dump(port1, port1.owriter, tcl.AESL_transaction);
     tcl.AESL_transaction++;
 #endif
   } catch (const hls::sim::SimException &e) {

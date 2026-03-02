@@ -1,4 +1,0 @@
-bgn_inference.cpp:41:1: warning: pipeline pragma is ignored, because it can be only applied inside loop body or function body  [-Winvalid-hls-pragmas]
-#pragma HLS PIPELINE II=1
-^
-1 warning generated.

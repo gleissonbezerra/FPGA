@@ -76,54 +76,56 @@ void XRadiation_injector_DisableAutoRestart(XRadiation_injector *InstancePtr) {
     XRadiation_injector_WriteReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_AP_CTRL, 0);
 }
 
-void XRadiation_injector_Set_intensity(XRadiation_injector *InstancePtr, u32 Data) {
+void XRadiation_injector_Set_weight_mem(XRadiation_injector *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XRadiation_injector_WriteReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_INTENSITY_DATA, Data);
+    XRadiation_injector_WriteReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_WEIGHT_MEM_DATA, (u32)(Data));
+    XRadiation_injector_WriteReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_WEIGHT_MEM_DATA + 4, (u32)(Data >> 32));
 }
 
-u32 XRadiation_injector_Get_intensity(XRadiation_injector *InstancePtr) {
-    u32 Data;
+u64 XRadiation_injector_Get_weight_mem(XRadiation_injector *InstancePtr) {
+    u64 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XRadiation_injector_ReadReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_INTENSITY_DATA);
+    Data = XRadiation_injector_ReadReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_WEIGHT_MEM_DATA);
+    Data += (u64)XRadiation_injector_ReadReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_WEIGHT_MEM_DATA + 4) << 32;
     return Data;
 }
 
-void XRadiation_injector_Set_seed(XRadiation_injector *InstancePtr, u32 Data) {
+void XRadiation_injector_Set_wr_addr(XRadiation_injector *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XRadiation_injector_WriteReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_SEED_DATA, Data);
+    XRadiation_injector_WriteReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_WR_ADDR_DATA, Data);
 }
 
-u32 XRadiation_injector_Get_seed(XRadiation_injector *InstancePtr) {
+u32 XRadiation_injector_Get_wr_addr(XRadiation_injector *InstancePtr) {
     u32 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XRadiation_injector_ReadReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_SEED_DATA);
+    Data = XRadiation_injector_ReadReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_WR_ADDR_DATA);
     return Data;
 }
 
-void XRadiation_injector_Set_num_words(XRadiation_injector *InstancePtr, u32 Data) {
+void XRadiation_injector_Set_wr_data(XRadiation_injector *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XRadiation_injector_WriteReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_NUM_WORDS_DATA, Data);
+    XRadiation_injector_WriteReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_WR_DATA_DATA, Data);
 }
 
-u32 XRadiation_injector_Get_num_words(XRadiation_injector *InstancePtr) {
+u32 XRadiation_injector_Get_wr_data(XRadiation_injector *InstancePtr) {
     u32 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XRadiation_injector_ReadReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_NUM_WORDS_DATA);
+    Data = XRadiation_injector_ReadReg(InstancePtr->Control_BaseAddress, XRADIATION_INJECTOR_CONTROL_ADDR_WR_DATA_DATA);
     return Data;
 }
 

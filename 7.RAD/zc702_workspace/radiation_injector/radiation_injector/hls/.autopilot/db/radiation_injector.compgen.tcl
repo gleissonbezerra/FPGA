@@ -1,8 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
-set name radiation_injector_urem_31ns_15ns_31_35_seq_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {urem} IMPL {auto_seq} LATENCY 34 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler radiation_injector_gmem0_m_axi BINDTYPE {interface} TYPE {adapter} IMPL {m_axi}
 }
 
 
@@ -15,29 +14,29 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 set axilite_register_dict [dict create]
 set port_control {
-intensity { 
+weight_mem { 
 	dir I
-	width 32
+	width 64
 	depth 1
 	mode ap_none
 	offset 16
-	offset_end 23
+	offset_end 27
 }
-seed { 
+wr_addr { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 24
-	offset_end 31
+	offset 28
+	offset_end 35
 }
-num_words { 
+wr_data { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 32
-	offset_end 39
+	offset 36
+	offset_end 43
 }
 ap_start { }
 ap_done { }
@@ -53,7 +52,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 3 \
+			id 1 \
 			corename radiation_injector_control_axilite \
 			name radiation_injector_control_s_axi \
 			ports {$port_control} \

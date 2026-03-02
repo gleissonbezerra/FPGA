@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'bgn_inference_Pipeline_LAYER2_MAC'" level="0">
-<item name = "Date">Sun Mar  1 01:54:16 2026
+<item name = "Date">Mon Mar  2 00:04:14 2026
 </item>
 <item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
 <item name = "Project">mnist_mlp_bgn</item>
@@ -81,22 +81,22 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln88_1_fu_219_p2">+, 0, 0, 6, 4, 1</column>
-<column name="add_ln88_fu_193_p2">+, 0, 0, 13, 13, 1</column>
-<column name="add_ln93_1_fu_272_p2">+, 0, 0, 13, 13, 13</column>
-<column name="add_ln93_fu_233_p2">+, 0, 0, 10, 10, 1</column>
-<column name="add_ln97_fu_285_p2">+, 0, 0, 13, 13, 13</column>
+<column name="add_ln78_1_fu_219_p2">+, 0, 0, 6, 4, 1</column>
+<column name="add_ln78_fu_193_p2">+, 0, 0, 13, 13, 1</column>
+<column name="add_ln82_1_fu_272_p2">+, 0, 0, 13, 13, 13</column>
+<column name="add_ln82_fu_233_p2">+, 0, 0, 10, 10, 1</column>
+<column name="add_ln86_fu_285_p2">+, 0, 0, 13, 13, 13</column>
 <column name="final_score_fu_361_p2">+, 0, 0, 26, 26, 26</column>
-<column name="icmp_ln104_fu_371_p2">icmp, 0, 0, 32, 32, 32</column>
-<column name="icmp_ln88_fu_187_p2">icmp, 0, 0, 13, 13, 12</column>
-<column name="icmp_ln93_fu_205_p2">icmp, 0, 0, 10, 10, 10</column>
+<column name="icmp_ln78_fu_187_p2">icmp, 0, 0, 13, 13, 12</column>
+<column name="icmp_ln82_fu_205_p2">icmp, 0, 0, 10, 10, 10</column>
+<column name="icmp_ln93_fu_371_p2">icmp, 0, 0, 32, 32, 32</column>
 <column name="class_idx_1_fu_388_p3">select, 0, 0, 32, 1, 32</column>
 <column name="grp_fu_424_p2">select, 0, 0, 31, 1, 1</column>
 <column name="max_score_1_fu_377_p3">select, 0, 0, 32, 1, 32</column>
-<column name="select_ln84_fu_211_p3">select, 0, 0, 10, 1, 1</column>
-<column name="select_ln88_1_fu_330_p3">select, 0, 0, 32, 1, 32</column>
-<column name="select_ln88_2_fu_337_p3">select, 0, 0, 32, 1, 32</column>
-<column name="select_ln88_fu_225_p3">select, 0, 0, 4, 1, 4</column>
+<column name="select_ln73_fu_211_p3">select, 0, 0, 10, 1, 1</column>
+<column name="select_ln78_1_fu_330_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln78_2_fu_337_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln78_fu_225_p3">select, 0, 0, 4, 1, 4</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -133,17 +133,17 @@
 <column name="class_idx_11_fu_84">32, 0, 32, 0</column>
 <column name="class_idx_fu_96">32, 0, 32, 0</column>
 <column name="i_fu_100">4, 0, 4, 0</column>
-<column name="icmp_ln88_reg_489">1, 0, 1, 0</column>
-<column name="icmp_ln93_reg_493">1, 0, 1, 0</column>
+<column name="icmp_ln78_reg_489">1, 0, 1, 0</column>
+<column name="icmp_ln82_reg_493">1, 0, 1, 0</column>
 <column name="indvar_flatten8_fu_104">13, 0, 13, 0</column>
 <column name="j_fu_80">10, 0, 10, 0</column>
 <column name="max_score_12_fu_88">32, 0, 32, 0</column>
 <column name="max_score_fu_92">32, 0, 32, 0</column>
-<column name="select_ln84_reg_500">10, 0, 10, 0</column>
-<column name="select_ln88_reg_506">4, 0, 4, 0</column>
-<column name="icmp_ln88_reg_489">64, 32, 1, 0</column>
-<column name="icmp_ln93_reg_493">64, 32, 1, 0</column>
-<column name="select_ln88_reg_506">64, 32, 4, 0</column>
+<column name="select_ln73_reg_500">10, 0, 10, 0</column>
+<column name="select_ln78_reg_506">4, 0, 4, 0</column>
+<column name="icmp_ln78_reg_489">64, 32, 1, 0</column>
+<column name="icmp_ln82_reg_493">64, 32, 1, 0</column>
+<column name="select_ln78_reg_506">64, 32, 4, 0</column>
 </table>
 </item>
 </section>

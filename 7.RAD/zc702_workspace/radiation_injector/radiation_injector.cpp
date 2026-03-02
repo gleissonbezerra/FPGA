@@ -1,47 +1,24 @@
 #include <ap_int.h>
 
-#define MAX_WORDS 16384
-
 extern "C" void radiation_injector(
-    ap_uint<32> weight_mem[MAX_WORDS],
-    ap_uint<32> intensity,
-    ap_uint<32> seed,
-    ap_uint<32> num_words
-)
-{
+    ap_uint<32> *weight_mem, 
+    ap_uint<32> wr_addr,     
+    ap_uint<32> wr_data      
+) {
 
-#pragma HLS INTERFACE bram port=weight_mem
-#pragma HLS INTERFACE s_axilite port=intensity bundle=control
-#pragma HLS INTERFACE s_axilite port=seed bundle=control
-#pragma HLS INTERFACE s_axilite port=num_words bundle=control
-#pragma HLS INTERFACE s_axilite port=return bundle=control
+// --- INTERFACES DE CONTROLE UNIFICADAS (AXI-LITE) ---
+#pragma HLS INTERFACE s_axilite port=wr_addr    bundle=control
+#pragma HLS INTERFACE s_axilite port=wr_data    bundle=control
+#pragma HLS INTERFACE s_axilite port=weight_mem bundle=control  // <-- ADICIONE ISSO AQUI
+#pragma HLS INTERFACE s_axilite port=return     bundle=control
 
-#pragma HLS BIND_STORAGE variable=weight_mem type=ram_2p impl=bram
+// --- INTERFACE DE DADOS (MASTER AXI) ---
+#pragma HLS INTERFACE m_axi port=weight_mem offset=slave bundle=gmem0 depth=16384
 
-    if (num_words == 0)
-        return;
+    ap_uint<32> tmp;
 
-    if (num_words > MAX_WORDS)
-        num_words = MAX_WORDS;
-
-    ap_uint<32> lfsr;
-
-    if(seed == 0)
-        lfsr = (ap_uint<32>)0xACE1u;
-    else
-        lfsr = seed;
-
-    // LFSR step
-    ap_uint<1> fb =
-        lfsr[0] ^ lfsr[1] ^ lfsr[21] ^ lfsr[31];
-
-    lfsr = (lfsr >> 1) | (fb << 31);
-
-    ap_uint<14> addr = lfsr % num_words;
-    ap_uint<5> bitpos = lfsr.range(20,16);
-
-    ap_uint<32> mask = ((ap_uint<32>)1 << bitpos);
-
-    ap_uint<32> val = weight_mem[addr];
-    weight_mem[addr] = val ^ mask;
+    if (wr_addr < 16384) {
+        tmp = weight_mem[wr_addr];
+        weight_mem[wr_addr] = wr_data ^ tmp;
+    }
 }

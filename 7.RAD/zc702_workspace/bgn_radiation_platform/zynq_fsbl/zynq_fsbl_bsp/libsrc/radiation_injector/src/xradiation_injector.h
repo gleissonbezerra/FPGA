@@ -45,12 +45,12 @@ typedef struct {
 #else
     u16 DeviceId;
 #endif
-    u64 Control_BaseAddress;
+    u64 Ctrl_BaseAddress;
 } XRadiation_injector_Config;
 #endif
 
 typedef struct {
-    u64 Control_BaseAddress;
+    u64 Ctrl_BaseAddress;
     u32 IsReady;
 } XRadiation_injector;
 
@@ -99,12 +99,10 @@ u32 XRadiation_injector_IsReady(XRadiation_injector *InstancePtr);
 void XRadiation_injector_EnableAutoRestart(XRadiation_injector *InstancePtr);
 void XRadiation_injector_DisableAutoRestart(XRadiation_injector *InstancePtr);
 
-void XRadiation_injector_Set_intensity(XRadiation_injector *InstancePtr, u32 Data);
-u32 XRadiation_injector_Get_intensity(XRadiation_injector *InstancePtr);
-void XRadiation_injector_Set_seed(XRadiation_injector *InstancePtr, u32 Data);
-u32 XRadiation_injector_Get_seed(XRadiation_injector *InstancePtr);
-void XRadiation_injector_Set_num_words(XRadiation_injector *InstancePtr, u32 Data);
-u32 XRadiation_injector_Get_num_words(XRadiation_injector *InstancePtr);
+void XRadiation_injector_Set_wr_addr(XRadiation_injector *InstancePtr, u32 Data);
+u32 XRadiation_injector_Get_wr_addr(XRadiation_injector *InstancePtr);
+void XRadiation_injector_Set_wr_data(XRadiation_injector *InstancePtr, u32 Data);
+u32 XRadiation_injector_Get_wr_data(XRadiation_injector *InstancePtr);
 
 void XRadiation_injector_InterruptGlobalEnable(XRadiation_injector *InstancePtr);
 void XRadiation_injector_InterruptGlobalDisable(XRadiation_injector *InstancePtr);

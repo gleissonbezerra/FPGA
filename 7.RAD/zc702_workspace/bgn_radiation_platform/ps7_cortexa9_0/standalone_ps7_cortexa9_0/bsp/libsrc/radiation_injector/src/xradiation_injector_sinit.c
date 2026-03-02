@@ -22,7 +22,7 @@ XRadiation_injector_Config *XRadiation_injector_LookupConfig(UINTPTR BaseAddress
 	int Index;
 
 	for (Index = (u32)0x0; XRadiation_injector_ConfigTable[Index].Name != NULL; Index++) {
-		if (!BaseAddress || XRadiation_injector_ConfigTable[Index].Control_BaseAddress == BaseAddress) {
+		if (!BaseAddress || XRadiation_injector_ConfigTable[Index].Ctrl_BaseAddress == BaseAddress) {
 			ConfigPtr = &XRadiation_injector_ConfigTable[Index];
 			break;
 		}

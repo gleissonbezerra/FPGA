@@ -1,21 +1,10 @@
---- !Passed
-Pass:            reflow-pragma-preprocess
-Name:            PragmaResourceTopArg
-DebugLoc:        { File: radiation_injector.cpp, Line: 19, Column: 1 }
-Function:        radiation_injector
-Args:            
-  - String:          'The resource pragma (bind_storage) on top-level function argument, in '''
-  - Pragma:          call
-    DebugLoc:        { File: radiation_injector.cpp, Line: 19, Column: 1 }
-  - String:          ''' is unsupported, please use INTERFACE pragma instead'
-...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
 Function:        apatb_radiation_injector_ir
 Args:            
   - Callee:          radiation_injector
-    DebugLoc:        { File: radiation_injector.cpp, Line: 11, Column: 0 }
+    DebugLoc:        { File: radiation_injector.cpp, Line: 7, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          apatb_radiation_injector_ir
   - String:          ' because it should never be inlined (cost=never)'

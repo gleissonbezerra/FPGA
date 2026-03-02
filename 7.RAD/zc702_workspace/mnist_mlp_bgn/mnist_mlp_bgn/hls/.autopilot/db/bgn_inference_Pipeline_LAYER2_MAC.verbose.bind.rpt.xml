@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'bgn_inference_Pipeline_LAYER2_MAC'" level="0">
-<item name = "Date">Sun Mar  1 01:54:16 2026
+<item name = "Date">Mon Mar  2 00:04:12 2026
 </item>
 <item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
 <item name = "Project">mnist_mlp_bgn</item>

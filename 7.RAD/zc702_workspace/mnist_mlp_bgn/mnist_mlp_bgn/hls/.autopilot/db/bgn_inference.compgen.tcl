@@ -5,6 +5,11 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler bgn_inference_gmem0_m_axi BINDTYPE {interface} TYPE {adapter} IMPL {m_axi}
+}
+
+
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -13,38 +18,22 @@ if {${::AESL::PGuard_autoexp_gen}} {
 }
 
 set axilite_register_dict [dict create]
-set port_CTRL {
+set port_control {
+weight_mem { 
+	dir I
+	width 64
+	depth 1
+	mode ap_none
+	offset 16
+	offset_end 27
+}
 prediction { 
 	dir O
 	width 32
 	depth 1
 	mode ap_vld
-	offset 16
-	offset_end 23
-}
-mode { 
-	dir I
-	width 32
-	depth 1
-	mode ap_none
-	offset 32
-	offset_end 39
-}
-wr_addr { 
-	dir I
-	width 32
-	depth 1
-	mode ap_none
-	offset 40
-	offset_end 47
-}
-wr_data { 
-	dir I
-	width 32
-	depth 1
-	mode ap_none
-	offset 48
-	offset_end 55
+	offset 28
+	offset_end 35
 }
 input_img { 
 	dir I
@@ -65,7 +54,7 @@ ap_idle { }
 interrupt {
 }
 }
-dict set axilite_register_dict CTRL $port_CTRL
+dict set axilite_register_dict control $port_control
 
 
 # Native S_AXILite:
@@ -73,9 +62,9 @@ if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
 			id 16 \
-			corename bgn_inference_CTRL_axilite \
-			name bgn_inference_CTRL_s_axi \
-			ports {$port_CTRL} \
+			corename bgn_inference_control_axilite \
+			name bgn_inference_control_s_axi \
+			ports {$port_control} \
 			op interface \
 			interrupt_clear_mode TOW \
 			interrupt_trigger_type default \
@@ -85,12 +74,12 @@ if {${::AESL::PGuard_simmodel_gen}} {
 			enable_mem_auto_widen 1 \
 		} "
 	} else {
-		puts "@W \[IMPL-110\] Cannot find AXI Lite interface model in the library. Ignored generation of AXI Lite  interface for 'CTRL'"
+		puts "@W \[IMPL-110\] Cannot find AXI Lite interface model in the library. Ignored generation of AXI Lite  interface for 'control'"
 	}
 }
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler bgn_inference_CTRL_s_axi BINDTYPE interface TYPE interface_s_axilite
+	::AP::rtl_comp_handler bgn_inference_control_s_axi BINDTYPE interface TYPE interface_s_axilite
 }
 
 

@@ -1,22 +1,19 @@
 directive:1:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=radiation_injector_XLX_SEP_ PragmaOptions=name=radiation_injector_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=radiation_injector
 ^
-radiation_injector.cpp:13:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=radiation_injector_XLX_SEP_ PragmaOptions=bram port=weight_mem_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE bram port=weight_mem
+radiation_injector.cpp:10:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=radiation_injector_XLX_SEP_ PragmaOptions=s_axilite port=wr_addr bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=wr_addr bundle=control
 ^
-radiation_injector.cpp:14:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=radiation_injector_XLX_SEP_ PragmaOptions=s_axilite port=intensity bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=intensity bundle=control
+radiation_injector.cpp:11:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=radiation_injector_XLX_SEP_ PragmaOptions=s_axilite port=wr_data bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=wr_data bundle=control
 ^
-radiation_injector.cpp:15:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=radiation_injector_XLX_SEP_ PragmaOptions=s_axilite port=seed bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=seed bundle=control
+radiation_injector.cpp:12:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=radiation_injector_XLX_SEP_ PragmaOptions=s_axilite port=weight_mem bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=weight_mem bundle=control
 ^
-radiation_injector.cpp:16:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=radiation_injector_XLX_SEP_ PragmaOptions=s_axilite port=num_words bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=num_words bundle=control
-^
-radiation_injector.cpp:17:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=radiation_injector_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+radiation_injector.cpp:13:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=radiation_injector_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 ^
-radiation_injector.cpp:19:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=radiation_injector_XLX_SEP_ PragmaOptions=variable=weight_mem type=ram_2p impl=bram_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS BIND_STORAGE variable=weight_mem type=ram_2p impl=bram
+radiation_injector.cpp:16:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=radiation_injector_XLX_SEP_ PragmaOptions=m_axi port=weight_mem offset=slave bundle=gmem0 depth=16384_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=weight_mem offset=slave bundle=gmem0 depth=16384
 ^
-7 warnings generated.
+6 warnings generated.

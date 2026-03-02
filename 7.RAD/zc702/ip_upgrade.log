@@ -1,6 +1,334 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 21:58:49 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_radiation_injector_0_5'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_radiation_injector_0_5 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114502391) to (Rev. 2114502478)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_radiation_injector_0_5'. These changes may impact your design.
+
+
+-Upgraded port order differs after port 'ap_clk'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 20:34:56 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_radiation_injector_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_radiation_injector_0_5 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114502299) to (Rev. 2114502391)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 18:33:01 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_radiation_injector_0_3'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_radiation_injector_0_3 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114502268) to (Rev. 2114502272)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 18:28:44 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_radiation_injector_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_radiation_injector_0_2 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114502259) to (Rev. 2114502268)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 18:19:41 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_radiation_injector_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_radiation_injector_0_1 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114502222) to (Rev. 2114502259)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'system_radiation_injector_0_1'.
+
+
+-Upgrade has removed interface 's_axi_control'
+
+-Upgrade has added interface 's_axi_CTRL' (xilinx.com:interface:aximm:1.0)
+
+-Upgrade has added interface 'weight_mem_PORTB' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_radiation_injector_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 's_axi_control_ARADDR'
+
+-Upgrade has removed port 's_axi_control_ARREADY'
+
+-Upgrade has removed port 's_axi_control_ARVALID'
+
+-Upgrade has removed port 's_axi_control_AWADDR'
+
+-Upgrade has removed port 's_axi_control_AWREADY'
+
+-Upgrade has removed port 's_axi_control_AWVALID'
+
+-Upgrade has removed port 's_axi_control_BREADY'
+
+-Upgrade has removed port 's_axi_control_BRESP'
+
+-Upgrade has removed port 's_axi_control_BVALID'
+
+-Upgrade has removed port 's_axi_control_RDATA'
+
+-Upgrade has removed port 's_axi_control_RREADY'
+
+-Upgrade has removed port 's_axi_control_RRESP'
+
+-Upgrade has removed port 's_axi_control_RVALID'
+
+-Upgrade has removed port 's_axi_control_WDATA'
+
+-Upgrade has removed port 's_axi_control_WREADY'
+
+-Upgrade has removed port 's_axi_control_WSTRB'
+
+-Upgrade has removed port 's_axi_control_WVALID'
+
+-Upgrade has added port 's_axi_CTRL_ARADDR'
+
+-Upgrade has added port 's_axi_CTRL_ARREADY'
+
+-Upgrade has added port 's_axi_CTRL_ARVALID'
+
+-Upgrade has added port 's_axi_CTRL_AWADDR'
+
+-Upgrade has added port 's_axi_CTRL_AWREADY'
+
+-Upgrade has added port 's_axi_CTRL_AWVALID'
+
+-Upgrade has added port 's_axi_CTRL_BREADY'
+
+-Upgrade has added port 's_axi_CTRL_BRESP'
+
+-Upgrade has added port 's_axi_CTRL_BVALID'
+
+-Upgrade has added port 's_axi_CTRL_RDATA'
+
+-Upgrade has added port 's_axi_CTRL_RREADY'
+
+-Upgrade has added port 's_axi_CTRL_RRESP'
+
+-Upgrade has added port 's_axi_CTRL_RVALID'
+
+-Upgrade has added port 's_axi_CTRL_WDATA'
+
+-Upgrade has added port 's_axi_CTRL_WREADY'
+
+-Upgrade has added port 's_axi_CTRL_WSTRB'
+
+-Upgrade has added port 's_axi_CTRL_WVALID'
+
+-Upgrade has added port 'weight_mem_Addr_B'
+
+-Upgrade has added port 'weight_mem_Clk_B'
+
+-Upgrade has added port 'weight_mem_Din_B'
+
+-Upgrade has added port 'weight_mem_Dout_B'
+
+-Upgrade has added port 'weight_mem_EN_B'
+
+-Upgrade has added port 'weight_mem_Rst_B'
+
+-Upgrade has added port 'weight_mem_WEN_B'
+
+
+4. Addressing Information
+-------------------------
+
+Detected addressing differences while upgrading 'system_radiation_injector_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed address block 's_axi_control/Reg'
+
+-Upgrade has added address block 's_axi_CTRL/Reg'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 17:43:12 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_radiation_injector_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_radiation_injector_0_1 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114502189) to (Rev. 2114502222)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 17:09:49 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_radiation_injector_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_radiation_injector_0_1 (xilinx.com:hls:radiation_injector:1.0) from (Rev. 2114501536) to (Rev. 2114502189)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_radiation_injector_0_1'. These changes may impact your design.
+
+
+-Upgraded port 's_axi_control_ARADDR' width 4 differs from original width 6
+
+-Upgraded port 's_axi_control_AWADDR' width 4 differs from original width 6
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 16:52:28 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_bgn_inference_0_4 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114502146) to (Rev. 2114502172)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar  1 16:28:10 2026
+| Host         : G-MF001 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_bgn_inference_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_bgn_inference_0_4 (xilinx.com:hls:bgn_inference:1.0) from (Rev. 2114501274) to (Rev. 2114502146)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
 | Date         : Sun Mar  1 06:16:31 2026
 | Host         : G-MF001 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

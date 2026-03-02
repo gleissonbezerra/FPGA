@@ -39,7 +39,7 @@
 					"usingPs7Init": {
 						"runPs7Init": true,
 						"runPs7PostInit": true,
-						"ps7InitTclFile": "E:\\source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\bgn_radiation_platform\\hw\\sdt\\ps7_init.tcl"
+						"ps7InitTclFile": "E:\\source\\.ITA\\FPGA\\7.RAD\\zc702_workspace\\mnist_app\\_ide\\psinit\\ps7_init.tcl"
 					}
 				},
 				"downloadElf": [

@@ -28,8 +28,8 @@
                  <0x100000 &ps7_ddr_0_memory 0x100000 0x1ff00000>,
                  <0x0 &ps7_ram_0_memory 0x0 0x30000>,
                  <0xffff0000 &ps7_ram_1_memory 0xffff0000 0xfe00>,
-                 <0x40000000 &bgn_inference_0 0x40000000 0x10000>,
-                 <0x40010000 &radiation_injector_0 0x40010000 0x10000>,
+                 <0x40000000 &radiation_injector_0 0x40000000 0x10000>,
+                 <0x40010000 &bgn_inference_0 0x40010000 0x10000>,
                  <0xf8008000 &ps7_afi_0 0xf8008000 0x1000>,
                  <0xf8009000 &ps7_afi_1 0xf8009000 0x1000>,
                  <0xf800a000 &ps7_afi_2 0xf800a000 0x1000>,
@@ -816,13 +816,13 @@
                         clocks = <&clkc 0xf>;
                 };
 
-                bgn_inference_0: bgn_inference@40000000 {
-                        phandle = <0x5>;
+                bgn_inference_0: bgn_inference@40010000 {
+                        phandle = <0x6>;
                         compatible = "xlnx,bgn-inference-1.0";
                         xlnx,ii = "2 , ~ , 22420";
                         xlnx,machine = <0x40>;
                         xlnx,ip-name = "bgn_inference";
-                        reg = <0x40000000 0x10000>;
+                        reg = <0x40010000 0x10000>;
                         clocks = <&clkc 0xf>;
                         xlnx,s-axi-ctrl-addr-width = <0x8>;
                         xlnx,clk-period = <0xa>;
@@ -835,22 +835,22 @@
                         xlnx,name = "bgn_inference_0";
                 };
 
-                radiation_injector_0: radiation_injector@40010000 {
-                        phandle = <0x6>;
+                radiation_injector_0: radiation_injector@40000000 {
+                        phandle = <0x5>;
                         compatible = "xlnx,radiation-injector-1.0";
-                        xlnx,ii = "2 , ~ , 36";
+                        xlnx,ii = <0x1>;
                         xlnx,machine = <0x40>;
-                        xlnx,s-axi-control-addr-width = <0x6>;
                         xlnx,ip-name = "radiation_injector";
-                        reg = <0x40010000 0x10000>;
+                        reg = <0x40000000 0x10000>;
                         clocks = <&clkc 0xf>;
+                        xlnx,s-axi-ctrl-addr-width = <0x5>;
                         xlnx,clk-period = <0xa>;
-                        xlnx,s-axi-control-data-width = <0x20>;
                         xlnx,edk-iptype = "PERIPHERAL";
                         status = "okay";
                         clock-names = "ap_clk";
-                        xlnx,combinational = <0x0>;
-                        xlnx,latency = <0x1>;
+                        xlnx,combinational = <0x1>;
+                        xlnx,s-axi-ctrl-data-width = <0x20>;
+                        xlnx,latency = <0x0>;
                         xlnx,name = "radiation_injector_0";
                 };
         };
@@ -945,8 +945,8 @@
                 ps7_afi_3 = "/axi/ps7_afi@f800b000";
                 amba_pl = "/amba_pl";
                 clocking0 = "/amba_pl/clocking0";
-                bgn_inference_0 = "/amba_pl/bgn_inference@40000000";
-                radiation_injector_0 = "/amba_pl/radiation_injector@40010000";
+                bgn_inference_0 = "/amba_pl/bgn_inference@40010000";
+                radiation_injector_0 = "/amba_pl/radiation_injector@40000000";
                 ps7_ddr_0_memory = "/memory@00100000";
                 ps7_ram_0_memory = "/memory@0";
                 ps7_ram_1_memory = "/memory@ffff0000";
